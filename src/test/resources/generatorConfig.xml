@@ -52,7 +52,7 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
         </table>
-        <table tableName="FUNDUNIT_BASICINFOMATION"  enableUpdateByPrimaryKey="false">
+        <table tableName="LOAN_ORG_CATALOG"  enableUpdateByPrimaryKey="false">
             <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
             <!--<ignoreColumn column="id"></ignoreColumn>-->
             <!--<ignoreColumn column="created_at"></ignoreColumn>-->

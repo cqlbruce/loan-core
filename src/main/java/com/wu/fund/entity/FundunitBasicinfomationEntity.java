@@ -3,7 +3,7 @@ package com.wu.fund.entity;
 
 /**
  * @Author: wangying
- * @Description:
+ * @Description:资金单元配置
  * @Date: Created in 17:29 2018/5/8
  */
 public class FundunitBasicinfomationEntity {

@@ -27,4 +27,10 @@ public interface LoanOrgCatalogMapper {
      * @mbggenerated 2018-05-08
      */
     List<LoanOrgCatalogEntity> selectAll();
+
+    /**
+     *
+     * @mbggenerated 2018-05-08
+     */
+    int updateByPrimaryKey(LoanOrgCatalogEntity record);
 }

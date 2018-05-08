@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.AssetAllocationListMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.AssetAllocationListEntity" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.AssetAllocationList" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
     <result column="PRODUCTCODE" property="productcode" jdbcType="VARCHAR" />
@@ -36,7 +36,7 @@
     delete from ASSET_ALLOCATION_LIST
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.AssetAllocationListEntity" >
+  <insert id="insert" parameterType="com.wu.fund.entity.AssetAllocationList" >
     insert into ASSET_ALLOCATION_LIST (SERIALNO, RELATIVESERIALNO, PRODUCTCODE, 
       PRODUCTDIMENSION, PROPORTION, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
@@ -58,6 +58,38 @@
       #{cusenterprisetype,jdbcType=VARCHAR}, #{workcitytype,jdbcType=VARCHAR}, #{housecitytype,jdbcType=VARCHAR}, 
       #{workprovince,jdbcType=VARCHAR}, #{houseprovince,jdbcType=VARCHAR})
   </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.AssetAllocationList" >
+    update ASSET_ALLOCATION_LIST
+    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
+      PRODUCTCODE = #{productcode,jdbcType=VARCHAR},
+      PRODUCTDIMENSION = #{productdimension,jdbcType=VARCHAR},
+      PROPORTION = #{proportion,jdbcType=VARCHAR},
+      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
+      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
+      ASSETTYPE = #{assettype,jdbcType=VARCHAR},
+      EDUCATION = #{education,jdbcType=VARCHAR},
+      MINACCOUNT = #{minaccount,jdbcType=VARCHAR},
+      MAXACCOUNT = #{maxaccount,jdbcType=VARCHAR},
+      LOANTERMUNIT = #{loantermunit,jdbcType=VARCHAR},
+      LOANTERM = #{loanterm,jdbcType=VARCHAR},
+      REPAYMENTTYPE = #{repaymenttype,jdbcType=VARCHAR},
+      APPLYORGID = #{applyorgid,jdbcType=VARCHAR},
+      CUSENTERPRISE = #{cusenterprise,jdbcType=VARCHAR},
+      WORKCITY = #{workcity,jdbcType=VARCHAR},
+      HOUSECITY = #{housecity,jdbcType=VARCHAR},
+      CUSCLASSIFY = #{cusclassify,jdbcType=VARCHAR},
+      RISKGRADE = #{riskgrade,jdbcType=VARCHAR},
+      CUSENTERPRISETYPE = #{cusenterprisetype,jdbcType=VARCHAR},
+      WORKCITYTYPE = #{workcitytype,jdbcType=VARCHAR},
+      HOUSECITYTYPE = #{housecitytype,jdbcType=VARCHAR},
+      WORKPROVINCE = #{workprovince,jdbcType=VARCHAR},
+      HOUSEPROVINCE = #{houseprovince,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, PRODUCTCODE, PRODUCTDIMENSION, PROPORTION, INPUTDATE, 
     UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, ASSETTYPE, EDUCATION, 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wu.fund.dao.LoanOrgPutoutConstraintMapper">
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgPutoutConstraint">
+    <id column="SERIALNO" jdbcType="VARCHAR" property="serialno" />
+    <result column="RELATIVESERIALNO" jdbcType="VARCHAR" property="relativeserialno" />
+    <result column="QUERYPUTOUT" jdbcType="VARCHAR" property="queryputout" />
+    <result column="CARDCHECK" jdbcType="VARCHAR" property="cardcheck" />
+    <result column="SECONDACCOUNT" jdbcType="VARCHAR" property="secondaccount" />
+    <result column="INPUTDATE" jdbcType="VARCHAR" property="inputdate" />
+    <result column="UPDATEUSERID" jdbcType="VARCHAR" property="updateuserid" />
+    <result column="UPDATEDATE" jdbcType="VARCHAR" property="updatedate" />
+    <result column="INPUTUSERID" jdbcType="VARCHAR" property="inputuserid" />
+    <result column="INPUTORGID" jdbcType="VARCHAR" property="inputorgid" />
+    <result column="UPDATEORGID" jdbcType="VARCHAR" property="updateorgid" />
+    <result column="PAYFEERULE" jdbcType="VARCHAR" property="payfeerule" />
+    <result column="ISCREATESCHEDULE" jdbcType="VARCHAR" property="iscreateschedule" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from LOAN_ORG_PUTOUT_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgPutoutConstraint">
+    insert into LOAN_ORG_PUTOUT_CONSTRAINT (SERIALNO, RELATIVESERIALNO, QUERYPUTOUT, 
+      CARDCHECK, SECONDACCOUNT, INPUTDATE, 
+      UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
+      INPUTORGID, UPDATEORGID, PAYFEERULE, 
+      ISCREATESCHEDULE)
+    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{queryputout,jdbcType=VARCHAR}, 
+      #{cardcheck,jdbcType=VARCHAR}, #{secondaccount,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
+      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
+      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{payfeerule,jdbcType=VARCHAR}, 
+      #{iscreateschedule,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgPutoutConstraint">
+    update LOAN_ORG_PUTOUT_CONSTRAINT
+    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
+      QUERYPUTOUT = #{queryputout,jdbcType=VARCHAR},
+      CARDCHECK = #{cardcheck,jdbcType=VARCHAR},
+      SECONDACCOUNT = #{secondaccount,jdbcType=VARCHAR},
+      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
+      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
+      PAYFEERULE = #{payfeerule,jdbcType=VARCHAR},
+      ISCREATESCHEDULE = #{iscreateschedule,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select SERIALNO, RELATIVESERIALNO, QUERYPUTOUT, CARDCHECK, SECONDACCOUNT, INPUTDATE, 
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, PAYFEERULE, ISCREATESCHEDULE
+    from LOAN_ORG_PUTOUT_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select SERIALNO, RELATIVESERIALNO, QUERYPUTOUT, CARDCHECK, SECONDACCOUNT, INPUTDATE, 
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, PAYFEERULE, ISCREATESCHEDULE
+    from LOAN_ORG_PUTOUT_CONSTRAINT
+  </select>
+</mapper>

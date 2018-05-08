@@ -1,32 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.wu.fund.dao.FundunitBasicinfomationMapper">
-
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundunitBasicinfomationEntity">
-    <id column="SERIALNO" jdbcType="VARCHAR" property="serialno" />
-    <result column="FUNDUNITNAME" jdbcType="VARCHAR" property="fundunitname" />
-    <result column="FUNDUNITSTATUS" jdbcType="VARCHAR" property="fundunitstatus" />
-    <result column="INPUTDATE" jdbcType="VARCHAR" property="inputdate" />
-    <result column="UPDATEUSERID" jdbcType="VARCHAR" property="updateuserid" />
-    <result column="UPDATEDATE" jdbcType="VARCHAR" property="updatedate" />
-    <result column="INPUTUSERID" jdbcType="VARCHAR" property="inputuserid" />
-    <result column="INPUTORGID" jdbcType="VARCHAR" property="inputorgid" />
-    <result column="UPDATEORGID" jdbcType="VARCHAR" property="updateorgid" />
-    <result column="FUNDUNITNO" jdbcType="VARCHAR" property="fundunitno" />
-    <result column="COMPANY" jdbcType="VARCHAR" property="company" />
-    <result column="WEIGHT" jdbcType="VARCHAR" property="weight" />
-    <result column="VALIDDATE" jdbcType="VARCHAR" property="validdate" />
-    <result column="INVALIDDATE" jdbcType="VARCHAR" property="invaliddate" />
-    <result column="QUOTAMODE" jdbcType="VARCHAR" property="quotamode" />
-    <result column="LENDERS" jdbcType="VARCHAR" property="lenders" />
-    <result column="TEMPSAVEFLAG" jdbcType="VARCHAR" property="tempsaveflag" />
-    <result column="CHANGEFLAG" jdbcType="VARCHAR" property="changeflag" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.FundunitBasicinfomationMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundunitBasicinfomation" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNAME" property="fundunitname" jdbcType="VARCHAR" />
+    <result column="FUNDUNITSTATUS" property="fundunitstatus" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
+    <result column="COMPANY" property="company" jdbcType="VARCHAR" />
+    <result column="WEIGHT" property="weight" jdbcType="VARCHAR" />
+    <result column="VALIDDATE" property="validdate" jdbcType="VARCHAR" />
+    <result column="INVALIDDATE" property="invaliddate" jdbcType="VARCHAR" />
+    <result column="QUOTAMODE" property="quotamode" jdbcType="VARCHAR" />
+    <result column="LENDERS" property="lenders" jdbcType="VARCHAR" />
+    <result column="TEMPSAVEFLAG" property="tempsaveflag" jdbcType="VARCHAR" />
+    <result column="CHANGEFLAG" property="changeflag" jdbcType="VARCHAR" />
   </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUNDUNIT_BASICINFOMATION
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.FundunitBasicinfomationEntity">
+  <insert id="insert" parameterType="com.wu.fund.entity.FundunitBasicinfomation" >
     insert into FUNDUNIT_BASICINFOMATION (SERIALNO, FUNDUNITNAME, FUNDUNITSTATUS, 
       INPUTDATE, UPDATEUSERID, UPDATEDATE, 
       INPUTUSERID, INPUTORGID, UPDATEORGID, 
@@ -42,14 +41,35 @@
       #{lenders,jdbcType=VARCHAR}, #{tempsaveflag,jdbcType=VARCHAR}, #{changeflag,jdbcType=VARCHAR}
       )
   </insert>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundunitBasicinfomation" >
+    update FUNDUNIT_BASICINFOMATION
+    set FUNDUNITNAME = #{fundunitname,jdbcType=VARCHAR},
+      FUNDUNITSTATUS = #{fundunitstatus,jdbcType=VARCHAR},
+      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
+      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
+      FUNDUNITNO = #{fundunitno,jdbcType=VARCHAR},
+      COMPANY = #{company,jdbcType=VARCHAR},
+      WEIGHT = #{weight,jdbcType=VARCHAR},
+      VALIDDATE = #{validdate,jdbcType=VARCHAR},
+      INVALIDDATE = #{invaliddate,jdbcType=VARCHAR},
+      QUOTAMODE = #{quotamode,jdbcType=VARCHAR},
+      LENDERS = #{lenders,jdbcType=VARCHAR},
+      TEMPSAVEFLAG = #{tempsaveflag,jdbcType=VARCHAR},
+      CHANGEFLAG = #{changeflag,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, FUNDUNITNAME, FUNDUNITSTATUS, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
     INPUTUSERID, INPUTORGID, UPDATEORGID, FUNDUNITNO, COMPANY, WEIGHT, VALIDDATE, INVALIDDATE, 
     QUOTAMODE, LENDERS, TEMPSAVEFLAG, CHANGEFLAG
     from FUNDUNIT_BASICINFOMATION
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+  <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, FUNDUNITNAME, FUNDUNITSTATUS, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
     INPUTUSERID, INPUTORGID, UPDATEORGID, FUNDUNITNO, COMPANY, WEIGHT, VALIDDATE, INVALIDDATE, 
     QUOTAMODE, LENDERS, TEMPSAVEFLAG, CHANGEFLAG

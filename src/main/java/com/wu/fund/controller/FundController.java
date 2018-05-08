@@ -16,10 +16,10 @@ import java.util.List;
 @RestController
 public class FundController {
 
-    @Autowired
-    FundunitBasicinfomationMapper fundunitBasicinfomationMapper;
-    @GetMapping("test")
-    private List<FundunitBasicinfomationEntity> test(){
-      return   fundunitBasicinfomationMapper.selectAll();
-    }
+//    @Autowired
+//    FundunitBasicinfomationMapper fundunitBasicinfomationMapper;
+//    @GetMapping("test")
+//    private List<FundunitBasicinfomationEntity> test(){
+//      return   fundunitBasicinfomationMapper.selectAll();
+//    }
 }

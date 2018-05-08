@@ -6,6 +6,8 @@
     <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
         <!-- 生成的Java文件的编码 -->
         <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- generate entity时，生成serialVersionUID -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
         <!--<plugin type="tk.mybatis.mappingg.generator.MapperPlugin">-->
             <!--<property name="mappers" value="tk.mybatis.mappingg.common.Mapper"/>-->
             <!--&lt;!&ndash; caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true &ndash;&gt;-->
@@ -52,7 +54,7 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
         </table>
-        <table tableName="FUND_UNIT_CONTRIBUTION_ORG"  enableUpdateByPrimaryKey="false">
+        <table tableName="ASSET_ALLOCATION_LIST"  enableUpdateByPrimaryKey="true">
             <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
             <!--<ignoreColumn column="id"></ignoreColumn>-->
             <!--<ignoreColumn column="created_at"></ignoreColumn>-->

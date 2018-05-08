@@ -3,11 +3,6 @@ package com.wu.fund.dao;
 import com.wu.fund.entity.AssetAllocationListEntity;
 import java.util.List;
 
-/**
- * @Author: wangying
- * @Description:资产配置清单
- * @Date: Created in 17:29 2018/5/8
- */
 public interface AssetAllocationListMapper {
     /**
      *
@@ -32,4 +27,10 @@ public interface AssetAllocationListMapper {
      * @mbggenerated 2018-05-08
      */
     List<AssetAllocationListEntity> selectAll();
+
+    /**
+     *
+     * @mbggenerated 2018-05-08
+     */
+    int updateByPrimaryKey(AssetAllocationListEntity record);
 }

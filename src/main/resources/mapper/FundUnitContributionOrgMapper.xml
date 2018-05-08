@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundUnitContributionOrgMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitContributionOrgEntity" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitContributionOrg" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
     <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
@@ -23,7 +23,7 @@
     delete from FUND_UNIT_CONTRIBUTION_ORG
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.FundUnitContributionOrgEntity" >
+  <insert id="insert" parameterType="com.wu.fund.entity.FundUnitContributionOrg" >
     insert into FUND_UNIT_CONTRIBUTION_ORG (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
       INPUTORGID, UPDATEORGID, ORGTYPE, 
@@ -37,6 +37,25 @@
       #{incomedistributionmode,jdbcType=VARCHAR}, #{incomeratio,jdbcType=VARCHAR}, #{capitalcost,jdbcType=VARCHAR}, 
       #{marginlevel,jdbcType=VARCHAR})
   </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundUnitContributionOrg" >
+    update FUND_UNIT_CONTRIBUTION_ORG
+    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
+      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
+      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
+      ORGTYPE = #{orgtype,jdbcType=VARCHAR},
+      ORGNAME = #{orgname,jdbcType=VARCHAR},
+      ORGCODE = #{orgcode,jdbcType=VARCHAR},
+      CONTRIBUTIONPROPORTION = #{contributionproportion,jdbcType=VARCHAR},
+      INCOMEDISTRIBUTIONMODE = #{incomedistributionmode,jdbcType=VARCHAR},
+      INCOMERATIO = #{incomeratio,jdbcType=VARCHAR},
+      CAPITALCOST = #{capitalcost,jdbcType=VARCHAR},
+      MARGINLEVEL = #{marginlevel,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
     INPUTORGID, UPDATEORGID, ORGTYPE, ORGNAME, ORGCODE, CONTRIBUTIONPROPORTION, INCOMEDISTRIBUTIONMODE, 

@@ -3,12 +3,6 @@ package com.wu.fund.dao;
 import com.wu.fund.entity.FundOrgLogZxEntity;
 import java.util.List;
 
-
-/**
- * @Author: wangying
- * @Description:资金平台-人行征信查询结果
- * @Date: Created in 17:29 2018/5/8
- */
 public interface FundOrgLogZxMapper {
     /**
      *
@@ -33,4 +27,10 @@ public interface FundOrgLogZxMapper {
      * @mbggenerated 2018-05-08
      */
     List<FundOrgLogZxEntity> selectAll();
+
+    /**
+     *
+     * @mbggenerated 2018-05-08
+     */
+    int updateByPrimaryKey(FundOrgLogZxEntity record);
 }

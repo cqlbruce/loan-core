@@ -3,11 +3,6 @@ package com.wu.fund.dao;
 import com.wu.fund.entity.LoanOrgBankChargeEntity;
 import java.util.List;
 
-/**
- * @Author: wangying
- * @Description:人行收费标准记录
- * @Date: Created in 17:29 2018/5/8
- */
 public interface LoanOrgBankChargeMapper {
     /**
      *
@@ -32,4 +27,10 @@ public interface LoanOrgBankChargeMapper {
      * @mbggenerated 2018-05-08
      */
     List<LoanOrgBankChargeEntity> selectAll();
+
+    /**
+     *
+     * @mbggenerated 2018-05-08
+     */
+    int updateByPrimaryKey(LoanOrgBankChargeEntity record);
 }

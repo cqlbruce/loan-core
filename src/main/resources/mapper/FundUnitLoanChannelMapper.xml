@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.FundUnitLoanChannelMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitLoanChannel" >
+    <result column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+    <result column="CHANNELTYPE" property="channeltype" jdbcType="VARCHAR" />
+    <result column="CHANNELCODE" property="channelcode" jdbcType="VARCHAR" />
+    <result column="CHANNELNAME" property="channelname" jdbcType="VARCHAR" />
+    <result column="CHANNELRATETYPE" property="channelratetype" jdbcType="VARCHAR" />
+    <result column="CHANNELRATE" property="channelrate" jdbcType="VARCHAR" />
+  </resultMap>
+  <insert id="insert" parameterType="com.wu.fund.entity.FundUnitLoanChannel" >
+    insert into FUND_UNIT_LOAN_CHANNEL (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
+      UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
+      INPUTORGID, UPDATEORGID, CHANNELTYPE, 
+      CHANNELCODE, CHANNELNAME, CHANNELRATETYPE, 
+      CHANNELRATE)
+    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
+      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
+      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{channeltype,jdbcType=VARCHAR}, 
+      #{channelcode,jdbcType=VARCHAR}, #{channelname,jdbcType=VARCHAR}, #{channelratetype,jdbcType=VARCHAR}, 
+      #{channelrate,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
+    INPUTORGID, UPDATEORGID, CHANNELTYPE, CHANNELCODE, CHANNELNAME, CHANNELRATETYPE, 
+    CHANNELRATE
+    from FUND_UNIT_LOAN_CHANNEL
+  </select>
+</mapper>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.LoanOrgBankConstraintMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgBankConstraintEntity" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgBankConstraint" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
     <result column="BANKDATATYPE" property="bankdatatype" jdbcType="VARCHAR" />
@@ -28,7 +28,7 @@
     delete from LOAN_ORG_BANK_CONSTRAINT
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgBankConstraintEntity" >
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgBankConstraint" >
     insert into LOAN_ORG_BANK_CONSTRAINT (SERIALNO, RELATIVESERIALNO, BANKDATATYPE, 
       PRIORITY, WEIGHT, CONTROLTYPE, 
       MONTHLIMIT, PUTOUTMULTIPLE, CHARGETYPE, 
@@ -46,6 +46,30 @@
       #{relativetype,jdbcType=VARCHAR}, #{remainmonthlimit,jdbcType=VARCHAR}, #{remaindaylimit,jdbcType=VARCHAR}
       )
   </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgBankConstraint" >
+    update LOAN_ORG_BANK_CONSTRAINT
+    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
+      BANKDATATYPE = #{bankdatatype,jdbcType=VARCHAR},
+      PRIORITY = #{priority,jdbcType=VARCHAR},
+      WEIGHT = #{weight,jdbcType=VARCHAR},
+      CONTROLTYPE = #{controltype,jdbcType=VARCHAR},
+      MONTHLIMIT = #{monthlimit,jdbcType=VARCHAR},
+      PUTOUTMULTIPLE = #{putoutmultiple,jdbcType=VARCHAR},
+      CHARGETYPE = #{chargetype,jdbcType=VARCHAR},
+      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
+      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
+      DAYLIMIT = #{daylimit,jdbcType=VARCHAR},
+      REPORTTERM = #{reportterm,jdbcType=VARCHAR},
+      TEMPSAVEFLAG = #{tempsaveflag,jdbcType=VARCHAR},
+      RELATIVETYPE = #{relativetype,jdbcType=VARCHAR},
+      REMAINMONTHLIMIT = #{remainmonthlimit,jdbcType=VARCHAR},
+      REMAINDAYLIMIT = #{remaindaylimit,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, BANKDATATYPE, PRIORITY, WEIGHT, CONTROLTYPE, MONTHLIMIT, 
     PUTOUTMULTIPLE, CHARGETYPE, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, 

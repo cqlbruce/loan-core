@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.LoanOrgBankConstraintMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgBankConstraintEntity" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
+    <result column="BANKDATATYPE" property="bankdatatype" jdbcType="VARCHAR" />
+    <result column="PRIORITY" property="priority" jdbcType="VARCHAR" />
+    <result column="WEIGHT" property="weight" jdbcType="VARCHAR" />
+    <result column="CONTROLTYPE" property="controltype" jdbcType="VARCHAR" />
+    <result column="MONTHLIMIT" property="monthlimit" jdbcType="VARCHAR" />
+    <result column="PUTOUTMULTIPLE" property="putoutmultiple" jdbcType="VARCHAR" />
+    <result column="CHARGETYPE" property="chargetype" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+    <result column="DAYLIMIT" property="daylimit" jdbcType="VARCHAR" />
+    <result column="REPORTTERM" property="reportterm" jdbcType="VARCHAR" />
+    <result column="TEMPSAVEFLAG" property="tempsaveflag" jdbcType="VARCHAR" />
+    <result column="RELATIVETYPE" property="relativetype" jdbcType="VARCHAR" />
+    <result column="REMAINMONTHLIMIT" property="remainmonthlimit" jdbcType="VARCHAR" />
+    <result column="REMAINDAYLIMIT" property="remaindaylimit" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from LOAN_ORG_BANK_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgBankConstraintEntity" >
+    insert into LOAN_ORG_BANK_CONSTRAINT (SERIALNO, RELATIVESERIALNO, BANKDATATYPE, 
+      PRIORITY, WEIGHT, CONTROLTYPE, 
+      MONTHLIMIT, PUTOUTMULTIPLE, CHARGETYPE, 
+      INPUTDATE, UPDATEUSERID, UPDATEDATE, 
+      INPUTUSERID, INPUTORGID, UPDATEORGID, 
+      DAYLIMIT, REPORTTERM, TEMPSAVEFLAG, 
+      RELATIVETYPE, REMAINMONTHLIMIT, REMAINDAYLIMIT
+      )
+    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{bankdatatype,jdbcType=VARCHAR}, 
+      #{priority,jdbcType=VARCHAR}, #{weight,jdbcType=VARCHAR}, #{controltype,jdbcType=VARCHAR}, 
+      #{monthlimit,jdbcType=VARCHAR}, #{putoutmultiple,jdbcType=VARCHAR}, #{chargetype,jdbcType=VARCHAR}, 
+      #{inputdate,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, 
+      #{inputuserid,jdbcType=VARCHAR}, #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, 
+      #{daylimit,jdbcType=VARCHAR}, #{reportterm,jdbcType=VARCHAR}, #{tempsaveflag,jdbcType=VARCHAR}, 
+      #{relativetype,jdbcType=VARCHAR}, #{remainmonthlimit,jdbcType=VARCHAR}, #{remaindaylimit,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select SERIALNO, RELATIVESERIALNO, BANKDATATYPE, PRIORITY, WEIGHT, CONTROLTYPE, MONTHLIMIT, 
+    PUTOUTMULTIPLE, CHARGETYPE, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, 
+    UPDATEORGID, DAYLIMIT, REPORTTERM, TEMPSAVEFLAG, RELATIVETYPE, REMAINMONTHLIMIT, 
+    REMAINDAYLIMIT
+    from LOAN_ORG_BANK_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, RELATIVESERIALNO, BANKDATATYPE, PRIORITY, WEIGHT, CONTROLTYPE, MONTHLIMIT, 
+    PUTOUTMULTIPLE, CHARGETYPE, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, 
+    UPDATEORGID, DAYLIMIT, REPORTTERM, TEMPSAVEFLAG, RELATIVETYPE, REMAINMONTHLIMIT, 
+    REMAINDAYLIMIT
+    from LOAN_ORG_BANK_CONSTRAINT
+  </select>
+</mapper>

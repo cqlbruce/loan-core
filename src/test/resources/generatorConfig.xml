@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="Mysql" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!--<plugin type="tk.mybatis.mappingg.generator.MapperPlugin">-->
+            <!--<property name="mappers" value="tk.mybatis.mappingg.common.Mapper"/>-->
+            <!--&lt;!&ndash; caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true &ndash;&gt;-->
+            <!--&lt;!&ndash;<property name="caseSensitive" value="true"/>&ndash;&gt;-->
+        <!--</plugin>-->
+
+        <commentGenerator type="com.wu.fund.MyCommentGenerator">
+
+        </commentGenerator>
+
+
+
+        <!-- 生成数据库字段注释及自定义注释 【扩展插件】 -->
+        <!--<commentGenerator type="com.wu.mall.core.config.RemarksCommentGenerator">-->
+          <!---->
+            <!--<property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>-->
+          <!---->
+            <!--<property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>-->
+        <!--</commentGenerator>-->
+
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@192.168.34.185:1521:jrkj"
+                        userId="credit_test"
+                        password="credit_testpass">
+
+        </jdbcConnection>
+        <javaModelGenerator targetPackage="com.wu.fund.entity" targetProject="E:\work\fs-core\src\main\java\">
+            <property name="enableSubPackages" value="true"></property>
+            <!--<property name="rootClass" value="com.msxf.eyas.posloan.db.model.BasePo"></property>-->
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="mapper" targetProject="E:\work\fs-core\src\main\resources">
+            <property name="enableSubPackages" value="true"></property>
+        </sqlMapGenerator>
+        <javaClientGenerator targetPackage="com.wu.fund.dao" targetProject="E:\work\fs-core\src\main\java\" type="XMLMAPPER">
+            <property name="enableSubPackages" value="true"></property>
+        </javaClientGenerator>
+        <!-- sql占位符，表示所有的表  单独填写表名生成单表，填写%生成所有-->
+        <!--不生成帮助类（Exmaples） -->
+        <!-- enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
+            enableSelectByExample="false" selectByExampleQueryId="false" -->
+        <!--已生成的表 <table schema="demo" tableName="USER" domainObjectName="User"></table> -->
+        <table schema="" tableName="ABS_DEAL" domainObjectName="AbsDeal"
+               enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+        <table tableName="FUNDUNIT_BASICINFOMATION"  enableUpdateByPrimaryKey="false">
+            <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
+            <!--<ignoreColumn column="id"></ignoreColumn>-->
+            <!--<ignoreColumn column="created_at"></ignoreColumn>-->
+            <!--<ignoreColumn column="created_by"></ignoreColumn>-->
+            <!--<ignoreColumn column="deleted"></ignoreColumn>-->
+            <!--<ignoreColumn column="updated_at"></ignoreColumn>-->
+            <!--<ignoreColumn column="updated_by"></ignoreColumn>-->
+            <!--<ignoreColumn column="version"></ignoreColumn>-->
+        </table>
+    </context>
+</generatorConfiguration>

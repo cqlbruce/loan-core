@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.AssetAllocationListMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.AssetAllocationListEntity" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
+    <result column="PRODUCTCODE" property="productcode" jdbcType="VARCHAR" />
+    <result column="PRODUCTDIMENSION" property="productdimension" jdbcType="VARCHAR" />
+    <result column="PROPORTION" property="proportion" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+    <result column="ASSETTYPE" property="assettype" jdbcType="VARCHAR" />
+    <result column="EDUCATION" property="education" jdbcType="VARCHAR" />
+    <result column="MINACCOUNT" property="minaccount" jdbcType="VARCHAR" />
+    <result column="MAXACCOUNT" property="maxaccount" jdbcType="VARCHAR" />
+    <result column="LOANTERMUNIT" property="loantermunit" jdbcType="VARCHAR" />
+    <result column="LOANTERM" property="loanterm" jdbcType="VARCHAR" />
+    <result column="REPAYMENTTYPE" property="repaymenttype" jdbcType="VARCHAR" />
+    <result column="APPLYORGID" property="applyorgid" jdbcType="VARCHAR" />
+    <result column="CUSENTERPRISE" property="cusenterprise" jdbcType="VARCHAR" />
+    <result column="WORKCITY" property="workcity" jdbcType="VARCHAR" />
+    <result column="HOUSECITY" property="housecity" jdbcType="VARCHAR" />
+    <result column="CUSCLASSIFY" property="cusclassify" jdbcType="VARCHAR" />
+    <result column="RISKGRADE" property="riskgrade" jdbcType="VARCHAR" />
+    <result column="CUSENTERPRISETYPE" property="cusenterprisetype" jdbcType="VARCHAR" />
+    <result column="WORKCITYTYPE" property="workcitytype" jdbcType="VARCHAR" />
+    <result column="HOUSECITYTYPE" property="housecitytype" jdbcType="VARCHAR" />
+    <result column="WORKPROVINCE" property="workprovince" jdbcType="VARCHAR" />
+    <result column="HOUSEPROVINCE" property="houseprovince" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from ASSET_ALLOCATION_LIST
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.AssetAllocationListEntity" >
+    insert into ASSET_ALLOCATION_LIST (SERIALNO, RELATIVESERIALNO, PRODUCTCODE, 
+      PRODUCTDIMENSION, PROPORTION, INPUTDATE, 
+      UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
+      INPUTORGID, UPDATEORGID, ASSETTYPE, 
+      EDUCATION, MINACCOUNT, MAXACCOUNT, 
+      LOANTERMUNIT, LOANTERM, REPAYMENTTYPE, 
+      APPLYORGID, CUSENTERPRISE, WORKCITY, 
+      HOUSECITY, CUSCLASSIFY, RISKGRADE, 
+      CUSENTERPRISETYPE, WORKCITYTYPE, HOUSECITYTYPE, 
+      WORKPROVINCE, HOUSEPROVINCE)
+    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{productcode,jdbcType=VARCHAR}, 
+      #{productdimension,jdbcType=VARCHAR}, #{proportion,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
+      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
+      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{assettype,jdbcType=VARCHAR}, 
+      #{education,jdbcType=VARCHAR}, #{minaccount,jdbcType=VARCHAR}, #{maxaccount,jdbcType=VARCHAR}, 
+      #{loantermunit,jdbcType=VARCHAR}, #{loanterm,jdbcType=VARCHAR}, #{repaymenttype,jdbcType=VARCHAR}, 
+      #{applyorgid,jdbcType=VARCHAR}, #{cusenterprise,jdbcType=VARCHAR}, #{workcity,jdbcType=VARCHAR}, 
+      #{housecity,jdbcType=VARCHAR}, #{cusclassify,jdbcType=VARCHAR}, #{riskgrade,jdbcType=VARCHAR}, 
+      #{cusenterprisetype,jdbcType=VARCHAR}, #{workcitytype,jdbcType=VARCHAR}, #{housecitytype,jdbcType=VARCHAR}, 
+      #{workprovince,jdbcType=VARCHAR}, #{houseprovince,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select SERIALNO, RELATIVESERIALNO, PRODUCTCODE, PRODUCTDIMENSION, PROPORTION, INPUTDATE, 
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, ASSETTYPE, EDUCATION, 
+    MINACCOUNT, MAXACCOUNT, LOANTERMUNIT, LOANTERM, REPAYMENTTYPE, APPLYORGID, CUSENTERPRISE, 
+    WORKCITY, HOUSECITY, CUSCLASSIFY, RISKGRADE, CUSENTERPRISETYPE, WORKCITYTYPE, HOUSECITYTYPE, 
+    WORKPROVINCE, HOUSEPROVINCE
+    from ASSET_ALLOCATION_LIST
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, RELATIVESERIALNO, PRODUCTCODE, PRODUCTDIMENSION, PROPORTION, INPUTDATE, 
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, ASSETTYPE, EDUCATION, 
+    MINACCOUNT, MAXACCOUNT, LOANTERMUNIT, LOANTERM, REPAYMENTTYPE, APPLYORGID, CUSENTERPRISE, 
+    WORKCITY, HOUSECITY, CUSCLASSIFY, RISKGRADE, CUSENTERPRISETYPE, WORKCITYTYPE, HOUSECITYTYPE, 
+    WORKPROVINCE, HOUSEPROVINCE
+    from ASSET_ALLOCATION_LIST
+  </select>
+</mapper>

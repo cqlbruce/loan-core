@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.FundUnitCustomerConstraintMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitCustomerConstraintEntity" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="CUSTOMERID" property="customerid" jdbcType="VARCHAR" />
+    <result column="REMAINSUM" property="remainsum" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from FUND_UNIT_CUSTOMER_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.FundUnitCustomerConstraintEntity" >
+    insert into FUND_UNIT_CUSTOMER_CONSTRAINT (SERIALNO, CUSTOMERID, REMAINSUM, 
+      FUNDUNITNO, INPUTDATE, UPDATEUSERID, 
+      UPDATEDATE, INPUTUSERID, INPUTORGID, 
+      UPDATEORGID)
+    values (#{serialno,jdbcType=VARCHAR}, #{customerid,jdbcType=VARCHAR}, #{remainsum,jdbcType=VARCHAR}, 
+      #{fundunitno,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, 
+      #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, #{inputorgid,jdbcType=VARCHAR}, 
+      #{updateorgid,jdbcType=VARCHAR})
+  </insert>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select SERIALNO, CUSTOMERID, REMAINSUM, FUNDUNITNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
+    INPUTUSERID, INPUTORGID, UPDATEORGID
+    from FUND_UNIT_CUSTOMER_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, CUSTOMERID, REMAINSUM, FUNDUNITNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
+    INPUTUSERID, INPUTORGID, UPDATEORGID
+    from FUND_UNIT_CUSTOMER_CONSTRAINT
+  </select>
+</mapper>

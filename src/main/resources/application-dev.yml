@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@192.168.34.185:1521:jrkj
+    username: credit_test
+    password: credit_testpass
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    initialSize: 5
+    minIdle: 5
+    maxActive: 20
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM dual
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat,wall,log4j
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+druid:
+  stat:
+   slowSqlMillis: 20
+

@@ -12,7 +12,11 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 
-
+/**
+ * @Author: wangying
+ * @Description:
+ * @Date: Created in 17:29 2018/5/8
+ */
 @Configuration
 public class DruidDBConfig {
     private Logger logger = LoggerFactory.getLogger(DruidDBConfig.class);

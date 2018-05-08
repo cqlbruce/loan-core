@@ -1,93 +1,99 @@
 package com.wu.fund.entity;
 
-public class FundunitBasicinfomation {
+
+/**
+ * @Author: wangying
+ * @Description:
+ * @Date: Created in 17:29 2018/5/8
+ */
+public class FundunitBasicinfomationEntity {
     /**
-     * null
+     * 流水号
      */
     private String serialno;
 
     /**
-     * null
+     * 资金单元名称
      */
     private String fundunitname;
 
     /**
-     * null
+     * 资金单元状态
      */
     private String fundunitstatus;
 
     /**
-     * null
+     * 录入时间
      */
     private String inputdate;
 
     /**
-     * null
+     * 更新人
      */
     private String updateuserid;
 
     /**
-     * null
+     * 更新时间
      */
     private String updatedate;
 
     /**
-     * null
+     * 录入人
      */
     private String inputuserid;
 
     /**
-     * null
+     * 录入机构
      */
     private String inputorgid;
 
     /**
-     * null
+     * 更新机构
      */
     private String updateorgid;
 
     /**
-     * null
+     * 资金单元编码
      */
     private String fundunitno;
 
     /**
-     * null
+     * 资金引入地区公司
      */
     private String company;
 
     /**
-     * null
+     * 资金引入地区权重
      */
     private String weight;
 
     /**
-     * null
+     * 生效日期
      */
     private String validdate;
 
     /**
-     * null
+     * 失效日期
      */
     private String invaliddate;
 
     /**
-     * null
+     * 额度模式
      */
     private String quotamode;
 
     /**
-     * null
+     * 放款方式
      */
     private String lenders;
 
     /**
-     * null
+     * 暂存标识
      */
     private String tempsaveflag;
 
     /**
-     * null
+     * 调整标识
      */
     private String changeflag;
 

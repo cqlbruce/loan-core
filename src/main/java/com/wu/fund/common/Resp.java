@@ -6,6 +6,7 @@ package com.wu.fund.common;
 import com.wu.fund.util.DateUtil;
 
 import java.io.Serializable;
+import java.util.Map;
 
 /**
  * @Author: wangying
@@ -15,7 +16,8 @@ import java.io.Serializable;
 public class Resp<T> implements Serializable {
     private static final long serialVersionUID = 1L;
 
-
+    public final static String SUCCESS_CODE = "0000";
+    public final static String FAIL_CODE = "0000";
     /**
      * 返回状态码
      */
@@ -52,5 +54,15 @@ public class Resp<T> implements Serializable {
 
     public void setResponseBody(T responseBody) {
         this.responseBody = responseBody;
+    }
+
+    public static <T>Resp success(String msg, T responseBody){
+
+        return new Resp<T>(SUCCESS_CODE,msg,responseBody);
+    }
+
+    //快速返回失败状态
+    public static <T>Resp fail(String msg){
+        return new Resp<T>(FAIL_CODE,msg,null);
     }
 }

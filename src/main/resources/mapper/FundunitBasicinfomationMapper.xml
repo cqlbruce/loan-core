@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundunitBasicinfomationMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundunitBasicinfomation" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundunitBasicinfomationEntity" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="FUNDUNITNAME" property="fundunitname" jdbcType="VARCHAR" />
     <result column="FUNDUNITSTATUS" property="fundunitstatus" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
     delete from FUNDUNIT_BASICINFOMATION
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.FundunitBasicinfomation" >
+  <insert id="insert" parameterType="com.wu.fund.entity.FundunitBasicinfomationEntity" >
     insert into FUNDUNIT_BASICINFOMATION (SERIALNO, FUNDUNITNAME, FUNDUNITSTATUS, 
       INPUTDATE, UPDATEUSERID, UPDATEDATE, 
       INPUTUSERID, INPUTORGID, UPDATEORGID, 
@@ -41,7 +41,7 @@
       #{lenders,jdbcType=VARCHAR}, #{tempsaveflag,jdbcType=VARCHAR}, #{changeflag,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundunitBasicinfomation" >
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundunitBasicinfomationEntity" >
     update FUNDUNIT_BASICINFOMATION
     set FUNDUNITNAME = #{fundunitname,jdbcType=VARCHAR},
       FUNDUNITSTATUS = #{fundunitstatus,jdbcType=VARCHAR},

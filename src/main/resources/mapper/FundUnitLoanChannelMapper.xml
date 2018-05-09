@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundUnitLoanChannelMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitLoanChannel" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitLoanChannelEntity" >
     <result column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
     <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
@@ -16,7 +16,7 @@
     <result column="CHANNELRATETYPE" property="channelratetype" jdbcType="VARCHAR" />
     <result column="CHANNELRATE" property="channelrate" jdbcType="VARCHAR" />
   </resultMap>
-  <insert id="insert" parameterType="com.wu.fund.entity.FundUnitLoanChannel" >
+  <insert id="insert" parameterType="com.wu.fund.entity.FundUnitLoanChannelEntity" >
     insert into FUND_UNIT_LOAN_CHANNEL (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
       INPUTORGID, UPDATEORGID, CHANNELTYPE, 

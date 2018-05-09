@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundOrgLogZxMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundOrgLogZx" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundOrgLogZxEntity" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="CAPPLYNO" property="capplyno" jdbcType="VARCHAR" />
     <result column="CSLBUSINESSNO" property="cslbusinessno" jdbcType="VARCHAR" />
@@ -31,7 +31,7 @@
     delete from FUND_ORG_LOG_ZX
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.FundOrgLogZx" >
+  <insert id="insert" parameterType="com.wu.fund.entity.FundOrgLogZxEntity" >
     insert into FUND_ORG_LOG_ZX (SERIALNO, CAPPLYNO, CSLBUSINESSNO, 
       CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, 
       FUNDSUBFLOWNAME, FUNDSUBFLOWSTATUS, FUNDSERVICERETURNCODE, 
@@ -51,7 +51,7 @@
       #{dealDesc,jdbcType=VARCHAR}, #{certtype,jdbcType=VARCHAR}, #{customername,jdbcType=VARCHAR}, 
       #{responsemessage,jdbcType=CLOB})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundOrgLogZx" >
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundOrgLogZxEntity" >
     update FUND_ORG_LOG_ZX
     set CAPPLYNO = #{capplyno,jdbcType=VARCHAR},
       CSLBUSINESSNO = #{cslbusinessno,jdbcType=VARCHAR},

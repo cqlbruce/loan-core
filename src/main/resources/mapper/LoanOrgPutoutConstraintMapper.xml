@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wu.fund.dao.LoanOrgPutoutConstraintMapper">
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgPutoutConstraint">
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgPutoutConstraintEntity">
     <id column="SERIALNO" jdbcType="VARCHAR" property="serialno" />
     <result column="RELATIVESERIALNO" jdbcType="VARCHAR" property="relativeserialno" />
     <result column="QUERYPUTOUT" jdbcType="VARCHAR" property="queryputout" />
@@ -20,7 +20,7 @@
     delete from LOAN_ORG_PUTOUT_CONSTRAINT
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgPutoutConstraint">
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgPutoutConstraintEntity">
     insert into LOAN_ORG_PUTOUT_CONSTRAINT (SERIALNO, RELATIVESERIALNO, QUERYPUTOUT, 
       CARDCHECK, SECONDACCOUNT, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
@@ -32,7 +32,7 @@
       #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{payfeerule,jdbcType=VARCHAR}, 
       #{iscreateschedule,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgPutoutConstraint">
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgPutoutConstraintEntity">
     update LOAN_ORG_PUTOUT_CONSTRAINT
     set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
       QUERYPUTOUT = #{queryputout,jdbcType=VARCHAR},

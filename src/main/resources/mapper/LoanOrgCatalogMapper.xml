@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.LoanOrgCatalogMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgCatalog" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgCatalogEntity" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="ORGTYPE" property="orgtype" jdbcType="VARCHAR" />
     <result column="ORGNAME" property="orgname" jdbcType="VARCHAR" />
@@ -30,7 +30,7 @@
     delete from LOAN_ORG_CATALOG
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgCatalog" >
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgCatalogEntity" >
     insert into LOAN_ORG_CATALOG (SERIALNO, ORGTYPE, ORGNAME, 
       ORGCODE, STATUS, PEOPLEBANKONOFF, 
       CREDITONOFF, PUTOUTONOFF, REPAYMENTONOFF, 
@@ -48,7 +48,7 @@
       #{fundcheckdatatype,jdbcType=VARCHAR}, #{billingcycle,jdbcType=VARCHAR}, #{billingdate,jdbcType=VARCHAR}, 
       #{tempsaveflag,jdbcType=VARCHAR}, #{changeflag,jdbcType=VARCHAR})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgCatalog" >
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgCatalogEntity" >
     update LOAN_ORG_CATALOG
     set ORGTYPE = #{orgtype,jdbcType=VARCHAR},
       ORGNAME = #{orgname,jdbcType=VARCHAR},

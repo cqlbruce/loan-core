@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.LoanOrgApplyConstraintMapper" >
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgApplyConstraint" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
     <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
     <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
     <result column="CONTROLTYPE" property="controltype" jdbcType="VARCHAR" />
@@ -25,7 +25,7 @@
     delete from LOAN_ORG_APPLY_CONSTRAINT
     where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgApplyConstraint" >
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
     insert into LOAN_ORG_APPLY_CONSTRAINT (SERIALNO, RELATIVESERIALNO, CONTROLTYPE, 
       MONTHLIMIT, PUTOUTMULTIPLE, DAYLIMIT, 
       APPROVETERM, REFUSETERM, QUERYCREDIT, 
@@ -41,7 +41,7 @@
       #{updateorgid,jdbcType=VARCHAR}, #{chargetype,jdbcType=VARCHAR}, #{relativetype,jdbcType=VARCHAR}
       )
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgApplyConstraint" >
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
     update LOAN_ORG_APPLY_CONSTRAINT
     set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
       CONTROLTYPE = #{controltype,jdbcType=VARCHAR},

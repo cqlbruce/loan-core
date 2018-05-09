@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.FunCrePreapprovalContactMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FunCrePreapprovalContactEntity" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="A_APPLY_NO" property="aApplyNo" jdbcType="VARCHAR" />
+    <result column="CONTACTS_RELATION" property="contactsRelation" jdbcType="VARCHAR" />
+    <result column="CONTACTS_NAME" property="contactsName" jdbcType="VARCHAR" />
+    <result column="CONTACTS_MOBILE" property="contactsMobile" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
+    <result column="LOANORGCODE" property="loanorgcode" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="VARCHAR" />
+    <result column="ENDTIME" property="endtime" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from FUN_CRE_PREAPPROVAL_CONTACT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.FunCrePreapprovalContactEntity" >
+    insert into FUN_CRE_PREAPPROVAL_CONTACT (SERIALNO, A_APPLY_NO, CONTACTS_RELATION, 
+      CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO, 
+      LOANORGCODE, STATUS, BEGINTIME, 
+      ENDTIME)
+    values (#{serialno,jdbcType=VARCHAR}, #{aApplyNo,jdbcType=VARCHAR}, #{contactsRelation,jdbcType=VARCHAR}, 
+      #{contactsName,jdbcType=VARCHAR}, #{contactsMobile,jdbcType=VARCHAR}, #{fundunitno,jdbcType=VARCHAR}, 
+      #{loanorgcode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{begintime,jdbcType=VARCHAR}, 
+      #{endtime,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FunCrePreapprovalContactEntity" >
+    update FUN_CRE_PREAPPROVAL_CONTACT
+    set A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR},
+      CONTACTS_RELATION = #{contactsRelation,jdbcType=VARCHAR},
+      CONTACTS_NAME = #{contactsName,jdbcType=VARCHAR},
+      CONTACTS_MOBILE = #{contactsMobile,jdbcType=VARCHAR},
+      FUNDUNITNO = #{fundunitno,jdbcType=VARCHAR},
+      LOANORGCODE = #{loanorgcode,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      BEGINTIME = #{begintime,jdbcType=VARCHAR},
+      ENDTIME = #{endtime,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select SERIALNO, A_APPLY_NO, CONTACTS_RELATION, CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO, 
+    LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from FUN_CRE_PREAPPROVAL_CONTACT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, A_APPLY_NO, CONTACTS_RELATION, CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO, 
+    LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from FUN_CRE_PREAPPROVAL_CONTACT
+  </select>
+</mapper>

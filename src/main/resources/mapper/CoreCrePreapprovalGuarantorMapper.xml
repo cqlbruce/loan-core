@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.CoreCrePreapprovalGuarantorMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="A_APPLY_NO" property="aApplyNo" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_RELATION" property="stakeholderRelation" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_TYPE" property="stakeholderType" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_NAME" property="stakeholderName" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_MOBILE" property="stakeholderMobile" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_CERT_TYPE" property="stakeholderCertType" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_CERT_NO" property="stakeholderCertNo" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_SEX" property="stakeholderSex" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_BIRTHDAY" property="stakeholderBirthday" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_MARITAL_STATUS" property="stakeholderMaritalStatus" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_HOME_ADDRESS" property="stakeholderHomeAddress" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_WORK_TYPE" property="stakeholderWorkType" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_WORK_PROPERTY" property="stakeholderWorkProperty" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_WORK_FIELD" property="stakeholderWorkField" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_WORK_ADDRESS" property="stakeholderWorkAddress" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_WORK_PHONE" property="stakeholderWorkPhone" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
+    <result column="LOANORGCODE" property="loanorgcode" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="VARCHAR" />
+    <result column="ENDTIME" property="endtime" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from CORE_CRE_PREAPPROVAL_GUARANTOR
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity" >
+    insert into CORE_CRE_PREAPPROVAL_GUARANTOR (SERIALNO, A_APPLY_NO, STAKEHOLDER_RELATION, 
+      STAKEHOLDER_TYPE, STAKEHOLDER_NAME, STAKEHOLDER_MOBILE, 
+      STAKEHOLDER_CERT_TYPE, STAKEHOLDER_CERT_NO, 
+      STAKEHOLDER_SEX, STAKEHOLDER_BIRTHDAY, STAKEHOLDER_MARITAL_STATUS, 
+      STAKEHOLDER_HOME_ADDRESS, STAKEHOLDER_WORK_TYPE, 
+      STAKEHOLDER_WORK_PROPERTY, STAKEHOLDER_WORK_FIELD, 
+      STAKEHOLDER_WORK_ADDRESS, STAKEHOLDER_WORK_PHONE, 
+      FUNDUNITNO, LOANORGCODE, STATUS, 
+      BEGINTIME, ENDTIME)
+    values (#{serialno,jdbcType=VARCHAR}, #{aApplyNo,jdbcType=VARCHAR}, #{stakeholderRelation,jdbcType=VARCHAR}, 
+      #{stakeholderType,jdbcType=VARCHAR}, #{stakeholderName,jdbcType=VARCHAR}, #{stakeholderMobile,jdbcType=VARCHAR}, 
+      #{stakeholderCertType,jdbcType=VARCHAR}, #{stakeholderCertNo,jdbcType=VARCHAR}, 
+      #{stakeholderSex,jdbcType=VARCHAR}, #{stakeholderBirthday,jdbcType=VARCHAR}, #{stakeholderMaritalStatus,jdbcType=VARCHAR}, 
+      #{stakeholderHomeAddress,jdbcType=VARCHAR}, #{stakeholderWorkType,jdbcType=VARCHAR}, 
+      #{stakeholderWorkProperty,jdbcType=VARCHAR}, #{stakeholderWorkField,jdbcType=VARCHAR}, 
+      #{stakeholderWorkAddress,jdbcType=VARCHAR}, #{stakeholderWorkPhone,jdbcType=VARCHAR}, 
+      #{fundunitno,jdbcType=VARCHAR}, #{loanorgcode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{begintime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity" >
+    update CORE_CRE_PREAPPROVAL_GUARANTOR
+    set A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR},
+      STAKEHOLDER_RELATION = #{stakeholderRelation,jdbcType=VARCHAR},
+      STAKEHOLDER_TYPE = #{stakeholderType,jdbcType=VARCHAR},
+      STAKEHOLDER_NAME = #{stakeholderName,jdbcType=VARCHAR},
+      STAKEHOLDER_MOBILE = #{stakeholderMobile,jdbcType=VARCHAR},
+      STAKEHOLDER_CERT_TYPE = #{stakeholderCertType,jdbcType=VARCHAR},
+      STAKEHOLDER_CERT_NO = #{stakeholderCertNo,jdbcType=VARCHAR},
+      STAKEHOLDER_SEX = #{stakeholderSex,jdbcType=VARCHAR},
+      STAKEHOLDER_BIRTHDAY = #{stakeholderBirthday,jdbcType=VARCHAR},
+      STAKEHOLDER_MARITAL_STATUS = #{stakeholderMaritalStatus,jdbcType=VARCHAR},
+      STAKEHOLDER_HOME_ADDRESS = #{stakeholderHomeAddress,jdbcType=VARCHAR},
+      STAKEHOLDER_WORK_TYPE = #{stakeholderWorkType,jdbcType=VARCHAR},
+      STAKEHOLDER_WORK_PROPERTY = #{stakeholderWorkProperty,jdbcType=VARCHAR},
+      STAKEHOLDER_WORK_FIELD = #{stakeholderWorkField,jdbcType=VARCHAR},
+      STAKEHOLDER_WORK_ADDRESS = #{stakeholderWorkAddress,jdbcType=VARCHAR},
+      STAKEHOLDER_WORK_PHONE = #{stakeholderWorkPhone,jdbcType=VARCHAR},
+      FUNDUNITNO = #{fundunitno,jdbcType=VARCHAR},
+      LOANORGCODE = #{loanorgcode,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      BEGINTIME = #{begintime,jdbcType=VARCHAR},
+      ENDTIME = #{endtime,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select SERIALNO, A_APPLY_NO, STAKEHOLDER_RELATION, STAKEHOLDER_TYPE, STAKEHOLDER_NAME, 
+    STAKEHOLDER_MOBILE, STAKEHOLDER_CERT_TYPE, STAKEHOLDER_CERT_NO, STAKEHOLDER_SEX, 
+    STAKEHOLDER_BIRTHDAY, STAKEHOLDER_MARITAL_STATUS, STAKEHOLDER_HOME_ADDRESS, STAKEHOLDER_WORK_TYPE, 
+    STAKEHOLDER_WORK_PROPERTY, STAKEHOLDER_WORK_FIELD, STAKEHOLDER_WORK_ADDRESS, STAKEHOLDER_WORK_PHONE, 
+    FUNDUNITNO, LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from CORE_CRE_PREAPPROVAL_GUARANTOR
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, A_APPLY_NO, STAKEHOLDER_RELATION, STAKEHOLDER_TYPE, STAKEHOLDER_NAME, 
+    STAKEHOLDER_MOBILE, STAKEHOLDER_CERT_TYPE, STAKEHOLDER_CERT_NO, STAKEHOLDER_SEX, 
+    STAKEHOLDER_BIRTHDAY, STAKEHOLDER_MARITAL_STATUS, STAKEHOLDER_HOME_ADDRESS, STAKEHOLDER_WORK_TYPE, 
+    STAKEHOLDER_WORK_PROPERTY, STAKEHOLDER_WORK_FIELD, STAKEHOLDER_WORK_ADDRESS, STAKEHOLDER_WORK_PHONE, 
+    FUNDUNITNO, LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from CORE_CRE_PREAPPROVAL_GUARANTOR
+  </select>
+</mapper>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.CoreCreditpreapprovalMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.CoreCreditpreapprovalEntity" >
+    <id column="A_APPLY_NO" property="aApplyNo" jdbcType="VARCHAR" />
+    <result column="A_SL_BUSINESS_NO" property="aSlBusinessNo" jdbcType="VARCHAR" />
+    <result column="CUST_NAME" property="custName" jdbcType="VARCHAR" />
+    <result column="CUST_MOBILE" property="custMobile" jdbcType="VARCHAR" />
+    <result column="CERT_TYPE" property="certType" jdbcType="VARCHAR" />
+    <result column="CERT_NO" property="certNo" jdbcType="VARCHAR" />
+    <result column="IMAGEFILE_NAME" property="imagefileName" jdbcType="VARCHAR" />
+    <result column="APPLY_AMT" property="applyAmt" jdbcType="NUMERIC" />
+    <result column="SEX" property="sex" jdbcType="VARCHAR" />
+    <result column="BIRTHDAY" property="birthday" jdbcType="VARCHAR" />
+    <result column="EDUCATION" property="education" jdbcType="VARCHAR" />
+    <result column="MARITAL_STATUS" property="maritalStatus" jdbcType="VARCHAR" />
+    <result column="HOME_ADDRESS" property="homeAddress" jdbcType="VARCHAR" />
+    <result column="HUOSE_ADDRESS" property="huoseAddress" jdbcType="VARCHAR" />
+    <result column="HOUSE_PROPERTY_FLAG" property="housePropertyFlag" jdbcType="VARCHAR" />
+    <result column="HOUSE_VALUE" property="houseValue" jdbcType="NUMERIC" />
+    <result column="WORK_TYPE" property="workType" jdbcType="VARCHAR" />
+    <result column="WORK_PROPERTY" property="workProperty" jdbcType="VARCHAR" />
+    <result column="WORK_FIELD" property="workField" jdbcType="VARCHAR" />
+    <result column="WORK_ADDRESS" property="workAddress" jdbcType="VARCHAR" />
+    <result column="WORK_PHONE" property="workPhone" jdbcType="VARCHAR" />
+    <result column="HOUSE_FUND_BASE" property="houseFundBase" jdbcType="NUMERIC" />
+    <result column="HOUSE_FUND_UNIT" property="houseFundUnit" jdbcType="VARCHAR" />
+    <result column="HOUSE_FUND_CURRENT_MONTHS" property="houseFundCurrentMonths" jdbcType="VARCHAR" />
+    <result column="HOUSE_FUND_TOTAL_MONTHS" property="houseFundTotalMonths" jdbcType="VARCHAR" />
+    <result column="CONTACTS_CNT" property="contactsCnt" jdbcType="VARCHAR" />
+    <result column="STAKEHOLDER_CNT" property="stakeholderCnt" jdbcType="VARCHAR" />
+    <result column="CHECK_APPLE_ID" property="checkAppleId" jdbcType="VARCHAR" />
+    <result column="BANK_CARD_NO" property="bankCardNo" jdbcType="VARCHAR" />
+    <result column="BANK_CARD_TYPE" property="bankCardType" jdbcType="VARCHAR" />
+    <result column="BANK_NAME" property="bankName" jdbcType="VARCHAR" />
+    <result column="BANK_MOBILE" property="bankMobile" jdbcType="VARCHAR" />
+    <result column="THIRD_ORG_CODE" property="thirdOrgCode" jdbcType="VARCHAR" />
+    <result column="VALID_STATUS" property="validStatus" jdbcType="VARCHAR" />
+    <result column="THIRD_ORG_RETURN_CODE" property="thirdOrgReturnCode" jdbcType="VARCHAR" />
+    <result column="THIRD_ORG_RETURN_MSG" property="thirdOrgReturnMsg" jdbcType="VARCHAR" />
+    <result column="APPLY_DATETIME" property="applyDatetime" jdbcType="VARCHAR" />
+    <result column="FINISH_DATETIME" property="finishDatetime" jdbcType="VARCHAR" />
+    <result column="A_DEAL_NO" property="aDealNo" jdbcType="VARCHAR" />
+    <result column="A_CAPITAL_BUSINESS_NO" property="aCapitalBusinessNo" jdbcType="VARCHAR" />
+    <result column="DEAL_STATUS" property="dealStatus" jdbcType="VARCHAR" />
+    <result column="DEAL_DESC" property="dealDesc" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
+    <result column="LOANORGCODE" property="loanorgcode" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="VARCHAR" />
+    <result column="ENDTIME" property="endtime" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from CORE_CREDITPREAPPROVAL
+    where A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.CoreCreditpreapprovalEntity" >
+    insert into CORE_CREDITPREAPPROVAL (A_APPLY_NO, A_SL_BUSINESS_NO, CUST_NAME, 
+      CUST_MOBILE, CERT_TYPE, CERT_NO, 
+      IMAGEFILE_NAME, APPLY_AMT, SEX, 
+      BIRTHDAY, EDUCATION, MARITAL_STATUS, 
+      HOME_ADDRESS, HUOSE_ADDRESS, HOUSE_PROPERTY_FLAG, 
+      HOUSE_VALUE, WORK_TYPE, WORK_PROPERTY, 
+      WORK_FIELD, WORK_ADDRESS, WORK_PHONE, 
+      HOUSE_FUND_BASE, HOUSE_FUND_UNIT, HOUSE_FUND_CURRENT_MONTHS, 
+      HOUSE_FUND_TOTAL_MONTHS, CONTACTS_CNT, STAKEHOLDER_CNT, 
+      CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, 
+      BANK_NAME, BANK_MOBILE, THIRD_ORG_CODE, 
+      VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, 
+      APPLY_DATETIME, FINISH_DATETIME, A_DEAL_NO, 
+      A_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
+      FUNDUNITNO, LOANORGCODE, STATUS, 
+      BEGINTIME, ENDTIME)
+    values (#{aApplyNo,jdbcType=VARCHAR}, #{aSlBusinessNo,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, 
+      #{custMobile,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{certNo,jdbcType=VARCHAR}, 
+      #{imagefileName,jdbcType=VARCHAR}, #{applyAmt,jdbcType=NUMERIC}, #{sex,jdbcType=VARCHAR}, 
+      #{birthday,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, 
+      #{homeAddress,jdbcType=VARCHAR}, #{huoseAddress,jdbcType=VARCHAR}, #{housePropertyFlag,jdbcType=VARCHAR}, 
+      #{houseValue,jdbcType=NUMERIC}, #{workType,jdbcType=VARCHAR}, #{workProperty,jdbcType=VARCHAR}, 
+      #{workField,jdbcType=VARCHAR}, #{workAddress,jdbcType=VARCHAR}, #{workPhone,jdbcType=VARCHAR}, 
+      #{houseFundBase,jdbcType=NUMERIC}, #{houseFundUnit,jdbcType=VARCHAR}, #{houseFundCurrentMonths,jdbcType=VARCHAR}, 
+      #{houseFundTotalMonths,jdbcType=VARCHAR}, #{contactsCnt,jdbcType=VARCHAR}, #{stakeholderCnt,jdbcType=VARCHAR}, 
+      #{checkAppleId,jdbcType=VARCHAR}, #{bankCardNo,jdbcType=VARCHAR}, #{bankCardType,jdbcType=VARCHAR}, 
+      #{bankName,jdbcType=VARCHAR}, #{bankMobile,jdbcType=VARCHAR}, #{thirdOrgCode,jdbcType=VARCHAR}, 
+      #{validStatus,jdbcType=VARCHAR}, #{thirdOrgReturnCode,jdbcType=VARCHAR}, #{thirdOrgReturnMsg,jdbcType=VARCHAR}, 
+      #{applyDatetime,jdbcType=VARCHAR}, #{finishDatetime,jdbcType=VARCHAR}, #{aDealNo,jdbcType=VARCHAR}, 
+      #{aCapitalBusinessNo,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, #{dealDesc,jdbcType=VARCHAR}, 
+      #{fundunitno,jdbcType=VARCHAR}, #{loanorgcode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
+      #{begintime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.CoreCreditpreapprovalEntity" >
+    update CORE_CREDITPREAPPROVAL
+    set A_SL_BUSINESS_NO = #{aSlBusinessNo,jdbcType=VARCHAR},
+      CUST_NAME = #{custName,jdbcType=VARCHAR},
+      CUST_MOBILE = #{custMobile,jdbcType=VARCHAR},
+      CERT_TYPE = #{certType,jdbcType=VARCHAR},
+      CERT_NO = #{certNo,jdbcType=VARCHAR},
+      IMAGEFILE_NAME = #{imagefileName,jdbcType=VARCHAR},
+      APPLY_AMT = #{applyAmt,jdbcType=NUMERIC},
+      SEX = #{sex,jdbcType=VARCHAR},
+      BIRTHDAY = #{birthday,jdbcType=VARCHAR},
+      EDUCATION = #{education,jdbcType=VARCHAR},
+      MARITAL_STATUS = #{maritalStatus,jdbcType=VARCHAR},
+      HOME_ADDRESS = #{homeAddress,jdbcType=VARCHAR},
+      HUOSE_ADDRESS = #{huoseAddress,jdbcType=VARCHAR},
+      HOUSE_PROPERTY_FLAG = #{housePropertyFlag,jdbcType=VARCHAR},
+      HOUSE_VALUE = #{houseValue,jdbcType=NUMERIC},
+      WORK_TYPE = #{workType,jdbcType=VARCHAR},
+      WORK_PROPERTY = #{workProperty,jdbcType=VARCHAR},
+      WORK_FIELD = #{workField,jdbcType=VARCHAR},
+      WORK_ADDRESS = #{workAddress,jdbcType=VARCHAR},
+      WORK_PHONE = #{workPhone,jdbcType=VARCHAR},
+      HOUSE_FUND_BASE = #{houseFundBase,jdbcType=NUMERIC},
+      HOUSE_FUND_UNIT = #{houseFundUnit,jdbcType=VARCHAR},
+      HOUSE_FUND_CURRENT_MONTHS = #{houseFundCurrentMonths,jdbcType=VARCHAR},
+      HOUSE_FUND_TOTAL_MONTHS = #{houseFundTotalMonths,jdbcType=VARCHAR},
+      CONTACTS_CNT = #{contactsCnt,jdbcType=VARCHAR},
+      STAKEHOLDER_CNT = #{stakeholderCnt,jdbcType=VARCHAR},
+      CHECK_APPLE_ID = #{checkAppleId,jdbcType=VARCHAR},
+      BANK_CARD_NO = #{bankCardNo,jdbcType=VARCHAR},
+      BANK_CARD_TYPE = #{bankCardType,jdbcType=VARCHAR},
+      BANK_NAME = #{bankName,jdbcType=VARCHAR},
+      BANK_MOBILE = #{bankMobile,jdbcType=VARCHAR},
+      THIRD_ORG_CODE = #{thirdOrgCode,jdbcType=VARCHAR},
+      VALID_STATUS = #{validStatus,jdbcType=VARCHAR},
+      THIRD_ORG_RETURN_CODE = #{thirdOrgReturnCode,jdbcType=VARCHAR},
+      THIRD_ORG_RETURN_MSG = #{thirdOrgReturnMsg,jdbcType=VARCHAR},
+      APPLY_DATETIME = #{applyDatetime,jdbcType=VARCHAR},
+      FINISH_DATETIME = #{finishDatetime,jdbcType=VARCHAR},
+      A_DEAL_NO = #{aDealNo,jdbcType=VARCHAR},
+      A_CAPITAL_BUSINESS_NO = #{aCapitalBusinessNo,jdbcType=VARCHAR},
+      DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
+      DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
+      FUNDUNITNO = #{fundunitno,jdbcType=VARCHAR},
+      LOANORGCODE = #{loanorgcode,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      BEGINTIME = #{begintime,jdbcType=VARCHAR},
+      ENDTIME = #{endtime,jdbcType=VARCHAR}
+    where A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select A_APPLY_NO, A_SL_BUSINESS_NO, CUST_NAME, CUST_MOBILE, CERT_TYPE, CERT_NO, 
+    IMAGEFILE_NAME, APPLY_AMT, SEX, BIRTHDAY, EDUCATION, MARITAL_STATUS, HOME_ADDRESS, 
+    HUOSE_ADDRESS, HOUSE_PROPERTY_FLAG, HOUSE_VALUE, WORK_TYPE, WORK_PROPERTY, WORK_FIELD, 
+    WORK_ADDRESS, WORK_PHONE, HOUSE_FUND_BASE, HOUSE_FUND_UNIT, HOUSE_FUND_CURRENT_MONTHS, 
+    HOUSE_FUND_TOTAL_MONTHS, CONTACTS_CNT, STAKEHOLDER_CNT, CHECK_APPLE_ID, BANK_CARD_NO, 
+    BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, 
+    THIRD_ORG_RETURN_MSG, APPLY_DATETIME, FINISH_DATETIME, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, 
+    DEAL_STATUS, DEAL_DESC, FUNDUNITNO, LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from CORE_CREDITPREAPPROVAL
+    where A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select A_APPLY_NO, A_SL_BUSINESS_NO, CUST_NAME, CUST_MOBILE, CERT_TYPE, CERT_NO, 
+    IMAGEFILE_NAME, APPLY_AMT, SEX, BIRTHDAY, EDUCATION, MARITAL_STATUS, HOME_ADDRESS, 
+    HUOSE_ADDRESS, HOUSE_PROPERTY_FLAG, HOUSE_VALUE, WORK_TYPE, WORK_PROPERTY, WORK_FIELD, 
+    WORK_ADDRESS, WORK_PHONE, HOUSE_FUND_BASE, HOUSE_FUND_UNIT, HOUSE_FUND_CURRENT_MONTHS, 
+    HOUSE_FUND_TOTAL_MONTHS, CONTACTS_CNT, STAKEHOLDER_CNT, CHECK_APPLE_ID, BANK_CARD_NO, 
+    BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, 
+    THIRD_ORG_RETURN_MSG, APPLY_DATETIME, FINISH_DATETIME, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, 
+    DEAL_STATUS, DEAL_DESC, FUNDUNITNO, LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from CORE_CREDITPREAPPROVAL
+  </select>
+</mapper>

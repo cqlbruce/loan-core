@@ -54,7 +54,7 @@
                enableDeleteByExample="false" enableSelectByExample="false"
                selectByExampleQueryId="false">
         </table>
-        <table tableName="ASSET_ALLOCATION_LIST"  enableUpdateByPrimaryKey="true">
+        <table tableName="LOANORG_PREAPPROVAL_CONTACT"  enableUpdateByPrimaryKey="true">
             <!--<generatedKey column="id" sqlStatement="Mysql" identity="true" />-->
             <!--<ignoreColumn column="id"></ignoreColumn>-->
             <!--<ignoreColumn column="created_at"></ignoreColumn>-->

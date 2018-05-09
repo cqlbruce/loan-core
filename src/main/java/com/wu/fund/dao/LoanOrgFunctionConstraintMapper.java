@@ -1,10 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.FundOrgLogZxEntity;
-
+import com.wu.fund.entity.LoanOrgFunctionConstraintEntity;
 import java.util.List;
 
-public interface FundOrgLogZxMapper {
+public interface LoanOrgFunctionConstraintMapper {
     /**
      *
      * @mbggenerated 2018-05-09
@@ -15,23 +14,23 @@ public interface FundOrgLogZxMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int insert(FundOrgLogZxEntity record);
+    int insert(LoanOrgFunctionConstraintEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    FundOrgLogZxEntity selectByPrimaryKey(String serialno);
+    LoanOrgFunctionConstraintEntity selectByPrimaryKey(String serialno);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    List<FundOrgLogZxEntity> selectAll();
+    List<LoanOrgFunctionConstraintEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    int updateByPrimaryKey(FundOrgLogZxEntity record);
+    int updateByPrimaryKey(LoanOrgFunctionConstraintEntity record);
 }

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.CorePutoutApplyMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.CorePutoutApplyEntity" >
+    <id column="L_APPLY_NO" property="lApplyNo" jdbcType="VARCHAR" />
+    <result column="L_SL_BUSINESS_NO" property="lSlBusinessNo" jdbcType="VARCHAR" />
+    <result column="A_DEAL_NO" property="aDealNo" jdbcType="VARCHAR" />
+    <result column="A_CAPITAL_BUSINESS_NO" property="aCapitalBusinessNo" jdbcType="VARCHAR" />
+    <result column="LOAN_AMT" property="loanAmt" jdbcType="NUMERIC" />
+    <result column="TERM_NO" property="termNo" jdbcType="VARCHAR" />
+    <result column="PAYBACK_TYPE" property="paybackType" jdbcType="VARCHAR" />
+    <result column="LOAN_USE" property="loanUse" jdbcType="VARCHAR" />
+    <result column="CERT_TYPE" property="certType" jdbcType="VARCHAR" />
+    <result column="CERT_NO" property="certNo" jdbcType="VARCHAR" />
+    <result column="IMAGEFILE_NAME" property="imagefileName" jdbcType="VARCHAR" />
+    <result column="RECEIVE_BANK_NAME" property="receiveBankName" jdbcType="VARCHAR" />
+    <result column="RECEIVE_BANK_ACNO" property="receiveBankAcno" jdbcType="VARCHAR" />
+    <result column="CHECK_APPLE_ID" property="checkAppleId" jdbcType="VARCHAR" />
+    <result column="BANK_CARD_NO" property="bankCardNo" jdbcType="VARCHAR" />
+    <result column="BANK_CARD_TYPE" property="bankCardType" jdbcType="VARCHAR" />
+    <result column="BANK_NAME" property="bankName" jdbcType="VARCHAR" />
+    <result column="BANK_MOBILE" property="bankMobile" jdbcType="VARCHAR" />
+    <result column="THIRD_ORG_CODE" property="thirdOrgCode" jdbcType="VARCHAR" />
+    <result column="VALID_STATUS" property="validStatus" jdbcType="VARCHAR" />
+    <result column="THIRD_ORG_RETURN_CODE" property="thirdOrgReturnCode" jdbcType="VARCHAR" />
+    <result column="THIRD_ORG_RETURN_MSG" property="thirdOrgReturnMsg" jdbcType="VARCHAR" />
+    <result column="APPLY_DATETIME" property="applyDatetime" jdbcType="VARCHAR" />
+    <result column="FINISH_DATETIME" property="finishDatetime" jdbcType="VARCHAR" />
+    <result column="L_DEAL_NO" property="lDealNo" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="VARCHAR" />
+    <result column="L_CAPITAL_BUSINESS_NO" property="lCapitalBusinessNo" jdbcType="VARCHAR" />
+    <result column="DEAL_STATUS" property="dealStatus" jdbcType="VARCHAR" />
+    <result column="DEAL_DESC" property="dealDesc" jdbcType="VARCHAR" />
+    <result column="TRANS_DATE" property="transDate" jdbcType="VARCHAR" />
+    <result column="CLEAR_DATE" property="clearDate" jdbcType="VARCHAR" />
+    <result column="CUST_NAME" property="custName" jdbcType="VARCHAR" />
+    <result column="RECEIVE_BANK_ACNM" property="receiveBankAcnm" jdbcType="VARCHAR" />
+    <result column="PHONE_NO" property="phoneNo" jdbcType="VARCHAR" />
+    <result column="BANK_NO" property="bankNo" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
+    <result column="LOANORGCODE" property="loanorgcode" jdbcType="VARCHAR" />
+    <result column="ENDTIME" property="endtime" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="begintime" jdbcType="VARCHAR" />
+    <result column="TRANSNO" property="transno" jdbcType="VARCHAR" />
+    <result column="REQNO" property="reqno" jdbcType="VARCHAR" />
+    <result column="CUSTOMERID" property="customerid" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from CORE_PUTOUT_APPLY
+    where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.CorePutoutApplyEntity" >
+    insert into CORE_PUTOUT_APPLY (L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, 
+      A_CAPITAL_BUSINESS_NO, LOAN_AMT, TERM_NO, 
+      PAYBACK_TYPE, LOAN_USE, CERT_TYPE, 
+      CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME, 
+      RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, 
+      BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, 
+      THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, 
+      THIRD_ORG_RETURN_MSG, APPLY_DATETIME, FINISH_DATETIME, 
+      L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, 
+      DEAL_STATUS, DEAL_DESC, TRANS_DATE, 
+      CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, 
+      PHONE_NO, BANK_NO, FUNDUNITNO, 
+      LOANORGCODE, ENDTIME, BEGINTIME, 
+      TRANSNO, REQNO, CUSTOMERID
+      )
+    values (#{lApplyNo,jdbcType=VARCHAR}, #{lSlBusinessNo,jdbcType=VARCHAR}, #{aDealNo,jdbcType=VARCHAR}, 
+      #{aCapitalBusinessNo,jdbcType=VARCHAR}, #{loanAmt,jdbcType=NUMERIC}, #{termNo,jdbcType=VARCHAR}, 
+      #{paybackType,jdbcType=VARCHAR}, #{loanUse,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, 
+      #{certNo,jdbcType=VARCHAR}, #{imagefileName,jdbcType=VARCHAR}, #{receiveBankName,jdbcType=VARCHAR}, 
+      #{receiveBankAcno,jdbcType=VARCHAR}, #{checkAppleId,jdbcType=VARCHAR}, #{bankCardNo,jdbcType=VARCHAR}, 
+      #{bankCardType,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}, #{bankMobile,jdbcType=VARCHAR}, 
+      #{thirdOrgCode,jdbcType=VARCHAR}, #{validStatus,jdbcType=VARCHAR}, #{thirdOrgReturnCode,jdbcType=VARCHAR}, 
+      #{thirdOrgReturnMsg,jdbcType=VARCHAR}, #{applyDatetime,jdbcType=VARCHAR}, #{finishDatetime,jdbcType=VARCHAR}, 
+      #{lDealNo,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{lCapitalBusinessNo,jdbcType=VARCHAR}, 
+      #{dealStatus,jdbcType=VARCHAR}, #{dealDesc,jdbcType=VARCHAR}, #{transDate,jdbcType=VARCHAR}, 
+      #{clearDate,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, #{receiveBankAcnm,jdbcType=VARCHAR}, 
+      #{phoneNo,jdbcType=VARCHAR}, #{bankNo,jdbcType=VARCHAR}, #{fundunitno,jdbcType=VARCHAR}, 
+      #{loanorgcode,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR}, #{begintime,jdbcType=VARCHAR}, 
+      #{transno,jdbcType=VARCHAR}, #{reqno,jdbcType=VARCHAR}, #{customerid,jdbcType=VARCHAR}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.CorePutoutApplyEntity" >
+    update CORE_PUTOUT_APPLY
+    set L_SL_BUSINESS_NO = #{lSlBusinessNo,jdbcType=VARCHAR},
+      A_DEAL_NO = #{aDealNo,jdbcType=VARCHAR},
+      A_CAPITAL_BUSINESS_NO = #{aCapitalBusinessNo,jdbcType=VARCHAR},
+      LOAN_AMT = #{loanAmt,jdbcType=NUMERIC},
+      TERM_NO = #{termNo,jdbcType=VARCHAR},
+      PAYBACK_TYPE = #{paybackType,jdbcType=VARCHAR},
+      LOAN_USE = #{loanUse,jdbcType=VARCHAR},
+      CERT_TYPE = #{certType,jdbcType=VARCHAR},
+      CERT_NO = #{certNo,jdbcType=VARCHAR},
+      IMAGEFILE_NAME = #{imagefileName,jdbcType=VARCHAR},
+      RECEIVE_BANK_NAME = #{receiveBankName,jdbcType=VARCHAR},
+      RECEIVE_BANK_ACNO = #{receiveBankAcno,jdbcType=VARCHAR},
+      CHECK_APPLE_ID = #{checkAppleId,jdbcType=VARCHAR},
+      BANK_CARD_NO = #{bankCardNo,jdbcType=VARCHAR},
+      BANK_CARD_TYPE = #{bankCardType,jdbcType=VARCHAR},
+      BANK_NAME = #{bankName,jdbcType=VARCHAR},
+      BANK_MOBILE = #{bankMobile,jdbcType=VARCHAR},
+      THIRD_ORG_CODE = #{thirdOrgCode,jdbcType=VARCHAR},
+      VALID_STATUS = #{validStatus,jdbcType=VARCHAR},
+      THIRD_ORG_RETURN_CODE = #{thirdOrgReturnCode,jdbcType=VARCHAR},
+      THIRD_ORG_RETURN_MSG = #{thirdOrgReturnMsg,jdbcType=VARCHAR},
+      APPLY_DATETIME = #{applyDatetime,jdbcType=VARCHAR},
+      FINISH_DATETIME = #{finishDatetime,jdbcType=VARCHAR},
+      L_DEAL_NO = #{lDealNo,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=VARCHAR},
+      L_CAPITAL_BUSINESS_NO = #{lCapitalBusinessNo,jdbcType=VARCHAR},
+      DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
+      DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
+      TRANS_DATE = #{transDate,jdbcType=VARCHAR},
+      CLEAR_DATE = #{clearDate,jdbcType=VARCHAR},
+      CUST_NAME = #{custName,jdbcType=VARCHAR},
+      RECEIVE_BANK_ACNM = #{receiveBankAcnm,jdbcType=VARCHAR},
+      PHONE_NO = #{phoneNo,jdbcType=VARCHAR},
+      BANK_NO = #{bankNo,jdbcType=VARCHAR},
+      FUNDUNITNO = #{fundunitno,jdbcType=VARCHAR},
+      LOANORGCODE = #{loanorgcode,jdbcType=VARCHAR},
+      ENDTIME = #{endtime,jdbcType=VARCHAR},
+      BEGINTIME = #{begintime,jdbcType=VARCHAR},
+      TRANSNO = #{transno,jdbcType=VARCHAR},
+      REQNO = #{reqno,jdbcType=VARCHAR},
+      CUSTOMERID = #{customerid,jdbcType=VARCHAR}
+    where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, LOAN_AMT, 
+    TERM_NO, PAYBACK_TYPE, LOAN_USE, CERT_TYPE, CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME, 
+    RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, 
+    THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, APPLY_DATETIME, 
+    FINISH_DATETIME, L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
+    TRANS_DATE, CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, PHONE_NO, BANK_NO, FUNDUNITNO, 
+    LOANORGCODE, ENDTIME, BEGINTIME, TRANSNO, REQNO, CUSTOMERID
+    from CORE_PUTOUT_APPLY
+    where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, LOAN_AMT, 
+    TERM_NO, PAYBACK_TYPE, LOAN_USE, CERT_TYPE, CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME, 
+    RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, 
+    THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, APPLY_DATETIME, 
+    FINISH_DATETIME, L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
+    TRANS_DATE, CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, PHONE_NO, BANK_NO, FUNDUNITNO, 
+    LOANORGCODE, ENDTIME, BEGINTIME, TRANSNO, REQNO, CUSTOMERID
+    from CORE_PUTOUT_APPLY
+  </select>
+</mapper>

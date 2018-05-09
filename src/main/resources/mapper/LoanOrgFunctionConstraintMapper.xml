@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wu.fund.dao.LoanOrgFunctionConstraintMapper" >
+  <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgFunctionConstraintEntity" >
+    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
+    <result column="OVERTIME" property="overtime" jdbcType="VARCHAR" />
+    <result column="APPLYFREQUENCY" property="applyfrequency" jdbcType="VARCHAR" />
+    <result column="FUNCTIONTYPE" property="functiontype" jdbcType="VARCHAR" />
+    <result column="SUBUPLOADIMAGE" property="subuploadimage" jdbcType="VARCHAR" />
+    <result column="SUBAPPLYFRONT" property="subapplyfront" jdbcType="VARCHAR" />
+    <result column="SUBAPPLY" property="subapply" jdbcType="VARCHAR" />
+    <result column="SUBWAITRESULT" property="subwaitresult" jdbcType="VARCHAR" />
+    <result column="SUBQUERYRESULT" property="subqueryresult" jdbcType="VARCHAR" />
+    <result column="SUBAPPLYPOST" property="subapplypost" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+    <result column="FUNCTIONNAME" property="functionname" jdbcType="VARCHAR" />
+    <result column="FUNCTIONONOFF" property="functiononoff" jdbcType="VARCHAR" />
+    <result column="RELATIVETYPE" property="relativetype" jdbcType="VARCHAR" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from LOAN_ORG_FUNCTION_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgFunctionConstraintEntity" >
+    insert into LOAN_ORG_FUNCTION_CONSTRAINT (SERIALNO, RELATIVESERIALNO, OVERTIME, 
+      APPLYFREQUENCY, FUNCTIONTYPE, SUBUPLOADIMAGE, 
+      SUBAPPLYFRONT, SUBAPPLY, SUBWAITRESULT, 
+      SUBQUERYRESULT, SUBAPPLYPOST, INPUTDATE, 
+      UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
+      INPUTORGID, UPDATEORGID, FUNCTIONNAME, 
+      FUNCTIONONOFF, RELATIVETYPE)
+    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{overtime,jdbcType=VARCHAR}, 
+      #{applyfrequency,jdbcType=VARCHAR}, #{functiontype,jdbcType=VARCHAR}, #{subuploadimage,jdbcType=VARCHAR}, 
+      #{subapplyfront,jdbcType=VARCHAR}, #{subapply,jdbcType=VARCHAR}, #{subwaitresult,jdbcType=VARCHAR}, 
+      #{subqueryresult,jdbcType=VARCHAR}, #{subapplypost,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
+      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
+      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{functionname,jdbcType=VARCHAR}, 
+      #{functiononoff,jdbcType=VARCHAR}, #{relativetype,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgFunctionConstraintEntity" >
+    update LOAN_ORG_FUNCTION_CONSTRAINT
+    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
+      OVERTIME = #{overtime,jdbcType=VARCHAR},
+      APPLYFREQUENCY = #{applyfrequency,jdbcType=VARCHAR},
+      FUNCTIONTYPE = #{functiontype,jdbcType=VARCHAR},
+      SUBUPLOADIMAGE = #{subuploadimage,jdbcType=VARCHAR},
+      SUBAPPLYFRONT = #{subapplyfront,jdbcType=VARCHAR},
+      SUBAPPLY = #{subapply,jdbcType=VARCHAR},
+      SUBWAITRESULT = #{subwaitresult,jdbcType=VARCHAR},
+      SUBQUERYRESULT = #{subqueryresult,jdbcType=VARCHAR},
+      SUBAPPLYPOST = #{subapplypost,jdbcType=VARCHAR},
+      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
+      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
+      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
+      FUNCTIONNAME = #{functionname,jdbcType=VARCHAR},
+      FUNCTIONONOFF = #{functiononoff,jdbcType=VARCHAR},
+      RELATIVETYPE = #{relativetype,jdbcType=VARCHAR}
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select SERIALNO, RELATIVESERIALNO, OVERTIME, APPLYFREQUENCY, FUNCTIONTYPE, SUBUPLOADIMAGE, 
+    SUBAPPLYFRONT, SUBAPPLY, SUBWAITRESULT, SUBQUERYRESULT, SUBAPPLYPOST, INPUTDATE, 
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, FUNCTIONNAME, FUNCTIONONOFF, 
+    RELATIVETYPE
+    from LOAN_ORG_FUNCTION_CONSTRAINT
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap" >
+    select SERIALNO, RELATIVESERIALNO, OVERTIME, APPLYFREQUENCY, FUNCTIONTYPE, SUBUPLOADIMAGE, 
+    SUBAPPLYFRONT, SUBAPPLY, SUBWAITRESULT, SUBQUERYRESULT, SUBAPPLYPOST, INPUTDATE, 
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, FUNCTIONNAME, FUNCTIONONOFF, 
+    RELATIVETYPE
+    from LOAN_ORG_FUNCTION_CONSTRAINT
+  </select>
+</mapper>

@@ -1,36 +1,48 @@
 package com.wu.fund.entity;
 
+import java.io.Serializable;
+
 
 /**
  * @Author: wangying
- * @Description:贷款机构配置放款约束
+ * @Description:贷款机构配置功能约束黑暗期
  * @Date: Created in  2018/5/9
  */
-public class LoanOrgPutoutConstraintEntity {
+public class FunctionDarkPeriodEntity implements Serializable {
     /**
      * 流水号
      */
     private String serialno;
 
     /**
-     * 关联贷款机构配置流水号
+     * 关联外键
      */
     private String relativeserialno;
 
     /**
-     * 放款自主查询征信
+     * 开始时间
      */
-    private String queryputout;
+    private String begintime;
 
     /**
-     * 放款自主绑卡验证
+     * 结束时间
      */
-    private String cardcheck;
+    private String endtime;
 
     /**
-     * 银行二类户开通
+     * 生效时间
      */
-    private String secondaccount;
+    private String validtime;
+
+    /**
+     * 失效时间
+     */
+    private String invalidtime;
+
+    /**
+     * 银行行号
+     */
+    private String bankno;
 
     /**
      * 录入时间
@@ -63,14 +75,19 @@ public class LoanOrgPutoutConstraintEntity {
     private String updateorgid;
 
     /**
-     * 代付收费标准
+     * 关联类型
      */
-    private String payfeerule;
+    private String relativetype;
 
     /**
-     * 是否由世联生成还款计划(code码YesNo  01是 02否)
+     * 银行名称
      */
-    private String iscreateschedule;
+    private String bankname;
+
+    /**
+     * FUNCTION_DARK_PERIOD
+     */
+    private static final long serialVersionUID = 1L;
 
     /**
      * null
@@ -106,50 +123,82 @@ public class LoanOrgPutoutConstraintEntity {
 
     /**
      * null
-     * @return QUERYPUTOUT null
+     * @return BEGINTIME null
      */
-    public String getQueryputout() {
-        return queryputout;
+    public String getBegintime() {
+        return begintime;
     }
 
     /**
      * null
-     * @param queryputout null
+     * @param begintime null
      */
-    public void setQueryputout(String queryputout) {
-        this.queryputout = queryputout;
+    public void setBegintime(String begintime) {
+        this.begintime = begintime;
     }
 
     /**
      * null
-     * @return CARDCHECK null
+     * @return ENDTIME null
      */
-    public String getCardcheck() {
-        return cardcheck;
+    public String getEndtime() {
+        return endtime;
     }
 
     /**
      * null
-     * @param cardcheck null
+     * @param endtime null
      */
-    public void setCardcheck(String cardcheck) {
-        this.cardcheck = cardcheck;
+    public void setEndtime(String endtime) {
+        this.endtime = endtime;
     }
 
     /**
      * null
-     * @return SECONDACCOUNT null
+     * @return VALIDTIME null
      */
-    public String getSecondaccount() {
-        return secondaccount;
+    public String getValidtime() {
+        return validtime;
     }
 
     /**
      * null
-     * @param secondaccount null
+     * @param validtime null
      */
-    public void setSecondaccount(String secondaccount) {
-        this.secondaccount = secondaccount;
+    public void setValidtime(String validtime) {
+        this.validtime = validtime;
+    }
+
+    /**
+     * null
+     * @return INVALIDTIME null
+     */
+    public String getInvalidtime() {
+        return invalidtime;
+    }
+
+    /**
+     * null
+     * @param invalidtime null
+     */
+    public void setInvalidtime(String invalidtime) {
+        this.invalidtime = invalidtime;
+    }
+
+    /**
+     * null
+     * @return BANKNO null
+     */
+    public String getBankno() {
+        return bankno;
+    }
+
+    /**
+     * null
+     * @param bankno null
+     */
+    public void setBankno(String bankno) {
+        this.bankno = bankno;
     }
 
     /**
@@ -250,33 +299,33 @@ public class LoanOrgPutoutConstraintEntity {
 
     /**
      * null
-     * @return PAYFEERULE null
+     * @return RELATIVETYPE null
      */
-    public String getPayfeerule() {
-        return payfeerule;
+    public String getRelativetype() {
+        return relativetype;
     }
 
     /**
      * null
-     * @param payfeerule null
+     * @param relativetype null
      */
-    public void setPayfeerule(String payfeerule) {
-        this.payfeerule = payfeerule;
+    public void setRelativetype(String relativetype) {
+        this.relativetype = relativetype;
     }
 
     /**
      * null
-     * @return ISCREATESCHEDULE null
+     * @return BANKNAME null
      */
-    public String getIscreateschedule() {
-        return iscreateschedule;
+    public String getBankname() {
+        return bankname;
     }
 
     /**
      * null
-     * @param iscreateschedule null
+     * @param bankname null
      */
-    public void setIscreateschedule(String iscreateschedule) {
-        this.iscreateschedule = iscreateschedule;
+    public void setBankname(String bankname) {
+        this.bankname = bankname;
     }
 }

@@ -1,4 +1,4 @@
-package com.wu.fund.vo;
+package com.wu.fund.common;
 
 import java.io.Serializable;
 

@@ -1,13 +1,11 @@
-package com.wu.fund.vo;
+package com.wu.fund.common;
 
 
 
 
 import com.wu.fund.util.DateUtil;
-import org.apache.commons.lang.time.DateUtils;
 
 import java.io.Serializable;
-import java.util.Map;
 
 /**
  * @Author: wangying

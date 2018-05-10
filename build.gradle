@@ -36,6 +36,9 @@ dependencies {
     compile "io.springfox:springfox-swagger-ui:2.8.0"
     compile "io.springfox:springfox-swagger2:2.8.0"
     compile('org.springframework.cloud:spring-cloud-starter-feign')
+    compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix')
     compile "com.alibaba:druid:1.1.6"
     compile "com.alibaba:fastjson:1.2.46"
     compile "com.qianmi:spring-boot-starter-rocketmq:1.1.0-RELEASE"

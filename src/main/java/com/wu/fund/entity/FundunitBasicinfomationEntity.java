@@ -10,52 +10,52 @@ public class FundunitBasicinfomationEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 资金单元名称
      */
-    private String fundunitname;
+    private String fundUnitName;
 
     /**
      * 资金单元状态
      */
-    private String fundunitstatus;
+    private String fundUnitStatus;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 资金单元编码
      */
-    private String fundunitno;
+    private String fundUnitNo;
 
     /**
      * 资金引入地区公司
@@ -70,17 +70,17 @@ public class FundunitBasicinfomationEntity {
     /**
      * 生效日期
      */
-    private String validdate;
+    private String validDate;
 
     /**
      * 失效日期
      */
-    private String invaliddate;
+    private String invalidDate;
 
     /**
      * 额度模式
      */
-    private String quotamode;
+    private String quotaMode;
 
     /**
      * 放款方式
@@ -90,298 +90,154 @@ public class FundunitBasicinfomationEntity {
     /**
      * 暂存标识
      */
-    private String tempsaveflag;
+    private String tempSaveFlag;
 
     /**
      * 调整标识
      */
-    private String changeflag;
+    private String changeFlag;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return FUNDUNITNAME null
-     */
-    public String getFundunitname() {
-        return fundunitname;
+    public String getFundUnitName() {
+        return fundUnitName;
     }
 
-    /**
-     * null
-     * @param fundunitname null
-     */
-    public void setFundunitname(String fundunitname) {
-        this.fundunitname = fundunitname;
+    public void setFundUnitName(String fundUnitName) {
+        this.fundUnitName = fundUnitName;
     }
 
-    /**
-     * null
-     * @return FUNDUNITSTATUS null
-     */
-    public String getFundunitstatus() {
-        return fundunitstatus;
+    public String getFundUnitStatus() {
+        return fundUnitStatus;
     }
 
-    /**
-     * null
-     * @param fundunitstatus null
-     */
-    public void setFundunitstatus(String fundunitstatus) {
-        this.fundunitstatus = fundunitstatus;
+    public void setFundUnitStatus(String fundUnitStatus) {
+        this.fundUnitStatus = fundUnitStatus;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return FUNDUNITNO null
-     */
-    public String getFundunitno() {
-        return fundunitno;
+    public String getFundUnitNo() {
+        return fundUnitNo;
     }
 
-    /**
-     * null
-     * @param fundunitno null
-     */
-    public void setFundunitno(String fundunitno) {
-        this.fundunitno = fundunitno;
+    public void setFundUnitNo(String fundUnitNo) {
+        this.fundUnitNo = fundUnitNo;
     }
 
-    /**
-     * null
-     * @return COMPANY null
-     */
     public String getCompany() {
         return company;
     }
 
-    /**
-     * null
-     * @param company null
-     */
     public void setCompany(String company) {
         this.company = company;
     }
 
-    /**
-     * null
-     * @return WEIGHT null
-     */
     public String getWeight() {
         return weight;
     }
 
-    /**
-     * null
-     * @param weight null
-     */
     public void setWeight(String weight) {
         this.weight = weight;
     }
 
-    /**
-     * null
-     * @return VALIDDATE null
-     */
-    public String getValiddate() {
-        return validdate;
+    public String getValidDate() {
+        return validDate;
     }
 
-    /**
-     * null
-     * @param validdate null
-     */
-    public void setValiddate(String validdate) {
-        this.validdate = validdate;
+    public void setValidDate(String validDate) {
+        this.validDate = validDate;
     }
 
-    /**
-     * null
-     * @return INVALIDDATE null
-     */
-    public String getInvaliddate() {
-        return invaliddate;
+    public String getInvalidDate() {
+        return invalidDate;
     }
 
-    /**
-     * null
-     * @param invaliddate null
-     */
-    public void setInvaliddate(String invaliddate) {
-        this.invaliddate = invaliddate;
+    public void setInvalidDate(String invalidDate) {
+        this.invalidDate = invalidDate;
     }
 
-    /**
-     * null
-     * @return QUOTAMODE null
-     */
-    public String getQuotamode() {
-        return quotamode;
+    public String getQuotaMode() {
+        return quotaMode;
     }
 
-    /**
-     * null
-     * @param quotamode null
-     */
-    public void setQuotamode(String quotamode) {
-        this.quotamode = quotamode;
+    public void setQuotaMode(String quotaMode) {
+        this.quotaMode = quotaMode;
     }
 
-    /**
-     * null
-     * @return LENDERS null
-     */
     public String getLenders() {
         return lenders;
     }
 
-    /**
-     * null
-     * @param lenders null
-     */
     public void setLenders(String lenders) {
         this.lenders = lenders;
     }
 
-    /**
-     * null
-     * @return TEMPSAVEFLAG null
-     */
-    public String getTempsaveflag() {
-        return tempsaveflag;
+    public String getTempSaveFlag() {
+        return tempSaveFlag;
     }
 
-    /**
-     * null
-     * @param tempsaveflag null
-     */
-    public void setTempsaveflag(String tempsaveflag) {
-        this.tempsaveflag = tempsaveflag;
+    public void setTempSaveFlag(String tempSaveFlag) {
+        this.tempSaveFlag = tempSaveFlag;
     }
 
-    /**
-     * null
-     * @return CHANGEFLAG null
-     */
-    public String getChangeflag() {
-        return changeflag;
+    public String getChangeFlag() {
+        return changeFlag;
     }
 
-    /**
-     * null
-     * @param changeflag null
-     */
-    public void setChangeflag(String changeflag) {
-        this.changeflag = changeflag;
+    public void setChangeFlag(String changeFlag) {
+        this.changeFlag = changeFlag;
     }
 }

@@ -10,77 +10,77 @@ public class FundOrgLogZxEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 人行请求流水号
      */
-    private String capplyno;
+    private String cApplyNo;
 
     /**
      * 世联金融业务流水号
      */
-    private String cslbusinessno;
+    private String cslBusinessNo;
 
     /**
      * 人行受理流水号
      */
-    private String cdealno;
+    private String cDealNo;
 
     /**
      * 当前步骤节点
      */
-    private String fundstepname;
+    private String fundStepName;
 
     /**
      * 当前主流程节点
      */
-    private String fundmainflowname;
+    private String fundMainFlowName;
 
     /**
      * 当前子流程节点
      */
-    private String fundsubflowname;
+    private String fundSubFlowName;
 
     /**
      * 当前子流程状态(codeno为FundSubFlowStatus 01 待处理 02 处理中 03挂起)
      */
-    private String fundsubflowstatus;
+    private String fundSubFlowStatus;
 
     /**
      * 当前子流程返回码
      */
-    private String fundservicereturncode;
+    private String fundServiceReturnCode;
 
     /**
      * 当前子流程返回信息
      */
-    private String fundservicereturnmsg;
+    private String fundServiceReturnMsg;
 
     /**
      * 业务状态(Codeno 为FundBusinessStatus)
      */
-    private String fundbusinessstatus;
+    private String fundBusinessStatus;
 
     /**
      * 人行资金方业务流水号
      */
-    private String ccapitalbusinessno;
+    private String cCapitalBusinessNo;
 
     /**
      * 开始查询时间
      */
-    private String begintime;
+    private String beginTime;
 
     /**
      * 结束查询时间
      */
-    private String endtime;
+    private String endTime;
 
     /**
      * 报告内容
      */
-    private String loanorgcode;
+    private String loanOrgCode;
 
     /**
      * 贷款机构编号
@@ -90,17 +90,17 @@ public class FundOrgLogZxEntity {
     /**
      * 状态
      */
-    private String oldloanorgcode;
+    private String oldLoanOrgCode;
 
     /**
      * 身份证证件号码
      */
-    private String certid;
+    private String certId;
 
     /**
      * 人行征信报告地址
      */
-    private String filepackageName;
+    private String filePackageName;
 
     /**
      * 处理结果
@@ -115,399 +115,207 @@ public class FundOrgLogZxEntity {
     /**
      * 证件类型
      */
-    private String certtype;
+    private String certType;
 
     /**
      * 客户姓名
      */
-    private String customername;
+    private String customerName;
 
     /**
      * null
      */
-    private String responsemessage;
+    private String responseMessage;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return CAPPLYNO null
-     */
-    public String getCapplyno() {
-        return capplyno;
+    public String getCApplyNo() {
+        return cApplyNo;
     }
 
-    /**
-     * null
-     * @param capplyno null
-     */
-    public void setCapplyno(String capplyno) {
-        this.capplyno = capplyno;
+    public void setCApplyNo(String capplyNo) {
+        this.cApplyNo = capplyNo;
     }
 
-    /**
-     * null
-     * @return CSLBUSINESSNO null
-     */
-    public String getCslbusinessno() {
-        return cslbusinessno;
+    public String getCslBusinessNo() {
+        return cslBusinessNo;
     }
 
-    /**
-     * null
-     * @param cslbusinessno null
-     */
-    public void setCslbusinessno(String cslbusinessno) {
-        this.cslbusinessno = cslbusinessno;
+    public void setCslBusinessNo(String cslBusinessNo) {
+        this.cslBusinessNo = cslBusinessNo;
     }
 
-    /**
-     * null
-     * @return CDEALNO null
-     */
-    public String getCdealno() {
-        return cdealno;
+    public String getcDealNo() {
+        return cDealNo;
     }
 
-    /**
-     * null
-     * @param cdealno null
-     */
-    public void setCdealno(String cdealno) {
-        this.cdealno = cdealno;
+    public void setcDealNo(String cDealNo) {
+        this.cDealNo = cDealNo;
     }
 
-    /**
-     * null
-     * @return FUNDSTEPNAME null
-     */
-    public String getFundstepname() {
-        return fundstepname;
+    public String getFundStepName() {
+        return fundStepName;
     }
 
-    /**
-     * null
-     * @param fundstepname null
-     */
-    public void setFundstepname(String fundstepname) {
-        this.fundstepname = fundstepname;
+    public void setFundStepName(String fundStepName) {
+        this.fundStepName = fundStepName;
     }
 
-    /**
-     * null
-     * @return FUNDMAINFLOWNAME null
-     */
-    public String getFundmainflowname() {
-        return fundmainflowname;
+    public String getFundMainFlowName() {
+        return fundMainFlowName;
     }
 
-    /**
-     * null
-     * @param fundmainflowname null
-     */
-    public void setFundmainflowname(String fundmainflowname) {
-        this.fundmainflowname = fundmainflowname;
+    public void setFundMainFlowName(String fundMainFlowName) {
+        this.fundMainFlowName = fundMainFlowName;
     }
 
-    /**
-     * null
-     * @return FUNDSUBFLOWNAME null
-     */
-    public String getFundsubflowname() {
-        return fundsubflowname;
+    public String getFundSubFlowName() {
+        return fundSubFlowName;
     }
 
-    /**
-     * null
-     * @param fundsubflowname null
-     */
-    public void setFundsubflowname(String fundsubflowname) {
-        this.fundsubflowname = fundsubflowname;
+    public void setFundSubFlowName(String fundSubFlowName) {
+        this.fundSubFlowName = fundSubFlowName;
     }
 
-    /**
-     * null
-     * @return FUNDSUBFLOWSTATUS null
-     */
-    public String getFundsubflowstatus() {
-        return fundsubflowstatus;
+    public String getFundSubFlowStatus() {
+        return fundSubFlowStatus;
     }
 
-    /**
-     * null
-     * @param fundsubflowstatus null
-     */
-    public void setFundsubflowstatus(String fundsubflowstatus) {
-        this.fundsubflowstatus = fundsubflowstatus;
+    public void setFundSubFlowStatus(String fundSubFlowStatus) {
+        this.fundSubFlowStatus = fundSubFlowStatus;
     }
 
-    /**
-     * null
-     * @return FUNDSERVICERETURNCODE null
-     */
-    public String getFundservicereturncode() {
-        return fundservicereturncode;
+    public String getFundServiceReturnCode() {
+        return fundServiceReturnCode;
     }
 
-    /**
-     * null
-     * @param fundservicereturncode null
-     */
-    public void setFundservicereturncode(String fundservicereturncode) {
-        this.fundservicereturncode = fundservicereturncode;
+    public void setFundServiceReturnCode(String fundServiceReturnCode) {
+        this.fundServiceReturnCode = fundServiceReturnCode;
     }
 
-    /**
-     * null
-     * @return FUNDSERVICERETURNMSG null
-     */
-    public String getFundservicereturnmsg() {
-        return fundservicereturnmsg;
+    public String getFundServiceReturnMsg() {
+        return fundServiceReturnMsg;
     }
 
-    /**
-     * null
-     * @param fundservicereturnmsg null
-     */
-    public void setFundservicereturnmsg(String fundservicereturnmsg) {
-        this.fundservicereturnmsg = fundservicereturnmsg;
+    public void setFundServiceReturnMsg(String fundServiceReturnMsg) {
+        this.fundServiceReturnMsg = fundServiceReturnMsg;
     }
 
-    /**
-     * null
-     * @return FUNDBUSINESSSTATUS null
-     */
-    public String getFundbusinessstatus() {
-        return fundbusinessstatus;
+    public String getFundBusinessStatus() {
+        return fundBusinessStatus;
     }
 
-    /**
-     * null
-     * @param fundbusinessstatus null
-     */
-    public void setFundbusinessstatus(String fundbusinessstatus) {
-        this.fundbusinessstatus = fundbusinessstatus;
+    public void setFundBusinessStatus(String fundBusinessStatus) {
+        this.fundBusinessStatus = fundBusinessStatus;
     }
 
-    /**
-     * null
-     * @return CCAPITALBUSINESSNO null
-     */
-    public String getCcapitalbusinessno() {
-        return ccapitalbusinessno;
+    public String getcCapitalBusinessNo() {
+        return cCapitalBusinessNo;
     }
 
-    /**
-     * null
-     * @param ccapitalbusinessno null
-     */
-    public void setCcapitalbusinessno(String ccapitalbusinessno) {
-        this.ccapitalbusinessno = ccapitalbusinessno;
+    public void setcCapitalBusinessNo(String cCapitalBusinessNo) {
+        this.cCapitalBusinessNo = cCapitalBusinessNo;
     }
 
-    /**
-     * null
-     * @return BEGINTIME null
-     */
-    public String getBegintime() {
-        return begintime;
+    public String getBeginTime() {
+        return beginTime;
     }
 
-    /**
-     * null
-     * @param begintime null
-     */
-    public void setBegintime(String begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
-    /**
-     * null
-     * @return ENDTIME null
-     */
-    public String getEndtime() {
-        return endtime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    /**
-     * null
-     * @param endtime null
-     */
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
-    /**
-     * null
-     * @return LOANORGCODE null
-     */
-    public String getLoanorgcode() {
-        return loanorgcode;
+    public String getLoanOrgCode() {
+        return loanOrgCode;
     }
 
-    /**
-     * null
-     * @param loanorgcode null
-     */
-    public void setLoanorgcode(String loanorgcode) {
-        this.loanorgcode = loanorgcode;
+    public void setLoanOrgCode(String loanOrgCode) {
+        this.loanOrgCode = loanOrgCode;
     }
 
-    /**
-     * null
-     * @return STATUS null
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * null
-     * @param status null
-     */
     public void setStatus(String status) {
         this.status = status;
     }
 
-    /**
-     * null
-     * @return OLDLOANORGCODE null
-     */
-    public String getOldloanorgcode() {
-        return oldloanorgcode;
+    public String getOldLoanOrgCode() {
+        return oldLoanOrgCode;
     }
 
-    /**
-     * null
-     * @param oldloanorgcode null
-     */
-    public void setOldloanorgcode(String oldloanorgcode) {
-        this.oldloanorgcode = oldloanorgcode;
+    public void setOldLoanOrgCode(String oldLoanOrgCode) {
+        this.oldLoanOrgCode = oldLoanOrgCode;
     }
 
-    /**
-     * null
-     * @return CERTID null
-     */
-    public String getCertid() {
-        return certid;
+    public String getCertId() {
+        return certId;
     }
 
-    /**
-     * null
-     * @param certid null
-     */
-    public void setCertid(String certid) {
-        this.certid = certid;
+    public void setCertId(String certId) {
+        this.certId = certId;
     }
 
-    /**
-     * null
-     * @return FILEPACKAGE_NAME null
-     */
-    public String getFilepackageName() {
-        return filepackageName;
+    public String getFilePackageName() {
+        return filePackageName;
     }
 
-    /**
-     * null
-     * @param filepackageName null
-     */
-    public void setFilepackageName(String filepackageName) {
-        this.filepackageName = filepackageName;
+    public void setFilePackageName(String filePackageName) {
+        this.filePackageName = filePackageName;
     }
 
-    /**
-     * null
-     * @return DEAL_STATUS null
-     */
     public String getDealStatus() {
         return dealStatus;
     }
 
-    /**
-     * null
-     * @param dealStatus null
-     */
     public void setDealStatus(String dealStatus) {
         this.dealStatus = dealStatus;
     }
 
-    /**
-     * null
-     * @return DEAL_DESC null
-     */
     public String getDealDesc() {
         return dealDesc;
     }
 
-    /**
-     * null
-     * @param dealDesc null
-     */
     public void setDealDesc(String dealDesc) {
         this.dealDesc = dealDesc;
     }
 
-    /**
-     * null
-     * @return CERTTYPE null
-     */
-    public String getCerttype() {
-        return certtype;
+    public String getCertType() {
+        return certType;
     }
 
-    /**
-     * null
-     * @param certtype null
-     */
-    public void setCerttype(String certtype) {
-        this.certtype = certtype;
+    public void setCertType(String certType) {
+        this.certType = certType;
     }
 
-    /**
-     * null
-     * @return CUSTOMERNAME null
-     */
-    public String getCustomername() {
-        return customername;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    /**
-     * null
-     * @param customername null
-     */
-    public void setCustomername(String customername) {
-        this.customername = customername;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    /**
-     * null
-     * @return RESPONSEMESSAGE null
-     */
-    public String getResponsemessage() {
-        return responsemessage;
+    public String getResponseMessage() {
+        return responseMessage;
     }
 
-    /**
-     * null
-     * @param responsemessage null
-     */
-    public void setResponsemessage(String responsemessage) {
-        this.responsemessage = responsemessage;
+    public void setResponseMessage(String responseMessage) {
+        this.responseMessage = responseMessage;
     }
 }

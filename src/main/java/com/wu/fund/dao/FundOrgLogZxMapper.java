@@ -9,7 +9,7 @@ public interface FundOrgLogZxMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -21,7 +21,7 @@ public interface FundOrgLogZxMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    FundOrgLogZxEntity selectByPrimaryKey(String serialno);
+    FundOrgLogZxEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

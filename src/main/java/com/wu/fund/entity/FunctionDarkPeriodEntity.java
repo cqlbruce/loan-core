@@ -12,320 +12,204 @@ public class FunctionDarkPeriodEntity implements Serializable {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联外键
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 开始时间
      */
-    private String begintime;
+    private String beginTime;
 
     /**
      * 结束时间
      */
-    private String endtime;
+    private String endTime;
 
     /**
      * 生效时间
      */
-    private String validtime;
+    private String validTime;
 
     /**
      * 失效时间
      */
-    private String invalidtime;
+    private String invalidTime;
 
     /**
      * 银行行号
      */
-    private String bankno;
+    private String bankNo;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 关联类型
      */
-    private String relativetype;
+    private String relativeType;
 
     /**
      * 银行名称
      */
-    private String bankname;
+    private String bankName;
 
     /**
      * FUNCTION_DARK_PERIOD
      */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return BEGINTIME null
-     */
-    public String getBegintime() {
-        return begintime;
+    public String getBeginTime() {
+        return beginTime;
     }
 
-    /**
-     * null
-     * @param begintime null
-     */
-    public void setBegintime(String begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
-    /**
-     * null
-     * @return ENDTIME null
-     */
-    public String getEndtime() {
-        return endtime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    /**
-     * null
-     * @param endtime null
-     */
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
-    /**
-     * null
-     * @return VALIDTIME null
-     */
-    public String getValidtime() {
-        return validtime;
+    public String getValidTime() {
+        return validTime;
     }
 
-    /**
-     * null
-     * @param validtime null
-     */
-    public void setValidtime(String validtime) {
-        this.validtime = validtime;
+    public void setValidTime(String validTime) {
+        this.validTime = validTime;
     }
 
-    /**
-     * null
-     * @return INVALIDTIME null
-     */
-    public String getInvalidtime() {
-        return invalidtime;
+    public String getInvalidTime() {
+        return invalidTime;
     }
 
-    /**
-     * null
-     * @param invalidtime null
-     */
-    public void setInvalidtime(String invalidtime) {
-        this.invalidtime = invalidtime;
+    public void setInvalidTime(String invalidTime) {
+        this.invalidTime = invalidTime;
     }
 
-    /**
-     * null
-     * @return BANKNO null
-     */
-    public String getBankno() {
-        return bankno;
+    public String getBankNo() {
+        return bankNo;
     }
 
-    /**
-     * null
-     * @param bankno null
-     */
-    public void setBankno(String bankno) {
-        this.bankno = bankno;
+    public void setBankNo(String bankNo) {
+        this.bankNo = bankNo;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return RELATIVETYPE null
-     */
-    public String getRelativetype() {
-        return relativetype;
+    public String getRelativeType() {
+        return relativeType;
     }
 
-    /**
-     * null
-     * @param relativetype null
-     */
-    public void setRelativetype(String relativetype) {
-        this.relativetype = relativetype;
+    public void setRelativeType(String relativeType) {
+        this.relativeType = relativeType;
     }
 
-    /**
-     * null
-     * @return BANKNAME null
-     */
-    public String getBankname() {
-        return bankname;
+    public String getBankName() {
+        return bankName;
     }
 
-    /**
-     * null
-     * @param bankname null
-     */
-    public void setBankname(String bankname) {
-        this.bankname = bankname;
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 }

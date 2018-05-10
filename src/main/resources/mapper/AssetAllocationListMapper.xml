@@ -2,39 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.AssetAllocationListMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.AssetAllocationListEntity" >
-    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
-    <result column="PRODUCTCODE" property="productcode" jdbcType="VARCHAR" />
-    <result column="PRODUCTDIMENSION" property="productdimension" jdbcType="VARCHAR" />
+    <id column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeSerialNo" jdbcType="VARCHAR" />
+    <result column="PRODUCTCODE" property="productCode" jdbcType="VARCHAR" />
+    <result column="PRODUCTDIMENSION" property="productDimension" jdbcType="VARCHAR" />
     <result column="PROPORTION" property="proportion" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
-    <result column="ASSETTYPE" property="assettype" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
+    <result column="ASSETTYPE" property="assetType" jdbcType="VARCHAR" />
     <result column="EDUCATION" property="education" jdbcType="VARCHAR" />
-    <result column="MINACCOUNT" property="minaccount" jdbcType="VARCHAR" />
-    <result column="MAXACCOUNT" property="maxaccount" jdbcType="VARCHAR" />
-    <result column="LOANTERMUNIT" property="loantermunit" jdbcType="VARCHAR" />
-    <result column="LOANTERM" property="loanterm" jdbcType="VARCHAR" />
-    <result column="REPAYMENTTYPE" property="repaymenttype" jdbcType="VARCHAR" />
-    <result column="APPLYORGID" property="applyorgid" jdbcType="VARCHAR" />
-    <result column="CUSENTERPRISE" property="cusenterprise" jdbcType="VARCHAR" />
-    <result column="WORKCITY" property="workcity" jdbcType="VARCHAR" />
-    <result column="HOUSECITY" property="housecity" jdbcType="VARCHAR" />
-    <result column="CUSCLASSIFY" property="cusclassify" jdbcType="VARCHAR" />
-    <result column="RISKGRADE" property="riskgrade" jdbcType="VARCHAR" />
-    <result column="CUSENTERPRISETYPE" property="cusenterprisetype" jdbcType="VARCHAR" />
-    <result column="WORKCITYTYPE" property="workcitytype" jdbcType="VARCHAR" />
-    <result column="HOUSECITYTYPE" property="housecitytype" jdbcType="VARCHAR" />
-    <result column="WORKPROVINCE" property="workprovince" jdbcType="VARCHAR" />
-    <result column="HOUSEPROVINCE" property="houseprovince" jdbcType="VARCHAR" />
+    <result column="MINACCOUNT" property="minAccount" jdbcType="VARCHAR" />
+    <result column="MAXACCOUNT" property="maxAccount" jdbcType="VARCHAR" />
+    <result column="LOANTERMUNIT" property="loanTermUnit" jdbcType="VARCHAR" />
+    <result column="LOANTERM" property="loanTerm" jdbcType="VARCHAR" />
+    <result column="REPAYMENTTYPE" property="repaymentType" jdbcType="VARCHAR" />
+    <result column="APPLYORGID" property="applyOrgId" jdbcType="VARCHAR" />
+    <result column="CUSENTERPRISE" property="cusEnterprise" jdbcType="VARCHAR" />
+    <result column="WORKCITY" property="workCity" jdbcType="VARCHAR" />
+    <result column="HOUSECITY" property="houseCity" jdbcType="VARCHAR" />
+    <result column="CUSCLASSIFY" property="cusClassify" jdbcType="VARCHAR" />
+    <result column="RISKGRADE" property="riskGrade" jdbcType="VARCHAR" />
+    <result column="CUSENTERPRISETYPE" property="cusEnterpriseType" jdbcType="VARCHAR" />
+    <result column="WORKCITYTYPE" property="workCityType" jdbcType="VARCHAR" />
+    <result column="HOUSECITYTYPE" property="houseCityType" jdbcType="VARCHAR" />
+    <result column="WORKPROVINCE" property="workProvince" jdbcType="VARCHAR" />
+    <result column="HOUSEPROVINCE" property="houseProvince" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from ASSET_ALLOCATION_LIST
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.AssetAllocationListEntity" >
     insert into ASSET_ALLOCATION_LIST (SERIALNO, RELATIVESERIALNO, PRODUCTCODE, 
@@ -47,48 +47,48 @@
       HOUSECITY, CUSCLASSIFY, RISKGRADE, 
       CUSENTERPRISETYPE, WORKCITYTYPE, HOUSECITYTYPE, 
       WORKPROVINCE, HOUSEPROVINCE)
-    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{productcode,jdbcType=VARCHAR}, 
-      #{productdimension,jdbcType=VARCHAR}, #{proportion,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
-      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
-      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{assettype,jdbcType=VARCHAR}, 
-      #{education,jdbcType=VARCHAR}, #{minaccount,jdbcType=VARCHAR}, #{maxaccount,jdbcType=VARCHAR}, 
-      #{loantermunit,jdbcType=VARCHAR}, #{loanterm,jdbcType=VARCHAR}, #{repaymenttype,jdbcType=VARCHAR}, 
-      #{applyorgid,jdbcType=VARCHAR}, #{cusenterprise,jdbcType=VARCHAR}, #{workcity,jdbcType=VARCHAR}, 
-      #{housecity,jdbcType=VARCHAR}, #{cusclassify,jdbcType=VARCHAR}, #{riskgrade,jdbcType=VARCHAR}, 
-      #{cusenterprisetype,jdbcType=VARCHAR}, #{workcitytype,jdbcType=VARCHAR}, #{housecitytype,jdbcType=VARCHAR}, 
-      #{workprovince,jdbcType=VARCHAR}, #{houseprovince,jdbcType=VARCHAR})
+    values (#{serialNo,jdbcType=VARCHAR}, #{relativeSerialNo,jdbcType=VARCHAR}, #{productCode,jdbcType=VARCHAR}, 
+      #{productDimension,jdbcType=VARCHAR}, #{proportion,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR}, 
+      #{updateUserId,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, 
+      #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{assetType,jdbcType=VARCHAR}, 
+      #{education,jdbcType=VARCHAR}, #{minAccount,jdbcType=VARCHAR}, #{maxAccount,jdbcType=VARCHAR}, 
+      #{loanTermUnit,jdbcType=VARCHAR}, #{loanTerm,jdbcType=VARCHAR}, #{repaymentType,jdbcType=VARCHAR}, 
+      #{applyOrgId,jdbcType=VARCHAR}, #{cusEnterprise,jdbcType=VARCHAR}, #{workCity,jdbcType=VARCHAR}, 
+      #{houseCity,jdbcType=VARCHAR}, #{cusClassify,jdbcType=VARCHAR}, #{riskGrade,jdbcType=VARCHAR}, 
+      #{cusEnterpriseType,jdbcType=VARCHAR}, #{workCityType,jdbcType=VARCHAR}, #{houseCityType,jdbcType=VARCHAR}, 
+      #{workProvince,jdbcType=VARCHAR}, #{houseProvince,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.AssetAllocationListEntity" >
     update ASSET_ALLOCATION_LIST
-    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
-      PRODUCTCODE = #{productcode,jdbcType=VARCHAR},
-      PRODUCTDIMENSION = #{productdimension,jdbcType=VARCHAR},
+    set RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      PRODUCTCODE = #{productCode,jdbcType=VARCHAR},
+      PRODUCTDIMENSION = #{productDimension,jdbcType=VARCHAR},
       PROPORTION = #{proportion,jdbcType=VARCHAR},
-      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
-      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
-      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
-      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
-      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
-      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
-      ASSETTYPE = #{assettype,jdbcType=VARCHAR},
+      INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      ASSETTYPE = #{assetType,jdbcType=VARCHAR},
       EDUCATION = #{education,jdbcType=VARCHAR},
-      MINACCOUNT = #{minaccount,jdbcType=VARCHAR},
-      MAXACCOUNT = #{maxaccount,jdbcType=VARCHAR},
-      LOANTERMUNIT = #{loantermunit,jdbcType=VARCHAR},
-      LOANTERM = #{loanterm,jdbcType=VARCHAR},
-      REPAYMENTTYPE = #{repaymenttype,jdbcType=VARCHAR},
-      APPLYORGID = #{applyorgid,jdbcType=VARCHAR},
-      CUSENTERPRISE = #{cusenterprise,jdbcType=VARCHAR},
-      WORKCITY = #{workcity,jdbcType=VARCHAR},
-      HOUSECITY = #{housecity,jdbcType=VARCHAR},
-      CUSCLASSIFY = #{cusclassify,jdbcType=VARCHAR},
-      RISKGRADE = #{riskgrade,jdbcType=VARCHAR},
-      CUSENTERPRISETYPE = #{cusenterprisetype,jdbcType=VARCHAR},
-      WORKCITYTYPE = #{workcitytype,jdbcType=VARCHAR},
-      HOUSECITYTYPE = #{housecitytype,jdbcType=VARCHAR},
-      WORKPROVINCE = #{workprovince,jdbcType=VARCHAR},
-      HOUSEPROVINCE = #{houseprovince,jdbcType=VARCHAR}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+      MINACCOUNT = #{minAccount,jdbcType=VARCHAR},
+      MAXACCOUNT = #{maxAccount,jdbcType=VARCHAR},
+      LOANTERMUNIT = #{loanTermUnit,jdbcType=VARCHAR},
+      LOANTERM = #{loanTerm,jdbcType=VARCHAR},
+      REPAYMENTTYPE = #{repaymentType,jdbcType=VARCHAR},
+      APPLYORGID = #{applyOrgId,jdbcType=VARCHAR},
+      CUSENTERPRISE = #{cusEnterprise,jdbcType=VARCHAR},
+      WORKCITY = #{workCity,jdbcType=VARCHAR},
+      HOUSECITY = #{houseCity,jdbcType=VARCHAR},
+      CUSCLASSIFY = #{cusClassify,jdbcType=VARCHAR},
+      RISKGRADE = #{riskGrade,jdbcType=VARCHAR},
+      CUSENTERPRISETYPE = #{cusEnterpriseType,jdbcType=VARCHAR},
+      WORKCITYTYPE = #{workCityType,jdbcType=VARCHAR},
+      HOUSECITYTYPE = #{houseCityType,jdbcType=VARCHAR},
+      WORKPROVINCE = #{workProvince,jdbcType=VARCHAR},
+      HOUSEPROVINCE = #{houseProvince,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, PRODUCTCODE, PRODUCTDIMENSION, PROPORTION, INPUTDATE, 
@@ -97,7 +97,7 @@
     WORKCITY, HOUSECITY, CUSCLASSIFY, RISKGRADE, CUSENTERPRISETYPE, WORKCITYTYPE, HOUSECITYTYPE, 
     WORKPROVINCE, HOUSEPROVINCE
     from ASSET_ALLOCATION_LIST
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, PRODUCTCODE, PRODUCTDIMENSION, PROPORTION, INPUTDATE, 

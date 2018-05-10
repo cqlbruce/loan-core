@@ -10,22 +10,22 @@ public class AssetAllocationListEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联外键
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 产品编码
      */
-    private String productcode;
+    private String productCode;
 
     /**
      * 产品维度
      */
-    private String productdimension;
+    private String productDimension;
 
     /**
      * 占比
@@ -35,37 +35,37 @@ public class AssetAllocationListEntity {
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 资产清单配置类型
      */
-    private String assettype;
+    private String assetType;
 
     /**
      * 学历
@@ -75,544 +75,312 @@ public class AssetAllocationListEntity {
     /**
      * 档次金额下限
      */
-    private String minaccount;
+    private String minAccount;
 
     /**
      * 档次金额上限
      */
-    private String maxaccount;
+    private String maxAccount;
 
     /**
      * 贷款期限单位
      */
-    private String loantermunit;
+    private String loanTermUnit;
 
     /**
      * 贷款期限
      */
-    private String loanterm;
+    private String loanTerm;
 
     /**
      * 还款方式
      */
-    private String repaymenttype;
+    private String repaymentType;
 
     /**
      * 申请渠道
      */
-    private String applyorgid;
+    private String applyOrgId;
 
     /**
      * 客户企业
      */
-    private String cusenterprise;
+    private String cusEnterprise;
 
     /**
      * 工作城市
      */
-    private String workcity;
+    private String workCity;
 
     /**
      * 房产城市
      */
-    private String housecity;
+    private String houseCity;
 
     /**
      * 客户客群分类
      */
-    private String cusclassify;
+    private String cusClassify;
 
     /**
      * 客户风险等级
      */
-    private String riskgrade;
+    private String riskGrade;
 
     /**
      * 客户企业分类
      */
-    private String cusenterprisetype;
+    private String cusEnterpriseType;
 
     /**
      * 工作城市分类
      */
-    private String workcitytype;
+    private String workCityType;
 
     /**
      * 房产城市分类
      */
-    private String housecitytype;
+    private String houseCityType;
 
     /**
      * 工作省
      */
-    private String workprovince;
+    private String workProvince;
 
     /**
      * 房产省
      */
-    private String houseprovince;
+    private String houseProvince;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return PRODUCTCODE null
-     */
-    public String getProductcode() {
-        return productcode;
+    public String getProductCode() {
+        return productCode;
     }
 
-    /**
-     * null
-     * @param productcode null
-     */
-    public void setProductcode(String productcode) {
-        this.productcode = productcode;
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
     }
 
-    /**
-     * null
-     * @return PRODUCTDIMENSION null
-     */
-    public String getProductdimension() {
-        return productdimension;
+    public String getProductDimension() {
+        return productDimension;
     }
 
-    /**
-     * null
-     * @param productdimension null
-     */
-    public void setProductdimension(String productdimension) {
-        this.productdimension = productdimension;
+    public void setProductDimension(String productDimension) {
+        this.productDimension = productDimension;
     }
 
-    /**
-     * null
-     * @return PROPORTION null
-     */
     public String getProportion() {
         return proportion;
     }
 
-    /**
-     * null
-     * @param proportion null
-     */
     public void setProportion(String proportion) {
         this.proportion = proportion;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return ASSETTYPE null
-     */
-    public String getAssettype() {
-        return assettype;
+    public String getAssetType() {
+        return assetType;
     }
 
-    /**
-     * null
-     * @param assettype null
-     */
-    public void setAssettype(String assettype) {
-        this.assettype = assettype;
+    public void setAssetType(String assetType) {
+        this.assetType = assetType;
     }
 
-    /**
-     * null
-     * @return EDUCATION null
-     */
     public String getEducation() {
         return education;
     }
 
-    /**
-     * null
-     * @param education null
-     */
     public void setEducation(String education) {
         this.education = education;
     }
 
-    /**
-     * null
-     * @return MINACCOUNT null
-     */
-    public String getMinaccount() {
-        return minaccount;
+    public String getMinAccount() {
+        return minAccount;
     }
 
-    /**
-     * null
-     * @param minaccount null
-     */
-    public void setMinaccount(String minaccount) {
-        this.minaccount = minaccount;
+    public void setMinAccount(String minAccount) {
+        this.minAccount = minAccount;
     }
 
-    /**
-     * null
-     * @return MAXACCOUNT null
-     */
-    public String getMaxaccount() {
-        return maxaccount;
+    public String getMaxAccount() {
+        return maxAccount;
     }
 
-    /**
-     * null
-     * @param maxaccount null
-     */
-    public void setMaxaccount(String maxaccount) {
-        this.maxaccount = maxaccount;
+    public void setMaxAccount(String maxAccount) {
+        this.maxAccount = maxAccount;
     }
 
-    /**
-     * null
-     * @return LOANTERMUNIT null
-     */
-    public String getLoantermunit() {
-        return loantermunit;
+    public String getLoanTermUnit() {
+        return loanTermUnit;
     }
 
-    /**
-     * null
-     * @param loantermunit null
-     */
-    public void setLoantermunit(String loantermunit) {
-        this.loantermunit = loantermunit;
+    public void setLoanTermUnit(String loanTermUnit) {
+        this.loanTermUnit = loanTermUnit;
     }
 
-    /**
-     * null
-     * @return LOANTERM null
-     */
-    public String getLoanterm() {
-        return loanterm;
+    public String getLoanTerm() {
+        return loanTerm;
     }
 
-    /**
-     * null
-     * @param loanterm null
-     */
-    public void setLoanterm(String loanterm) {
-        this.loanterm = loanterm;
+    public void setLoanTerm(String loanTerm) {
+        this.loanTerm = loanTerm;
     }
 
-    /**
-     * null
-     * @return REPAYMENTTYPE null
-     */
-    public String getRepaymenttype() {
-        return repaymenttype;
+    public String getRepaymentType() {
+        return repaymentType;
     }
 
-    /**
-     * null
-     * @param repaymenttype null
-     */
-    public void setRepaymenttype(String repaymenttype) {
-        this.repaymenttype = repaymenttype;
+    public void setRepaymentType(String repaymentType) {
+        this.repaymentType = repaymentType;
     }
 
-    /**
-     * null
-     * @return APPLYORGID null
-     */
-    public String getApplyorgid() {
-        return applyorgid;
+    public String getApplyOrgId() {
+        return applyOrgId;
     }
 
-    /**
-     * null
-     * @param applyorgid null
-     */
-    public void setApplyorgid(String applyorgid) {
-        this.applyorgid = applyorgid;
+    public void setApplyOrgId(String applyOrgId) {
+        this.applyOrgId = applyOrgId;
     }
 
-    /**
-     * null
-     * @return CUSENTERPRISE null
-     */
-    public String getCusenterprise() {
-        return cusenterprise;
+    public String getCusEnterprise() {
+        return cusEnterprise;
     }
 
-    /**
-     * null
-     * @param cusenterprise null
-     */
-    public void setCusenterprise(String cusenterprise) {
-        this.cusenterprise = cusenterprise;
+    public void setCusEnterprise(String cusEnterprise) {
+        this.cusEnterprise = cusEnterprise;
     }
 
-    /**
-     * null
-     * @return WORKCITY null
-     */
-    public String getWorkcity() {
-        return workcity;
+    public String getWorkCity() {
+        return workCity;
     }
 
-    /**
-     * null
-     * @param workcity null
-     */
-    public void setWorkcity(String workcity) {
-        this.workcity = workcity;
+    public void setWorkCity(String workCity) {
+        this.workCity = workCity;
     }
 
-    /**
-     * null
-     * @return HOUSECITY null
-     */
-    public String getHousecity() {
-        return housecity;
+    public String getHouseCity() {
+        return houseCity;
     }
 
-    /**
-     * null
-     * @param housecity null
-     */
-    public void setHousecity(String housecity) {
-        this.housecity = housecity;
+    public void setHouseCity(String houseCity) {
+        this.houseCity = houseCity;
     }
 
-    /**
-     * null
-     * @return CUSCLASSIFY null
-     */
-    public String getCusclassify() {
-        return cusclassify;
+    public String getCusClassify() {
+        return cusClassify;
     }
 
-    /**
-     * null
-     * @param cusclassify null
-     */
-    public void setCusclassify(String cusclassify) {
-        this.cusclassify = cusclassify;
+    public void setCusClassify(String cusClassify) {
+        this.cusClassify = cusClassify;
     }
 
-    /**
-     * null
-     * @return RISKGRADE null
-     */
-    public String getRiskgrade() {
-        return riskgrade;
+    public String getRiskGrade() {
+        return riskGrade;
     }
 
-    /**
-     * null
-     * @param riskgrade null
-     */
-    public void setRiskgrade(String riskgrade) {
-        this.riskgrade = riskgrade;
+    public void setRiskGrade(String riskGrade) {
+        this.riskGrade = riskGrade;
     }
 
-    /**
-     * null
-     * @return CUSENTERPRISETYPE null
-     */
-    public String getCusenterprisetype() {
-        return cusenterprisetype;
+    public String getCusEnterpriseType() {
+        return cusEnterpriseType;
     }
 
-    /**
-     * null
-     * @param cusenterprisetype null
-     */
-    public void setCusenterprisetype(String cusenterprisetype) {
-        this.cusenterprisetype = cusenterprisetype;
+    public void setCusEnterpriseType(String cusEnterpriseType) {
+        this.cusEnterpriseType = cusEnterpriseType;
     }
 
-    /**
-     * null
-     * @return WORKCITYTYPE null
-     */
-    public String getWorkcitytype() {
-        return workcitytype;
+    public String getWorkCityType() {
+        return workCityType;
     }
 
-    /**
-     * null
-     * @param workcitytype null
-     */
-    public void setWorkcitytype(String workcitytype) {
-        this.workcitytype = workcitytype;
+    public void setWorkCityType(String workCityType) {
+        this.workCityType = workCityType;
     }
 
-    /**
-     * null
-     * @return HOUSECITYTYPE null
-     */
-    public String getHousecitytype() {
-        return housecitytype;
+    public String getHouseCityType() {
+        return houseCityType;
     }
 
-    /**
-     * null
-     * @param housecitytype null
-     */
-    public void setHousecitytype(String housecitytype) {
-        this.housecitytype = housecitytype;
+    public void setHouseCityType(String houseCityType) {
+        this.houseCityType = houseCityType;
     }
 
-    /**
-     * null
-     * @return WORKPROVINCE null
-     */
-    public String getWorkprovince() {
-        return workprovince;
+    public String getWorkProvince() {
+        return workProvince;
     }
 
-    /**
-     * null
-     * @param workprovince null
-     */
-    public void setWorkprovince(String workprovince) {
-        this.workprovince = workprovince;
+    public void setWorkProvince(String workProvince) {
+        this.workProvince = workProvince;
     }
 
-    /**
-     * null
-     * @return HOUSEPROVINCE null
-     */
-    public String getHouseprovince() {
-        return houseprovince;
+    public String getHouseProvince() {
+        return houseProvince;
     }
 
-    /**
-     * null
-     * @param houseprovince null
-     */
-    public void setHouseprovince(String houseprovince) {
-        this.houseprovince = houseprovince;
+    public void setHouseProvince(String houseProvince) {
+        this.houseProvince = houseProvince;
     }
 }

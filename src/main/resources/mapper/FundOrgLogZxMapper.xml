@@ -2,34 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wu.fund.dao.FundOrgLogZxMapper">
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundOrgLogZxEntity">
-    <id column="SERIALNO" jdbcType="VARCHAR" property="serialno" />
-    <result column="CAPPLYNO" jdbcType="VARCHAR" property="capplyno" />
-    <result column="CSLBUSINESSNO" jdbcType="VARCHAR" property="cslbusinessno" />
-    <result column="CDEALNO" jdbcType="VARCHAR" property="cdealno" />
-    <result column="FUNDSTEPNAME" jdbcType="VARCHAR" property="fundstepname" />
-    <result column="FUNDMAINFLOWNAME" jdbcType="VARCHAR" property="fundmainflowname" />
-    <result column="FUNDSUBFLOWNAME" jdbcType="VARCHAR" property="fundsubflowname" />
-    <result column="FUNDSUBFLOWSTATUS" jdbcType="VARCHAR" property="fundsubflowstatus" />
-    <result column="FUNDSERVICERETURNCODE" jdbcType="VARCHAR" property="fundservicereturncode" />
-    <result column="FUNDSERVICERETURNMSG" jdbcType="VARCHAR" property="fundservicereturnmsg" />
-    <result column="FUNDBUSINESSSTATUS" jdbcType="VARCHAR" property="fundbusinessstatus" />
-    <result column="CCAPITALBUSINESSNO" jdbcType="VARCHAR" property="ccapitalbusinessno" />
-    <result column="BEGINTIME" jdbcType="VARCHAR" property="begintime" />
-    <result column="ENDTIME" jdbcType="VARCHAR" property="endtime" />
-    <result column="LOANORGCODE" jdbcType="VARCHAR" property="loanorgcode" />
+    <id column="SERIALNO" jdbcType="VARCHAR" property="serialNo" />
+    <result column="CAPPLYNO" jdbcType="VARCHAR" property="cApplyNo" />
+    <result column="CSLBUSINESSNO" jdbcType="VARCHAR" property="cslBusinessNo" />
+    <result column="CDEALNO" jdbcType="VARCHAR" property="cDealNo" />
+    <result column="FUNDSTEPNAME" jdbcType="VARCHAR" property="fundStepName" />
+    <result column="FUNDMAINFLOWNAME" jdbcType="VARCHAR" property="fundMainFlowName" />
+    <result column="FUNDSUBFLOWNAME" jdbcType="VARCHAR" property="fundSubFlowName" />
+    <result column="FUNDSUBFLOWSTATUS" jdbcType="VARCHAR" property="fundSubFlowStatus" />
+    <result column="FUNDSERVICERETURNCODE" jdbcType="VARCHAR" property="fundServiceReturnCode" />
+    <result column="FUNDSERVICERETURNMSG" jdbcType="VARCHAR" property="fundServiceReturnMsg" />
+    <result column="FUNDBUSINESSSTATUS" jdbcType="VARCHAR" property="fundBusinessStatus" />
+    <result column="CCAPITALBUSINESSNO" jdbcType="VARCHAR" property="cCapitalBusinessNo" />
+    <result column="BEGINTIME" jdbcType="VARCHAR" property="beginTime" />
+    <result column="ENDTIME" jdbcType="VARCHAR" property="endTime" />
+    <result column="LOANORGCODE" jdbcType="VARCHAR" property="loanOrgCode" />
     <result column="STATUS" jdbcType="VARCHAR" property="status" />
-    <result column="OLDLOANORGCODE" jdbcType="VARCHAR" property="oldloanorgcode" />
-    <result column="CERTID" jdbcType="VARCHAR" property="certid" />
-    <result column="FILEPACKAGE_NAME" jdbcType="VARCHAR" property="filepackageName" />
+    <result column="OLDLOANORGCODE" jdbcType="VARCHAR" property="oldLoanOrgCode" />
+    <result column="CERTID" jdbcType="VARCHAR" property="certId" />
+    <result column="FILEPACKAGE_NAME" jdbcType="VARCHAR" property="filePackageName" />
     <result column="DEAL_STATUS" jdbcType="VARCHAR" property="dealStatus" />
     <result column="DEAL_DESC" jdbcType="VARCHAR" property="dealDesc" />
-    <result column="CERTTYPE" jdbcType="VARCHAR" property="certtype" />
-    <result column="CUSTOMERNAME" jdbcType="VARCHAR" property="customername" />
-    <result column="RESPONSEMESSAGE" jdbcType="CLOB" property="responsemessage" />
+    <result column="CERTTYPE" jdbcType="VARCHAR" property="certType" />
+    <result column="CUSTOMERNAME" jdbcType="VARCHAR" property="customerName" />
+    <result column="RESPONSEMESSAGE" jdbcType="CLOB" property="responseMessage" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from FUND_ORG_LOG_ZX
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
     insert into FUND_ORG_LOG_ZX (SERIALNO, CAPPLYNO, CSLBUSINESSNO, 
@@ -41,42 +41,42 @@
       CERTID, FILEPACKAGE_NAME, DEAL_STATUS, 
       DEAL_DESC, CERTTYPE, CUSTOMERNAME, 
       RESPONSEMESSAGE)
-    values (#{serialno,jdbcType=VARCHAR}, #{capplyno,jdbcType=VARCHAR}, #{cslbusinessno,jdbcType=VARCHAR}, 
-      #{cdealno,jdbcType=VARCHAR}, #{fundstepname,jdbcType=VARCHAR}, #{fundmainflowname,jdbcType=VARCHAR}, 
-      #{fundsubflowname,jdbcType=VARCHAR}, #{fundsubflowstatus,jdbcType=VARCHAR}, #{fundservicereturncode,jdbcType=VARCHAR}, 
-      #{fundservicereturnmsg,jdbcType=VARCHAR}, #{fundbusinessstatus,jdbcType=VARCHAR}, 
-      #{ccapitalbusinessno,jdbcType=VARCHAR}, #{begintime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR}, 
-      #{loanorgcode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{oldloanorgcode,jdbcType=VARCHAR}, 
-      #{certid,jdbcType=VARCHAR}, #{filepackageName,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, 
-      #{dealDesc,jdbcType=VARCHAR}, #{certtype,jdbcType=VARCHAR}, #{customername,jdbcType=VARCHAR}, 
-      #{responsemessage,jdbcType=CLOB})
+    values (#{serialNo,jdbcType=VARCHAR}, #{cApplyNo,jdbcType=VARCHAR}, #{cslBusinessNo,jdbcType=VARCHAR}, 
+      #{cDealNo,jdbcType=VARCHAR}, #{fundStepName,jdbcType=VARCHAR}, #{fundMainFlowName,jdbcType=VARCHAR}, 
+      #{fundSubFlowName,jdbcType=VARCHAR}, #{fundSubFlowStatus,jdbcType=VARCHAR}, #{fundServiceReturnCode,jdbcType=VARCHAR}, 
+      #{fundServiceReturnMsg,jdbcType=VARCHAR}, #{fundBusinessStatus,jdbcType=VARCHAR}, 
+      #{cCapitalBusinessNo,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
+      #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{oldLoanOrgCode,jdbcType=VARCHAR}, 
+      #{certId,jdbcType=VARCHAR}, #{filePackageName,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, 
+      #{dealDesc,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, 
+      #{responseMessage,jdbcType=CLOB})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
     update FUND_ORG_LOG_ZX
-    set CAPPLYNO = #{capplyno,jdbcType=VARCHAR},
-      CSLBUSINESSNO = #{cslbusinessno,jdbcType=VARCHAR},
-      CDEALNO = #{cdealno,jdbcType=VARCHAR},
-      FUNDSTEPNAME = #{fundstepname,jdbcType=VARCHAR},
-      FUNDMAINFLOWNAME = #{fundmainflowname,jdbcType=VARCHAR},
-      FUNDSUBFLOWNAME = #{fundsubflowname,jdbcType=VARCHAR},
-      FUNDSUBFLOWSTATUS = #{fundsubflowstatus,jdbcType=VARCHAR},
-      FUNDSERVICERETURNCODE = #{fundservicereturncode,jdbcType=VARCHAR},
-      FUNDSERVICERETURNMSG = #{fundservicereturnmsg,jdbcType=VARCHAR},
-      FUNDBUSINESSSTATUS = #{fundbusinessstatus,jdbcType=VARCHAR},
-      CCAPITALBUSINESSNO = #{ccapitalbusinessno,jdbcType=VARCHAR},
-      BEGINTIME = #{begintime,jdbcType=VARCHAR},
-      ENDTIME = #{endtime,jdbcType=VARCHAR},
-      LOANORGCODE = #{loanorgcode,jdbcType=VARCHAR},
+    set CAPPLYNO = #{cApplyNo,jdbcType=VARCHAR},
+      CSLBUSINESSNO = #{cslBusinessNo,jdbcType=VARCHAR},
+      CDEALNO = #{cDealNo,jdbcType=VARCHAR},
+      FUNDSTEPNAME = #{fundStepName,jdbcType=VARCHAR},
+      FUNDMAINFLOWNAME = #{fundMainFlowName,jdbcType=VARCHAR},
+      FUNDSUBFLOWNAME = #{fundSubFlowName,jdbcType=VARCHAR},
+      FUNDSUBFLOWSTATUS = #{fundSubFlowStatus,jdbcType=VARCHAR},
+      FUNDSERVICERETURNCODE = #{fundServiceReturnCode,jdbcType=VARCHAR},
+      FUNDSERVICERETURNMSG = #{fundServiceReturnMsg,jdbcType=VARCHAR},
+      FUNDBUSINESSSTATUS = #{fundBusinessStatus,jdbcType=VARCHAR},
+      CCAPITALBUSINESSNO = #{cCapitalBusinessNo,jdbcType=VARCHAR},
+      BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+      ENDTIME = #{endTime,jdbcType=VARCHAR},
+      LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
       STATUS = #{status,jdbcType=VARCHAR},
-      OLDLOANORGCODE = #{oldloanorgcode,jdbcType=VARCHAR},
-      CERTID = #{certid,jdbcType=VARCHAR},
-      FILEPACKAGE_NAME = #{filepackageName,jdbcType=VARCHAR},
+      OLDLOANORGCODE = #{oldLoanOrgCode,jdbcType=VARCHAR},
+      CERTID = #{certId,jdbcType=VARCHAR},
+      FILEPACKAGE_NAME = #{filePackageName,jdbcType=VARCHAR},
       DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
       DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
-      CERTTYPE = #{certtype,jdbcType=VARCHAR},
-      CUSTOMERNAME = #{customername,jdbcType=VARCHAR},
-      RESPONSEMESSAGE = #{responsemessage,jdbcType=CLOB}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+      CERTTYPE = #{certType,jdbcType=VARCHAR},
+      CUSTOMERNAME = #{customerName,jdbcType=VARCHAR},
+      RESPONSEMESSAGE = #{responseMessage,jdbcType=CLOB}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select SERIALNO, CAPPLYNO, CSLBUSINESSNO, CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, 
@@ -85,7 +85,7 @@
     OLDLOANORGCODE, CERTID, FILEPACKAGE_NAME, DEAL_STATUS, DEAL_DESC, CERTTYPE, CUSTOMERNAME, 
     RESPONSEMESSAGE
     from FUND_ORG_LOG_ZX
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap">
     select SERIALNO, CAPPLYNO, CSLBUSINESSNO, CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, 

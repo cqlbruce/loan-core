@@ -8,7 +8,7 @@ public interface FunCrePreapprovalContactMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface FunCrePreapprovalContactMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    FunCrePreapprovalContactEntity selectByPrimaryKey(String serialno);
+    FunCrePreapprovalContactEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

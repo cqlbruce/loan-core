@@ -43,7 +43,7 @@ public class CoreCreditpreapprovalEntity implements Serializable {
     /**
      * 影像资料文件包名
      */
-    private String imagefileName;
+    private String imageFileName;
 
     /**
      * 申请金额
@@ -224,12 +224,12 @@ public class CoreCreditpreapprovalEntity implements Serializable {
     /**
      * 资金单元编号
      */
-    private String fundunitno;
+    private String fundUnitNo;
 
     /**
      * 贷款机构编号
      */
-    private String loanorgcode;
+    private String loanOrgCode;
 
     /**
      * 交易状态
@@ -239,12 +239,12 @@ public class CoreCreditpreapprovalEntity implements Serializable {
     /**
      * 开始时间
      */
-    private String begintime;
+    private String beginTime;
 
     /**
      * 结束时间
      */
-    private String endtime;
+    private String endTime;
 
     /**
      * CORE_CREDITPREAPPROVAL
@@ -351,16 +351,16 @@ public class CoreCreditpreapprovalEntity implements Serializable {
      * null
      * @return IMAGEFILE_NAME null
      */
-    public String getImagefileName() {
-        return imagefileName;
+    public String getImageFileName() {
+        return imageFileName;
     }
 
     /**
      * null
-     * @param imagefileName null
+     * @param imageFileName null
      */
-    public void setImagefileName(String imagefileName) {
-        this.imagefileName = imagefileName;
+    public void setImageFileName(String imageFileName) {
+        this.imageFileName = imageFileName;
     }
 
     /**
@@ -923,83 +923,45 @@ public class CoreCreditpreapprovalEntity implements Serializable {
         this.dealDesc = dealDesc;
     }
 
-    /**
-     * null
-     * @return FUNDUNITNO null
-     */
-    public String getFundunitno() {
-        return fundunitno;
+    public String getFundUnitNo() {
+        return fundUnitNo;
     }
 
-    /**
-     * null
-     * @param fundunitno null
-     */
-    public void setFundunitno(String fundunitno) {
-        this.fundunitno = fundunitno;
+    public void setFundUnitNo(String fundUnitNo) {
+        this.fundUnitNo = fundUnitNo;
     }
 
-    /**
-     * null
-     * @return LOANORGCODE null
-     */
-    public String getLoanorgcode() {
-        return loanorgcode;
+    public String getLoanOrgCode() {
+        return loanOrgCode;
     }
 
-    /**
-     * null
-     * @param loanorgcode null
-     */
-    public void setLoanorgcode(String loanorgcode) {
-        this.loanorgcode = loanorgcode;
+    public void setLoanOrgCode(String loanOrgCode) {
+        this.loanOrgCode = loanOrgCode;
     }
 
-    /**
-     * null
-     * @return STATUS null
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * null
-     * @param status null
-     */
     public void setStatus(String status) {
         this.status = status;
     }
 
-    /**
-     * null
-     * @return BEGINTIME null
-     */
-    public String getBegintime() {
-        return begintime;
+    public String getBeginTime() {
+        return beginTime;
     }
 
-    /**
-     * null
-     * @param begintime null
-     */
-    public void setBegintime(String begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
-    /**
-     * null
-     * @return ENDTIME null
-     */
-    public String getEndtime() {
-        return endtime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    /**
-     * null
-     * @param endtime null
-     */
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
+
+   
 }

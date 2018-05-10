@@ -8,7 +8,7 @@ public interface FunCrePreapprovalGuarantorMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface FunCrePreapprovalGuarantorMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    FunCrePreapprovalGuarantorEntity selectByPrimaryKey(String serialno);
+    FunCrePreapprovalGuarantorEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

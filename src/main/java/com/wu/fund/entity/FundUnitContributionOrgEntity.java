@@ -9,336 +9,208 @@ public class FundUnitContributionOrgEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联资金单元编号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 出资机构类型
      */
-    private String orgtype;
+    private String orgType;
 
     /**
      * 出资机构名称
      */
-    private String orgname;
+    private String orgName;
 
     /**
      * 出资机构编码
      */
-    private String orgcode;
+    private String orgCode;
 
     /**
      * 出资比例
      */
-    private String contributionproportion;
+    private String contributionProportion;
 
     /**
      * 收益分配方式
      */
-    private String incomedistributionmode;
+    private String incomeDistributionMode;
 
     /**
      * 收益比例
      */
-    private String incomeratio;
+    private String incomeRatio;
 
     /**
      * '资金成本（年化利率）
      */
-    private String capitalcost;
+    private String capitalCost;
 
     /**
      * 保证金比例
      */
-    private String marginlevel;
+    private String marginLevel;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return ORGTYPE null
-     */
-    public String getOrgtype() {
-        return orgtype;
+    public String getOrgType() {
+        return orgType;
     }
 
-    /**
-     * null
-     * @param orgtype null
-     */
-    public void setOrgtype(String orgtype) {
-        this.orgtype = orgtype;
+    public void setOrgType(String orgType) {
+        this.orgType = orgType;
     }
 
-    /**
-     * null
-     * @return ORGNAME null
-     */
-    public String getOrgname() {
-        return orgname;
+    public String getOrgName() {
+        return orgName;
     }
 
-    /**
-     * null
-     * @param orgname null
-     */
-    public void setOrgname(String orgname) {
-        this.orgname = orgname;
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
     }
 
-    /**
-     * null
-     * @return ORGCODE null
-     */
-    public String getOrgcode() {
-        return orgcode;
+    public String getOrgCode() {
+        return orgCode;
     }
 
-    /**
-     * null
-     * @param orgcode null
-     */
-    public void setOrgcode(String orgcode) {
-        this.orgcode = orgcode;
+    public void setOrgCode(String orgCode) {
+        this.orgCode = orgCode;
     }
 
-    /**
-     * null
-     * @return CONTRIBUTIONPROPORTION null
-     */
-    public String getContributionproportion() {
-        return contributionproportion;
+    public String getContributionProportion() {
+        return contributionProportion;
     }
 
-    /**
-     * null
-     * @param contributionproportion null
-     */
-    public void setContributionproportion(String contributionproportion) {
-        this.contributionproportion = contributionproportion;
+    public void setContributionProportion(String contributionProportion) {
+        this.contributionProportion = contributionProportion;
     }
 
-    /**
-     * null
-     * @return INCOMEDISTRIBUTIONMODE null
-     */
-    public String getIncomedistributionmode() {
-        return incomedistributionmode;
+    public String getIncomeDistributionMode() {
+        return incomeDistributionMode;
     }
 
-    /**
-     * null
-     * @param incomedistributionmode null
-     */
-    public void setIncomedistributionmode(String incomedistributionmode) {
-        this.incomedistributionmode = incomedistributionmode;
+    public void setIncomeDistributionMode(String incomeDistributionMode) {
+        this.incomeDistributionMode = incomeDistributionMode;
     }
 
-    /**
-     * null
-     * @return INCOMERATIO null
-     */
-    public String getIncomeratio() {
-        return incomeratio;
+    public String getIncomeRatio() {
+        return incomeRatio;
     }
 
-    /**
-     * null
-     * @param incomeratio null
-     */
-    public void setIncomeratio(String incomeratio) {
-        this.incomeratio = incomeratio;
+    public void setIncomeRatio(String incomeRatio) {
+        this.incomeRatio = incomeRatio;
     }
 
-    /**
-     * null
-     * @return CAPITALCOST null
-     */
-    public String getCapitalcost() {
-        return capitalcost;
+    public String getCapitalCost() {
+        return capitalCost;
     }
 
-    /**
-     * null
-     * @param capitalcost null
-     */
-    public void setCapitalcost(String capitalcost) {
-        this.capitalcost = capitalcost;
+    public void setCapitalCost(String capitalCost) {
+        this.capitalCost = capitalCost;
     }
 
-    /**
-     * null
-     * @return MARGINLEVEL null
-     */
-    public String getMarginlevel() {
-        return marginlevel;
+    public String getMarginLevel() {
+        return marginLevel;
     }
 
-    /**
-     * null
-     * @param marginlevel null
-     */
-    public void setMarginlevel(String marginlevel) {
-        this.marginlevel = marginlevel;
+    public void setMarginLevel(String marginLevel) {
+        this.marginLevel = marginLevel;
     }
 }

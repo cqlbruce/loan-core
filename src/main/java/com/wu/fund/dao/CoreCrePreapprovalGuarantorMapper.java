@@ -8,7 +8,7 @@ public interface CoreCrePreapprovalGuarantorMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface CoreCrePreapprovalGuarantorMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    CoreCrePreapprovalGuarantorEntity selectByPrimaryKey(String serialno);
+    CoreCrePreapprovalGuarantorEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

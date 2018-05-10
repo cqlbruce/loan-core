@@ -12,7 +12,7 @@ public class FunCrePreapprovalContactEntity implements Serializable {
     /**
      * 联系人流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 授信或预审批请求流水号
@@ -37,12 +37,12 @@ public class FunCrePreapprovalContactEntity implements Serializable {
     /**
      * 资金单元编号
      */
-    private String fundunitno;
+    private String fundUnitNo;
 
     /**
      * 贷款机构编号
      */
-    private String loanorgcode;
+    private String loanOrgCode;
 
     /**
      * 交易状态
@@ -52,175 +52,99 @@ public class FunCrePreapprovalContactEntity implements Serializable {
     /**
      * 开始时间
      */
-    private String begintime;
+    private String beginTime;
 
     /**
      * 结束时间
      */
-    private String endtime;
+    private String endTime;
 
     /**
      * FUN_CRE_PREAPPROVAL_CONTACT
      */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return A_APPLY_NO null
-     */
     public String getaApplyNo() {
         return aApplyNo;
     }
 
-    /**
-     * null
-     * @param aApplyNo null
-     */
     public void setaApplyNo(String aApplyNo) {
         this.aApplyNo = aApplyNo;
     }
 
-    /**
-     * null
-     * @return CONTACTS_RELATION null
-     */
     public String getContactsRelation() {
         return contactsRelation;
     }
 
-    /**
-     * null
-     * @param contactsRelation null
-     */
     public void setContactsRelation(String contactsRelation) {
         this.contactsRelation = contactsRelation;
     }
 
-    /**
-     * null
-     * @return CONTACTS_NAME null
-     */
     public String getContactsName() {
         return contactsName;
     }
 
-    /**
-     * null
-     * @param contactsName null
-     */
     public void setContactsName(String contactsName) {
         this.contactsName = contactsName;
     }
 
-    /**
-     * null
-     * @return CONTACTS_MOBILE null
-     */
     public String getContactsMobile() {
         return contactsMobile;
     }
 
-    /**
-     * null
-     * @param contactsMobile null
-     */
     public void setContactsMobile(String contactsMobile) {
         this.contactsMobile = contactsMobile;
     }
 
-    /**
-     * null
-     * @return FUNDUNITNO null
-     */
-    public String getFundunitno() {
-        return fundunitno;
+    public String getFundUnitNo() {
+        return fundUnitNo;
     }
 
-    /**
-     * null
-     * @param fundunitno null
-     */
-    public void setFundunitno(String fundunitno) {
-        this.fundunitno = fundunitno;
+    public void setFundUnitNo(String fundUnitNo) {
+        this.fundUnitNo = fundUnitNo;
     }
 
-    /**
-     * null
-     * @return LOANORGCODE null
-     */
-    public String getLoanorgcode() {
-        return loanorgcode;
+    public String getLoanOrgCode() {
+        return loanOrgCode;
     }
 
-    /**
-     * null
-     * @param loanorgcode null
-     */
-    public void setLoanorgcode(String loanorgcode) {
-        this.loanorgcode = loanorgcode;
+    public void setLoanOrgCode(String loanOrgCode) {
+        this.loanOrgCode = loanOrgCode;
     }
 
-    /**
-     * null
-     * @return STATUS null
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * null
-     * @param status null
-     */
     public void setStatus(String status) {
         this.status = status;
     }
 
-    /**
-     * null
-     * @return BEGINTIME null
-     */
-    public String getBegintime() {
-        return begintime;
+    public String getBeginTime() {
+        return beginTime;
     }
 
-    /**
-     * null
-     * @param begintime null
-     */
-    public void setBegintime(String begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
-    /**
-     * null
-     * @return ENDTIME null
-     */
-    public String getEndtime() {
-        return endtime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    /**
-     * null
-     * @param endtime null
-     */
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 }

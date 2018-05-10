@@ -38,6 +38,7 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-feign')
     compile "com.alibaba:druid:1.1.6"
     compile "com.alibaba:fastjson:1.2.46"
+    compile "com.qianmi:spring-boot-starter-rocketmq:1.1.0-RELEASE"
     compile 'org.mybatis.generator:mybatis-generator-core:1.3.2'
     compile 'tk.mybatis:mapper:3.3.2'
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"

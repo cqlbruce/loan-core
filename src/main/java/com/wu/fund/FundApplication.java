@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @MapperScan("com.wu.fund.dao")
 @ComponentScan("com.wu.fund")
-public class FundApplication {
+public class FundApplication  {
 
     public static void main(String[] args) {
         SpringApplication.run(FundApplication.class, args);

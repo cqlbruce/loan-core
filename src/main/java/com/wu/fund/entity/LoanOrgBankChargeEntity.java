@@ -9,252 +9,156 @@ public class LoanOrgBankChargeEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联人行约束流水号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 档次笔数下限
      */
-    private String lowlimit;
+    private String lowLimit;
 
     /**
      * 档次笔数上限
      */
-    private String uplimit;
+    private String upLimit;
 
     /**
      * 单笔收费金额
      */
-    private String singlesum;
+    private String singleSum;
 
     /**
      * 关联类型
      */
-    private String relativetype;
+    private String relativeType;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return LOWLIMIT null
-     */
-    public String getLowlimit() {
-        return lowlimit;
+    public String getLowLimit() {
+        return lowLimit;
     }
 
-    /**
-     * null
-     * @param lowlimit null
-     */
-    public void setLowlimit(String lowlimit) {
-        this.lowlimit = lowlimit;
+    public void setLowLimit(String lowLimit) {
+        this.lowLimit = lowLimit;
     }
 
-    /**
-     * null
-     * @return UPLIMIT null
-     */
-    public String getUplimit() {
-        return uplimit;
+    public String getUpLimit() {
+        return upLimit;
     }
 
-    /**
-     * null
-     * @param uplimit null
-     */
-    public void setUplimit(String uplimit) {
-        this.uplimit = uplimit;
+    public void setUpLimit(String upLimit) {
+        this.upLimit = upLimit;
     }
 
-    /**
-     * null
-     * @return SINGLESUM null
-     */
-    public String getSinglesum() {
-        return singlesum;
+    public String getSingleSum() {
+        return singleSum;
     }
 
-    /**
-     * null
-     * @param singlesum null
-     */
-    public void setSinglesum(String singlesum) {
-        this.singlesum = singlesum;
+    public void setSingleSum(String singleSum) {
+        this.singleSum = singleSum;
     }
 
-    /**
-     * null
-     * @return RELATIVETYPE null
-     */
-    public String getRelativetype() {
-        return relativetype;
+    public String getRelativeType() {
+        return relativeType;
     }
 
-    /**
-     * null
-     * @param relativetype null
-     */
-    public void setRelativetype(String relativetype) {
-        this.relativetype = relativetype;
+    public void setRelativeType(String relativeType) {
+        this.relativeType = relativeType;
     }
 }

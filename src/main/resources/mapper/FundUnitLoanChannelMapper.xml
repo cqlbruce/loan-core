@@ -2,19 +2,19 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundUnitLoanChannelMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitLoanChannelEntity" >
-    <result column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
-    <result column="CHANNELTYPE" property="channeltype" jdbcType="VARCHAR" />
-    <result column="CHANNELCODE" property="channelcode" jdbcType="VARCHAR" />
-    <result column="CHANNELNAME" property="channelname" jdbcType="VARCHAR" />
-    <result column="CHANNELRATETYPE" property="channelratetype" jdbcType="VARCHAR" />
-    <result column="CHANNELRATE" property="channelrate" jdbcType="VARCHAR" />
+    <result column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeSerialNo" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
+    <result column="CHANNELTYPE" property="channelType" jdbcType="VARCHAR" />
+    <result column="CHANNELCODE" property="channelCode" jdbcType="VARCHAR" />
+    <result column="CHANNELNAME" property="channelName" jdbcType="VARCHAR" />
+    <result column="CHANNELRATETYPE" property="channelRateType" jdbcType="VARCHAR" />
+    <result column="CHANNELRATE" property="channelRate" jdbcType="VARCHAR" />
   </resultMap>
   <insert id="insert" parameterType="com.wu.fund.entity.FundUnitLoanChannelEntity" >
     insert into FUND_UNIT_LOAN_CHANNEL (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
@@ -22,11 +22,11 @@
       INPUTORGID, UPDATEORGID, CHANNELTYPE, 
       CHANNELCODE, CHANNELNAME, CHANNELRATETYPE, 
       CHANNELRATE)
-    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
-      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
-      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{channeltype,jdbcType=VARCHAR}, 
-      #{channelcode,jdbcType=VARCHAR}, #{channelname,jdbcType=VARCHAR}, #{channelratetype,jdbcType=VARCHAR}, 
-      #{channelrate,jdbcType=VARCHAR})
+    values (#{serialNo,jdbcType=VARCHAR}, #{relativeSerialNo,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR},
+      #{updateUserId,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR},
+      #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{channelType,jdbcType=VARCHAR},
+      #{channelCode,jdbcType=VARCHAR}, #{channelName,jdbcType=VARCHAR}, #{channelRateType,jdbcType=VARCHAR},
+      #{channelRate,jdbcType=VARCHAR})
   </insert>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 

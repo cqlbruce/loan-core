@@ -8,7 +8,7 @@ public interface FundUnitLoanOrgMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface FundUnitLoanOrgMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    FundUnitLoanOrgEntity selectByPrimaryKey(String serialno);
+    FundUnitLoanOrgEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

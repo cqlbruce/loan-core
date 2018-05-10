@@ -2,51 +2,51 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundUnitLoanOrgMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitLoanOrgEntity" >
-    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
-    <result column="ORGTYPE" property="orgtype" jdbcType="VARCHAR" />
-    <result column="ORGNAME" property="orgname" jdbcType="VARCHAR" />
-    <result column="ORGCODE" property="orgcode" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
+    <id column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeSerialNo" jdbcType="VARCHAR" />
+    <result column="ORGTYPE" property="orgType" jdbcType="VARCHAR" />
+    <result column="ORGNAME" property="orgName" jdbcType="VARCHAR" />
+    <result column="ORGCODE" property="orgCode" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUND_UNIT_LOAN_ORG
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.FundUnitLoanOrgEntity" >
     insert into FUND_UNIT_LOAN_ORG (SERIALNO, RELATIVESERIALNO, ORGTYPE, 
       ORGNAME, ORGCODE, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
       INPUTORGID, UPDATEORGID)
-    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{orgtype,jdbcType=VARCHAR}, 
-      #{orgname,jdbcType=VARCHAR}, #{orgcode,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
-      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
-      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR})
+    values (#{serialNo,jdbcType=VARCHAR}, #{relativeSerialNo,jdbcType=VARCHAR}, #{orgType,jdbcType=VARCHAR},
+      #{orgName,jdbcType=VARCHAR}, #{orgCode,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR},
+      #{updateUserId,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR},
+      #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundUnitLoanOrgEntity" >
     update FUND_UNIT_LOAN_ORG
-    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
-      ORGTYPE = #{orgtype,jdbcType=VARCHAR},
-      ORGNAME = #{orgname,jdbcType=VARCHAR},
-      ORGCODE = #{orgcode,jdbcType=VARCHAR},
-      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
-      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
-      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
-      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
-      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
-      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    set RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      ORGTYPE = #{orgType,jdbcType=VARCHAR},
+      ORGNAME = #{orgName,jdbcType=VARCHAR},
+      ORGCODE = #{orgCode,jdbcType=VARCHAR},
+      INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, ORGTYPE, ORGNAME, ORGCODE, INPUTDATE, UPDATEUSERID, 
     UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID
     from FUND_UNIT_LOAN_ORG
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, ORGTYPE, ORGNAME, ORGCODE, INPUTDATE, UPDATEUSERID, 

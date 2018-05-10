@@ -2,28 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.LoanOrgApplyConstraintMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
-    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
-    <result column="CONTROLTYPE" property="controltype" jdbcType="VARCHAR" />
-    <result column="MONTHLIMIT" property="monthlimit" jdbcType="VARCHAR" />
-    <result column="PUTOUTMULTIPLE" property="putoutmultiple" jdbcType="VARCHAR" />
-    <result column="DAYLIMIT" property="daylimit" jdbcType="VARCHAR" />
-    <result column="APPROVETERM" property="approveterm" jdbcType="VARCHAR" />
-    <result column="REFUSETERM" property="refuseterm" jdbcType="VARCHAR" />
-    <result column="QUERYCREDIT" property="querycredit" jdbcType="VARCHAR" />
-    <result column="CARDCHECK" property="cardcheck" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
-    <result column="CHARGETYPE" property="chargetype" jdbcType="VARCHAR" />
-    <result column="RELATIVETYPE" property="relativetype" jdbcType="VARCHAR" />
+    <id column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeSerialNo" jdbcType="VARCHAR" />
+    <result column="CONTROLTYPE" property="controlType" jdbcType="VARCHAR" />
+    <result column="MONTHLIMIT" property="monthLimit" jdbcType="VARCHAR" />
+    <result column="PUTOUTMULTIPLE" property="putOutMultiple" jdbcType="VARCHAR" />
+    <result column="DAYLIMIT" property="dayLimit" jdbcType="VARCHAR" />
+    <result column="APPROVETERM" property="approveTerm" jdbcType="VARCHAR" />
+    <result column="REFUSETERM" property="refuseTerm" jdbcType="VARCHAR" />
+    <result column="QUERYCREDIT" property="queryCredit" jdbcType="VARCHAR" />
+    <result column="CARDCHECK" property="cardCheck" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
+    <result column="CHARGETYPE" property="chargeType" jdbcType="VARCHAR" />
+    <result column="RELATIVETYPE" property="relativeType" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from LOAN_ORG_APPLY_CONSTRAINT
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
     insert into LOAN_ORG_APPLY_CONSTRAINT (SERIALNO, RELATIVESERIALNO, CONTROLTYPE, 
@@ -33,41 +33,41 @@
       UPDATEDATE, INPUTUSERID, INPUTORGID, 
       UPDATEORGID, CHARGETYPE, RELATIVETYPE
       )
-    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{controltype,jdbcType=VARCHAR}, 
-      #{monthlimit,jdbcType=VARCHAR}, #{putoutmultiple,jdbcType=VARCHAR}, #{daylimit,jdbcType=VARCHAR}, 
-      #{approveterm,jdbcType=VARCHAR}, #{refuseterm,jdbcType=VARCHAR}, #{querycredit,jdbcType=VARCHAR}, 
-      #{cardcheck,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, 
-      #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, #{inputorgid,jdbcType=VARCHAR}, 
-      #{updateorgid,jdbcType=VARCHAR}, #{chargetype,jdbcType=VARCHAR}, #{relativetype,jdbcType=VARCHAR}
+    values (#{serialNo,jdbcType=VARCHAR}, #{relativeSerialNo,jdbcType=VARCHAR}, #{controlType,jdbcType=VARCHAR},
+      #{monthLimit,jdbcType=VARCHAR}, #{putOutMultiple,jdbcType=VARCHAR}, #{dayLimit,jdbcType=VARCHAR},
+      #{approveTerm,jdbcType=VARCHAR}, #{refuseTerm,jdbcType=VARCHAR}, #{queryCredit,jdbcType=VARCHAR},
+      #{cardCheck,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR}, #{updateUserId,jdbcType=VARCHAR},
+      #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, #{inputOrgId,jdbcType=VARCHAR},
+      #{updateOrgId,jdbcType=VARCHAR}, #{chargeType,jdbcType=VARCHAR}, #{relativeType,jdbcType=VARCHAR}
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
     update LOAN_ORG_APPLY_CONSTRAINT
-    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
-      CONTROLTYPE = #{controltype,jdbcType=VARCHAR},
-      MONTHLIMIT = #{monthlimit,jdbcType=VARCHAR},
-      PUTOUTMULTIPLE = #{putoutmultiple,jdbcType=VARCHAR},
-      DAYLIMIT = #{daylimit,jdbcType=VARCHAR},
-      APPROVETERM = #{approveterm,jdbcType=VARCHAR},
-      REFUSETERM = #{refuseterm,jdbcType=VARCHAR},
-      QUERYCREDIT = #{querycredit,jdbcType=VARCHAR},
-      CARDCHECK = #{cardcheck,jdbcType=VARCHAR},
-      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
-      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
-      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
-      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
-      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
-      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
-      CHARGETYPE = #{chargetype,jdbcType=VARCHAR},
-      RELATIVETYPE = #{relativetype,jdbcType=VARCHAR}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    set RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      CONTROLTYPE = #{controlType,jdbcType=VARCHAR},
+      MONTHLIMIT = #{monthLimit,jdbcType=VARCHAR},
+      PUTOUTMULTIPLE = #{putOutMultiple,jdbcType=VARCHAR},
+      DAYLIMIT = #{dayLimit,jdbcType=VARCHAR},
+      APPROVETERM = #{approveTerm,jdbcType=VARCHAR},
+      REFUSETERM = #{refuseTerm,jdbcType=VARCHAR},
+      QUERYCREDIT = #{queryCredit,jdbcType=VARCHAR},
+      CARDCHECK = #{cardCheck,jdbcType=VARCHAR},
+      INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      CHARGETYPE = #{chargeType,jdbcType=VARCHAR},
+      RELATIVETYPE = #{relativeType,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, CONTROLTYPE, MONTHLIMIT, PUTOUTMULTIPLE, DAYLIMIT, 
     APPROVETERM, REFUSETERM, QUERYCREDIT, CARDCHECK, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
     INPUTUSERID, INPUTORGID, UPDATEORGID, CHARGETYPE, RELATIVETYPE
     from LOAN_ORG_APPLY_CONSTRAINT
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, CONTROLTYPE, MONTHLIMIT, PUTOUTMULTIPLE, DAYLIMIT, 

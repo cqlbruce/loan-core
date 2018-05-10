@@ -8,7 +8,7 @@ public interface LoanOrgCatalogMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface LoanOrgCatalogMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    LoanOrgCatalogEntity selectByPrimaryKey(String serialno);
+    LoanOrgCatalogEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

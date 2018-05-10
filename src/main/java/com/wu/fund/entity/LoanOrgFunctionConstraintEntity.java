@@ -12,12 +12,12 @@ public class LoanOrgFunctionConstraintEntity implements Serializable {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联贷款机构配置流水号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 超时时间
@@ -27,410 +27,254 @@ public class LoanOrgFunctionConstraintEntity implements Serializable {
     /**
      * 申请频率
      */
-    private String applyfrequency;
+    private String applyFrequency;
 
     /**
      * 功能类型
      */
-    private String functiontype;
+    private String functionType;
 
     /**
      * 子流程定义-上传影响协议
      */
-    private String subuploadimage;
+    private String subUploadImage;
 
     /**
      * 子流程定义-申请前置
      */
-    private String subapplyfront;
+    private String subApplyFront;
 
     /**
      * 子流程定义-申请
      */
-    private String subapply;
+    private String subApply;
 
     /**
      * 子流程定义-等待结果通知
      */
-    private String subwaitresult;
+    private String subWaitResult;
 
     /**
      * 子流程定义-主动查询结果
      */
-    private String subqueryresult;
+    private String subQueryResult;
 
     /**
      * 子流程定义-申请后置
      */
-    private String subapplypost;
+    private String subApplyPost;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 功能名称
      */
-    private String functionname;
+    private String functionName;
 
     /**
      * 功能开关
      */
-    private String functiononoff;
+    private String functionOnOff;
 
     /**
      * 关联类型
      */
-    private String relativetype;
+    private String relativeType;
 
     /**
      * LOAN_ORG_FUNCTION_CONSTRAINT
      */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return OVERTIME null
-     */
     public String getOvertime() {
         return overtime;
     }
 
-    /**
-     * null
-     * @param overtime null
-     */
     public void setOvertime(String overtime) {
         this.overtime = overtime;
     }
 
-    /**
-     * null
-     * @return APPLYFREQUENCY null
-     */
-    public String getApplyfrequency() {
-        return applyfrequency;
+    public String getApplyFrequency() {
+        return applyFrequency;
     }
 
-    /**
-     * null
-     * @param applyfrequency null
-     */
-    public void setApplyfrequency(String applyfrequency) {
-        this.applyfrequency = applyfrequency;
+    public void setApplyFrequency(String applyFrequency) {
+        this.applyFrequency = applyFrequency;
     }
 
-    /**
-     * null
-     * @return FUNCTIONTYPE null
-     */
-    public String getFunctiontype() {
-        return functiontype;
+    public String getFunctionType() {
+        return functionType;
     }
 
-    /**
-     * null
-     * @param functiontype null
-     */
-    public void setFunctiontype(String functiontype) {
-        this.functiontype = functiontype;
+    public void setFunctionType(String functionType) {
+        this.functionType = functionType;
     }
 
-    /**
-     * null
-     * @return SUBUPLOADIMAGE null
-     */
-    public String getSubuploadimage() {
-        return subuploadimage;
+    public String getSubUploadImage() {
+        return subUploadImage;
     }
 
-    /**
-     * null
-     * @param subuploadimage null
-     */
-    public void setSubuploadimage(String subuploadimage) {
-        this.subuploadimage = subuploadimage;
+    public void setSubUploadImage(String subUploadImage) {
+        this.subUploadImage = subUploadImage;
     }
 
-    /**
-     * null
-     * @return SUBAPPLYFRONT null
-     */
-    public String getSubapplyfront() {
-        return subapplyfront;
+    public String getSubApplyFront() {
+        return subApplyFront;
     }
 
-    /**
-     * null
-     * @param subapplyfront null
-     */
-    public void setSubapplyfront(String subapplyfront) {
-        this.subapplyfront = subapplyfront;
+    public void setSubApplyFront(String subApplyFront) {
+        this.subApplyFront = subApplyFront;
     }
 
-    /**
-     * null
-     * @return SUBAPPLY null
-     */
-    public String getSubapply() {
-        return subapply;
+    public String getSubApply() {
+        return subApply;
     }
 
-    /**
-     * null
-     * @param subapply null
-     */
-    public void setSubapply(String subapply) {
-        this.subapply = subapply;
+    public void setSubApply(String subApply) {
+        this.subApply = subApply;
     }
 
-    /**
-     * null
-     * @return SUBWAITRESULT null
-     */
-    public String getSubwaitresult() {
-        return subwaitresult;
+    public String getSubWaitResult() {
+        return subWaitResult;
     }
 
-    /**
-     * null
-     * @param subwaitresult null
-     */
-    public void setSubwaitresult(String subwaitresult) {
-        this.subwaitresult = subwaitresult;
+    public void setSubWaitResult(String subWaitResult) {
+        this.subWaitResult = subWaitResult;
     }
 
-    /**
-     * null
-     * @return SUBQUERYRESULT null
-     */
-    public String getSubqueryresult() {
-        return subqueryresult;
+    public String getSubQueryResult() {
+        return subQueryResult;
     }
 
-    /**
-     * null
-     * @param subqueryresult null
-     */
-    public void setSubqueryresult(String subqueryresult) {
-        this.subqueryresult = subqueryresult;
+    public void setSubQueryResult(String subQueryResult) {
+        this.subQueryResult = subQueryResult;
     }
 
-    /**
-     * null
-     * @return SUBAPPLYPOST null
-     */
-    public String getSubapplypost() {
-        return subapplypost;
+    public String getSubApplyPost() {
+        return subApplyPost;
     }
 
-    /**
-     * null
-     * @param subapplypost null
-     */
-    public void setSubapplypost(String subapplypost) {
-        this.subapplypost = subapplypost;
+    public void setSubApplyPost(String subApplyPost) {
+        this.subApplyPost = subApplyPost;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return FUNCTIONNAME null
-     */
-    public String getFunctionname() {
-        return functionname;
+    public String getFunctionName() {
+        return functionName;
     }
 
-    /**
-     * null
-     * @param functionname null
-     */
-    public void setFunctionname(String functionname) {
-        this.functionname = functionname;
+    public void setFunctionName(String functionName) {
+        this.functionName = functionName;
     }
 
-    /**
-     * null
-     * @return FUNCTIONONOFF null
-     */
-    public String getFunctiononoff() {
-        return functiononoff;
+    public String getFunctionOnOff() {
+        return functionOnOff;
     }
 
-    /**
-     * null
-     * @param functiononoff null
-     */
-    public void setFunctiononoff(String functiononoff) {
-        this.functiononoff = functiononoff;
+    public void setFunctionOnOff(String functionOnOff) {
+        this.functionOnOff = functionOnOff;
     }
 
-    /**
-     * null
-     * @return RELATIVETYPE null
-     */
-    public String getRelativetype() {
-        return relativetype;
+    public String getRelativeType() {
+        return relativeType;
     }
 
-    /**
-     * null
-     * @param relativetype null
-     */
-    public void setRelativetype(String relativetype) {
-        this.relativetype = relativetype;
+    public void setRelativeType(String relativeType) {
+        this.relativeType = relativeType;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 }

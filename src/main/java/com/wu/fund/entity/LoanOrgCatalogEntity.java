@@ -10,22 +10,22 @@ public class LoanOrgCatalogEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 贷款机构类型
      */
-    private String orgtype;
+    private String orgType;
 
     /**
      * 贷款机构名称
      */
-    private String orgname;
+    private String orgName;
 
     /**
      * 贷款机构编码
      */
-    private String orgcode;
+    private String orgCode;
 
     /**
      * 贷款机构状态
@@ -35,458 +35,274 @@ public class LoanOrgCatalogEntity {
     /**
      * 人行开关
      */
-    private String peoplebankonoff;
+    private String peopleBankOnOff;
 
     /**
      * 授信开关
      */
-    private String creditonoff;
+    private String creditOnOff;
 
     /**
      * 放款开关
      */
-    private String putoutonoff;
+    private String putOutOnOff;
 
     /**
      * 还款开关
      */
-    private String repaymentonoff;
+    private String repaymentOnOff;
 
     /**
      * 放款通知开关
      */
-    private String putouttipsonoff;
+    private String putOutTipsOnOff;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 还款通知开关
      */
-    private String repaymenttipsonoff;
+    private String repaymentTipsOnOff;
 
     /**
      * 对账时间
      */
-    private String fundcheckdate;
+    private String fundCheckDate;
 
     /**
      * 对账数据类型清单
      */
-    private String fundcheckdatatype;
+    private String fundCheckDataType;
 
     /**
      * 账单周期
      */
-    private String billingcycle;
+    private String billingCycle;
 
     /**
      * 账单日期
      */
-    private String billingdate;
+    private String billingDate;
 
     /**
      * 暂存标识
      */
-    private String tempsaveflag;
+    private String tempSaveFlag;
 
     /**
      * 调整标识
      */
-    private String changeflag;
+    private String changeFlag;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return ORGTYPE null
-     */
-    public String getOrgtype() {
-        return orgtype;
+    public String getOrgType() {
+        return orgType;
     }
 
-    /**
-     * null
-     * @param orgtype null
-     */
-    public void setOrgtype(String orgtype) {
-        this.orgtype = orgtype;
+    public void setOrgType(String orgType) {
+        this.orgType = orgType;
     }
 
-    /**
-     * null
-     * @return ORGNAME null
-     */
-    public String getOrgname() {
-        return orgname;
+    public String getOrgName() {
+        return orgName;
     }
 
-    /**
-     * null
-     * @param orgname null
-     */
-    public void setOrgname(String orgname) {
-        this.orgname = orgname;
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
     }
 
-    /**
-     * null
-     * @return ORGCODE null
-     */
-    public String getOrgcode() {
-        return orgcode;
+    public String getOrgCode() {
+        return orgCode;
     }
 
-    /**
-     * null
-     * @param orgcode null
-     */
-    public void setOrgcode(String orgcode) {
-        this.orgcode = orgcode;
+    public void setOrgCode(String orgCode) {
+        this.orgCode = orgCode;
     }
 
-    /**
-     * null
-     * @return STATUS null
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * null
-     * @param status null
-     */
     public void setStatus(String status) {
         this.status = status;
     }
 
-    /**
-     * null
-     * @return PEOPLEBANKONOFF null
-     */
-    public String getPeoplebankonoff() {
-        return peoplebankonoff;
+    public String getPeopleBankOnOff() {
+        return peopleBankOnOff;
     }
 
-    /**
-     * null
-     * @param peoplebankonoff null
-     */
-    public void setPeoplebankonoff(String peoplebankonoff) {
-        this.peoplebankonoff = peoplebankonoff;
+    public void setPeopleBankOnOff(String peopleBankOnOff) {
+        this.peopleBankOnOff = peopleBankOnOff;
     }
 
-    /**
-     * null
-     * @return CREDITONOFF null
-     */
-    public String getCreditonoff() {
-        return creditonoff;
+    public String getCreditOnOff() {
+        return creditOnOff;
     }
 
-    /**
-     * null
-     * @param creditonoff null
-     */
-    public void setCreditonoff(String creditonoff) {
-        this.creditonoff = creditonoff;
+    public void setCreditOnOff(String creditOnOff) {
+        this.creditOnOff = creditOnOff;
     }
 
-    /**
-     * null
-     * @return PUTOUTONOFF null
-     */
-    public String getPutoutonoff() {
-        return putoutonoff;
+    public String getPutOutOnOff() {
+        return putOutOnOff;
     }
 
-    /**
-     * null
-     * @param putoutonoff null
-     */
-    public void setPutoutonoff(String putoutonoff) {
-        this.putoutonoff = putoutonoff;
+    public void setPutOutOnOff(String putOutOnOff) {
+        this.putOutOnOff = putOutOnOff;
     }
 
-    /**
-     * null
-     * @return REPAYMENTONOFF null
-     */
-    public String getRepaymentonoff() {
-        return repaymentonoff;
+    public String getRepaymentOnOff() {
+        return repaymentOnOff;
     }
 
-    /**
-     * null
-     * @param repaymentonoff null
-     */
-    public void setRepaymentonoff(String repaymentonoff) {
-        this.repaymentonoff = repaymentonoff;
+    public void setRepaymentOnOff(String repaymentOnOff) {
+        this.repaymentOnOff = repaymentOnOff;
     }
 
-    /**
-     * null
-     * @return PUTOUTTIPSONOFF null
-     */
-    public String getPutouttipsonoff() {
-        return putouttipsonoff;
+    public String getPutOutTipsOnOff() {
+        return putOutTipsOnOff;
     }
 
-    /**
-     * null
-     * @param putouttipsonoff null
-     */
-    public void setPutouttipsonoff(String putouttipsonoff) {
-        this.putouttipsonoff = putouttipsonoff;
+    public void setPutOutTipsOnOff(String putOutTipsOnOff) {
+        this.putOutTipsOnOff = putOutTipsOnOff;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return REPAYMENTTIPSONOFF null
-     */
-    public String getRepaymenttipsonoff() {
-        return repaymenttipsonoff;
+    public String getRepaymentTipsOnOff() {
+        return repaymentTipsOnOff;
     }
 
-    /**
-     * null
-     * @param repaymenttipsonoff null
-     */
-    public void setRepaymenttipsonoff(String repaymenttipsonoff) {
-        this.repaymenttipsonoff = repaymenttipsonoff;
+    public void setRepaymentTipsOnOff(String repaymentTipsOnOff) {
+        this.repaymentTipsOnOff = repaymentTipsOnOff;
     }
 
-    /**
-     * null
-     * @return FUNDCHECKDATE null
-     */
-    public String getFundcheckdate() {
-        return fundcheckdate;
+    public String getFundCheckDate() {
+        return fundCheckDate;
     }
 
-    /**
-     * null
-     * @param fundcheckdate null
-     */
-    public void setFundcheckdate(String fundcheckdate) {
-        this.fundcheckdate = fundcheckdate;
+    public void setFundCheckDate(String fundCheckDate) {
+        this.fundCheckDate = fundCheckDate;
     }
 
-    /**
-     * null
-     * @return FUNDCHECKDATATYPE null
-     */
-    public String getFundcheckdatatype() {
-        return fundcheckdatatype;
+    public String getFundCheckDataType() {
+        return fundCheckDataType;
     }
 
-    /**
-     * null
-     * @param fundcheckdatatype null
-     */
-    public void setFundcheckdatatype(String fundcheckdatatype) {
-        this.fundcheckdatatype = fundcheckdatatype;
+    public void setFundCheckDataType(String fundCheckDataType) {
+        this.fundCheckDataType = fundCheckDataType;
     }
 
-    /**
-     * null
-     * @return BILLINGCYCLE null
-     */
-    public String getBillingcycle() {
-        return billingcycle;
+    public String getBillingCycle() {
+        return billingCycle;
     }
 
-    /**
-     * null
-     * @param billingcycle null
-     */
-    public void setBillingcycle(String billingcycle) {
-        this.billingcycle = billingcycle;
+    public void setBillingCycle(String billingCycle) {
+        this.billingCycle = billingCycle;
     }
 
-    /**
-     * null
-     * @return BILLINGDATE null
-     */
-    public String getBillingdate() {
-        return billingdate;
+    public String getBillingDate() {
+        return billingDate;
     }
 
-    /**
-     * null
-     * @param billingdate null
-     */
-    public void setBillingdate(String billingdate) {
-        this.billingdate = billingdate;
+    public void setBillingDate(String billingDate) {
+        this.billingDate = billingDate;
     }
 
-    /**
-     * null
-     * @return TEMPSAVEFLAG null
-     */
-    public String getTempsaveflag() {
-        return tempsaveflag;
+    public String getTempSaveFlag() {
+        return tempSaveFlag;
     }
 
-    /**
-     * null
-     * @param tempsaveflag null
-     */
-    public void setTempsaveflag(String tempsaveflag) {
-        this.tempsaveflag = tempsaveflag;
+    public void setTempSaveFlag(String tempSaveFlag) {
+        this.tempSaveFlag = tempSaveFlag;
     }
 
-    /**
-     * null
-     * @return CHANGEFLAG null
-     */
-    public String getChangeflag() {
-        return changeflag;
+    public String getChangeFlag() {
+        return changeFlag;
     }
 
-    /**
-     * null
-     * @param changeflag null
-     */
-    public void setChangeflag(String changeflag) {
-        this.changeflag = changeflag;
+    public void setChangeFlag(String changeFlag) {
+        this.changeFlag = changeFlag;
     }
 }

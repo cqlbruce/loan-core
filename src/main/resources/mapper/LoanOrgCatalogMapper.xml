@@ -2,33 +2,33 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.LoanOrgCatalogMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgCatalogEntity" >
-    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="ORGTYPE" property="orgtype" jdbcType="VARCHAR" />
-    <result column="ORGNAME" property="orgname" jdbcType="VARCHAR" />
-    <result column="ORGCODE" property="orgcode" jdbcType="VARCHAR" />
+    <id column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="ORGTYPE" property="orgType" jdbcType="VARCHAR" />
+    <result column="ORGNAME" property="orgName" jdbcType="VARCHAR" />
+    <result column="ORGCODE" property="orgCode" jdbcType="VARCHAR" />
     <result column="STATUS" property="status" jdbcType="VARCHAR" />
-    <result column="PEOPLEBANKONOFF" property="peoplebankonoff" jdbcType="VARCHAR" />
-    <result column="CREDITONOFF" property="creditonoff" jdbcType="VARCHAR" />
-    <result column="PUTOUTONOFF" property="putoutonoff" jdbcType="VARCHAR" />
-    <result column="REPAYMENTONOFF" property="repaymentonoff" jdbcType="VARCHAR" />
-    <result column="PUTOUTTIPSONOFF" property="putouttipsonoff" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
-    <result column="REPAYMENTTIPSONOFF" property="repaymenttipsonoff" jdbcType="VARCHAR" />
-    <result column="FUNDCHECKDATE" property="fundcheckdate" jdbcType="VARCHAR" />
-    <result column="FUNDCHECKDATATYPE" property="fundcheckdatatype" jdbcType="VARCHAR" />
-    <result column="BILLINGCYCLE" property="billingcycle" jdbcType="VARCHAR" />
-    <result column="BILLINGDATE" property="billingdate" jdbcType="VARCHAR" />
-    <result column="TEMPSAVEFLAG" property="tempsaveflag" jdbcType="VARCHAR" />
-    <result column="CHANGEFLAG" property="changeflag" jdbcType="VARCHAR" />
+    <result column="PEOPLEBANKONOFF" property="peopleBankOnOff" jdbcType="VARCHAR" />
+    <result column="CREDITONOFF" property="creditOnOff" jdbcType="VARCHAR" />
+    <result column="PUTOUTONOFF" property="putOutOnOff" jdbcType="VARCHAR" />
+    <result column="REPAYMENTONOFF" property="repaymentOnOff" jdbcType="VARCHAR" />
+    <result column="PUTOUTTIPSONOFF" property="putOutTipsOnOff" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
+    <result column="REPAYMENTTIPSONOFF" property="repaymentTipsOnOff" jdbcType="VARCHAR" />
+    <result column="FUNDCHECKDATE" property="fundCheckDate" jdbcType="VARCHAR" />
+    <result column="FUNDCHECKDATATYPE" property="fundCheckDataType" jdbcType="VARCHAR" />
+    <result column="BILLINGCYCLE" property="billingCycle" jdbcType="VARCHAR" />
+    <result column="BILLINGDATE" property="billingDate" jdbcType="VARCHAR" />
+    <result column="TEMPSAVEFLAG" property="tempSaveFlag" jdbcType="VARCHAR" />
+    <result column="CHANGEFLAG" property="changeFlag" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from LOAN_ORG_CATALOG
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgCatalogEntity" >
     insert into LOAN_ORG_CATALOG (SERIALNO, ORGTYPE, ORGNAME, 
@@ -39,40 +39,40 @@
       UPDATEORGID, REPAYMENTTIPSONOFF, FUNDCHECKDATE, 
       FUNDCHECKDATATYPE, BILLINGCYCLE, BILLINGDATE, 
       TEMPSAVEFLAG, CHANGEFLAG)
-    values (#{serialno,jdbcType=VARCHAR}, #{orgtype,jdbcType=VARCHAR}, #{orgname,jdbcType=VARCHAR}, 
-      #{orgcode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{peoplebankonoff,jdbcType=VARCHAR}, 
-      #{creditonoff,jdbcType=VARCHAR}, #{putoutonoff,jdbcType=VARCHAR}, #{repaymentonoff,jdbcType=VARCHAR}, 
-      #{putouttipsonoff,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, #{updateuserid,jdbcType=VARCHAR}, 
-      #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, #{inputorgid,jdbcType=VARCHAR}, 
-      #{updateorgid,jdbcType=VARCHAR}, #{repaymenttipsonoff,jdbcType=VARCHAR}, #{fundcheckdate,jdbcType=VARCHAR}, 
-      #{fundcheckdatatype,jdbcType=VARCHAR}, #{billingcycle,jdbcType=VARCHAR}, #{billingdate,jdbcType=VARCHAR}, 
-      #{tempsaveflag,jdbcType=VARCHAR}, #{changeflag,jdbcType=VARCHAR})
+    values (#{serialNo,jdbcType=VARCHAR}, #{orgType,jdbcType=VARCHAR}, #{orgName,jdbcType=VARCHAR},
+      #{orgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{peopleBankOnOff,jdbcType=VARCHAR},
+      #{creditOnOff,jdbcType=VARCHAR}, #{putOutOnOff,jdbcType=VARCHAR}, #{repaymentOnOff,jdbcType=VARCHAR},
+      #{putOutTipsOnOff,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR}, #{updateUserId,jdbcType=VARCHAR},
+      #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, #{inputOrgId,jdbcType=VARCHAR},
+      #{updateOrgId,jdbcType=VARCHAR}, #{repaymentTipsOnOff,jdbcType=VARCHAR}, #{fundCheckDate,jdbcType=VARCHAR},
+      #{fundCheckDataType,jdbcType=VARCHAR}, #{billingCycle,jdbcType=VARCHAR}, #{billingDate,jdbcType=VARCHAR},
+      #{tempSaveFlag,jdbcType=VARCHAR}, #{changeFlag,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgCatalogEntity" >
     update LOAN_ORG_CATALOG
-    set ORGTYPE = #{orgtype,jdbcType=VARCHAR},
-      ORGNAME = #{orgname,jdbcType=VARCHAR},
-      ORGCODE = #{orgcode,jdbcType=VARCHAR},
+    set ORGTYPE = #{orgType,jdbcType=VARCHAR},
+      ORGNAME = #{orgName,jdbcType=VARCHAR},
+      ORGCODE = #{orgCode,jdbcType=VARCHAR},
       STATUS = #{status,jdbcType=VARCHAR},
-      PEOPLEBANKONOFF = #{peoplebankonoff,jdbcType=VARCHAR},
-      CREDITONOFF = #{creditonoff,jdbcType=VARCHAR},
-      PUTOUTONOFF = #{putoutonoff,jdbcType=VARCHAR},
-      REPAYMENTONOFF = #{repaymentonoff,jdbcType=VARCHAR},
-      PUTOUTTIPSONOFF = #{putouttipsonoff,jdbcType=VARCHAR},
-      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
-      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
-      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
-      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
-      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
-      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
-      REPAYMENTTIPSONOFF = #{repaymenttipsonoff,jdbcType=VARCHAR},
-      FUNDCHECKDATE = #{fundcheckdate,jdbcType=VARCHAR},
-      FUNDCHECKDATATYPE = #{fundcheckdatatype,jdbcType=VARCHAR},
-      BILLINGCYCLE = #{billingcycle,jdbcType=VARCHAR},
-      BILLINGDATE = #{billingdate,jdbcType=VARCHAR},
-      TEMPSAVEFLAG = #{tempsaveflag,jdbcType=VARCHAR},
-      CHANGEFLAG = #{changeflag,jdbcType=VARCHAR}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+      PEOPLEBANKONOFF = #{peopleBankOnOff,jdbcType=VARCHAR},
+      CREDITONOFF = #{creditOnOff,jdbcType=VARCHAR},
+      PUTOUTONOFF = #{putOutOnOff,jdbcType=VARCHAR},
+      REPAYMENTONOFF = #{repaymentOnOff,jdbcType=VARCHAR},
+      PUTOUTTIPSONOFF = #{putOutTipsOnOff,jdbcType=VARCHAR},
+      INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      REPAYMENTTIPSONOFF = #{repaymentTipsOnOff,jdbcType=VARCHAR},
+      FUNDCHECKDATE = #{fundCheckDate,jdbcType=VARCHAR},
+      FUNDCHECKDATATYPE = #{fundCheckDataType,jdbcType=VARCHAR},
+      BILLINGCYCLE = #{billingCycle,jdbcType=VARCHAR},
+      BILLINGDATE = #{billingDate,jdbcType=VARCHAR},
+      TEMPSAVEFLAG = #{tempSaveFlag,jdbcType=VARCHAR},
+      CHANGEFLAG = #{changeFlag,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, ORGTYPE, ORGNAME, ORGCODE, STATUS, PEOPLEBANKONOFF, CREDITONOFF, 
@@ -80,7 +80,7 @@
     INPUTUSERID, INPUTORGID, UPDATEORGID, REPAYMENTTIPSONOFF, FUNDCHECKDATE, FUNDCHECKDATATYPE, 
     BILLINGCYCLE, BILLINGDATE, TEMPSAVEFLAG, CHANGEFLAG
     from LOAN_ORG_CATALOG
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, ORGTYPE, ORGNAME, ORGCODE, STATUS, PEOPLEBANKONOFF, CREDITONOFF, 

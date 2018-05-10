@@ -8,7 +8,7 @@
     <result column="CUST_MOBILE" property="custMobile" jdbcType="VARCHAR" />
     <result column="CERT_TYPE" property="certType" jdbcType="VARCHAR" />
     <result column="CERT_NO" property="certNo" jdbcType="VARCHAR" />
-    <result column="IMAGEFILE_NAME" property="imagefileName" jdbcType="VARCHAR" />
+    <result column="IMAGEFILE_NAME" property="imageFileName" jdbcType="VARCHAR" />
     <result column="APPLY_AMT" property="applyAmt" jdbcType="NUMERIC" />
     <result column="SEX" property="sex" jdbcType="VARCHAR" />
     <result column="BIRTHDAY" property="birthday" jdbcType="VARCHAR" />
@@ -44,11 +44,11 @@
     <result column="A_CAPITAL_BUSINESS_NO" property="aCapitalBusinessNo" jdbcType="VARCHAR" />
     <result column="DEAL_STATUS" property="dealStatus" jdbcType="VARCHAR" />
     <result column="DEAL_DESC" property="dealDesc" jdbcType="VARCHAR" />
-    <result column="FUNDUNITNO" property="fundunitno" jdbcType="VARCHAR" />
-    <result column="LOANORGCODE" property="loanorgcode" jdbcType="VARCHAR" />
+    <result column="FUNDUNITNO" property="fundUnitNo" jdbcType="VARCHAR" />
+    <result column="LOANORGCODE" property="loanOrgCode" jdbcType="VARCHAR" />
     <result column="STATUS" property="status" jdbcType="VARCHAR" />
-    <result column="BEGINTIME" property="begintime" jdbcType="VARCHAR" />
-    <result column="ENDTIME" property="endtime" jdbcType="VARCHAR" />
+    <result column="BEGINTIME" property="beginTime" jdbcType="VARCHAR" />
+    <result column="ENDTIME" property="endTime" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from LOANORG_CREDITPREAPPROVAL
@@ -73,7 +73,7 @@
       BEGINTIME, ENDTIME)
     values (#{aApplyNo,jdbcType=VARCHAR}, #{aSlBusinessNo,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, 
       #{custMobile,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{certNo,jdbcType=VARCHAR}, 
-      #{imagefileName,jdbcType=VARCHAR}, #{applyAmt,jdbcType=NUMERIC}, #{sex,jdbcType=VARCHAR}, 
+      #{imageFileName,jdbcType=VARCHAR}, #{applyAmt,jdbcType=NUMERIC}, #{sex,jdbcType=VARCHAR},
       #{birthday,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, 
       #{homeAddress,jdbcType=VARCHAR}, #{huoseAddress,jdbcType=VARCHAR}, #{housePropertyFlag,jdbcType=VARCHAR}, 
       #{houseValue,jdbcType=NUMERIC}, #{workType,jdbcType=VARCHAR}, #{workProperty,jdbcType=VARCHAR}, 
@@ -85,8 +85,8 @@
       #{validStatus,jdbcType=VARCHAR}, #{thirdOrgReturnCode,jdbcType=VARCHAR}, #{thirdOrgReturnMsg,jdbcType=VARCHAR}, 
       #{applyDatetime,jdbcType=VARCHAR}, #{finishDatetime,jdbcType=VARCHAR}, #{aDealNo,jdbcType=VARCHAR}, 
       #{aCapitalBusinessNo,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, #{dealDesc,jdbcType=VARCHAR}, 
-      #{fundunitno,jdbcType=VARCHAR}, #{loanorgcode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
-      #{begintime,jdbcType=VARCHAR}, #{endtime,jdbcType=VARCHAR})
+      #{fundUnitNo,jdbcType=VARCHAR}, #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR},
+      #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanorgCreditpreapprovalEntity" >
     update LOANORG_CREDITPREAPPROVAL
@@ -95,7 +95,7 @@
       CUST_MOBILE = #{custMobile,jdbcType=VARCHAR},
       CERT_TYPE = #{certType,jdbcType=VARCHAR},
       CERT_NO = #{certNo,jdbcType=VARCHAR},
-      IMAGEFILE_NAME = #{imagefileName,jdbcType=VARCHAR},
+      IMAGEFILE_NAME = #{imageFileName,jdbcType=VARCHAR},
       APPLY_AMT = #{applyAmt,jdbcType=NUMERIC},
       SEX = #{sex,jdbcType=VARCHAR},
       BIRTHDAY = #{birthday,jdbcType=VARCHAR},
@@ -131,11 +131,11 @@
       A_CAPITAL_BUSINESS_NO = #{aCapitalBusinessNo,jdbcType=VARCHAR},
       DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
       DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
-      FUNDUNITNO = #{fundunitno,jdbcType=VARCHAR},
-      LOANORGCODE = #{loanorgcode,jdbcType=VARCHAR},
+      FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},
+      LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
       STATUS = #{status,jdbcType=VARCHAR},
-      BEGINTIME = #{begintime,jdbcType=VARCHAR},
-      ENDTIME = #{endtime,jdbcType=VARCHAR}
+      BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+      ENDTIME = #{endTime,jdbcType=VARCHAR}
     where A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >

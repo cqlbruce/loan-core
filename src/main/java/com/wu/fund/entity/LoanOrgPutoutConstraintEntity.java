@@ -10,12 +10,12 @@ public class LoanOrgPutoutConstraintEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联贷款机构配置流水号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 放款自主查询征信
@@ -25,258 +25,154 @@ public class LoanOrgPutoutConstraintEntity {
     /**
      * 放款自主绑卡验证
      */
-    private String cardcheck;
+    private String cardCheck;
 
     /**
      * 银行二类户开通
      */
-    private String secondaccount;
+    private String secondAccount;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 代付收费标准
      */
-    private String payfeerule;
+    private String payFeeRule;
 
     /**
      * 是否由世联生成还款计划(code码YesNo  01是 02否)
      */
-    private String iscreateschedule;
+    private String isCreateSchedule;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return QUERYPUTOUT null
-     */
     public String getQueryputout() {
         return queryputout;
     }
 
-    /**
-     * null
-     * @param queryputout null
-     */
     public void setQueryputout(String queryputout) {
         this.queryputout = queryputout;
     }
 
-    /**
-     * null
-     * @return CARDCHECK null
-     */
-    public String getCardcheck() {
-        return cardcheck;
+    public String getCardCheck() {
+        return cardCheck;
     }
 
-    /**
-     * null
-     * @param cardcheck null
-     */
-    public void setCardcheck(String cardcheck) {
-        this.cardcheck = cardcheck;
+    public void setCardCheck(String cardCheck) {
+        this.cardCheck = cardCheck;
     }
 
-    /**
-     * null
-     * @return SECONDACCOUNT null
-     */
-    public String getSecondaccount() {
-        return secondaccount;
+    public String getSecondAccount() {
+        return secondAccount;
     }
 
-    /**
-     * null
-     * @param secondaccount null
-     */
-    public void setSecondaccount(String secondaccount) {
-        this.secondaccount = secondaccount;
+    public void setSecondAccount(String secondAccount) {
+        this.secondAccount = secondAccount;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return PAYFEERULE null
-     */
-    public String getPayfeerule() {
-        return payfeerule;
+    public String getPayFeeRule() {
+        return payFeeRule;
     }
 
-    /**
-     * null
-     * @param payfeerule null
-     */
-    public void setPayfeerule(String payfeerule) {
-        this.payfeerule = payfeerule;
+    public void setPayFeeRule(String payFeeRule) {
+        this.payFeeRule = payFeeRule;
     }
 
-    /**
-     * null
-     * @return ISCREATESCHEDULE null
-     */
-    public String getIscreateschedule() {
-        return iscreateschedule;
+    public String getIsCreateSchedule() {
+        return isCreateSchedule;
     }
 
-    /**
-     * null
-     * @param iscreateschedule null
-     */
-    public void setIscreateschedule(String iscreateschedule) {
-        this.iscreateschedule = iscreateschedule;
+    public void setIsCreateSchedule(String isCreateSchedule) {
+        this.isCreateSchedule = isCreateSchedule;
     }
 }

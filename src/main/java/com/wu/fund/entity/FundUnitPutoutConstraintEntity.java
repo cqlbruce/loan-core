@@ -10,525 +10,325 @@ public class FundUnitPutoutConstraintEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联资金单元编号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 收益计算方式
      */
-    private String incomecalcumethod;
+    private String incomeCalcuMethod;
 
     /**
      * 放款一次性回佣比例
      */
-    private String onetimeloanrebates;
+    private String oneTimeLoanRebates;
 
     /**
      * 还款息费分佣比例
      */
-    private String reimbursementrate;
+    private String reimbursementRate;
 
     /**
      * 放款一次性回佣金额
      */
-    private String onetimeloansum;
+    private String oneTimeLoanSum;
 
     /**
      * 综合资金成本（年化利率）
      */
-    private String annualinterestrate;
+    private String annualInterestRate;
 
     /**
      * 放款优先级
      */
-    private String lendingpriority;
+    private String lendingPriority;
 
     /**
      * 放款权重
      */
-    private String lendingweight;
+    private String lendingWeight;
 
     /**
      * 允许超限放款
      */
-    private String allowableoverlimit;
+    private String allowableOverLimit;
 
     /**
      * 总额度（元）
      */
-    private String totalsum;
+    private String totalSum;
 
     /**
      * 单客限额（元）
      */
-    private String singlecustlimit;
+    private String singleCustLimit;
 
     /**
      * 单笔最低限额（元）
      */
-    private String singleminamount;
+    private String singleMinAmount;
 
     /**
      * 单笔最高限额（元）
      */
-    private String singlemaxamount;
+    private String singleMaxAmount;
 
     /**
      * 日限额（元）
      */
-    private String dailylimit;
+    private String dailyLimit;
 
     /**
      * 月限额（元）
      */
-    private String monthlylimit;
+    private String monthlyLimit;
 
     /**
      * 月限额剩余次数
      */
-    private String remainmonthlimit;
+    private String remainMonthLimit;
 
     /**
      * 日限额剩余次数
      */
-    private String remaindaylimit;
+    private String remainDayLimit;
 
     /**
      * 剩余总额度
      */
-    private String remaintotalsum;
+    private String remainTotalSum;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return INCOMECALCUMETHOD null
-     */
-    public String getIncomecalcumethod() {
-        return incomecalcumethod;
+    public String getIncomeCalcuMethod() {
+        return incomeCalcuMethod;
     }
 
-    /**
-     * null
-     * @param incomecalcumethod null
-     */
-    public void setIncomecalcumethod(String incomecalcumethod) {
-        this.incomecalcumethod = incomecalcumethod;
+    public void setIncomeCalcuMethod(String incomeCalcuMethod) {
+        this.incomeCalcuMethod = incomeCalcuMethod;
     }
 
-    /**
-     * null
-     * @return ONETIMELOANREBATES null
-     */
-    public String getOnetimeloanrebates() {
-        return onetimeloanrebates;
+    public String getOneTimeLoanRebates() {
+        return oneTimeLoanRebates;
     }
 
-    /**
-     * null
-     * @param onetimeloanrebates null
-     */
-    public void setOnetimeloanrebates(String onetimeloanrebates) {
-        this.onetimeloanrebates = onetimeloanrebates;
+    public void setOneTimeLoanRebates(String oneTimeLoanRebates) {
+        this.oneTimeLoanRebates = oneTimeLoanRebates;
     }
 
-    /**
-     * null
-     * @return REIMBURSEMENTRATE null
-     */
-    public String getReimbursementrate() {
-        return reimbursementrate;
+    public String getReimbursementRate() {
+        return reimbursementRate;
     }
 
-    /**
-     * null
-     * @param reimbursementrate null
-     */
-    public void setReimbursementrate(String reimbursementrate) {
-        this.reimbursementrate = reimbursementrate;
+    public void setReimbursementRate(String reimbursementRate) {
+        this.reimbursementRate = reimbursementRate;
     }
 
-    /**
-     * null
-     * @return ONETIMELOANSUM null
-     */
-    public String getOnetimeloansum() {
-        return onetimeloansum;
+    public String getOneTimeLoanSum() {
+        return oneTimeLoanSum;
     }
 
-    /**
-     * null
-     * @param onetimeloansum null
-     */
-    public void setOnetimeloansum(String onetimeloansum) {
-        this.onetimeloansum = onetimeloansum;
+    public void setOneTimeLoanSum(String oneTimeLoanSum) {
+        this.oneTimeLoanSum = oneTimeLoanSum;
     }
 
-    /**
-     * null
-     * @return ANNUALINTERESTRATE null
-     */
-    public String getAnnualinterestrate() {
-        return annualinterestrate;
+    public String getAnnualInterestRate() {
+        return annualInterestRate;
     }
 
-    /**
-     * null
-     * @param annualinterestrate null
-     */
-    public void setAnnualinterestrate(String annualinterestrate) {
-        this.annualinterestrate = annualinterestrate;
+    public void setAnnualInterestRate(String annualInterestRate) {
+        this.annualInterestRate = annualInterestRate;
     }
 
-    /**
-     * null
-     * @return LENDINGPRIORITY null
-     */
-    public String getLendingpriority() {
-        return lendingpriority;
+    public String getLendingPriority() {
+        return lendingPriority;
     }
 
-    /**
-     * null
-     * @param lendingpriority null
-     */
-    public void setLendingpriority(String lendingpriority) {
-        this.lendingpriority = lendingpriority;
+    public void setLendingPriority(String lendingPriority) {
+        this.lendingPriority = lendingPriority;
     }
 
-    /**
-     * null
-     * @return LENDINGWEIGHT null
-     */
-    public String getLendingweight() {
-        return lendingweight;
+    public String getLendingWeight() {
+        return lendingWeight;
     }
 
-    /**
-     * null
-     * @param lendingweight null
-     */
-    public void setLendingweight(String lendingweight) {
-        this.lendingweight = lendingweight;
+    public void setLendingWeight(String lendingWeight) {
+        this.lendingWeight = lendingWeight;
     }
 
-    /**
-     * null
-     * @return ALLOWABLEOVERLIMIT null
-     */
-    public String getAllowableoverlimit() {
-        return allowableoverlimit;
+    public String getAllowableOverLimit() {
+        return allowableOverLimit;
     }
 
-    /**
-     * null
-     * @param allowableoverlimit null
-     */
-    public void setAllowableoverlimit(String allowableoverlimit) {
-        this.allowableoverlimit = allowableoverlimit;
+    public void setAllowableOverLimit(String allowableOverLimit) {
+        this.allowableOverLimit = allowableOverLimit;
     }
 
-    /**
-     * null
-     * @return TOTALSUM null
-     */
-    public String getTotalsum() {
-        return totalsum;
+    public String getTotalSum() {
+        return totalSum;
     }
 
-    /**
-     * null
-     * @param totalsum null
-     */
-    public void setTotalsum(String totalsum) {
-        this.totalsum = totalsum;
+    public void setTotalSum(String totalSum) {
+        this.totalSum = totalSum;
     }
 
-    /**
-     * null
-     * @return SINGLECUSTLIMIT null
-     */
-    public String getSinglecustlimit() {
-        return singlecustlimit;
+    public String getSingleCustLimit() {
+        return singleCustLimit;
     }
 
-    /**
-     * null
-     * @param singlecustlimit null
-     */
-    public void setSinglecustlimit(String singlecustlimit) {
-        this.singlecustlimit = singlecustlimit;
+    public void setSingleCustLimit(String singleCustLimit) {
+        this.singleCustLimit = singleCustLimit;
     }
 
-    /**
-     * null
-     * @return SINGLEMINAMOUNT null
-     */
-    public String getSingleminamount() {
-        return singleminamount;
+    public String getSingleMinAmount() {
+        return singleMinAmount;
     }
 
-    /**
-     * null
-     * @param singleminamount null
-     */
-    public void setSingleminamount(String singleminamount) {
-        this.singleminamount = singleminamount;
+    public void setSingleMinAmount(String singleMinAmount) {
+        this.singleMinAmount = singleMinAmount;
     }
 
-    /**
-     * null
-     * @return SINGLEMAXAMOUNT null
-     */
-    public String getSinglemaxamount() {
-        return singlemaxamount;
+    public String getSingleMaxAmount() {
+        return singleMaxAmount;
     }
 
-    /**
-     * null
-     * @param singlemaxamount null
-     */
-    public void setSinglemaxamount(String singlemaxamount) {
-        this.singlemaxamount = singlemaxamount;
+    public void setSingleMaxAmount(String singleMaxAmount) {
+        this.singleMaxAmount = singleMaxAmount;
     }
 
-    /**
-     * null
-     * @return DAILYLIMIT null
-     */
-    public String getDailylimit() {
-        return dailylimit;
+    public String getDailyLimit() {
+        return dailyLimit;
     }
 
-    /**
-     * null
-     * @param dailylimit null
-     */
-    public void setDailylimit(String dailylimit) {
-        this.dailylimit = dailylimit;
+    public void setDailyLimit(String dailyLimit) {
+        this.dailyLimit = dailyLimit;
     }
 
-    /**
-     * null
-     * @return MONTHLYLIMIT null
-     */
-    public String getMonthlylimit() {
-        return monthlylimit;
+    public String getMonthlyLimit() {
+        return monthlyLimit;
     }
 
-    /**
-     * null
-     * @param monthlylimit null
-     */
-    public void setMonthlylimit(String monthlylimit) {
-        this.monthlylimit = monthlylimit;
+    public void setMonthlyLimit(String monthlyLimit) {
+        this.monthlyLimit = monthlyLimit;
     }
 
-    /**
-     * null
-     * @return REMAINMONTHLIMIT null
-     */
-    public String getRemainmonthlimit() {
-        return remainmonthlimit;
+    public String getRemainMonthLimit() {
+        return remainMonthLimit;
     }
 
-    /**
-     * null
-     * @param remainmonthlimit null
-     */
-    public void setRemainmonthlimit(String remainmonthlimit) {
-        this.remainmonthlimit = remainmonthlimit;
+    public void setRemainMonthLimit(String remainMonthLimit) {
+        this.remainMonthLimit = remainMonthLimit;
     }
 
-    /**
-     * null
-     * @return REMAINDAYLIMIT null
-     */
-    public String getRemaindaylimit() {
-        return remaindaylimit;
+    public String getRemainDayLimit() {
+        return remainDayLimit;
     }
 
-    /**
-     * null
-     * @param remaindaylimit null
-     */
-    public void setRemaindaylimit(String remaindaylimit) {
-        this.remaindaylimit = remaindaylimit;
+    public void setRemainDayLimit(String remainDayLimit) {
+        this.remainDayLimit = remainDayLimit;
     }
 
-    /**
-     * null
-     * @return REMAINTOTALSUM null
-     */
-    public String getRemaintotalsum() {
-        return remaintotalsum;
+    public String getRemainTotalSum() {
+        return remainTotalSum;
     }
 
-    /**
-     * null
-     * @param remaintotalsum null
-     */
-    public void setRemaintotalsum(String remaintotalsum) {
-        this.remaintotalsum = remaintotalsum;
+    public void setRemainTotalSum(String remainTotalSum) {
+        this.remainTotalSum = remainTotalSum;
     }
 }

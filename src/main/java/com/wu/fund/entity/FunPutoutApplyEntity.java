@@ -61,7 +61,7 @@ public class FunPutoutApplyEntity implements Serializable {
     /**
      * 影像资料文件包名
      */
-    private String imagefileName;
+    private String imageFileName;
 
     /**
      * 收款银行名称
@@ -71,7 +71,7 @@ public class FunPutoutApplyEntity implements Serializable {
     /**
      * 收款银行账号
      */
-    private String receiveBankAcno;
+    private String receiveBankAcNo;
 
     /**
      * 认证ID
@@ -186,754 +186,406 @@ public class FunPutoutApplyEntity implements Serializable {
     /**
      * 资金单元编号
      */
-    private String fundunitno;
+    private String fundUnitNo;
 
     /**
      * 贷款机构编号
      */
-    private String loanorgcode;
+    private String loanOrgCode;
 
     /**
      * 开始时间
      */
-    private String begintime;
+    private String beginTime;
 
     /**
      * 结束时间
      */
-    private String endtime;
+    private String endTime;
 
     /**
      * 交易编号
      */
-    private String transno;
+    private String transNo;
 
     /**
      * 交易请求编号
      */
-    private String reqno;
+    private String reqNo;
 
     /**
      * 客户编号
      */
-    private String customerid;
+    private String customerId;
 
     /**
      * 轮询处理时间（精确到毫秒）
      */
-    private String dealtime;
+    private String dealTime;
 
     /**
      * null
      */
-    private String oldfundunitno;
+    private String oldfundUnitNo;
 
     /**
      * FUN_PUTOUT_APPLY
      */
     private static final long serialVersionUID = 1L;
 
-    /**
-     * null
-     * @return L_APPLY_NO null
-     */
     public String getlApplyNo() {
         return lApplyNo;
     }
 
-    /**
-     * null
-     * @param lApplyNo null
-     */
     public void setlApplyNo(String lApplyNo) {
         this.lApplyNo = lApplyNo;
     }
 
-    /**
-     * null
-     * @return L_SL_BUSINESS_NO null
-     */
     public String getlSlBusinessNo() {
         return lSlBusinessNo;
     }
 
-    /**
-     * null
-     * @param lSlBusinessNo null
-     */
     public void setlSlBusinessNo(String lSlBusinessNo) {
         this.lSlBusinessNo = lSlBusinessNo;
     }
 
-    /**
-     * null
-     * @return A_DEAL_NO null
-     */
     public String getaDealNo() {
         return aDealNo;
     }
 
-    /**
-     * null
-     * @param aDealNo null
-     */
     public void setaDealNo(String aDealNo) {
         this.aDealNo = aDealNo;
     }
 
-    /**
-     * null
-     * @return A_CAPITAL_BUSINESS_NO null
-     */
     public String getaCapitalBusinessNo() {
         return aCapitalBusinessNo;
     }
 
-    /**
-     * null
-     * @param aCapitalBusinessNo null
-     */
     public void setaCapitalBusinessNo(String aCapitalBusinessNo) {
         this.aCapitalBusinessNo = aCapitalBusinessNo;
     }
 
-    /**
-     * null
-     * @return LOAN_AMT null
-     */
     public BigDecimal getLoanAmt() {
         return loanAmt;
     }
 
-    /**
-     * null
-     * @param loanAmt null
-     */
     public void setLoanAmt(BigDecimal loanAmt) {
         this.loanAmt = loanAmt;
     }
 
-    /**
-     * null
-     * @return TERM_NO null
-     */
     public String getTermNo() {
         return termNo;
     }
 
-    /**
-     * null
-     * @param termNo null
-     */
     public void setTermNo(String termNo) {
         this.termNo = termNo;
     }
 
-    /**
-     * null
-     * @return PAYBACK_TYPE null
-     */
     public String getPaybackType() {
         return paybackType;
     }
 
-    /**
-     * null
-     * @param paybackType null
-     */
     public void setPaybackType(String paybackType) {
         this.paybackType = paybackType;
     }
 
-    /**
-     * null
-     * @return LOAN_USE null
-     */
     public String getLoanUse() {
         return loanUse;
     }
 
-    /**
-     * null
-     * @param loanUse null
-     */
     public void setLoanUse(String loanUse) {
         this.loanUse = loanUse;
     }
 
-    /**
-     * null
-     * @return CERT_TYPE null
-     */
     public String getCertType() {
         return certType;
     }
 
-    /**
-     * null
-     * @param certType null
-     */
     public void setCertType(String certType) {
         this.certType = certType;
     }
 
-    /**
-     * null
-     * @return CERT_NO null
-     */
     public String getCertNo() {
         return certNo;
     }
 
-    /**
-     * null
-     * @param certNo null
-     */
     public void setCertNo(String certNo) {
         this.certNo = certNo;
     }
 
-    /**
-     * null
-     * @return IMAGEFILE_NAME null
-     */
-    public String getImagefileName() {
-        return imagefileName;
+    public String getImageFileName() {
+        return imageFileName;
     }
 
-    /**
-     * null
-     * @param imagefileName null
-     */
-    public void setImagefileName(String imagefileName) {
-        this.imagefileName = imagefileName;
+    public void setImageFileName(String imageFileName) {
+        this.imageFileName = imageFileName;
     }
 
-    /**
-     * null
-     * @return RECEIVE_BANK_NAME null
-     */
     public String getReceiveBankName() {
         return receiveBankName;
     }
 
-    /**
-     * null
-     * @param receiveBankName null
-     */
     public void setReceiveBankName(String receiveBankName) {
         this.receiveBankName = receiveBankName;
     }
 
-    /**
-     * null
-     * @return RECEIVE_BANK_ACNO null
-     */
-    public String getReceiveBankAcno() {
-        return receiveBankAcno;
+    public String getReceiveBankAcNo() {
+        return receiveBankAcNo;
     }
 
-    /**
-     * null
-     * @param receiveBankAcno null
-     */
-    public void setReceiveBankAcno(String receiveBankAcno) {
-        this.receiveBankAcno = receiveBankAcno;
+    public void setReceiveBankAcNo(String receiveBankAcNo) {
+        this.receiveBankAcNo = receiveBankAcNo;
     }
 
-    /**
-     * null
-     * @return CHECK_APPLE_ID null
-     */
     public String getCheckAppleId() {
         return checkAppleId;
     }
 
-    /**
-     * null
-     * @param checkAppleId null
-     */
     public void setCheckAppleId(String checkAppleId) {
         this.checkAppleId = checkAppleId;
     }
 
-    /**
-     * null
-     * @return BANK_CARD_NO null
-     */
     public String getBankCardNo() {
         return bankCardNo;
     }
 
-    /**
-     * null
-     * @param bankCardNo null
-     */
     public void setBankCardNo(String bankCardNo) {
         this.bankCardNo = bankCardNo;
     }
 
-    /**
-     * null
-     * @return BANK_CARD_TYPE null
-     */
     public String getBankCardType() {
         return bankCardType;
     }
 
-    /**
-     * null
-     * @param bankCardType null
-     */
     public void setBankCardType(String bankCardType) {
         this.bankCardType = bankCardType;
     }
 
-    /**
-     * null
-     * @return BANK_NAME null
-     */
     public String getBankName() {
         return bankName;
     }
 
-    /**
-     * null
-     * @param bankName null
-     */
     public void setBankName(String bankName) {
         this.bankName = bankName;
     }
 
-    /**
-     * null
-     * @return BANK_MOBILE null
-     */
     public String getBankMobile() {
         return bankMobile;
     }
 
-    /**
-     * null
-     * @param bankMobile null
-     */
     public void setBankMobile(String bankMobile) {
         this.bankMobile = bankMobile;
     }
 
-    /**
-     * null
-     * @return THIRD_ORG_CODE null
-     */
     public String getThirdOrgCode() {
         return thirdOrgCode;
     }
 
-    /**
-     * null
-     * @param thirdOrgCode null
-     */
     public void setThirdOrgCode(String thirdOrgCode) {
         this.thirdOrgCode = thirdOrgCode;
     }
 
-    /**
-     * null
-     * @return VALID_STATUS null
-     */
     public String getValidStatus() {
         return validStatus;
     }
 
-    /**
-     * null
-     * @param validStatus null
-     */
     public void setValidStatus(String validStatus) {
         this.validStatus = validStatus;
     }
 
-    /**
-     * null
-     * @return THIRD_ORG_RETURN_CODE null
-     */
     public String getThirdOrgReturnCode() {
         return thirdOrgReturnCode;
     }
 
-    /**
-     * null
-     * @param thirdOrgReturnCode null
-     */
     public void setThirdOrgReturnCode(String thirdOrgReturnCode) {
         this.thirdOrgReturnCode = thirdOrgReturnCode;
     }
 
-    /**
-     * null
-     * @return THIRD_ORG_RETURN_MSG null
-     */
     public String getThirdOrgReturnMsg() {
         return thirdOrgReturnMsg;
     }
 
-    /**
-     * null
-     * @param thirdOrgReturnMsg null
-     */
     public void setThirdOrgReturnMsg(String thirdOrgReturnMsg) {
         this.thirdOrgReturnMsg = thirdOrgReturnMsg;
     }
 
-    /**
-     * null
-     * @return APPLY_DATETIME null
-     */
     public String getApplyDatetime() {
         return applyDatetime;
     }
 
-    /**
-     * null
-     * @param applyDatetime null
-     */
     public void setApplyDatetime(String applyDatetime) {
         this.applyDatetime = applyDatetime;
     }
 
-    /**
-     * null
-     * @return FINISH_DATETIME null
-     */
     public String getFinishDatetime() {
         return finishDatetime;
     }
 
-    /**
-     * null
-     * @param finishDatetime null
-     */
     public void setFinishDatetime(String finishDatetime) {
         this.finishDatetime = finishDatetime;
     }
 
-    /**
-     * null
-     * @return L_DEAL_NO null
-     */
     public String getlDealNo() {
         return lDealNo;
     }
 
-    /**
-     * null
-     * @param lDealNo null
-     */
     public void setlDealNo(String lDealNo) {
         this.lDealNo = lDealNo;
     }
 
-    /**
-     * null
-     * @return STATUS null
-     */
     public String getStatus() {
         return status;
     }
 
-    /**
-     * null
-     * @param status null
-     */
     public void setStatus(String status) {
         this.status = status;
     }
 
-    /**
-     * null
-     * @return L_CAPITAL_BUSINESS_NO null
-     */
     public String getlCapitalBusinessNo() {
         return lCapitalBusinessNo;
     }
 
-    /**
-     * null
-     * @param lCapitalBusinessNo null
-     */
     public void setlCapitalBusinessNo(String lCapitalBusinessNo) {
         this.lCapitalBusinessNo = lCapitalBusinessNo;
     }
 
-    /**
-     * null
-     * @return DEAL_STATUS null
-     */
     public String getDealStatus() {
         return dealStatus;
     }
 
-    /**
-     * null
-     * @param dealStatus null
-     */
     public void setDealStatus(String dealStatus) {
         this.dealStatus = dealStatus;
     }
 
-    /**
-     * null
-     * @return DEAL_DESC null
-     */
     public String getDealDesc() {
         return dealDesc;
     }
 
-    /**
-     * null
-     * @param dealDesc null
-     */
     public void setDealDesc(String dealDesc) {
         this.dealDesc = dealDesc;
     }
 
-    /**
-     * null
-     * @return TRANS_DATE null
-     */
     public String getTransDate() {
         return transDate;
     }
 
-    /**
-     * null
-     * @param transDate null
-     */
     public void setTransDate(String transDate) {
         this.transDate = transDate;
     }
 
-    /**
-     * null
-     * @return CLEAR_DATE null
-     */
     public String getClearDate() {
         return clearDate;
     }
 
-    /**
-     * null
-     * @param clearDate null
-     */
     public void setClearDate(String clearDate) {
         this.clearDate = clearDate;
     }
 
-    /**
-     * null
-     * @return CUST_NAME null
-     */
     public String getCustName() {
         return custName;
     }
 
-    /**
-     * null
-     * @param custName null
-     */
     public void setCustName(String custName) {
         this.custName = custName;
     }
 
-    /**
-     * null
-     * @return RECEIVE_BANK_ACNM null
-     */
     public String getReceiveBankAcnm() {
         return receiveBankAcnm;
     }
 
-    /**
-     * null
-     * @param receiveBankAcnm null
-     */
     public void setReceiveBankAcnm(String receiveBankAcnm) {
         this.receiveBankAcnm = receiveBankAcnm;
     }
 
-    /**
-     * null
-     * @return PHONE_NO null
-     */
     public String getPhoneNo() {
         return phoneNo;
     }
 
-    /**
-     * null
-     * @param phoneNo null
-     */
     public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
 
-    /**
-     * null
-     * @return BANK_NO null
-     */
     public String getBankNo() {
         return bankNo;
     }
 
-    /**
-     * null
-     * @param bankNo null
-     */
     public void setBankNo(String bankNo) {
         this.bankNo = bankNo;
     }
 
-    /**
-     * null
-     * @return FUNDUNITNO null
-     */
-    public String getFundunitno() {
-        return fundunitno;
+    public String getFundUnitNo() {
+        return fundUnitNo;
     }
 
-    /**
-     * null
-     * @param fundunitno null
-     */
-    public void setFundunitno(String fundunitno) {
-        this.fundunitno = fundunitno;
+    public void setFundUnitNo(String fundUnitNo) {
+        this.fundUnitNo = fundUnitNo;
     }
 
-    /**
-     * null
-     * @return LOANORGCODE null
-     */
-    public String getLoanorgcode() {
-        return loanorgcode;
+    public String getLoanOrgCode() {
+        return loanOrgCode;
     }
 
-    /**
-     * null
-     * @param loanorgcode null
-     */
-    public void setLoanorgcode(String loanorgcode) {
-        this.loanorgcode = loanorgcode;
+    public void setLoanOrgCode(String loanOrgCode) {
+        this.loanOrgCode = loanOrgCode;
     }
 
-    /**
-     * null
-     * @return BEGINTIME null
-     */
-    public String getBegintime() {
-        return begintime;
+    public String getBeginTime() {
+        return beginTime;
     }
 
-    /**
-     * null
-     * @param begintime null
-     */
-    public void setBegintime(String begintime) {
-        this.begintime = begintime;
+    public void setBeginTime(String beginTime) {
+        this.beginTime = beginTime;
     }
 
-    /**
-     * null
-     * @return ENDTIME null
-     */
-    public String getEndtime() {
-        return endtime;
+    public String getEndTime() {
+        return endTime;
     }
 
-    /**
-     * null
-     * @param endtime null
-     */
-    public void setEndtime(String endtime) {
-        this.endtime = endtime;
+    public void setEndTime(String endTime) {
+        this.endTime = endTime;
     }
 
-    /**
-     * null
-     * @return TRANSNO null
-     */
-    public String getTransno() {
-        return transno;
+    public String getTransNo() {
+        return transNo;
     }
 
-    /**
-     * null
-     * @param transno null
-     */
-    public void setTransno(String transno) {
-        this.transno = transno;
+    public void setTransNo(String transNo) {
+        this.transNo = transNo;
     }
 
-    /**
-     * null
-     * @return REQNO null
-     */
-    public String getReqno() {
-        return reqno;
+    public String getReqNo() {
+        return reqNo;
     }
 
-    /**
-     * null
-     * @param reqno null
-     */
-    public void setReqno(String reqno) {
-        this.reqno = reqno;
+    public void setReqNo(String reqNo) {
+        this.reqNo = reqNo;
     }
 
-    /**
-     * null
-     * @return CUSTOMERID null
-     */
-    public String getCustomerid() {
-        return customerid;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    /**
-     * null
-     * @param customerid null
-     */
-    public void setCustomerid(String customerid) {
-        this.customerid = customerid;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
-    /**
-     * null
-     * @return DEALTIME null
-     */
-    public String getDealtime() {
-        return dealtime;
+    public String getDealTime() {
+        return dealTime;
     }
 
-    /**
-     * null
-     * @param dealtime null
-     */
-    public void setDealtime(String dealtime) {
-        this.dealtime = dealtime;
+    public void setDealTime(String dealTime) {
+        this.dealTime = dealTime;
     }
 
-    /**
-     * null
-     * @return OLDFUNDUNITNO null
-     */
-    public String getOldfundunitno() {
-        return oldfundunitno;
+    public String getOldfundUnitNo() {
+        return oldfundUnitNo;
     }
 
-    /**
-     * null
-     * @param oldfundunitno null
-     */
-    public void setOldfundunitno(String oldfundunitno) {
-        this.oldfundunitno = oldfundunitno;
+    public void setOldfundUnitNo(String oldfundUnitNo) {
+        this.oldfundUnitNo = oldfundUnitNo;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 }

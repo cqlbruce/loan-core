@@ -2,22 +2,22 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.LoanOrgBankChargeMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanOrgBankChargeEntity" >
-    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
-    <result column="LOWLIMIT" property="lowlimit" jdbcType="VARCHAR" />
-    <result column="UPLIMIT" property="uplimit" jdbcType="VARCHAR" />
-    <result column="SINGLESUM" property="singlesum" jdbcType="VARCHAR" />
-    <result column="RELATIVETYPE" property="relativetype" jdbcType="VARCHAR" />
+    <id column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeSerialNo" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
+    <result column="LOWLIMIT" property="lowLimit" jdbcType="VARCHAR" />
+    <result column="UPLIMIT" property="upLimit" jdbcType="VARCHAR" />
+    <result column="SINGLESUM" property="singleSum" jdbcType="VARCHAR" />
+    <result column="RELATIVETYPE" property="relativeType" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from LOAN_ORG_BANK_CHARGE
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.LoanOrgBankChargeEntity" >
     insert into LOAN_ORG_BANK_CHARGE (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
@@ -25,32 +25,32 @@
       INPUTORGID, UPDATEORGID, LOWLIMIT, 
       UPLIMIT, SINGLESUM, RELATIVETYPE
       )
-    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
-      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
-      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{lowlimit,jdbcType=VARCHAR}, 
-      #{uplimit,jdbcType=VARCHAR}, #{singlesum,jdbcType=VARCHAR}, #{relativetype,jdbcType=VARCHAR}
+    values (#{serialNo,jdbcType=VARCHAR}, #{relativeSerialNo,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR},
+      #{updateUserId,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR},
+      #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{lowLimit,jdbcType=VARCHAR},
+      #{upLimit,jdbcType=VARCHAR}, #{singleSum,jdbcType=VARCHAR}, #{relativeType,jdbcType=VARCHAR}
       )
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgBankChargeEntity" >
     update LOAN_ORG_BANK_CHARGE
-    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
-      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
-      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
-      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
-      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
-      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
-      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
-      LOWLIMIT = #{lowlimit,jdbcType=VARCHAR},
-      UPLIMIT = #{uplimit,jdbcType=VARCHAR},
-      SINGLESUM = #{singlesum,jdbcType=VARCHAR},
-      RELATIVETYPE = #{relativetype,jdbcType=VARCHAR}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    set RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      LOWLIMIT = #{lowLimit,jdbcType=VARCHAR},
+      UPLIMIT = #{upLimit,jdbcType=VARCHAR},
+      SINGLESUM = #{singleSum,jdbcType=VARCHAR},
+      RELATIVETYPE = #{relativeType,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
     INPUTORGID, UPDATEORGID, LOWLIMIT, UPLIMIT, SINGLESUM, RELATIVETYPE
     from LOAN_ORG_BANK_CHARGE
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 

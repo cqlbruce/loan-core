@@ -8,7 +8,7 @@ public interface LoanOrgBankConstraintMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface LoanOrgBankConstraintMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    LoanOrgBankConstraintEntity selectByPrimaryKey(String serialno);
+    LoanOrgBankConstraintEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

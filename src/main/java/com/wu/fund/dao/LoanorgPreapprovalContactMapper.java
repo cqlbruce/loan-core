@@ -8,7 +8,7 @@ public interface LoanorgPreapprovalContactMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int deleteByPrimaryKey(String serialno);
+    int deleteByPrimaryKey(String serialNo);
 
     /**
      *
@@ -20,7 +20,7 @@ public interface LoanorgPreapprovalContactMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    LoanorgPreapprovalContactEntity selectByPrimaryKey(String serialno);
+    LoanorgPreapprovalContactEntity selectByPrimaryKey(String serialNo);
 
     /**
      *

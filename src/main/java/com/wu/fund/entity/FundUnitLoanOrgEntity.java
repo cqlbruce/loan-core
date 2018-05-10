@@ -9,231 +9,143 @@ public class FundUnitLoanOrgEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联外键
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 贷款机构类型
      */
-    private String orgtype;
+    private String orgType;
 
     /**
      * 贷款机构名称
      */
-    private String orgname;
+    private String orgName;
 
     /**
      * 贷款机构编码
      */
-    private String orgcode;
+    private String orgCode;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return ORGTYPE null
-     */
-    public String getOrgtype() {
-        return orgtype;
+    public String getOrgType() {
+        return orgType;
     }
 
-    /**
-     * null
-     * @param orgtype null
-     */
-    public void setOrgtype(String orgtype) {
-        this.orgtype = orgtype;
+    public void setOrgType(String orgType) {
+        this.orgType = orgType;
     }
 
-    /**
-     * null
-     * @return ORGNAME null
-     */
-    public String getOrgname() {
-        return orgname;
+    public String getOrgName() {
+        return orgName;
     }
 
-    /**
-     * null
-     * @param orgname null
-     */
-    public void setOrgname(String orgname) {
-        this.orgname = orgname;
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
     }
 
-    /**
-     * null
-     * @return ORGCODE null
-     */
-    public String getOrgcode() {
-        return orgcode;
+    public String getOrgCode() {
+        return orgCode;
     }
 
-    /**
-     * null
-     * @param orgcode null
-     */
-    public void setOrgcode(String orgcode) {
-        this.orgcode = orgcode;
+    public void setOrgCode(String orgCode) {
+        this.orgCode = orgCode;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 }

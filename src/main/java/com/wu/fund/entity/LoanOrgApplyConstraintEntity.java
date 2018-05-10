@@ -12,378 +12,234 @@ public class LoanOrgApplyConstraintEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联贷款机构配置流水号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 授信月限次控制方式
      */
-    private String controltype;
+    private String controlType;
 
     /**
      * 授信固定月限次
      */
-    private String monthlimit;
+    private String monthLimit;
 
     /**
      * 授信月限次放款倍数
      */
-    private String putoutmultiple;
+    private String putOutMultiple;
 
     /**
      * 授信日限次
      */
-    private String daylimit;
+    private String dayLimit;
 
     /**
      * 授信通过有效期限
      */
-    private String approveterm;
+    private String approveTerm;
 
     /**
      * 授信拒绝限制期限
      */
-    private String refuseterm;
+    private String refuseTerm;
 
     /**
      * 授信自主查询征信
      */
-    private String querycredit;
+    private String queryCredit;
 
     /**
      * 授信自主绑卡验证
      */
-    private String cardcheck;
+    private String cardCheck;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 身份验证收费标准
      */
-    private String chargetype;
+    private String chargeType;
 
     /**
      * 关联类型
      */
-    private String relativetype;
+    private String relativeType;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return CONTROLTYPE null
-     */
-    public String getControltype() {
-        return controltype;
+    public String getControlType() {
+        return controlType;
     }
 
-    /**
-     * null
-     * @param controltype null
-     */
-    public void setControltype(String controltype) {
-        this.controltype = controltype;
+    public void setControlType(String controlType) {
+        this.controlType = controlType;
     }
 
-    /**
-     * null
-     * @return MONTHLIMIT null
-     */
-    public String getMonthlimit() {
-        return monthlimit;
+    public String getMonthLimit() {
+        return monthLimit;
     }
 
-    /**
-     * null
-     * @param monthlimit null
-     */
-    public void setMonthlimit(String monthlimit) {
-        this.monthlimit = monthlimit;
+    public void setMonthLimit(String monthLimit) {
+        this.monthLimit = monthLimit;
     }
 
-    /**
-     * null
-     * @return PUTOUTMULTIPLE null
-     */
-    public String getPutoutmultiple() {
-        return putoutmultiple;
+    public String getPutOutMultiple() {
+        return putOutMultiple;
     }
 
-    /**
-     * null
-     * @param putoutmultiple null
-     */
-    public void setPutoutmultiple(String putoutmultiple) {
-        this.putoutmultiple = putoutmultiple;
+    public void setPutOutMultiple(String putOutMultiple) {
+        this.putOutMultiple = putOutMultiple;
     }
 
-    /**
-     * null
-     * @return DAYLIMIT null
-     */
-    public String getDaylimit() {
-        return daylimit;
+    public String getDayLimit() {
+        return dayLimit;
     }
 
-    /**
-     * null
-     * @param daylimit null
-     */
-    public void setDaylimit(String daylimit) {
-        this.daylimit = daylimit;
+    public void setDayLimit(String dayLimit) {
+        this.dayLimit = dayLimit;
     }
 
-    /**
-     * null
-     * @return APPROVETERM null
-     */
-    public String getApproveterm() {
-        return approveterm;
+    public String getApproveTerm() {
+        return approveTerm;
     }
 
-    /**
-     * null
-     * @param approveterm null
-     */
-    public void setApproveterm(String approveterm) {
-        this.approveterm = approveterm;
+    public void setApproveTerm(String approveTerm) {
+        this.approveTerm = approveTerm;
     }
 
-    /**
-     * null
-     * @return REFUSETERM null
-     */
-    public String getRefuseterm() {
-        return refuseterm;
+    public String getRefuseTerm() {
+        return refuseTerm;
     }
 
-    /**
-     * null
-     * @param refuseterm null
-     */
-    public void setRefuseterm(String refuseterm) {
-        this.refuseterm = refuseterm;
+    public void setRefuseTerm(String refuseTerm) {
+        this.refuseTerm = refuseTerm;
     }
 
-    /**
-     * null
-     * @return QUERYCREDIT null
-     */
-    public String getQuerycredit() {
-        return querycredit;
+    public String getQueryCredit() {
+        return queryCredit;
     }
 
-    /**
-     * null
-     * @param querycredit null
-     */
-    public void setQuerycredit(String querycredit) {
-        this.querycredit = querycredit;
+    public void setQueryCredit(String queryCredit) {
+        this.queryCredit = queryCredit;
     }
 
-    /**
-     * null
-     * @return CARDCHECK null
-     */
-    public String getCardcheck() {
-        return cardcheck;
+    public String getCardCheck() {
+        return cardCheck;
     }
 
-    /**
-     * null
-     * @param cardcheck null
-     */
-    public void setCardcheck(String cardcheck) {
-        this.cardcheck = cardcheck;
+    public void setCardCheck(String cardCheck) {
+        this.cardCheck = cardCheck;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return CHARGETYPE null
-     */
-    public String getChargetype() {
-        return chargetype;
+    public String getChargeType() {
+        return chargeType;
     }
 
-    /**
-     * null
-     * @param chargetype null
-     */
-    public void setChargetype(String chargetype) {
-        this.chargetype = chargetype;
+    public void setChargeType(String chargeType) {
+        this.chargeType = chargeType;
     }
 
-    /**
-     * null
-     * @return RELATIVETYPE null
-     */
-    public String getRelativetype() {
-        return relativetype;
+    public String getRelativeType() {
+        return relativeType;
     }
 
-    /**
-     * null
-     * @param relativetype null
-     */
-    public void setRelativetype(String relativetype) {
-        this.relativetype = relativetype;
+    public void setRelativeType(String relativeType) {
+        this.relativeType = relativeType;
     }
 }

@@ -2,35 +2,35 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wu.fund.dao.FundUnitPutoutConstraintMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundUnitPutoutConstraintEntity" >
-    <id column="SERIALNO" property="serialno" jdbcType="VARCHAR" />
-    <result column="RELATIVESERIALNO" property="relativeserialno" jdbcType="VARCHAR" />
-    <result column="INPUTDATE" property="inputdate" jdbcType="VARCHAR" />
-    <result column="UPDATEUSERID" property="updateuserid" jdbcType="VARCHAR" />
-    <result column="UPDATEDATE" property="updatedate" jdbcType="VARCHAR" />
-    <result column="INPUTUSERID" property="inputuserid" jdbcType="VARCHAR" />
-    <result column="INPUTORGID" property="inputorgid" jdbcType="VARCHAR" />
-    <result column="UPDATEORGID" property="updateorgid" jdbcType="VARCHAR" />
-    <result column="INCOMECALCUMETHOD" property="incomecalcumethod" jdbcType="VARCHAR" />
-    <result column="ONETIMELOANREBATES" property="onetimeloanrebates" jdbcType="VARCHAR" />
-    <result column="REIMBURSEMENTRATE" property="reimbursementrate" jdbcType="VARCHAR" />
-    <result column="ONETIMELOANSUM" property="onetimeloansum" jdbcType="VARCHAR" />
-    <result column="ANNUALINTERESTRATE" property="annualinterestrate" jdbcType="VARCHAR" />
-    <result column="LENDINGPRIORITY" property="lendingpriority" jdbcType="VARCHAR" />
-    <result column="LENDINGWEIGHT" property="lendingweight" jdbcType="VARCHAR" />
-    <result column="ALLOWABLEOVERLIMIT" property="allowableoverlimit" jdbcType="VARCHAR" />
-    <result column="TOTALSUM" property="totalsum" jdbcType="VARCHAR" />
-    <result column="SINGLECUSTLIMIT" property="singlecustlimit" jdbcType="VARCHAR" />
-    <result column="SINGLEMINAMOUNT" property="singleminamount" jdbcType="VARCHAR" />
-    <result column="SINGLEMAXAMOUNT" property="singlemaxamount" jdbcType="VARCHAR" />
-    <result column="DAILYLIMIT" property="dailylimit" jdbcType="VARCHAR" />
-    <result column="MONTHLYLIMIT" property="monthlylimit" jdbcType="VARCHAR" />
-    <result column="REMAINMONTHLIMIT" property="remainmonthlimit" jdbcType="VARCHAR" />
-    <result column="REMAINDAYLIMIT" property="remaindaylimit" jdbcType="VARCHAR" />
-    <result column="REMAINTOTALSUM" property="remaintotalsum" jdbcType="VARCHAR" />
+    <id column="SERIALNO" property="serialNo" jdbcType="VARCHAR" />
+    <result column="RELATIVESERIALNO" property="relativeSerialNo" jdbcType="VARCHAR" />
+    <result column="INPUTDATE" property="inputDate" jdbcType="VARCHAR" />
+    <result column="UPDATEUSERID" property="updateUserId" jdbcType="VARCHAR" />
+    <result column="UPDATEDATE" property="updateDate" jdbcType="VARCHAR" />
+    <result column="INPUTUSERID" property="inputUserId" jdbcType="VARCHAR" />
+    <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
+    <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
+    <result column="INCOMECALCUMETHOD" property="incomeCalcuMethod" jdbcType="VARCHAR" />
+    <result column="ONETIMELOANREBATES" property="oneTimeLoanRebates" jdbcType="VARCHAR" />
+    <result column="REIMBURSEMENTRATE" property="reimbursementRate" jdbcType="VARCHAR" />
+    <result column="ONETIMELOANSUM" property="oneTimeLoanSum" jdbcType="VARCHAR" />
+    <result column="ANNUALINTERESTRATE" property="annualInterestRate" jdbcType="VARCHAR" />
+    <result column="LENDINGPRIORITY" property="lendingPriority" jdbcType="VARCHAR" />
+    <result column="LENDINGWEIGHT" property="lendingWeight" jdbcType="VARCHAR" />
+    <result column="ALLOWABLEOVERLIMIT" property="allowableOverLimit" jdbcType="VARCHAR" />
+    <result column="TOTALSUM" property="totalSum" jdbcType="VARCHAR" />
+    <result column="SINGLECUSTLIMIT" property="singleCustLimit" jdbcType="VARCHAR" />
+    <result column="SINGLEMINAMOUNT" property="singleMinAmount" jdbcType="VARCHAR" />
+    <result column="SINGLEMAXAMOUNT" property="singleMaxAmount" jdbcType="VARCHAR" />
+    <result column="DAILYLIMIT" property="dailyLimit" jdbcType="VARCHAR" />
+    <result column="MONTHLYLIMIT" property="monthlyLimit" jdbcType="VARCHAR" />
+    <result column="REMAINMONTHLIMIT" property="remainMonthLimit" jdbcType="VARCHAR" />
+    <result column="REMAINDAYLIMIT" property="remainDayLimit" jdbcType="VARCHAR" />
+    <result column="REMAINTOTALSUM" property="remainTotalSum" jdbcType="VARCHAR" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUND_UNIT_PUTOUT_CONSTRAINT
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
   <insert id="insert" parameterType="com.wu.fund.entity.FundUnitPutoutConstraintEntity" >
     insert into FUND_UNIT_PUTOUT_CONSTRAINT (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
@@ -42,43 +42,43 @@
       SINGLECUSTLIMIT, SINGLEMINAMOUNT, SINGLEMAXAMOUNT, 
       DAILYLIMIT, MONTHLYLIMIT, REMAINMONTHLIMIT, 
       REMAINDAYLIMIT, REMAINTOTALSUM)
-    values (#{serialno,jdbcType=VARCHAR}, #{relativeserialno,jdbcType=VARCHAR}, #{inputdate,jdbcType=VARCHAR}, 
-      #{updateuserid,jdbcType=VARCHAR}, #{updatedate,jdbcType=VARCHAR}, #{inputuserid,jdbcType=VARCHAR}, 
-      #{inputorgid,jdbcType=VARCHAR}, #{updateorgid,jdbcType=VARCHAR}, #{incomecalcumethod,jdbcType=VARCHAR}, 
-      #{onetimeloanrebates,jdbcType=VARCHAR}, #{reimbursementrate,jdbcType=VARCHAR}, 
-      #{onetimeloansum,jdbcType=VARCHAR}, #{annualinterestrate,jdbcType=VARCHAR}, #{lendingpriority,jdbcType=VARCHAR}, 
-      #{lendingweight,jdbcType=VARCHAR}, #{allowableoverlimit,jdbcType=VARCHAR}, #{totalsum,jdbcType=VARCHAR}, 
-      #{singlecustlimit,jdbcType=VARCHAR}, #{singleminamount,jdbcType=VARCHAR}, #{singlemaxamount,jdbcType=VARCHAR}, 
-      #{dailylimit,jdbcType=VARCHAR}, #{monthlylimit,jdbcType=VARCHAR}, #{remainmonthlimit,jdbcType=VARCHAR}, 
-      #{remaindaylimit,jdbcType=VARCHAR}, #{remaintotalsum,jdbcType=VARCHAR})
+    values (#{serialNo,jdbcType=VARCHAR}, #{relativeSerialNo,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR},
+      #{updateUserId,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR},
+      #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{incomeCalcuMethod,jdbcType=VARCHAR},
+      #{oneTimeLoanRebates,jdbcType=VARCHAR}, #{reimbursementRate,jdbcType=VARCHAR},
+      #{oneTimeLoanSum,jdbcType=VARCHAR}, #{annualInterestRate,jdbcType=VARCHAR}, #{lendingPriority,jdbcType=VARCHAR},
+      #{lendingWeight,jdbcType=VARCHAR}, #{allowableOverLimit,jdbcType=VARCHAR}, #{totalSum,jdbcType=VARCHAR},
+      #{singleCustLimit,jdbcType=VARCHAR}, #{singleMinAmount,jdbcType=VARCHAR}, #{singleMaxAmount,jdbcType=VARCHAR},
+      #{dailyLimit,jdbcType=VARCHAR}, #{monthlyLimit,jdbcType=VARCHAR}, #{remainMonthLimit,jdbcType=VARCHAR},
+      #{remainDayLimit,jdbcType=VARCHAR}, #{remainTotalSum,jdbcType=VARCHAR})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundUnitPutoutConstraintEntity" >
     update FUND_UNIT_PUTOUT_CONSTRAINT
-    set RELATIVESERIALNO = #{relativeserialno,jdbcType=VARCHAR},
-      INPUTDATE = #{inputdate,jdbcType=VARCHAR},
-      UPDATEUSERID = #{updateuserid,jdbcType=VARCHAR},
-      UPDATEDATE = #{updatedate,jdbcType=VARCHAR},
-      INPUTUSERID = #{inputuserid,jdbcType=VARCHAR},
-      INPUTORGID = #{inputorgid,jdbcType=VARCHAR},
-      UPDATEORGID = #{updateorgid,jdbcType=VARCHAR},
-      INCOMECALCUMETHOD = #{incomecalcumethod,jdbcType=VARCHAR},
-      ONETIMELOANREBATES = #{onetimeloanrebates,jdbcType=VARCHAR},
-      REIMBURSEMENTRATE = #{reimbursementrate,jdbcType=VARCHAR},
-      ONETIMELOANSUM = #{onetimeloansum,jdbcType=VARCHAR},
-      ANNUALINTERESTRATE = #{annualinterestrate,jdbcType=VARCHAR},
-      LENDINGPRIORITY = #{lendingpriority,jdbcType=VARCHAR},
-      LENDINGWEIGHT = #{lendingweight,jdbcType=VARCHAR},
-      ALLOWABLEOVERLIMIT = #{allowableoverlimit,jdbcType=VARCHAR},
-      TOTALSUM = #{totalsum,jdbcType=VARCHAR},
-      SINGLECUSTLIMIT = #{singlecustlimit,jdbcType=VARCHAR},
-      SINGLEMINAMOUNT = #{singleminamount,jdbcType=VARCHAR},
-      SINGLEMAXAMOUNT = #{singlemaxamount,jdbcType=VARCHAR},
-      DAILYLIMIT = #{dailylimit,jdbcType=VARCHAR},
-      MONTHLYLIMIT = #{monthlylimit,jdbcType=VARCHAR},
-      REMAINMONTHLIMIT = #{remainmonthlimit,jdbcType=VARCHAR},
-      REMAINDAYLIMIT = #{remaindaylimit,jdbcType=VARCHAR},
-      REMAINTOTALSUM = #{remaintotalsum,jdbcType=VARCHAR}
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    set RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      INCOMECALCUMETHOD = #{incomeCalcuMethod,jdbcType=VARCHAR},
+      ONETIMELOANREBATES = #{oneTimeLoanRebates,jdbcType=VARCHAR},
+      REIMBURSEMENTRATE = #{reimbursementRate,jdbcType=VARCHAR},
+      ONETIMELOANSUM = #{oneTimeLoanSum,jdbcType=VARCHAR},
+      ANNUALINTERESTRATE = #{annualInterestRate,jdbcType=VARCHAR},
+      LENDINGPRIORITY = #{lendingPriority,jdbcType=VARCHAR},
+      LENDINGWEIGHT = #{lendingWeight,jdbcType=VARCHAR},
+      ALLOWABLEOVERLIMIT = #{allowableOverLimit,jdbcType=VARCHAR},
+      TOTALSUM = #{totalSum,jdbcType=VARCHAR},
+      SINGLECUSTLIMIT = #{singleCustLimit,jdbcType=VARCHAR},
+      SINGLEMINAMOUNT = #{singleMinAmount,jdbcType=VARCHAR},
+      SINGLEMAXAMOUNT = #{singleMaxAmount,jdbcType=VARCHAR},
+      DAILYLIMIT = #{dailyLimit,jdbcType=VARCHAR},
+      MONTHLYLIMIT = #{monthlyLimit,jdbcType=VARCHAR},
+      REMAINMONTHLIMIT = #{remainMonthLimit,jdbcType=VARCHAR},
+      REMAINDAYLIMIT = #{remainDayLimit,jdbcType=VARCHAR},
+      REMAINTOTALSUM = #{remainTotalSum,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
@@ -87,7 +87,7 @@
     TOTALSUM, SINGLECUSTLIMIT, SINGLEMINAMOUNT, SINGLEMAXAMOUNT, DAILYLIMIT, MONTHLYLIMIT, 
     REMAINMONTHLIMIT, REMAINDAYLIMIT, REMAINTOTALSUM
     from FUND_UNIT_PUTOUT_CONSTRAINT
-    where SERIALNO = #{serialno,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 

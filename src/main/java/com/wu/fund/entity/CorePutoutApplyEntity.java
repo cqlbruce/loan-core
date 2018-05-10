@@ -309,8 +309,8 @@ public class CorePutoutApplyEntity implements Serializable {
         return imageFileName;
     }
 
-    public void setImageFileName(String imagefileName) {
-        this.imageFileName = imagefileName;
+    public void setImageFileName(String imageFileName) {
+        this.imageFileName = imageFileName;
     }
 
     public String getReceiveBankName() {
@@ -561,5 +561,7 @@ public class CorePutoutApplyEntity implements Serializable {
         this.customerId = customerId;
     }
 
-
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 }

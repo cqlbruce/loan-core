@@ -10,273 +10,169 @@ public class FundUnitLoanChannelEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联资金配置流水号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 业务通道类型
      */
-    private String channeltype;
+    private String channelType;
 
     /**
      * 业务通道编码
      */
-    private String channelcode;
+    private String channelCode;
 
     /**
      * 业务通道名称
      */
-    private String channelname;
+    private String channelName;
 
     /**
      * 通道费率类型
      */
-    private String channelratetype;
+    private String channelRateType;
 
     /**
      * 通道费率
      */
-    private String channelrate;
+    private String channelRate;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return CHANNELTYPE null
-     */
-    public String getChanneltype() {
-        return channeltype;
+    public String getChannelType() {
+        return channelType;
     }
 
-    /**
-     * null
-     * @param channeltype null
-     */
-    public void setChanneltype(String channeltype) {
-        this.channeltype = channeltype;
+    public void setChannelType(String channelType) {
+        this.channelType = channelType;
     }
 
-    /**
-     * null
-     * @return CHANNELCODE null
-     */
-    public String getChannelcode() {
-        return channelcode;
+    public String getChannelCode() {
+        return channelCode;
     }
 
-    /**
-     * null
-     * @param channelcode null
-     */
-    public void setChannelcode(String channelcode) {
-        this.channelcode = channelcode;
+    public void setChannelCode(String channelCode) {
+        this.channelCode = channelCode;
     }
 
-    /**
-     * null
-     * @return CHANNELNAME null
-     */
-    public String getChannelname() {
-        return channelname;
+    public String getChannelName() {
+        return channelName;
     }
 
-    /**
-     * null
-     * @param channelname null
-     */
-    public void setChannelname(String channelname) {
-        this.channelname = channelname;
+    public void setChannelName(String channelName) {
+        this.channelName = channelName;
     }
 
-    /**
-     * null
-     * @return CHANNELRATETYPE null
-     */
-    public String getChannelratetype() {
-        return channelratetype;
+    public String getChannelRateType() {
+        return channelRateType;
     }
 
-    /**
-     * null
-     * @param channelratetype null
-     */
-    public void setChannelratetype(String channelratetype) {
-        this.channelratetype = channelratetype;
+    public void setChannelRateType(String channelRateType) {
+        this.channelRateType = channelRateType;
     }
 
-    /**
-     * null
-     * @return CHANNELRATE null
-     */
-    public String getChannelrate() {
-        return channelrate;
+    public String getChannelRate() {
+        return channelRate;
     }
 
-    /**
-     * null
-     * @param channelrate null
-     */
-    public void setChannelrate(String channelrate) {
-        this.channelrate = channelrate;
+    public void setChannelRate(String channelRate) {
+        this.channelRate = channelRate;
     }
 }

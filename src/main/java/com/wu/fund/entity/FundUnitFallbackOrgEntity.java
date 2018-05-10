@@ -11,77 +11,77 @@ public class FundUnitFallbackOrgEntity {
     /**
      * 流水号
      */
-    private String serialno;
+    private String serialNo;
 
     /**
      * 关联资金配置流水号
      */
-    private String relativeserialno;
+    private String relativeSerialNo;
 
     /**
      * 兜底机构类型
      */
-    private String orgtype;
+    private String orgType;
 
     /**
      * 兜底机构名称
      */
-    private String orgname;
+    private String orgName;
 
     /**
      * 兜底机构编码
      */
-    private String orgcode;
+    private String orgCode;
 
     /**
      * 录入时间
      */
-    private String inputdate;
+    private String inputDate;
 
     /**
      * 更新人
      */
-    private String updateuserid;
+    private String updateUserId;
 
     /**
      * 更新时间
      */
-    private String updatedate;
+    private String updateDate;
 
     /**
      * 录入人
      */
-    private String inputuserid;
+    private String inputUserId;
 
     /**
      * 录入机构
      */
-    private String inputorgid;
+    private String inputOrgId;
 
     /**
      * 更新机构
      */
-    private String updateorgid;
+    private String updateOrgId;
 
     /**
      * 兜底模式
      */
-    private String fallbacktype;
+    private String fallbackType;
 
     /**
      * 代偿天数
      */
-    private String compensatoryday;
+    private String compensatoryDay;
 
     /**
      * 回购天数
      */
-    private String buybackday;
+    private String buybackDay;
 
     /**
      * 兜底费率类型
      */
-    private String ratetype;
+    private String rateType;
 
     /**
      * 兜底费率
@@ -91,277 +91,141 @@ public class FundUnitFallbackOrgEntity {
     /**
      * 兜底保证金比例
      */
-    private String marginlevel;
+    private String marginLevel;
 
-    /**
-     * null
-     * @return SERIALNO null
-     */
-    public String getSerialno() {
-        return serialno;
+    public String getSerialNo() {
+        return serialNo;
     }
 
-    /**
-     * null
-     * @param serialno null
-     */
-    public void setSerialno(String serialno) {
-        this.serialno = serialno;
+    public void setSerialNo(String serialNo) {
+        this.serialNo = serialNo;
     }
 
-    /**
-     * null
-     * @return RELATIVESERIALNO null
-     */
-    public String getRelativeserialno() {
-        return relativeserialno;
+    public String getRelativeSerialNo() {
+        return relativeSerialNo;
     }
 
-    /**
-     * null
-     * @param relativeserialno null
-     */
-    public void setRelativeserialno(String relativeserialno) {
-        this.relativeserialno = relativeserialno;
+    public void setRelativeSerialNo(String relativeSerialNo) {
+        this.relativeSerialNo = relativeSerialNo;
     }
 
-    /**
-     * null
-     * @return ORGTYPE null
-     */
-    public String getOrgtype() {
-        return orgtype;
+    public String getOrgType() {
+        return orgType;
     }
 
-    /**
-     * null
-     * @param orgtype null
-     */
-    public void setOrgtype(String orgtype) {
-        this.orgtype = orgtype;
+    public void setOrgType(String orgType) {
+        this.orgType = orgType;
     }
 
-    /**
-     * null
-     * @return ORGNAME null
-     */
-    public String getOrgname() {
-        return orgname;
+    public String getOrgName() {
+        return orgName;
     }
 
-    /**
-     * null
-     * @param orgname null
-     */
-    public void setOrgname(String orgname) {
-        this.orgname = orgname;
+    public void setOrgName(String orgName) {
+        this.orgName = orgName;
     }
 
-    /**
-     * null
-     * @return ORGCODE null
-     */
-    public String getOrgcode() {
-        return orgcode;
+    public String getOrgCode() {
+        return orgCode;
     }
 
-    /**
-     * null
-     * @param orgcode null
-     */
-    public void setOrgcode(String orgcode) {
-        this.orgcode = orgcode;
+    public void setOrgCode(String orgCode) {
+        this.orgCode = orgCode;
     }
 
-    /**
-     * null
-     * @return INPUTDATE null
-     */
-    public String getInputdate() {
-        return inputdate;
+    public String getInputDate() {
+        return inputDate;
     }
 
-    /**
-     * null
-     * @param inputdate null
-     */
-    public void setInputdate(String inputdate) {
-        this.inputdate = inputdate;
+    public void setInputDate(String inputDate) {
+        this.inputDate = inputDate;
     }
 
-    /**
-     * null
-     * @return UPDATEUSERID null
-     */
-    public String getUpdateuserid() {
-        return updateuserid;
+    public String getUpdateUserId() {
+        return updateUserId;
     }
 
-    /**
-     * null
-     * @param updateuserid null
-     */
-    public void setUpdateuserid(String updateuserid) {
-        this.updateuserid = updateuserid;
+    public void setUpdateUserId(String updateUserId) {
+        this.updateUserId = updateUserId;
     }
 
-    /**
-     * null
-     * @return UPDATEDATE null
-     */
-    public String getUpdatedate() {
-        return updatedate;
+    public String getUpdateDate() {
+        return updateDate;
     }
 
-    /**
-     * null
-     * @param updatedate null
-     */
-    public void setUpdatedate(String updatedate) {
-        this.updatedate = updatedate;
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
     }
 
-    /**
-     * null
-     * @return INPUTUSERID null
-     */
-    public String getInputuserid() {
-        return inputuserid;
+    public String getInputUserId() {
+        return inputUserId;
     }
 
-    /**
-     * null
-     * @param inputuserid null
-     */
-    public void setInputuserid(String inputuserid) {
-        this.inputuserid = inputuserid;
+    public void setInputUserId(String inputUserId) {
+        this.inputUserId = inputUserId;
     }
 
-    /**
-     * null
-     * @return INPUTORGID null
-     */
-    public String getInputorgid() {
-        return inputorgid;
+    public String getInputOrgId() {
+        return inputOrgId;
     }
 
-    /**
-     * null
-     * @param inputorgid null
-     */
-    public void setInputorgid(String inputorgid) {
-        this.inputorgid = inputorgid;
+    public void setInputOrgId(String inputOrgId) {
+        this.inputOrgId = inputOrgId;
     }
 
-    /**
-     * null
-     * @return UPDATEORGID null
-     */
-    public String getUpdateorgid() {
-        return updateorgid;
+    public String getUpdateOrgId() {
+        return updateOrgId;
     }
 
-    /**
-     * null
-     * @param updateorgid null
-     */
-    public void setUpdateorgid(String updateorgid) {
-        this.updateorgid = updateorgid;
+    public void setUpdateOrgId(String updateOrgId) {
+        this.updateOrgId = updateOrgId;
     }
 
-    /**
-     * null
-     * @return FALLBACKTYPE null
-     */
-    public String getFallbacktype() {
-        return fallbacktype;
+    public String getFallbackType() {
+        return fallbackType;
     }
 
-    /**
-     * null
-     * @param fallbacktype null
-     */
-    public void setFallbacktype(String fallbacktype) {
-        this.fallbacktype = fallbacktype;
+    public void setFallbackType(String fallbackType) {
+        this.fallbackType = fallbackType;
     }
 
-    /**
-     * null
-     * @return COMPENSATORYDAY null
-     */
-    public String getCompensatoryday() {
-        return compensatoryday;
+    public String getCompensatoryDay() {
+        return compensatoryDay;
     }
 
-    /**
-     * null
-     * @param compensatoryday null
-     */
-    public void setCompensatoryday(String compensatoryday) {
-        this.compensatoryday = compensatoryday;
+    public void setCompensatoryDay(String compensatoryDay) {
+        this.compensatoryDay = compensatoryDay;
     }
 
-    /**
-     * null
-     * @return BUYBACKDAY null
-     */
-    public String getBuybackday() {
-        return buybackday;
+    public String getBuybackDay() {
+        return buybackDay;
     }
 
-    /**
-     * null
-     * @param buybackday null
-     */
-    public void setBuybackday(String buybackday) {
-        this.buybackday = buybackday;
+    public void setBuybackDay(String buybackDay) {
+        this.buybackDay = buybackDay;
     }
 
-    /**
-     * null
-     * @return RATETYPE null
-     */
-    public String getRatetype() {
-        return ratetype;
+    public String getRateType() {
+        return rateType;
     }
 
-    /**
-     * null
-     * @param ratetype null
-     */
-    public void setRatetype(String ratetype) {
-        this.ratetype = ratetype;
+    public void setRateType(String rateType) {
+        this.rateType = rateType;
     }
 
-    /**
-     * null
-     * @return RATE null
-     */
     public String getRate() {
         return rate;
     }
 
-    /**
-     * null
-     * @param rate null
-     */
     public void setRate(String rate) {
         this.rate = rate;
     }
 
-    /**
-     * null
-     * @return MARGINLEVEL null
-     */
-    public String getMarginlevel() {
-        return marginlevel;
+    public String getMarginLevel() {
+        return marginLevel;
     }
 
-    /**
-     * null
-     * @param marginlevel null
-     */
-    public void setMarginlevel(String marginlevel) {
-        this.marginlevel = marginlevel;
+    public void setMarginLevel(String marginLevel) {
+        this.marginLevel = marginLevel;
     }
 }

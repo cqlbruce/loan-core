@@ -153,13 +153,13 @@ public class CoreCreditpreapprovalEntity implements Serializable {
     /**
      * 银行卡号
      */
-    private String bankCardNo;
+    private String cardNo;
 
     /**
      * 银行卡类型1借记卡
      * 2贷记卡
      */
-    private String bankCardType;
+    private String cardType;
 
     /**
      * 银行卡开户行名
@@ -209,7 +209,7 @@ public class CoreCreditpreapprovalEntity implements Serializable {
     /**
      * 授信或预审批资金方业务流水号
      */
-    private String aCapitalBusinessNo;
+    private String aCapitalBusiNo;
 
     /**
      * 处理结果0000 成功9999 失败0010 无该笔申请记录0020 其它0030 处理中0040 影像或合同文件缺失
@@ -704,15 +704,15 @@ public class CoreCreditpreapprovalEntity implements Serializable {
      * @return BANK_CARD_NO null
      */
     public String getBankCardNo() {
-        return bankCardNo;
+        return cardNo;
     }
 
     /**
      * null
-     * @param bankCardNo null
+     * @param cardNo null
      */
-    public void setBankCardNo(String bankCardNo) {
-        this.bankCardNo = bankCardNo;
+    public void setBankCardNo(String cardNo) {
+        this.cardNo = cardNo;
     }
 
     /**
@@ -720,15 +720,15 @@ public class CoreCreditpreapprovalEntity implements Serializable {
      * @return BANK_CARD_TYPE null
      */
     public String getBankCardType() {
-        return bankCardType;
+        return cardType;
     }
 
     /**
      * null
-     * @param bankCardType null
+     * @param cardType null
      */
-    public void setBankCardType(String bankCardType) {
-        this.bankCardType = bankCardType;
+    public void setBankCardType(String cardType) {
+        this.cardType = cardType;
     }
 
     /**
@@ -879,16 +879,16 @@ public class CoreCreditpreapprovalEntity implements Serializable {
      * null
      * @return A_CAPITAL_BUSINESS_NO null
      */
-    public String getaCapitalBusinessNo() {
-        return aCapitalBusinessNo;
+    public String getaCapitalBusiNo() {
+        return aCapitalBusiNo;
     }
 
     /**
      * null
-     * @param aCapitalBusinessNo null
+     * @param aCapitalBusiNo null
      */
-    public void setaCapitalBusinessNo(String aCapitalBusinessNo) {
-        this.aCapitalBusinessNo = aCapitalBusinessNo;
+    public void setaCapitalBusiNo(String aCapitalBusiNo) {
+        this.aCapitalBusiNo = aCapitalBusiNo;
     }
 
     /**

@@ -154,13 +154,13 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
     /**
      * 银行卡号
      */
-    private String bankCardNo;
+    private String cardNo;
 
     /**
      * 银行卡类型1 借记卡
      * 2 贷记卡
      */
-    private String bankCardType;
+    private String cardType;
 
     /**
      * 银行卡开户行名
@@ -210,7 +210,7 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
     /**
      * 授信或预审批资金方业务流水号
      */
-    private String aCapitalBusinessNo;
+    private String aCapitalBusiNo;
 
     /**
      * 处理结果0000 成功
@@ -482,19 +482,19 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
     }
 
     public String getBankCardNo() {
-        return bankCardNo;
+        return cardNo;
     }
 
-    public void setBankCardNo(String bankCardNo) {
-        this.bankCardNo = bankCardNo;
+    public void setBankCardNo(String cardNo) {
+        this.cardNo = cardNo;
     }
 
     public String getBankCardType() {
-        return bankCardType;
+        return cardType;
     }
 
-    public void setBankCardType(String bankCardType) {
-        this.bankCardType = bankCardType;
+    public void setBankCardType(String cardType) {
+        this.cardType = cardType;
     }
 
     public String getBankName() {
@@ -569,12 +569,12 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
         this.aDealNo = aDealNo;
     }
 
-    public String getaCapitalBusinessNo() {
-        return aCapitalBusinessNo;
+    public String getaCapitalBusiNo() {
+        return aCapitalBusiNo;
     }
 
-    public void setaCapitalBusinessNo(String aCapitalBusinessNo) {
-        this.aCapitalBusinessNo = aCapitalBusinessNo;
+    public void setaCapitalBusiNo(String aCapitalBusiNo) {
+        this.aCapitalBusiNo = aCapitalBusiNo;
     }
 
     public String getDealStatus() {

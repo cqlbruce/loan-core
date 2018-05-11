@@ -30,8 +30,8 @@
     <result column="CONTACTS_CNT" property="contactsCnt" jdbcType="VARCHAR" />
     <result column="STAKEHOLDER_CNT" property="stakeholderCnt" jdbcType="VARCHAR" />
     <result column="CHECK_APPLE_ID" property="checkAppleId" jdbcType="VARCHAR" />
-    <result column="BANK_CARD_NO" property="bankCardNo" jdbcType="VARCHAR" />
-    <result column="BANK_CARD_TYPE" property="bankCardType" jdbcType="VARCHAR" />
+    <result column="BANK_CARD_NO" property="cardNo" jdbcType="VARCHAR" />
+    <result column="BANK_CARD_TYPE" property="cardType" jdbcType="VARCHAR" />
     <result column="BANK_NAME" property="bankName" jdbcType="VARCHAR" />
     <result column="BANK_MOBILE" property="bankMobile" jdbcType="VARCHAR" />
     <result column="THIRD_ORG_CODE" property="thirdOrgCode" jdbcType="VARCHAR" />
@@ -41,7 +41,7 @@
     <result column="APPLY_DATETIME" property="applyDatetime" jdbcType="VARCHAR" />
     <result column="FINISH_DATETIME" property="finishDatetime" jdbcType="VARCHAR" />
     <result column="A_DEAL_NO" property="aDealNo" jdbcType="VARCHAR" />
-    <result column="A_CAPITAL_BUSINESS_NO" property="aCapitalBusinessNo" jdbcType="VARCHAR" />
+    <result column="A_CAPITAL_BUSINESS_NO" property="aCapitalBusiNo" jdbcType="VARCHAR" />
     <result column="DEAL_STATUS" property="dealStatus" jdbcType="VARCHAR" />
     <result column="DEAL_DESC" property="dealDesc" jdbcType="VARCHAR" />
     <result column="FUNDUNITNO" property="fundUnitNo" jdbcType="VARCHAR" />
@@ -80,11 +80,11 @@
       #{workField,jdbcType=VARCHAR}, #{workAddress,jdbcType=VARCHAR}, #{workPhone,jdbcType=VARCHAR}, 
       #{houseFundBase,jdbcType=NUMERIC}, #{houseFundUnit,jdbcType=VARCHAR}, #{houseFundCurrentMonths,jdbcType=VARCHAR}, 
       #{houseFundTotalMonths,jdbcType=VARCHAR}, #{contactsCnt,jdbcType=VARCHAR}, #{stakeholderCnt,jdbcType=VARCHAR}, 
-      #{checkAppleId,jdbcType=VARCHAR}, #{bankCardNo,jdbcType=VARCHAR}, #{bankCardType,jdbcType=VARCHAR}, 
+      #{checkAppleId,jdbcType=VARCHAR}, #{cardNo,jdbcType=VARCHAR}, #{cardType,jdbcType=VARCHAR},
       #{bankName,jdbcType=VARCHAR}, #{bankMobile,jdbcType=VARCHAR}, #{thirdOrgCode,jdbcType=VARCHAR}, 
       #{validStatus,jdbcType=VARCHAR}, #{thirdOrgReturnCode,jdbcType=VARCHAR}, #{thirdOrgReturnMsg,jdbcType=VARCHAR}, 
       #{applyDatetime,jdbcType=VARCHAR}, #{finishDatetime,jdbcType=VARCHAR}, #{aDealNo,jdbcType=VARCHAR}, 
-      #{aCapitalBusinessNo,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, #{dealDesc,jdbcType=VARCHAR}, 
+      #{aCapitalBusiNo,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, #{dealDesc,jdbcType=VARCHAR},
       #{fundUnitNo,jdbcType=VARCHAR}, #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
       #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR})
   </insert>
@@ -117,8 +117,8 @@
       CONTACTS_CNT = #{contactsCnt,jdbcType=VARCHAR},
       STAKEHOLDER_CNT = #{stakeholderCnt,jdbcType=VARCHAR},
       CHECK_APPLE_ID = #{checkAppleId,jdbcType=VARCHAR},
-      BANK_CARD_NO = #{bankCardNo,jdbcType=VARCHAR},
-      BANK_CARD_TYPE = #{bankCardType,jdbcType=VARCHAR},
+      BANK_CARD_NO = #{cardNo,jdbcType=VARCHAR},
+      BANK_CARD_TYPE = #{cardType,jdbcType=VARCHAR},
       BANK_NAME = #{bankName,jdbcType=VARCHAR},
       BANK_MOBILE = #{bankMobile,jdbcType=VARCHAR},
       THIRD_ORG_CODE = #{thirdOrgCode,jdbcType=VARCHAR},
@@ -128,7 +128,7 @@
       APPLY_DATETIME = #{applyDatetime,jdbcType=VARCHAR},
       FINISH_DATETIME = #{finishDatetime,jdbcType=VARCHAR},
       A_DEAL_NO = #{aDealNo,jdbcType=VARCHAR},
-      A_CAPITAL_BUSINESS_NO = #{aCapitalBusinessNo,jdbcType=VARCHAR},
+      A_CAPITAL_BUSINESS_NO = #{aCapitalBusiNo,jdbcType=VARCHAR},
       DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
       DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
       FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},

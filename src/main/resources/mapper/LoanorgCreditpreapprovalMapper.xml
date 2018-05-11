@@ -3,7 +3,7 @@
 <mapper namespace="com.wu.fund.dao.LoanorgCreditpreapprovalMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.LoanorgCreditpreapprovalEntity" >
     <id column="A_APPLY_NO" property="aApplyNo" jdbcType="VARCHAR" />
-    <result column="A_SL_BUSINESS_NO" property="aSlBusinessNo" jdbcType="VARCHAR" />
+    <result column="A_SL_BUSINESS_NO" property="aBusiNo" jdbcType="VARCHAR" />
     <result column="CUST_NAME" property="custName" jdbcType="VARCHAR" />
     <result column="CUST_MOBILE" property="custMobile" jdbcType="VARCHAR" />
     <result column="CERT_TYPE" property="certType" jdbcType="VARCHAR" />
@@ -71,7 +71,7 @@
       A_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
       FUNDUNITNO, LOANORGCODE, STATUS, 
       BEGINTIME, ENDTIME)
-    values (#{aApplyNo,jdbcType=VARCHAR}, #{aSlBusinessNo,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, 
+    values (#{aApplyNo,jdbcType=VARCHAR}, #{aBusiNo,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR},
       #{custMobile,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{certNo,jdbcType=VARCHAR}, 
       #{imageFileName,jdbcType=VARCHAR}, #{applyAmt,jdbcType=NUMERIC}, #{sex,jdbcType=VARCHAR},
       #{birthday,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, 
@@ -90,7 +90,7 @@
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanorgCreditpreapprovalEntity" >
     update LOANORG_CREDITPREAPPROVAL
-    set A_SL_BUSINESS_NO = #{aSlBusinessNo,jdbcType=VARCHAR},
+    set A_SL_BUSINESS_NO = #{aBusiNo,jdbcType=VARCHAR},
       CUST_NAME = #{custName,jdbcType=VARCHAR},
       CUST_MOBILE = #{custMobile,jdbcType=VARCHAR},
       CERT_TYPE = #{certType,jdbcType=VARCHAR},

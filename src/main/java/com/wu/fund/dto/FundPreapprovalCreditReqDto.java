@@ -1,16 +1,15 @@
-package com.wu.fund.entity;
+package com.wu.fund.dto;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
-
-
+import java.util.List;
 
 /**
  * @Author: wangying
- * @Description:贷款机构授信审批
- * @Date: Created in  2018/5/9
+ * @Description:授信或预审批请求参数
+ * @Date: Created in  2018/5/11
  */
-public class LoanorgCreditpreapprovalEntity implements Serializable {
+public class FundPreapprovalCreditReqDto {
+
     /**
      * 授信或预审批请求流水号
      */
@@ -178,7 +177,8 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
     private String thirdOrgCode;
 
     /**
-     * 认证状态01 认证通过02 认证未通过
+     * 认证状态01 认证通过
+     * 02 认证未通过
      */
     private String validStatus;
 
@@ -252,10 +252,11 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
      */
     private String endTime;
 
-    /**
-     * LOANORG_CREDITPREAPPROVAL
-     */
-    private static final long serialVersionUID = 1L;
+
+    List<FundCrePreapprovalContactReqDto> contactList;
+
+    List<FundCrePreapprovalGuarantorReqDto> guarantorList;
+
 
     public String getaApplyNo() {
         return aApplyNo;
@@ -481,19 +482,19 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
         this.checkAppleId = checkAppleId;
     }
 
-    public String getBankCardNo() {
+    public String getCardNo() {
         return cardNo;
     }
 
-    public void setBankCardNo(String cardNo) {
+    public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
 
-    public String getBankCardType() {
+    public String getCardType() {
         return cardType;
     }
 
-    public void setBankCardType(String cardType) {
+    public void setCardType(String cardType) {
         this.cardType = cardType;
     }
 
@@ -633,7 +634,19 @@ public class LoanorgCreditpreapprovalEntity implements Serializable {
         this.endTime = endTime;
     }
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    public List<FundCrePreapprovalContactReqDto> getContactList() {
+        return contactList;
+    }
+
+    public void setContactList(List<FundCrePreapprovalContactReqDto> contactList) {
+        this.contactList = contactList;
+    }
+
+    public List<FundCrePreapprovalGuarantorReqDto> getGuarantorList() {
+        return guarantorList;
+    }
+
+    public void setGuarantorList(List<FundCrePreapprovalGuarantorReqDto> guarantorList) {
+        this.guarantorList = guarantorList;
     }
 }

@@ -3,7 +3,7 @@
 <mapper namespace="com.wu.fund.dao.FundPreapprovalCreditMapper" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundPreapprovalCreditEntity" >
     <id column="A_APPLY_NO" property="aApplyNo" jdbcType="VARCHAR" />
-    <result column="A_SL_BUSINESS_NO" property="aSlBusinessNo" jdbcType="VARCHAR" />
+    <result column="A_SL_BUSINESS_NO" property="aBusiNo" jdbcType="VARCHAR" />
     <result column="CUST_NAME" property="custName" jdbcType="VARCHAR" />
     <result column="CUST_MOBILE" property="custMobile" jdbcType="VARCHAR" />
     <result column="CERT_TYPE" property="certType" jdbcType="VARCHAR" />
@@ -71,7 +71,7 @@
       A_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
       FUNDUNITNO, LOANORGCODE, STATUS, 
       BEGINTIME, ENDTIME)
-    values (#{aApplyNo,jdbcType=VARCHAR}, #{aSlBusinessNo,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, 
+    values (#{aApplyNo,jdbcType=VARCHAR}, #{aBusiNo,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR},
       #{custMobile,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{certNo,jdbcType=VARCHAR}, 
       #{imageFileName,jdbcType=VARCHAR}, #{applyAmt,jdbcType=NUMERIC}, #{sex,jdbcType=VARCHAR}, 
       #{birthday,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, #{maritalStatus,jdbcType=VARCHAR}, 
@@ -90,7 +90,7 @@
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundPreapprovalCreditEntity" >
     update FUND_PREAPPROVAL_CREDIT
-    set A_SL_BUSINESS_NO = #{aSlBusinessNo,jdbcType=VARCHAR},
+    set A_SL_BUSINESS_NO = #{aBusiNo,jdbcType=VARCHAR},
       CUST_NAME = #{custName,jdbcType=VARCHAR},
       CUST_MOBILE = #{custMobile,jdbcType=VARCHAR},
       CERT_TYPE = #{certType,jdbcType=VARCHAR},
@@ -160,5 +160,17 @@
     THIRD_ORG_RETURN_MSG, APPLY_DATETIME, FINISH_DATETIME, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, 
     DEAL_STATUS, DEAL_DESC, FUNDUNITNO, LOANORGCODE, STATUS, BEGINTIME, ENDTIME
     from FUND_PREAPPROVAL_CREDIT
+  </select>
+  <!--根据aBusiNo查询申请授信或预审批-->
+  <select id="selectByBusiNo" resultMap="BaseResultMap" >
+    select A_APPLY_NO, A_SL_BUSINESS_NO, CUST_NAME, CUST_MOBILE, CERT_TYPE, CERT_NO,
+    IMAGEFILE_NAME, APPLY_AMT, SEX, BIRTHDAY, EDUCATION, MARITAL_STATUS, HOME_ADDRESS,
+    HUOSE_ADDRESS, HOUSE_PROPERTY_FLAG, HOUSE_VALUE, WORK_TYPE, WORK_PROPERTY, WORK_FIELD,
+    WORK_ADDRESS, WORK_PHONE, HOUSE_FUND_BASE, HOUSE_FUND_UNIT, HOUSE_FUND_CURRENT_MONTHS,
+    HOUSE_FUND_TOTAL_MONTHS, CONTACTS_CNT, STAKEHOLDER_CNT, CHECK_APPLE_ID, BANK_CARD_NO,
+    BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE,
+    THIRD_ORG_RETURN_MSG, APPLY_DATETIME, FINISH_DATETIME, A_DEAL_NO, A_CAPITAL_BUSINESS_NO,
+    DEAL_STATUS, DEAL_DESC, FUNDUNITNO, LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from FUND_PREAPPROVAL_CREDIT where A_SL_BUSINESS_NO=#{aBusiNo,jdbcType=VARCHAR} and  STATUS=#{status,jdbcType=VARCHAR}
   </select>
 </mapper>

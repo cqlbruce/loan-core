@@ -16,7 +16,7 @@ public class FundPreapprovalCreditEntity implements Serializable {
     /**
      * 世联金融业务流水号
      */
-    private String aSlBusinessNo;
+    private String aBusiNo;
 
     /**
      * 客户姓名
@@ -263,12 +263,12 @@ public class FundPreapprovalCreditEntity implements Serializable {
         this.aApplyNo = aApplyNo;
     }
 
-    public String getaSlBusinessNo() {
-        return aSlBusinessNo;
+    public String getaBusiNo() {
+        return aBusiNo;
     }
 
-    public void setaSlBusinessNo(String aSlBusinessNo) {
-        this.aSlBusinessNo = aSlBusinessNo;
+    public void setaBusiNo(String aBusiNo) {
+        this.aBusiNo = aBusiNo;
     }
 
     public String getCustName() {

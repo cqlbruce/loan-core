@@ -47,8 +47,14 @@
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select SERIALNO, A_APPLY_NO, CONTACTS_RELATION, CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO, 
+    select SERIALNO, A_APPLY_NO, CONTACTS_RELATION, CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO,
     LOANORGCODE, STATUS, BEGINTIME, ENDTIME
     from FUN_CRE_PREAPPROVAL_CONTACT
+  </select>
+   <!--根据授信或预审批请求流水号查询联系人-->
+  <select id="selectContactByApplyNo" resultMap="BaseResultMap" >
+    select SERIALNO, A_APPLY_NO, CONTACTS_RELATION, CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO,
+    LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+    from FUN_CRE_PREAPPROVAL_CONTACT where A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR}
   </select>
 </mapper>

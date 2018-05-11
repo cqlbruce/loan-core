@@ -1,8 +1,11 @@
 package com.wu.fund.dao;
 
 import com.wu.fund.entity.FunCrePreapprovalContactEntity;
-import java.util.List;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
+import java.util.List;
+@Repository
 public interface FunCrePreapprovalContactMapper {
     /**
      *
@@ -33,4 +36,12 @@ public interface FunCrePreapprovalContactMapper {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FunCrePreapprovalContactEntity record);
+
+    /**
+     * -根据授信或预审批请求流水号查询联系人
+     * @param aApplyNo
+     * @return
+     */
+
+    List<FunCrePreapprovalContactEntity> selectContactByApplyNo(@Param("aApplyNo")String aApplyNo);
 }

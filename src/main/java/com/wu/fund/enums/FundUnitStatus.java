@@ -9,7 +9,7 @@ public enum FundUnitStatus {
 
     WAITE_EFFECT("00", "待生效"),
 
-   IS_EFFECT("01", "生效"),
+    IS_EFFECT("01", "生效"),
 
     LOSE_EFFECT("02", "失效");
 

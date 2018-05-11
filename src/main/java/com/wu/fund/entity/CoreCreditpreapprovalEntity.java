@@ -18,7 +18,7 @@ public class CoreCreditpreapprovalEntity implements Serializable {
     /**
      * 世联金融业务流水号
      */
-    private String aSlBusinessNo;
+    private String aBusiNo;
 
     /**
      * 客户姓名
@@ -271,16 +271,16 @@ public class CoreCreditpreapprovalEntity implements Serializable {
      * null
      * @return A_SL_BUSINESS_NO null
      */
-    public String getaSlBusinessNo() {
-        return aSlBusinessNo;
+    public String getaBusiNo() {
+        return aBusiNo;
     }
 
     /**
      * null
-     * @param aSlBusinessNo null
+     * @param aBusiNo null
      */
-    public void setaSlBusinessNo(String aSlBusinessNo) {
-        this.aSlBusinessNo = aSlBusinessNo;
+    public void setaBusiNo(String aBusiNo) {
+        this.aBusiNo = aBusiNo;
     }
 
     /**

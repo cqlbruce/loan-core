@@ -1,8 +1,18 @@
 package com.wu.fund.dao;
 
 import com.wu.fund.entity.FundPreapprovalCreditEntity;
+import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 
+/**
+ * @Author: wangying
+ * @Description:申请授信或预审批
+ * @Date: Created in  2018/5/9
+ */
+@Component
 public interface FundPreapprovalCreditMapper {
     /**
      *
@@ -33,4 +43,12 @@ public interface FundPreapprovalCreditMapper {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FundPreapprovalCreditEntity record);
+
+    /**
+     * 根据aBusiNo查询申请授信或预审批
+     * @param aBusiNo
+     * @param status
+     * @return
+     */
+    FundPreapprovalCreditEntity selectByBusiNo(@Param("aBusiNo")String aBusiNo,@Param("status") String status);
 }

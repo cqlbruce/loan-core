@@ -38,4 +38,15 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 20000
-
+#  metrics:
+#    enabled: true
+#  config:
+#    stream:
+#       maxConcurrentConnections: 50
+#
+#management:
+#  port: 9000
+#
+#turbine:
+#   clusters: default
+#   location: turbine

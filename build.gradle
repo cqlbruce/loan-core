@@ -39,7 +39,9 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-feign')
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
     compile('org.springframework.cloud:spring-cloud-starter-hystrix')
-    compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
+    compile('org.springframework.cloud:spring-cloud-starter-ribbon')
+    //compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
+   // compile('org.springframework.cloud:spring-cloud-starter-turbine')
     compile "com.alibaba:druid:1.1.6"
     compile "com.alibaba:fastjson:1.2.46"
     compile "com.qianmi:spring-boot-starter-rocketmq:1.1.0-RELEASE"

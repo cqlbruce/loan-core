@@ -39,6 +39,7 @@ dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-feign')
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
     compile('org.springframework.cloud:spring-cloud-starter-hystrix')
+    compile('org.springframework.cloud:spring-cloud-starter-hystrix-dashboard')
     compile "com.alibaba:druid:1.1.6"
     compile "com.alibaba:fastjson:1.2.46"
     compile "com.qianmi:spring-boot-starter-rocketmq:1.1.0-RELEASE"
@@ -59,7 +60,6 @@ def cVersion = "${version}"
 def pName = "${project.name}"
 def serviceName = "fund"
 
-apply plugin: 'org.springframework.boot'
 bootRepackage.enabled = true
 springBoot {
     mainClass = 'com.wu.fund.FundApplication'

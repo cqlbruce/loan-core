@@ -1,10 +1,10 @@
-package com.wu.fund.common;
+package com.wu.fund.common.req;
 
 
 
 import java.io.Serializable;
 
-public class RequestHeader implements Serializable {
+public class OldRequestHeader implements Serializable {
 
     private String channel_no;
 

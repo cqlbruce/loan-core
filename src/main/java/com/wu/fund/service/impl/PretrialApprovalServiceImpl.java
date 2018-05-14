@@ -4,6 +4,7 @@ import com.wu.fund.dao.FunCrePreapprovalContactMapper;
 import com.wu.fund.dao.FunCrePreapprovalGuarantorMapper;
 import com.wu.fund.dao.FundPreapprovalCreditMapper;
 import com.wu.fund.dto.FundPreapprovalCreditReqDto;
+import com.wu.fund.dto.QueryPretrialApprovalRespDto;
 import com.wu.fund.entity.FunCrePreapprovalContactEntity;
 import com.wu.fund.entity.FunCrePreapprovalGuarantorEntity;
 import com.wu.fund.entity.FundPreapprovalCreditEntity;
@@ -64,7 +65,21 @@ public class PretrialApprovalServiceImpl implements PretrialApprovalService {
     }
 
     @Override
-    public void queryPretrialApprovalResult(String aApplyNo) {
+    public QueryPretrialApprovalRespDto queryPretrialApprovalResult(String aApplyNo) {
+
+        FundPreapprovalCreditEntity creditEntity=creditMapper.selectByApplyNo(aApplyNo);
+        QueryPretrialApprovalRespDto respDto=new QueryPretrialApprovalRespDto();
+        if (creditEntity!=null){
+           respDto.setaApplyNo(creditEntity.getaApplyNo());
+           respDto.setaCapitalBusiNo(creditEntity.getaCapitalBusiNo());
+           respDto.setaDealNo(creditEntity.getaDealNo());
+           respDto.setDealDesc(creditEntity.getDealDesc());
+           respDto.setDealStatus(creditEntity.getDealStatus());
+           respDto.setStatus(creditEntity.getStatus());
+
+        }
+
+        return respDto;
 
     }
 }

@@ -1,4 +1,4 @@
-package com.wu.fund.common;
+package com.wu.fund.common.resp;
 
 import java.io.Serializable;
 
@@ -9,7 +9,7 @@ import java.io.Serializable;
  * @Description: Json统一响应头对象封装，必须实现序列化
  * @Date: Created in 9:39 2018/5/10
  */
-public class ResponseHeader implements Serializable {
+public class OldResponseHeader implements Serializable {
     /**
      *响应日期
      */

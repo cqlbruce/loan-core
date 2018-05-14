@@ -51,4 +51,11 @@ public interface FundPreapprovalCreditMapper {
      * @return
      */
     FundPreapprovalCreditEntity selectByBusiNo(@Param("aBusiNo")String aBusiNo,@Param("status") String status);
+
+    /**
+     * 根据请求流水号aApplyNo查询申请授信或预审批
+     * @param aApplyNo
+     * @return
+     */
+    FundPreapprovalCreditEntity  selectByApplyNo(@Param("aApplyNo")String aApplyNo);
 }

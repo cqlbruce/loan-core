@@ -1,6 +1,7 @@
 package com.wu.fund.service;
 
 import com.wu.fund.dto.FundPreapprovalCreditReqDto;
+import com.wu.fund.dto.QueryPretrialApprovalRespDto;
 
 /**
  * @Author: wangying
@@ -18,5 +19,5 @@ public interface PretrialApprovalService {
      *
      * @param aApplyNo
      */
-    void  queryPretrialApprovalResult(String aApplyNo);
+    QueryPretrialApprovalRespDto queryPretrialApprovalResult(String aApplyNo);
 }

@@ -95,4 +95,20 @@
     RESPONSEMESSAGE
     from FUND_ORG_LOG_ZX
   </select>
+  
+  <sql id="Base_Column_List">
+    SERIALNO,CAPPLYNO,CSLBUSINESSNO,CDEALNO,FUNDSTEPNAME,FUNDMAINFLOWNAME,FUNDSUBFLOWSTATUS,FUNDSERVICERETURNCODE,FUNDSERVICERETURNMSG,FUNDBUSINESSSTATUS,CCAPITALBUSINESSNO,BEGINTIME,ENDTIME,
+    LOANORGCODE,STATUS,OLDLOANORGCODE,CERTID,FILEPACKAGE_NAME,DEAL_STATUS,DEAL_DESC,CERTTYPE,CUSTOMERNAME,RESPONSEMESSAGE
+  </sql>
+  
+  <select id="queryByCertIdAndApplyTime" resultMap="BaseResultMap" parameterType="java.util.Map">
+	  select <include refid="Base_Column_List" /> from FUND_ORG_LOG_ZX 
+	  where 
+	  	CERTID = #{certId, jdbcType=VARCHAR}
+	  and 
+	    ENDTIME &gt;= #{applyTime,jdbcType=VARCHAR}
+  </select>
+  
+  
+  
 </mapper>

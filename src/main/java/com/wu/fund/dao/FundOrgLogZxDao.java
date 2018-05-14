@@ -1,8 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.FundOrgLogZxEntity;
-
 import java.util.List;
+import java.util.Map;
+
+import com.wu.fund.entity.FundOrgLogZxEntity;
 
 public interface FundOrgLogZxDao {
     /**
@@ -34,4 +35,8 @@ public interface FundOrgLogZxDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FundOrgLogZxEntity record);
+    
+    
+    List<FundOrgLogZxEntity> queryByCertIdAndApplyTime(Map<String, String> map);
+    
 }

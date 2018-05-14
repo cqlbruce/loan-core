@@ -16,6 +16,10 @@
     <result column="CHANNELRATETYPE" property="channelRateType" jdbcType="VARCHAR" />
     <result column="CHANNELRATE" property="channelRate" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID,
+    UPDATEORGID, CHANNELTYPE, CHANNELCODE, CHANNELNAME, CHANNELRATETYPE, CHANNELRATE
+  </sql>
   <insert id="insert" parameterType="com.wu.fund.entity.FundUnitLoanChannelEntity" >
     insert into FUND_UNIT_LOAN_CHANNEL (SERIALNO, RELATIVESERIALNO, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
@@ -27,6 +31,91 @@
       #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{channelType,jdbcType=VARCHAR},
       #{channelCode,jdbcType=VARCHAR}, #{channelName,jdbcType=VARCHAR}, #{channelRateType,jdbcType=VARCHAR},
       #{channelRate,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FundUnitLoanChannelEntity" >
+    insert into FUND_UNIT_LOAN_CHANNEL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+      <if test="channeltype != null" >
+        CHANNELTYPE,
+      </if>
+      <if test="channelCode != null" >
+        CHANNELCODE,
+      </if>
+      <if test="channelName != null" >
+        CHANNELNAME,
+      </if>
+      <if test="channelRatetype != null" >
+        CHANNELRATETYPE,
+      </if>
+      <if test="channelRate != null" >
+        CHANNELRATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null" >
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="channeltype != null" >
+        #{channeltype,jdbcType=VARCHAR},
+      </if>
+      <if test="channelCode != null" >
+        #{channelCode,jdbcType=VARCHAR},
+      </if>
+      <if test="channelName != null" >
+        #{channelName,jdbcType=VARCHAR},
+      </if>
+      <if test="channelRatetype != null" >
+        #{channelRatetype,jdbcType=VARCHAR},
+      </if>
+      <if test="channelRate != null" >
+        #{channelRate,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 

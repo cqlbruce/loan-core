@@ -41,6 +41,295 @@
       #{lenders,jdbcType=VARCHAR}, #{tempSaveFlag,jdbcType=VARCHAR}, #{changeFlag,jdbcType=VARCHAR}
       )
   </insert>
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FundPreapprovalCreditEntity" >
+    insert into FUND_PREAPPROVAL_CREDIT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="aApplyNo != null" >
+        A_APPLY_NO,
+      </if>
+      <if test="aBusiNo != null" >
+        A_SL_BUSINESS_NO,
+      </if>
+      <if test="custName != null" >
+        CUST_NAME,
+      </if>
+      <if test="custMobile != null" >
+        CUST_MOBILE,
+      </if>
+      <if test="certType != null" >
+        CERT_TYPE,
+      </if>
+      <if test="certNo != null" >
+        CERT_NO,
+      </if>
+      <if test="imageFileName != null" >
+        IMAGEFILE_NAME,
+      </if>
+      <if test="applyAmt != null" >
+        APPLY_AMT,
+      </if>
+      <if test="sex != null" >
+        SEX,
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY,
+      </if>
+      <if test="education != null" >
+        EDUCATION,
+      </if>
+      <if test="maritalStatus != null" >
+        MARITAL_STATUS,
+      </if>
+      <if test="homeAddress != null" >
+        HOME_ADDRESS,
+      </if>
+      <if test="huoseAddress != null" >
+        HUOSE_ADDRESS,
+      </if>
+      <if test="housePropertyFlag != null" >
+        HOUSE_PROPERTY_FLAG,
+      </if>
+      <if test="houseValue != null" >
+        HOUSE_VALUE,
+      </if>
+      <if test="workType != null" >
+        WORK_TYPE,
+      </if>
+      <if test="workProperty != null" >
+        WORK_PROPERTY,
+      </if>
+      <if test="workField != null" >
+        WORK_FIELD,
+      </if>
+      <if test="workAddress != null" >
+        WORK_ADDRESS,
+      </if>
+      <if test="workPhone != null" >
+        WORK_PHONE,
+      </if>
+      <if test="houseFundBase != null" >
+        HOUSE_FUND_BASE,
+      </if>
+      <if test="houseFundUnit != null" >
+        HOUSE_FUND_UNIT,
+      </if>
+      <if test="houseFundCurrentMonths != null" >
+        HOUSE_FUND_CURRENT_MONTHS,
+      </if>
+      <if test="houseFundTotalMonths != null" >
+        HOUSE_FUND_TOTAL_MONTHS,
+      </if>
+      <if test="contactsCnt != null" >
+        CONTACTS_CNT,
+      </if>
+      <if test="stakeholderCnt != null" >
+        STAKEHOLDER_CNT,
+      </if>
+      <if test="checkAppleId != null" >
+        CHECK_APPLE_ID,
+      </if>
+      <if test="cardNo != null" >
+        BANK_CARD_NO,
+      </if>
+      <if test="cardType != null" >
+        BANK_CARD_TYPE,
+      </if>
+      <if test="bankName != null" >
+        BANK_NAME,
+      </if>
+      <if test="bankMobile != null" >
+        BANK_MOBILE,
+      </if>
+      <if test="thirdOrgCode != null" >
+        THIRD_ORG_CODE,
+      </if>
+      <if test="validStatus != null" >
+        VALID_STATUS,
+      </if>
+      <if test="thirdOrgReturnCode != null" >
+        THIRD_ORG_RETURN_CODE,
+      </if>
+      <if test="thirdOrgReturnMsg != null" >
+        THIRD_ORG_RETURN_MSG,
+      </if>
+      <if test="applyDatetime != null" >
+        APPLY_DATETIME,
+      </if>
+      <if test="finishDatetime != null" >
+        FINISH_DATETIME,
+      </if>
+      <if test="aDealNo != null" >
+        A_DEAL_NO,
+      </if>
+      <if test="aCapitalBusiNo != null" >
+        A_CAPITAL_BUSINESS_NO,
+      </if>
+      <if test="dealStatus != null" >
+        DEAL_STATUS,
+      </if>
+      <if test="dealDesc != null" >
+        DEAL_DESC,
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO,
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endTime != null" >
+        ENDTIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="aApplyNo != null" >
+        #{aApplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aBusiNo != null" >
+        #{aBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="custName != null" >
+        #{custName,jdbcType=VARCHAR},
+      </if>
+      <if test="custMobile != null" >
+        #{custMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="certType != null" >
+        #{certType,jdbcType=VARCHAR},
+      </if>
+      <if test="certNo != null" >
+        #{certNo,jdbcType=VARCHAR},
+      </if>
+      <if test="imageFileName != null" >
+        #{imageFileName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyAmt != null" >
+        #{applyAmt,jdbcType=NUMERIC},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="maritalStatus != null" >
+        #{maritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null" >
+        #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="huoseAddress != null" >
+        #{huoseAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="housePropertyFlag != null" >
+        #{housePropertyFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="houseValue != null" >
+        #{houseValue,jdbcType=NUMERIC},
+      </if>
+      <if test="workType != null" >
+        #{workType,jdbcType=VARCHAR},
+      </if>
+      <if test="workProperty != null" >
+        #{workProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="workField != null" >
+        #{workField,jdbcType=VARCHAR},
+      </if>
+      <if test="workAddress != null" >
+        #{workAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="workPhone != null" >
+        #{workPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="houseFundBase != null" >
+        #{houseFundBase,jdbcType=NUMERIC},
+      </if>
+      <if test="houseFundUnit != null" >
+        #{houseFundUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="houseFundCurrentMonths != null" >
+        #{houseFundCurrentMonths,jdbcType=VARCHAR},
+      </if>
+      <if test="houseFundTotalMonths != null" >
+        #{houseFundTotalMonths,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsCnt != null" >
+        #{contactsCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderCnt != null" >
+        #{stakeholderCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="checkAppleId != null" >
+        #{checkAppleId,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNo != null" >
+        #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="cardType != null" >
+        #{cardType,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankMobile != null" >
+        #{bankMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgCode != null" >
+        #{thirdOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="validStatus != null" >
+        #{validStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnCode != null" >
+        #{thirdOrgReturnCode,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnMsg != null" >
+        #{thirdOrgReturnMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDatetime != null" >
+        #{applyDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="finishDatetime != null" >
+        #{finishDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="aDealNo != null" >
+        #{aDealNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aCapitalBusiNo != null" >
+        #{aCapitalBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="dealStatus != null" >
+        #{dealStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDesc != null" >
+        #{dealDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundunitBasicinfomationEntity" >
     update FUNDUNIT_BASICINFOMATION
     set FUNDUNITNAME = #{fundUnitName,jdbcType=VARCHAR},
@@ -61,6 +350,151 @@
       TEMPSAVEFLAG = #{tempSaveFlag,jdbcType=VARCHAR},
       CHANGEFLAG = #{changeFlag,jdbcType=VARCHAR}
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.FundPreapprovalCreditEntity" >
+    update FUND_PREAPPROVAL_CREDIT
+    <set >
+      <if test="aBusiNo != null" >
+        A_SL_BUSINESS_NO = #{aBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="custName != null" >
+        CUST_NAME = #{custName,jdbcType=VARCHAR},
+      </if>
+      <if test="custMobile != null" >
+        CUST_MOBILE = #{custMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="certType != null" >
+        CERT_TYPE = #{certType,jdbcType=VARCHAR},
+      </if>
+      <if test="certNo != null" >
+        CERT_NO = #{certNo,jdbcType=VARCHAR},
+      </if>
+      <if test="imageFileName != null" >
+        IMAGEFILE_NAME = #{imageFileName,jdbcType=VARCHAR},
+      </if>
+      <if test="applyAmt != null" >
+        APPLY_AMT = #{applyAmt,jdbcType=NUMERIC},
+      </if>
+      <if test="sex != null" >
+        SEX = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null" >
+        BIRTHDAY = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null" >
+        EDUCATION = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="maritalStatus != null" >
+        MARITAL_STATUS = #{maritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAddress != null" >
+        HOME_ADDRESS = #{homeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="huoseAddress != null" >
+        HUOSE_ADDRESS = #{huoseAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="housePropertyFlag != null" >
+        HOUSE_PROPERTY_FLAG = #{housePropertyFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="houseValue != null" >
+        HOUSE_VALUE = #{houseValue,jdbcType=NUMERIC},
+      </if>
+      <if test="workType != null" >
+        WORK_TYPE = #{workType,jdbcType=VARCHAR},
+      </if>
+      <if test="workProperty != null" >
+        WORK_PROPERTY = #{workProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="workField != null" >
+        WORK_FIELD = #{workField,jdbcType=VARCHAR},
+      </if>
+      <if test="workAddress != null" >
+        WORK_ADDRESS = #{workAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="workPhone != null" >
+        WORK_PHONE = #{workPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="houseFundBase != null" >
+        HOUSE_FUND_BASE = #{houseFundBase,jdbcType=NUMERIC},
+      </if>
+      <if test="houseFundUnit != null" >
+        HOUSE_FUND_UNIT = #{houseFundUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="houseFundCurrentMonths != null" >
+        HOUSE_FUND_CURRENT_MONTHS = #{houseFundCurrentMonths,jdbcType=VARCHAR},
+      </if>
+      <if test="houseFundTotalMonths != null" >
+        HOUSE_FUND_TOTAL_MONTHS = #{houseFundTotalMonths,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsCnt != null" >
+        CONTACTS_CNT = #{contactsCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderCnt != null" >
+        STAKEHOLDER_CNT = #{stakeholderCnt,jdbcType=VARCHAR},
+      </if>
+      <if test="checkAppleId != null" >
+        CHECK_APPLE_ID = #{checkAppleId,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNo != null" >
+        BANK_CARD_NO = #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="cardType != null" >
+        BANK_CARD_TYPE = #{cardType,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        BANK_NAME = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankMobile != null" >
+        BANK_MOBILE = #{bankMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgCode != null" >
+        THIRD_ORG_CODE = #{thirdOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="validStatus != null" >
+        VALID_STATUS = #{validStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnCode != null" >
+        THIRD_ORG_RETURN_CODE = #{thirdOrgReturnCode,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnMsg != null" >
+        THIRD_ORG_RETURN_MSG = #{thirdOrgReturnMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDatetime != null" >
+        APPLY_DATETIME = #{applyDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="finishDatetime != null" >
+        FINISH_DATETIME = #{finishDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="aDealNo != null" >
+        A_DEAL_NO = #{aDealNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aCapitalBusiNo != null" >
+        A_CAPITAL_BUSINESS_NO = #{aCapitalBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="dealStatus != null" >
+        DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDesc != null" >
+        DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        ENDTIME = #{endTime,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, FUNDUNITNAME, FUNDUNITSTATUS, INPUTDATE, UPDATEUSERID, UPDATEDATE, 

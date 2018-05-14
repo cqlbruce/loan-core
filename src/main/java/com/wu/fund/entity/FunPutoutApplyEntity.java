@@ -141,7 +141,7 @@ public class FunPutoutApplyEntity implements Serializable {
     /**
      * 放款资金方业务流水号
      */
-    private String lCapitalBusinessNo;
+    private String lCapitalBusiNo;
 
     /**
      * 处理结果
@@ -441,12 +441,12 @@ public class FunPutoutApplyEntity implements Serializable {
         this.status = status;
     }
 
-    public String getlCapitalBusinessNo() {
-        return lCapitalBusinessNo;
+    public String getlCapitalBusiNo() {
+        return lCapitalBusiNo;
     }
 
-    public void setlCapitalBusinessNo(String lCapitalBusinessNo) {
-        this.lCapitalBusinessNo = lCapitalBusinessNo;
+    public void setlCapitalBusiNo(String lCapitalBusiNo) {
+        this.lCapitalBusiNo = lCapitalBusiNo;
     }
 
     public String getDealStatus() {

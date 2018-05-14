@@ -21,6 +21,12 @@
     <result column="CHARGETYPE" property="chargeType" jdbcType="VARCHAR" />
     <result column="RELATIVETYPE" property="relativeType" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List">
+     SERIALNO, RELATIVESERIALNO, CONTROLTYPE, MONTHLIMIT, PUTOUTMULTIPLE, DAYLIMIT,
+    APPROVETERM, REFUSETERM, QUERYCREDIT, CARDCHECK, INPUTDATE, UPDATEUSERID, UPDATEDATE,
+    INPUTUSERID, INPUTORGID, UPDATEORGID, CHARGETYPE, RELATIVETYPE
+
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from LOAN_ORG_APPLY_CONSTRAINT
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -40,6 +46,122 @@
       #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, #{inputOrgId,jdbcType=VARCHAR},
       #{updateOrgId,jdbcType=VARCHAR}, #{chargeType,jdbcType=VARCHAR}, #{relativeType,jdbcType=VARCHAR}
       )
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
+    insert into LOAN_ORG_APPLY_CONSTRAINT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO,
+      </if>
+      <if test="controlType != null" >
+        CONTROLTYPE,
+      </if>
+      <if test="monthLimit != null" >
+        MONTHLIMIT,
+      </if>
+      <if test="putOutMultiple != null" >
+        PUTOUTMULTIPLE,
+      </if>
+      <if test="dayLimit != null" >
+        DAYLIMIT,
+      </if>
+      <if test="approveTerm != null" >
+        APPROVETERM,
+      </if>
+      <if test="refuseTerm != null" >
+        REFUSETERM,
+      </if>
+      <if test="queryCredit != null" >
+        QUERYCREDIT,
+      </if>
+      <if test="cardCheck != null" >
+        CARDCHECK,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+      <if test="chargeType != null" >
+        CHARGETYPE,
+      </if>
+      <if test="relativeType != null" >
+        RELATIVETYPE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null" >
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="controlType != null" >
+        #{controlType,jdbcType=VARCHAR},
+      </if>
+      <if test="monthLimit != null" >
+        #{monthLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="putOutMultiple != null" >
+        #{putOutMultiple,jdbcType=VARCHAR},
+      </if>
+      <if test="dayLimit != null" >
+        #{dayLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="approveTerm != null" >
+        #{approveTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="refuseTerm != null" >
+        #{refuseTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="queryCredit != null" >
+        #{queryCredit,jdbcType=VARCHAR},
+      </if>
+      <if test="cardCheck != null" >
+        #{cardCheck,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeType != null" >
+        #{chargeType,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeType != null" >
+        #{relativeType,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
     update LOAN_ORG_APPLY_CONSTRAINT
@@ -62,17 +184,71 @@
       RELATIVETYPE = #{relativeType,jdbcType=VARCHAR}
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.LoanOrgApplyConstraintEntity" >
+    update LOAN_ORG_APPLY_CONSTRAINT
+    <set >
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="controlType != null" >
+        CONTROLTYPE = #{controlType,jdbcType=VARCHAR},
+      </if>
+      <if test="monthLimit != null" >
+        MONTHLIMIT = #{monthLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="putOutMultiple != null" >
+        PUTOUTMULTIPLE = #{putOutMultiple,jdbcType=VARCHAR},
+      </if>
+      <if test="dayLimit != null" >
+        DAYLIMIT = #{dayLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="approveTerm != null" >
+        APPROVETERM = #{approveTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="refuseTerm != null" >
+        REFUSETERM = #{refuseTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="queryCredit != null" >
+        QUERYCREDIT = #{queryCredit,jdbcType=VARCHAR},
+      </if>
+      <if test="cardCheck != null" >
+        CARDCHECK = #{cardCheck,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeType != null" >
+        CHARGETYPE = #{chargeType,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeType != null" >
+        RELATIVETYPE = #{relativeType,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select SERIALNO, RELATIVESERIALNO, CONTROLTYPE, MONTHLIMIT, PUTOUTMULTIPLE, DAYLIMIT, 
-    APPROVETERM, REFUSETERM, QUERYCREDIT, CARDCHECK, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
-    INPUTUSERID, INPUTORGID, UPDATEORGID, CHARGETYPE, RELATIVETYPE
+    select <include refid="Base_Column_List"/>
     from LOAN_ORG_APPLY_CONSTRAINT
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select SERIALNO, RELATIVESERIALNO, CONTROLTYPE, MONTHLIMIT, PUTOUTMULTIPLE, DAYLIMIT, 
-    APPROVETERM, REFUSETERM, QUERYCREDIT, CARDCHECK, INPUTDATE, UPDATEUSERID, UPDATEDATE, 
-    INPUTUSERID, INPUTORGID, UPDATEORGID, CHARGETYPE, RELATIVETYPE
+    select <include refid="Base_Column_List"/>
     from LOAN_ORG_APPLY_CONSTRAINT
   </select>
 </mapper>

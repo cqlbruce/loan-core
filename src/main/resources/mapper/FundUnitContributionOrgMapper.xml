@@ -19,6 +19,12 @@
     <result column="CAPITALCOST" property="capitalCost" jdbcType="VARCHAR" />
     <result column="MARGINLEVEL" property="marginLevel" jdbcType="VARCHAR" />
   </resultMap>
+
+  <sql id="Base_Column_List" >
+    SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID,
+    UPDATEORGID, ORGTYPE, ORGNAME, ORGCODE, CONTRIBUTIONPROPORTION, INCOMEDISTRIBUTIONMODE,
+    INCOMERATIO, CAPITALCOST, MARGINLEVEL
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUND_UNIT_CONTRIBUTION_ORG
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -37,6 +43,110 @@
       #{incomeDistributionMode,jdbcType=VARCHAR}, #{incomeRatio,jdbcType=VARCHAR}, #{capitalCost,jdbcType=VARCHAR}, 
       #{marginLevel,jdbcType=VARCHAR})
   </insert>
+
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FundUnitContributionOrgEntity" >
+    insert into FUND_UNIT_CONTRIBUTION_ORG
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+      <if test="orgType != null" >
+        ORGTYPE,
+      </if>
+      <if test="orgName != null" >
+        ORGNAME,
+      </if>
+      <if test="orgCode != null" >
+        ORGCODE,
+      </if>
+      <if test="contributionProportion != null" >
+        CONTRIBUTIONPROPORTION,
+      </if>
+      <if test="incomeDistributionMode != null" >
+        INCOMEDISTRIBUTIONMODE,
+      </if>
+      <if test="incomeRatio != null" >
+        INCOMERATIO,
+      </if>
+      <if test="capitalCost != null" >
+        CAPITALCOST,
+      </if>
+      <if test="marginLevel != null" >
+        MARGINLEVEL,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null" >
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="orgName != null" >
+        #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgCode != null" >
+        #{orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="contributionProportion != null" >
+        #{contributionProportion,jdbcType=VARCHAR},
+      </if>
+      <if test="incomeDistributionMode != null" >
+        #{incomeDistributionMode,jdbcType=VARCHAR},
+      </if>
+      <if test="incomeRatio != null" >
+        #{incomeRatio,jdbcType=VARCHAR},
+      </if>
+      <if test="capitalCost != null" >
+        #{capitalCost,jdbcType=VARCHAR},
+      </if>
+      <if test="marginLevel != null" >
+        #{marginLevel,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundUnitContributionOrgEntity" >
     update FUND_UNIT_CONTRIBUTION_ORG
     set RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
@@ -54,6 +164,58 @@
       INCOMERATIO = #{incomeRatio,jdbcType=VARCHAR},
       CAPITALCOST = #{capitalCost,jdbcType=VARCHAR},
       MARGINLEVEL = #{marginLevel,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.FundUnitContributionOrgEntity" >
+    update FUND_UNIT_CONTRIBUTION_ORG
+    <set >
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        ORGTYPE = #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="orgName != null" >
+        ORGNAME = #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgCode != null" >
+        ORGCODE = #{orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="contributionProportion != null" >
+        CONTRIBUTIONPROPORTION = #{contributionProportion,jdbcType=VARCHAR},
+      </if>
+      <if test="incomeDistributionMode != null" >
+        INCOMEDISTRIBUTIONMODE = #{incomeDistributionMode,jdbcType=VARCHAR},
+      </if>
+      <if test="incomeRatio != null" >
+        INCOMERATIO = #{incomeRatio,jdbcType=VARCHAR},
+      </if>
+      <if test="capitalCost != null" >
+        CAPITALCOST = #{capitalCost,jdbcType=VARCHAR},
+      </if>
+      <if test="marginLevel != null" >
+        MARGINLEVEL = #{marginLevel,jdbcType=VARCHAR},
+      </if>
+    </set>
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >

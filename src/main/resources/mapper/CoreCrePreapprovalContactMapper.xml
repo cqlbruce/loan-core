@@ -13,6 +13,10 @@
     <result column="BEGINTIME" property="beginTime" jdbcType="VARCHAR" />
     <result column="ENDTIME" property="endTime" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    SERIALNO, A_APPLY_NO, CONTACTS_RELATION, CONTACTS_NAME, CONTACTS_MOBILE, FUNDUNITNO,
+    LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from CORE_CRE_PREAPPROVAL_CONTACT
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -27,6 +31,74 @@
       #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, 
       #{endTime,jdbcType=VARCHAR})
   </insert>
+
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.CoreCrePreapprovalContactEntity" >
+    insert into CORE_CRE_PREAPPROVAL_CONTACT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="aApplyNo != null" >
+        A_APPLY_NO,
+      </if>
+      <if test="contactsRelation != null" >
+        CONTACTS_RELATION,
+      </if>
+      <if test="contactsName != null" >
+        CONTACTS_NAME,
+      </if>
+      <if test="contactsMobile != null" >
+        CONTACTS_MOBILE,
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO,
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endTime != null" >
+        ENDTIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aApplyNo != null" >
+        #{aApplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation != null" >
+        #{contactsRelation,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsName != null" >
+        #{contactsName,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsMobile != null" >
+        #{contactsMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.CoreCrePreapprovalContactEntity" >
     update CORE_CRE_PREAPPROVAL_CONTACT
     set A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR},
@@ -38,6 +110,39 @@
       STATUS = #{status,jdbcType=VARCHAR},
       BEGINTIME = #{beginTime,jdbcType=VARCHAR},
       ENDTIME = #{endTime,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.CoreCrePreapprovalContactEntity" >
+    update CORE_CRE_PREAPPROVAL_CONTACT
+    <set >
+      <if test="aApplyNo != null" >
+        A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsRelation != null" >
+        CONTACTS_RELATION = #{contactsRelation,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsName != null" >
+        CONTACTS_NAME = #{contactsName,jdbcType=VARCHAR},
+      </if>
+      <if test="contactsMobile != null" >
+        CONTACTS_MOBILE = #{contactsMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        ENDTIME = #{endTime,jdbcType=VARCHAR},
+      </if>
+    </set>
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >

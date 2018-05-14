@@ -20,8 +20,13 @@
     <result column="RATE" property="rate" jdbcType="VARCHAR" />
     <result column="MARGINLEVEL" property="marginLevel" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    SERIALNO, RELATIVESERIALNO, ORGTYPE, ORGNAME, ORGCODE, INPUTDATE, UPDATEUSERID, UPDATEDATE,
+    INPUTUSERID, INPUTORGID, UPDATEORGID, FALLBACKTYPE, COMPENSATORYDAY, BUYBACKDAY,
+    RATETYPE, RATE, MARGINLEVEL
+  </sql>
   <insert id="insert" parameterType="com.wu.fund.entity.FundUnitFallbackOrgEntity" >
-    insert into FUND_UNIT_FALLBACK_ORG (SERIALNO, RELATIVESERIALNO, ORGTYPE, 
+    insert into FUND_UNIT_FALLBACK_ORG (SERIALNO, RELATIVESERIALNO, ORGTYPE,
       ORGNAME, ORGCODE, INPUTDATE, 
       UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
       INPUTORGID, UPDATEORGID, FALLBACKTYPE, 
@@ -33,6 +38,116 @@
       #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{fallbackType,jdbcType=VARCHAR}, 
       #{compensatoryDay,jdbcType=VARCHAR}, #{buybackDay,jdbcType=VARCHAR}, #{rateType,jdbcType=VARCHAR}, 
       #{rate,jdbcType=VARCHAR}, #{marginLevel,jdbcType=VARCHAR})
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FundUnitFallbackOrgEntity" >
+    insert into FUND_UNIT_FALLBACK_ORG
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO,
+      </if>
+      <if test="orgType != null" >
+        ORGTYPE,
+      </if>
+      <if test="orgName != null" >
+        ORGNAME,
+      </if>
+      <if test="orgCode != null" >
+        ORGCODE,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+      <if test="fallbackType != null" >
+        FALLBACKTYPE,
+      </if>
+      <if test="compensatoryDay != null" >
+        COMPENSATORYDAY,
+      </if>
+      <if test="buybackDay != null" >
+        BUYBACKDAY,
+      </if>
+      <if test="rateType != null" >
+        RATETYPE,
+      </if>
+      <if test="rate != null" >
+        RATE,
+      </if>
+      <if test="marginLevel != null" >
+        MARGINLEVEL,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null" >
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="orgType != null" >
+        #{orgType,jdbcType=VARCHAR},
+      </if>
+      <if test="orgName != null" >
+        #{orgName,jdbcType=VARCHAR},
+      </if>
+      <if test="orgCode != null" >
+        #{orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="fallbackType != null" >
+        #{fallbackType,jdbcType=VARCHAR},
+      </if>
+      <if test="compensatoryDay != null" >
+        #{compensatoryDay,jdbcType=VARCHAR},
+      </if>
+      <if test="buybackDay != null" >
+        #{buybackDay,jdbcType=VARCHAR},
+      </if>
+      <if test="rateType != null" >
+        #{rateType,jdbcType=VARCHAR},
+      </if>
+      <if test="rate != null" >
+        #{rate,jdbcType=VARCHAR},
+      </if>
+      <if test="marginLevel != null" >
+        #{marginLevel,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, ORGTYPE, ORGNAME, ORGCODE, INPUTDATE, UPDATEUSERID, 

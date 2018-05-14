@@ -15,6 +15,7 @@ public interface AssetAllocationListDao {
      * @mbggenerated 2018-05-08
      */
     int insert(AssetAllocationListEntity record);
+    int insertSelective(AssetAllocationListEntity record);
 
     /**
      *
@@ -33,4 +34,5 @@ public interface AssetAllocationListDao {
      * @mbggenerated 2018-05-08
      */
     int updateByPrimaryKey(AssetAllocationListEntity record);
+    int updateByPrimaryKeySelective(AssetAllocationListEntity record);
 }

@@ -30,8 +30,8 @@
 
         <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
                         connectionURL="jdbc:oracle:thin:@192.168.34.185:1521:jrkj"
-                        userId="credit_test"
-                        password="credit_testpass">
+                        userId="credit"
+                        password="credit_pass">
 
         </jdbcConnection>
         <javaModelGenerator targetPackage="com.wu.fund.entity" targetProject="E:\work\fs-core\src\test\java\">

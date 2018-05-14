@@ -28,6 +28,14 @@
     <result column="REMAINDAYLIMIT" property="remainDayLimit" jdbcType="VARCHAR" />
     <result column="REMAINTOTALSUM" property="remainTotalSum" jdbcType="VARCHAR" />
   </resultMap>
+
+  <sql id="Base_Column_List">
+     SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID,
+    INPUTORGID, UPDATEORGID, INCOMECALCUMETHOD, ONETIMELOANREBATES, REIMBURSEMENTRATE,
+    ONETIMELOANSUM, ANNUALINTERESTRATE, LENDINGPRIORITY, LENDINGWEIGHT, ALLOWABLEOVERLIMIT,
+    TOTALSUM, SINGLECUSTLIMIT, SINGLEMINAMOUNT, SINGLEMAXAMOUNT, DAILYLIMIT, MONTHLYLIMIT,
+    REMAINMONTHLIMIT, REMAINDAYLIMIT, REMAINTOTALSUM
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUND_UNIT_PUTOUT_CONSTRAINT
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -51,6 +59,163 @@
       #{singleCustLimit,jdbcType=VARCHAR}, #{singleMinAmount,jdbcType=VARCHAR}, #{singleMaxAmount,jdbcType=VARCHAR},
       #{dailyLimit,jdbcType=VARCHAR}, #{monthlyLimit,jdbcType=VARCHAR}, #{remainMonthLimit,jdbcType=VARCHAR},
       #{remainDayLimit,jdbcType=VARCHAR}, #{remainTotalSum,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FundUnitPutoutConstraintEntity" >
+    insert into FUND_UNIT_PUTOUT_CONSTRAINT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+      <if test="incomeCalcuMethod != null" >
+        INCOMECALCUMETHOD,
+      </if>
+      <if test="oneTimeLoanRebates != null" >
+        ONETIMELOANREBATES,
+      </if>
+      <if test="reimbursementRate != null" >
+        REIMBURSEMENTRATE,
+      </if>
+      <if test="oneTimeLoanSum != null" >
+        ONETIMELOANSUM,
+      </if>
+      <if test="annualInterestRate != null" >
+        ANNUALINTERESTRATE,
+      </if>
+      <if test="lendingPriority != null" >
+        LENDINGPRIORITY,
+      </if>
+      <if test="lendingWeight != null" >
+        LENDINGWEIGHT,
+      </if>
+      <if test="allowableOverLimit != null" >
+        ALLOWABLEOVERLIMIT,
+      </if>
+      <if test="totalSum != null" >
+        TOTALSUM,
+      </if>
+      <if test="singleCustLimit != null" >
+        SINGLECUSTLIMIT,
+      </if>
+      <if test="singleMinAmount != null" >
+        SINGLEMINAMOUNT,
+      </if>
+      <if test="singleMaxAmount != null" >
+        SINGLEMAXAMOUNT,
+      </if>
+      <if test="dailyLimit != null" >
+        DAILYLIMIT,
+      </if>
+      <if test="monthlyLimit != null" >
+        MONTHLYLIMIT,
+      </if>
+      <if test="remainMonthLimit != null" >
+        REMAINMONTHLIMIT,
+      </if>
+      <if test="remainDayLimit != null" >
+        REMAINDAYLIMIT,
+      </if>
+      <if test="remainTotalSum != null" >
+        REMAINTOTALSUM,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null" >
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="incomeCalcuMethod != null" >
+        #{incomeCalcuMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="oneTimeLoanRebates != null" >
+        #{oneTimeLoanRebates,jdbcType=VARCHAR},
+      </if>
+      <if test="reimbursementRate != null" >
+        #{reimbursementRate,jdbcType=VARCHAR},
+      </if>
+      <if test="oneTimeLoanSum != null" >
+        #{oneTimeLoanSum,jdbcType=VARCHAR},
+      </if>
+      <if test="annualInterestRate != null" >
+        #{annualInterestRate,jdbcType=VARCHAR},
+      </if>
+      <if test="lendingPriority != null" >
+        #{lendingPriority,jdbcType=VARCHAR},
+      </if>
+      <if test="lendingWeight != null" >
+        #{lendingWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="allowableOverLimit != null" >
+        #{allowableOverLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="totalSum != null" >
+        #{totalSum,jdbcType=VARCHAR},
+      </if>
+      <if test="singleCustLimit != null" >
+        #{singleCustLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="singleMinAmount != null" >
+        #{singleMinAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="singleMaxAmount != null" >
+        #{singleMaxAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="dailyLimit != null" >
+        #{dailyLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="monthlyLimit != null" >
+        #{monthlyLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="remainMonthLimit != null" >
+        #{remainMonthLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="remainDayLimit != null" >
+        #{remainDayLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="remainTotalSum != null" >
+        #{remainTotalSum,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundUnitPutoutConstraintEntity" >
     update FUND_UNIT_PUTOUT_CONSTRAINT
@@ -80,21 +245,91 @@
       REMAINTOTALSUM = #{remainTotalSum,jdbcType=VARCHAR}
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.FundUnitPutoutConstraintEntity" >
+    update FUND_UNIT_PUTOUT_CONSTRAINT
+    <set >
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="incomeCalcuMethod != null" >
+        INCOMECALCUMETHOD = #{incomeCalcuMethod,jdbcType=VARCHAR},
+      </if>
+      <if test="oneTimeLoanRebates != null" >
+        ONETIMELOANREBATES = #{oneTimeLoanRebates,jdbcType=VARCHAR},
+      </if>
+      <if test="reimbursementRate != null" >
+        REIMBURSEMENTRATE = #{reimbursementRate,jdbcType=VARCHAR},
+      </if>
+      <if test="oneTimeLoanSum != null" >
+        ONETIMELOANSUM = #{oneTimeLoanSum,jdbcType=VARCHAR},
+      </if>
+      <if test="annualInterestRate != null" >
+        ANNUALINTERESTRATE = #{annualInterestRate,jdbcType=VARCHAR},
+      </if>
+      <if test="lendingPriority != null" >
+        LENDINGPRIORITY = #{lendingPriority,jdbcType=VARCHAR},
+      </if>
+      <if test="lendingWeight != null" >
+        LENDINGWEIGHT = #{lendingWeight,jdbcType=VARCHAR},
+      </if>
+      <if test="allowableOverLimit != null" >
+        ALLOWABLEOVERLIMIT = #{allowableOverLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="totalSum != null" >
+        TOTALSUM = #{totalSum,jdbcType=VARCHAR},
+      </if>
+      <if test="singleCustLimit != null" >
+        SINGLECUSTLIMIT = #{singleCustLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="singleMinAmount != null" >
+        SINGLEMINAMOUNT = #{singleMinAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="singleMaxAmount != null" >
+        SINGLEMAXAMOUNT = #{singleMaxAmount,jdbcType=VARCHAR},
+      </if>
+      <if test="dailyLimit != null" >
+        DAILYLIMIT = #{dailyLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="monthlyLimit != null" >
+        MONTHLYLIMIT = #{monthlyLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="remainMonthLimit != null" >
+        REMAINMONTHLIMIT = #{remainMonthLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="remainDayLimit != null" >
+        REMAINDAYLIMIT = #{remainDayLimit,jdbcType=VARCHAR},
+      </if>
+      <if test="remainTotalSum != null" >
+        REMAINTOTALSUM = #{remainTotalSum,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
-    INPUTORGID, UPDATEORGID, INCOMECALCUMETHOD, ONETIMELOANREBATES, REIMBURSEMENTRATE, 
-    ONETIMELOANSUM, ANNUALINTERESTRATE, LENDINGPRIORITY, LENDINGWEIGHT, ALLOWABLEOVERLIMIT, 
-    TOTALSUM, SINGLECUSTLIMIT, SINGLEMINAMOUNT, SINGLEMAXAMOUNT, DAILYLIMIT, MONTHLYLIMIT, 
-    REMAINMONTHLIMIT, REMAINDAYLIMIT, REMAINTOTALSUM
+    select <include refid="Base_Column_List"/>
     from FUND_UNIT_PUTOUT_CONSTRAINT
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select SERIALNO, RELATIVESERIALNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, INPUTUSERID, 
-    INPUTORGID, UPDATEORGID, INCOMECALCUMETHOD, ONETIMELOANREBATES, REIMBURSEMENTRATE, 
-    ONETIMELOANSUM, ANNUALINTERESTRATE, LENDINGPRIORITY, LENDINGWEIGHT, ALLOWABLEOVERLIMIT, 
-    TOTALSUM, SINGLECUSTLIMIT, SINGLEMINAMOUNT, SINGLEMAXAMOUNT, DAILYLIMIT, MONTHLYLIMIT, 
-    REMAINMONTHLIMIT, REMAINDAYLIMIT, REMAINTOTALSUM
+    select <include refid="Base_Column_List"/>
     from FUND_UNIT_PUTOUT_CONSTRAINT
   </select>
 </mapper>

@@ -18,6 +18,10 @@
     <result column="RELATIVETYPE" property="relativeType" jdbcType="VARCHAR" />
     <result column="BANKNAME" property="bankName" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List" >
+    SERIALNO, RELATIVESERIALNO, BEGINTIME, ENDTIME, VALIDTIME, INVALIDTIME, BANKNO, INPUTDATE,
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, RELATIVETYPE, BANKNAME
+  </sql>
   <insert id="insert" parameterType="com.wu.fund.entity.FunctionDarkPeriodEntity" >
     insert into FUNCTION_DARK_PERIOD (SERIALNO, RELATIVESERIALNO, BEGINTIME, 
       ENDTIME, VALIDTIME, INVALIDTIME, 
@@ -31,6 +35,104 @@
       #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, #{inputOrgId,jdbcType=VARCHAR}, 
       #{updateOrgId,jdbcType=VARCHAR}, #{relativeType,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}
       )
+  </insert>
+
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FunctionDarkPeriodEntity" >
+    insert into FUNCTION_DARK_PERIOD
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null" >
+        RELATIVESERIALNO,
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endTime != null" >
+        ENDTIME,
+      </if>
+      <if test="validTime != null" >
+        VALIDTIME,
+      </if>
+      <if test="invalidTime != null" >
+        INVALIDTIME,
+      </if>
+      <if test="bankNo != null" >
+        BANKNO,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+      <if test="relativeType != null" >
+        RELATIVETYPE,
+      </if>
+      <if test="bankName != null" >
+        BANKNAME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null" >
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="validTime != null" >
+        #{validTime,jdbcType=VARCHAR},
+      </if>
+      <if test="invalidTime != null" >
+        #{invalidTime,jdbcType=VARCHAR},
+      </if>
+      <if test="bankNo != null" >
+        #{bankNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeType != null" >
+        #{relativeType,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <select id="selectAll" resultMap="BaseResultMap" >
     select SERIALNO, RELATIVESERIALNO, BEGINTIME, ENDTIME, VALIDTIME, INVALIDTIME, BANKNO, 

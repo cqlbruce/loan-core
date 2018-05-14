@@ -50,6 +50,11 @@ public class LoanServiceImpl implements LoanService {
         }
     }
 
+    /**
+     * T31.查询放款申请结果
+     * @param lApplyNo
+     * @return
+     */
     @Override
     public LoadApplyQueryRespDto queryLoanApplyResult(String lApplyNo) {
 

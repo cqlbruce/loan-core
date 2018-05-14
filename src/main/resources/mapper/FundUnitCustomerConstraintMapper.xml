@@ -13,6 +13,11 @@
     <result column="INPUTORGID" property="inputOrgId" jdbcType="VARCHAR" />
     <result column="UPDATEORGID" property="updateOrgId" jdbcType="VARCHAR" />
   </resultMap>
+
+  <sql id="Base_Column_List" >
+    SERIALNO, CUSTOMERID, REMAINSUM, FUNDUNITNO, INPUTDATE, UPDATEUSERID, UPDATEDATE,
+    INPUTUSERID, INPUTORGID, UPDATEORGID
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUND_UNIT_CUSTOMER_CONSTRAINT
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -27,6 +32,73 @@
       #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, #{inputOrgId,jdbcType=VARCHAR}, 
       #{updateOrgId,jdbcType=VARCHAR})
   </insert>
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FundUnitCustomerConstraintEntity" >
+    insert into FUND_UNIT_CUSTOMER_CONSTRAINT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialno != null" >
+        SERIALNO,
+      </if>
+      <if test="customerId != null" >
+        CUSTOMERID,
+      </if>
+      <if test="remainSum != null" >
+        REMAINSUM,
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO,
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialno != null" >
+        #{serialno,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="remainSum != null" >
+        #{remainSum,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundUnitCustomerConstraintEntity" >
     update FUND_UNIT_CUSTOMER_CONSTRAINT
     set CUSTOMERID = #{customerId,jdbcType=VARCHAR},
@@ -39,6 +111,40 @@
       INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
       UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR}
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.FundUnitCustomerConstraintEntity" >
+    update FUND_UNIT_CUSTOMER_CONSTRAINT
+    <set >
+      <if test="customerId != null" >
+        CUSTOMERID = #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="remainSum != null" >
+        REMAINSUM = #{remainSum,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null" >
+        INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null" >
+        UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null" >
+        INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null" >
+        INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null" >
+        UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where SERIALNO = #{serialno,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select SERIALNO, CUSTOMERID, REMAINSUM, FUNDUNITNO, INPUTDATE, UPDATEUSERID, UPDATEDATE, 

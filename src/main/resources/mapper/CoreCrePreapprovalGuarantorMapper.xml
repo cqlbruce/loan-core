@@ -25,6 +25,14 @@
     <result column="BEGINTIME" property="beginTime" jdbcType="VARCHAR" />
     <result column="ENDTIME" property="endTime" jdbcType="VARCHAR" />
   </resultMap>
+
+  <sql id="Base_Column_List" >
+    SERIALNO, A_APPLY_NO, STAKEHOLDER_RELATION, STAKEHOLDER_TYPE, STAKEHOLDER_NAME, STAKEHOLDER_MOBILE,
+    STAKEHOLDER_CERT_TYPE, STAKEHOLDER_CERT_NO, STAKEHOLDER_SEX, STAKEHOLDER_BIRTHDAY,
+    STAKEHOLDER_MARITAL_STATUS, STAKEHOLDER_HOME_ADDRESS, STAKEHOLDER_WORK_TYPE, STAKEHOLDER_WORK_PROPERTY,
+    STAKEHOLDER_WORK_FIELD, STAKEHOLDER_WORK_ADDRESS, STAKEHOLDER_WORK_PHONE, FUNDUNITNO,
+    LOANORGCODE, STATUS, BEGINTIME, ENDTIME
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from CORE_CRE_PREAPPROVAL_GUARANTOR
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -49,6 +57,146 @@
       #{fundUnitNo,jdbcType=VARCHAR}, #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, 
       #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR})
   </insert>
+
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity" >
+    insert into CORE_CRE_PREAPPROVAL_GUARANTOR
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        SERIALNO,
+      </if>
+      <if test="aApplyNo != null" >
+        A_APPLY_NO,
+      </if>
+      <if test="stakeholderRelation != null" >
+        STAKEHOLDER_RELATION,
+      </if>
+      <if test="stakeholderType != null" >
+        STAKEHOLDER_TYPE,
+      </if>
+      <if test="stakeholderName != null" >
+        STAKEHOLDER_NAME,
+      </if>
+      <if test="stakeholderMobile != null" >
+        STAKEHOLDER_MOBILE,
+      </if>
+      <if test="stakeholderCertType != null" >
+        STAKEHOLDER_CERT_TYPE,
+      </if>
+      <if test="stakeholderCertNo != null" >
+        STAKEHOLDER_CERT_NO,
+      </if>
+      <if test="stakeholderSex != null" >
+        STAKEHOLDER_SEX,
+      </if>
+      <if test="stakeholderBirthday != null" >
+        STAKEHOLDER_BIRTHDAY,
+      </if>
+      <if test="stakeholderMaritalStatus != null" >
+        STAKEHOLDER_MARITAL_STATUS,
+      </if>
+      <if test="stakeholderHomeAddress != null" >
+        STAKEHOLDER_HOME_ADDRESS,
+      </if>
+      <if test="stakeholderWorkType != null" >
+        STAKEHOLDER_WORK_TYPE,
+      </if>
+      <if test="stakeholderWorkProperty != null" >
+        STAKEHOLDER_WORK_PROPERTY,
+      </if>
+      <if test="stakeholderWorkField != null" >
+        STAKEHOLDER_WORK_FIELD,
+      </if>
+      <if test="stakeholderWorkAddress != null" >
+        STAKEHOLDER_WORK_ADDRESS,
+      </if>
+      <if test="stakeholderWorkPhone != null" >
+        STAKEHOLDER_WORK_PHONE,
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO,
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endTime != null" >
+        ENDTIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="serialNo != null" >
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aApplyNo != null" >
+        #{aApplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderRelation != null" >
+        #{stakeholderRelation,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderType != null" >
+        #{stakeholderType,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderName != null" >
+        #{stakeholderName,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderMobile != null" >
+        #{stakeholderMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderCertType != null" >
+        #{stakeholderCertType,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderCertNo != null" >
+        #{stakeholderCertNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderSex != null" >
+        #{stakeholderSex,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderBirthday != null" >
+        #{stakeholderBirthday,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderMaritalStatus != null" >
+        #{stakeholderMaritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderHomeAddress != null" >
+        #{stakeholderHomeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkType != null" >
+        #{stakeholderWorkType,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkProperty != null" >
+        #{stakeholderWorkProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkField != null" >
+        #{stakeholderWorkField,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkAddress != null" >
+        #{stakeholderWorkAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkPhone != null" >
+        #{stakeholderWorkPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity" >
     update CORE_CRE_PREAPPROVAL_GUARANTOR
     set A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR},
@@ -72,6 +220,76 @@
       STATUS = #{status,jdbcType=VARCHAR},
       BEGINTIME = #{beginTime,jdbcType=VARCHAR},
       ENDTIME = #{endTime,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity" >
+    update CORE_CRE_PREAPPROVAL_GUARANTOR
+    <set >
+      <if test="aApplyNo != null" >
+        A_APPLY_NO = #{aApplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderRelation != null" >
+        STAKEHOLDER_RELATION = #{stakeholderRelation,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderType != null" >
+        STAKEHOLDER_TYPE = #{stakeholderType,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderName != null" >
+        STAKEHOLDER_NAME = #{stakeholderName,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderMobile != null" >
+        STAKEHOLDER_MOBILE = #{stakeholderMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderCertType != null" >
+        STAKEHOLDER_CERT_TYPE = #{stakeholderCertType,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderCertNo != null" >
+        STAKEHOLDER_CERT_NO = #{stakeholderCertNo,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderSex != null" >
+        STAKEHOLDER_SEX = #{stakeholderSex,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderBirthday != null" >
+        STAKEHOLDER_BIRTHDAY = #{stakeholderBirthday,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderMaritalStatus != null" >
+        STAKEHOLDER_MARITAL_STATUS = #{stakeholderMaritalStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderHomeAddress != null" >
+        STAKEHOLDER_HOME_ADDRESS = #{stakeholderHomeAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkType != null" >
+        STAKEHOLDER_WORK_TYPE = #{stakeholderWorkType,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkProperty != null" >
+        STAKEHOLDER_WORK_PROPERTY = #{stakeholderWorkProperty,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkField != null" >
+        STAKEHOLDER_WORK_FIELD = #{stakeholderWorkField,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkAddress != null" >
+        STAKEHOLDER_WORK_ADDRESS = #{stakeholderWorkAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="stakeholderWorkPhone != null" >
+        STAKEHOLDER_WORK_PHONE = #{stakeholderWorkPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        ENDTIME = #{endTime,jdbcType=VARCHAR},
+      </if>
+    </set>
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >

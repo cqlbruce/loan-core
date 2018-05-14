@@ -32,6 +32,14 @@
     <result column="WORKPROVINCE" property="workProvince" jdbcType="VARCHAR" />
     <result column="HOUSEPROVINCE" property="houseProvince" jdbcType="VARCHAR" />
   </resultMap>
+
+  <sql id="Base_Column_List">
+    SERIALNO, RELATIVESERIALNO, PRODUCTCODE, PRODUCTDIMENSION, PROPORTION, INPUTDATE,
+    UPDATEUSERID, UPDATEDATE, INPUTUSERID, INPUTORGID, UPDATEORGID, ASSETTYPE, EDUCATION,
+    MINACCOUNT, MAXACCOUNT, LOANTERMUNIT, LOANTERM, REPAYMENTTYPE, APPLYORGID, CUSENTERPRISE,
+    WORKCITY, HOUSECITY, CUSCLASSIFY, RISKGRADE, CUSENTERPRISETYPE, WORKCITYTYPE, HOUSECITYTYPE,
+    WORKPROVINCE, HOUSEPROVINCE
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from ASSET_ALLOCATION_LIST
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
@@ -51,12 +59,193 @@
       #{productDimension,jdbcType=VARCHAR}, #{proportion,jdbcType=VARCHAR}, #{inputDate,jdbcType=VARCHAR}, 
       #{updateUserId,jdbcType=VARCHAR}, #{updateDate,jdbcType=VARCHAR}, #{inputUserId,jdbcType=VARCHAR}, 
       #{inputOrgId,jdbcType=VARCHAR}, #{updateOrgId,jdbcType=VARCHAR}, #{assetType,jdbcType=VARCHAR}, 
-      #{education,jdbcType=VARCHAR}, #{minAccount,jdbcType=VARCHAR}, #{maxAccount,jdbcType=VARCHAR}, 
+      #{education,jdbcType=VARCHAR}, #{minAccount,jdbcType=VARCHAR}, #{maxAccount,jdbcType=VARCHAR},
       #{loanTermUnit,jdbcType=VARCHAR}, #{loanTerm,jdbcType=VARCHAR}, #{repaymentType,jdbcType=VARCHAR}, 
       #{applyOrgId,jdbcType=VARCHAR}, #{cusEnterprise,jdbcType=VARCHAR}, #{workCity,jdbcType=VARCHAR}, 
       #{houseCity,jdbcType=VARCHAR}, #{cusClassify,jdbcType=VARCHAR}, #{riskGrade,jdbcType=VARCHAR}, 
       #{cusEnterpriseType,jdbcType=VARCHAR}, #{workCityType,jdbcType=VARCHAR}, #{houseCityType,jdbcType=VARCHAR}, 
       #{workProvince,jdbcType=VARCHAR}, #{houseProvince,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.AssetAllocationListEntity">
+    insert into ASSET_ALLOCATION_LIST
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="serialNo != null">
+        SERIALNO,
+      </if>
+      <if test="relativeSerialNo != null">
+        RELATIVESERIALNO,
+      </if>
+      <if test="productCode != null">
+        PRODUCTCODE,
+      </if>
+      <if test="productDimension != null">
+        PRODUCTDIMENSION,
+      </if>
+      <if test="proportion != null">
+        PROPORTION,
+      </if>
+      <if test="inputDate != null">
+        INPUTDATE,
+      </if>
+      <if test="updateUserId != null">
+        UPDATEUSERID,
+      </if>
+      <if test="updateDate != null">
+        UPDATEDATE,
+      </if>
+      <if test="inputUserId != null">
+        INPUTUSERID,
+      </if>
+      <if test="inputOrgId != null">
+        INPUTORGID,
+      </if>
+      <if test="updateOrgId != null">
+        UPDATEORGID,
+      </if>
+      <if test="assetType != null">
+        ASSETTYPE,
+      </if>
+      <if test="education != null">
+        EDUCATION,
+      </if>
+      <if test="minAccount != null">
+        MINACCOUNT,
+      </if>
+      <if test="maxAccount != null">
+        MAXACCOUNT,
+      </if>
+      <if test="loanTermUnit != null">
+        LOANTERMUNIT,
+      </if>
+      <if test="loanTerm != null">
+        LOANTERM,
+      </if>
+      <if test="repaymentType != null">
+        REPAYMENTTYPE,
+      </if>
+      <if test="applyOrgId != null">
+        APPLYORGID,
+      </if>
+      <if test="cusEnterprise != null">
+        CUSENTERPRISE,
+      </if>
+      <if test="workCity != null">
+        WORKCITY,
+      </if>
+      <if test="houseCity != null">
+        HOUSECITY,
+      </if>
+      <if test="cusClassify != null">
+        CUSCLASSIFY,
+      </if>
+      <if test="riskGrade != null">
+        RISKGRADE,
+      </if>
+      <if test="cusEnterpriseType != null">
+        CUSENTERPRISETYPE,
+      </if>
+      <if test="workCityType != null">
+        WORKCITYTYPE,
+      </if>
+      <if test="houseCityType != null">
+        HOUSECITYTYPE,
+      </if>
+      <if test="workProvince != null">
+        WORKPROVINCE,
+      </if>
+      <if test="houseProvince != null">
+        HOUSEPROVINCE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="serialNo != null">
+        #{serialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="relativeSerialNo != null">
+        #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="productDimension != null">
+        #{productDimension,jdbcType=VARCHAR},
+      </if>
+      <if test="proportion != null">
+        #{proportion,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null">
+        #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null">
+        #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null">
+        #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null">
+        #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null">
+        #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null">
+        #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="assetType != null">
+        #{assetType,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="minAccount != null">
+        #{minAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="maxAccount != null">
+        #{maxAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="loanTermUnit != null">
+        #{loanTermUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="loanTerm != null">
+        #{loanTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentType != null">
+        #{repaymentType,jdbcType=VARCHAR},
+      </if>
+      <if test="applyOrgId != null">
+        #{applyOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="cusEnterprise != null">
+        #{cusEnterprise,jdbcType=VARCHAR},
+      </if>
+      <if test="workCity != null">
+        #{workCity,jdbcType=VARCHAR},
+      </if>
+      <if test="houseCity != null">
+        #{houseCity,jdbcType=VARCHAR},
+      </if>
+      <if test="cusClassify != null">
+        #{cusClassify,jdbcType=VARCHAR},
+      </if>
+      <if test="riskGrade != null">
+        #{riskGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="cusEnterpriseType != null">
+        #{cusEnterpriseType,jdbcType=VARCHAR},
+      </if>
+      <if test="workCityType != null">
+        #{workCityType,jdbcType=VARCHAR},
+      </if>
+      <if test="houseCityType != null">
+        #{houseCityType,jdbcType=VARCHAR},
+      </if>
+      <if test="workProvince != null">
+        #{workProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="houseProvince != null">
+        #{houseProvince,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.AssetAllocationListEntity" >
     update ASSET_ALLOCATION_LIST
@@ -88,6 +277,97 @@
       HOUSECITYTYPE = #{houseCityType,jdbcType=VARCHAR},
       WORKPROVINCE = #{workProvince,jdbcType=VARCHAR},
       HOUSEPROVINCE = #{houseProvince,jdbcType=VARCHAR}
+    where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+  </update>
+
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.AssetAllocationListEntity">
+    update ASSET_ALLOCATION_LIST
+    <set>
+      <if test="relativeSerialNo != null">
+        RELATIVESERIALNO = #{relativeSerialNo,jdbcType=VARCHAR},
+      </if>
+      <if test="productCode != null">
+        PRODUCTCODE = #{productCode,jdbcType=VARCHAR},
+      </if>
+      <if test="productDimension != null">
+        PRODUCTDIMENSION = #{productDimension,jdbcType=VARCHAR},
+      </if>
+      <if test="proportion != null">
+        PROPORTION = #{proportion,jdbcType=VARCHAR},
+      </if>
+      <if test="inputDate != null">
+        INPUTDATE = #{inputDate,jdbcType=VARCHAR},
+      </if>
+      <if test="updateUserId != null">
+        UPDATEUSERID = #{updateUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null">
+        UPDATEDATE = #{updateDate,jdbcType=VARCHAR},
+      </if>
+      <if test="inputUserId != null">
+        INPUTUSERID = #{inputUserId,jdbcType=VARCHAR},
+      </if>
+      <if test="inputOrgId != null">
+        INPUTORGID = #{inputOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="updateOrgId != null">
+        UPDATEORGID = #{updateOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="assetType != null">
+        ASSETTYPE = #{assetType,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        EDUCATION = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="minAccount != null">
+        MINACCOUNT = #{minAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="maxAccount != null">
+        MAXACCOUNT = #{maxAccount,jdbcType=VARCHAR},
+      </if>
+      <if test="loanTermUnit != null">
+        LOANTERMUNIT = #{loanTermUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="loanTerm != null">
+        LOANTERM = #{loanTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="repaymentType != null">
+        REPAYMENTTYPE = #{repaymentType,jdbcType=VARCHAR},
+      </if>
+      <if test="applyOrgId != null">
+        APPLYORGID = #{applyOrgId,jdbcType=VARCHAR},
+      </if>
+      <if test="cusEnterprise != null">
+        CUSENTERPRISE = #{cusEnterprise,jdbcType=VARCHAR},
+      </if>
+      <if test="workCity != null">
+        WORKCITY = #{workCity,jdbcType=VARCHAR},
+      </if>
+      <if test="houseCity != null">
+        HOUSECITY = #{houseCity,jdbcType=VARCHAR},
+      </if>
+      <if test="cusClassify != null">
+        CUSCLASSIFY = #{cusClassify,jdbcType=VARCHAR},
+      </if>
+      <if test="riskGrade != null">
+        RISKGRADE = #{riskGrade,jdbcType=VARCHAR},
+      </if>
+      <if test="cusEnterpriseType != null">
+        CUSENTERPRISETYPE = #{cusEnterpriseType,jdbcType=VARCHAR},
+      </if>
+      <if test="workCityType != null">
+        WORKCITYTYPE = #{workCityType,jdbcType=VARCHAR},
+      </if>
+      <if test="houseCityType != null">
+        HOUSECITYTYPE = #{houseCityType,jdbcType=VARCHAR},
+      </if>
+      <if test="workProvince != null">
+        WORKPROVINCE = #{workProvince,jdbcType=VARCHAR},
+      </if>
+      <if test="houseProvince != null">
+        HOUSEPROVINCE = #{houseProvince,jdbcType=VARCHAR},
+      </if>
+    </set>
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >

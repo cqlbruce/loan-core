@@ -28,7 +28,7 @@
     <result column="FINISH_DATETIME" property="finishDatetime" jdbcType="VARCHAR" />
     <result column="L_DEAL_NO" property="lDealNo" jdbcType="VARCHAR" />
     <result column="STATUS" property="status" jdbcType="VARCHAR" />
-    <result column="L_CAPITAL_BUSINESS_NO" property="lCapitalBusinessNo" jdbcType="VARCHAR" />
+    <result column="L_CAPITAL_BUSINESS_NO" property="lCapitalBusiNo" jdbcType="VARCHAR" />
     <result column="DEAL_STATUS" property="dealStatus" jdbcType="VARCHAR" />
     <result column="DEAL_DESC" property="dealDesc" jdbcType="VARCHAR" />
     <result column="TRANS_DATE" property="transDate" jdbcType="VARCHAR" />
@@ -47,6 +47,15 @@
     <result column="DEALTIME" property="dealTime" jdbcType="VARCHAR" />
     <result column="OLDFUNDUNITNO" property="oldfundUnitNo" jdbcType="VARCHAR" />
   </resultMap>
+  <sql id="Base_Column_List">
+     L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, LOAN_AMT,
+    TERM_NO, PAYBACK_TYPE, LOAN_USE, CERT_TYPE, CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME,
+    RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE,
+    THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, APPLY_DATETIME,
+    FINISH_DATETIME, L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC,
+    TRANS_DATE, CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, PHONE_NO, BANK_NO, FUNDUNITNO,
+    LOANORGCODE, BEGINTIME, ENDTIME, TRANSNO, REQNO, CUSTOMERID, DEALTIME, OLDFUNDUNITNO
+  </sql>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from FUN_PUTOUT_APPLY
     where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
@@ -75,13 +84,314 @@
       #{cardType,jdbcType=VARCHAR}, #{bankName,jdbcType=VARCHAR}, #{bankMobile,jdbcType=VARCHAR},
       #{thirdOrgCode,jdbcType=VARCHAR}, #{validStatus,jdbcType=VARCHAR}, #{thirdOrgReturnCode,jdbcType=VARCHAR}, 
       #{thirdOrgReturnMsg,jdbcType=VARCHAR}, #{applyDatetime,jdbcType=VARCHAR}, #{finishDatetime,jdbcType=VARCHAR}, 
-      #{lDealNo,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{lCapitalBusinessNo,jdbcType=VARCHAR}, 
+      #{lDealNo,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{lCapitalBusiNo,jdbcType=VARCHAR},
       #{dealStatus,jdbcType=VARCHAR}, #{dealDesc,jdbcType=VARCHAR}, #{transDate,jdbcType=VARCHAR}, 
       #{clearDate,jdbcType=VARCHAR}, #{custName,jdbcType=VARCHAR}, #{receiveBankAcnm,jdbcType=VARCHAR}, 
       #{phoneNo,jdbcType=VARCHAR}, #{bankNo,jdbcType=VARCHAR}, #{fundUnitNo,jdbcType=VARCHAR},
       #{loanOrgCode,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR},
       #{transNo,jdbcType=VARCHAR}, #{reqNo,jdbcType=VARCHAR}, #{customerId,jdbcType=VARCHAR},
       #{dealTime,jdbcType=VARCHAR}, #{oldfundUnitNo,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wu.fund.entity.FunPutoutApplyEntity" >
+    insert into FUN_PUTOUT_APPLY
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="lApplyNo != null" >
+        L_APPLY_NO,
+      </if>
+      <if test="lBusiNo != null" >
+        L_SL_BUSINESS_NO,
+      </if>
+      <if test="aDealNo != null" >
+        A_DEAL_NO,
+      </if>
+      <if test="aCapitalBusiNo != null" >
+        A_CAPITAL_BUSINESS_NO,
+      </if>
+      <if test="loanAmt != null" >
+        LOAN_AMT,
+      </if>
+      <if test="termNo != null" >
+        TERM_NO,
+      </if>
+      <if test="paybackType != null" >
+        PAYBACK_TYPE,
+      </if>
+      <if test="loanUse != null" >
+        LOAN_USE,
+      </if>
+      <if test="certType != null" >
+        CERT_TYPE,
+      </if>
+      <if test="certNo != null" >
+        CERT_NO,
+      </if>
+      <if test="imageFileName != null" >
+        IMAGEFILE_NAME,
+      </if>
+      <if test="receiveBankName != null" >
+        RECEIVE_BANK_NAME,
+      </if>
+      <if test="receiveBankAcno != null" >
+        RECEIVE_BANK_ACNO,
+      </if>
+      <if test="checkAppleId != null" >
+        CHECK_APPLE_ID,
+      </if>
+      <if test="cardNo != null" >
+        BANK_CARD_NO,
+      </if>
+      <if test="cardType != null" >
+        BANK_CARD_TYPE,
+      </if>
+      <if test="bankName != null" >
+        BANK_NAME,
+      </if>
+      <if test="bankMobile != null" >
+        BANK_MOBILE,
+      </if>
+      <if test="thirdOrgCode != null" >
+        THIRD_ORG_CODE,
+      </if>
+      <if test="validStatus != null" >
+        VALID_STATUS,
+      </if>
+      <if test="thirdOrgReturnCode != null" >
+        THIRD_ORG_RETURN_CODE,
+      </if>
+      <if test="thirdOrgReturnMsg != null" >
+        THIRD_ORG_RETURN_MSG,
+      </if>
+      <if test="applyDatetime != null" >
+        APPLY_DATETIME,
+      </if>
+      <if test="finishDatetime != null" >
+        FINISH_DATETIME,
+      </if>
+      <if test="lDealNo != null" >
+        L_DEAL_NO,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="lCapitalBusiNo != null" >
+        L_CAPITAL_BUSINESS_NO,
+      </if>
+      <if test="dealStatus != null" >
+        DEAL_STATUS,
+      </if>
+      <if test="dealDesc != null" >
+        DEAL_DESC,
+      </if>
+      <if test="transDate != null" >
+        TRANS_DATE,
+      </if>
+      <if test="clearDate != null" >
+        CLEAR_DATE,
+      </if>
+      <if test="custName != null" >
+        CUST_NAME,
+      </if>
+      <if test="receiveBankAcnm != null" >
+        RECEIVE_BANK_ACNM,
+      </if>
+      <if test="phoneNo != null" >
+        PHONE_NO,
+      </if>
+      <if test="bankNo != null" >
+        BANK_NO,
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO,
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE,
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME,
+      </if>
+      <if test="endTime != null" >
+        ENDTIME,
+      </if>
+      <if test="transNo != null" >
+        TRANSNO,
+      </if>
+      <if test="reqNo != null" >
+        REQNO,
+      </if>
+      <if test="customerId != null" >
+        CUSTOMERID,
+      </if>
+      <if test="dealTime != null" >
+        DEALTIME,
+      </if>
+      <if test="oldfundUnitNo != null" >
+        OLDFUNDUNITNO,
+      </if>
+      <if test="fundstepname != null" >
+        FUNDSTEPNAME,
+      </if>
+      <if test="fundmainflowname != null" >
+        FUNDMAINFLOWNAME,
+      </if>
+      <if test="fundsubflowname != null" >
+        FUNDSUBFLOWNAME,
+      </if>
+      <if test="fundsubflowstatus != null" >
+        FUNDSUBFLOWSTATUS,
+      </if>
+      <if test="applychannel != null" >
+        APPLYCHANNEL,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="lApplyNo != null" >
+        #{lApplyNo,jdbcType=VARCHAR},
+      </if>
+      <if test="lBusiNo != null" >
+        #{lBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aDealNo != null" >
+        #{aDealNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aCapitalBusiNo != null" >
+        #{aCapitalBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanAmt != null" >
+        #{loanAmt,jdbcType=NUMERIC},
+      </if>
+      <if test="termNo != null" >
+        #{termNo,jdbcType=VARCHAR},
+      </if>
+      <if test="paybackType != null" >
+        #{paybackType,jdbcType=VARCHAR},
+      </if>
+      <if test="loanUse != null" >
+        #{loanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="certType != null" >
+        #{certType,jdbcType=VARCHAR},
+      </if>
+      <if test="certNo != null" >
+        #{certNo,jdbcType=VARCHAR},
+      </if>
+      <if test="imageFileName != null" >
+        #{imageFileName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBankName != null" >
+        #{receiveBankName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBankAcno != null" >
+        #{receiveBankAcno,jdbcType=VARCHAR},
+      </if>
+      <if test="checkAppleId != null" >
+        #{checkAppleId,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNo != null" >
+        #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="cardType != null" >
+        #{cardType,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankMobile != null" >
+        #{bankMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgCode != null" >
+        #{thirdOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="validStatus != null" >
+        #{validStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnCode != null" >
+        #{thirdOrgReturnCode,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnMsg != null" >
+        #{thirdOrgReturnMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDatetime != null" >
+        #{applyDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="finishDatetime != null" >
+        #{finishDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="lDealNo != null" >
+        #{lDealNo,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="lCapitalBusiNo != null" >
+        #{lCapitalBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="dealStatus != null" >
+        #{dealStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDesc != null" >
+        #{dealDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="transDate != null" >
+        #{transDate,jdbcType=VARCHAR},
+      </if>
+      <if test="clearDate != null" >
+        #{clearDate,jdbcType=VARCHAR},
+      </if>
+      <if test="custName != null" >
+        #{custName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBankAcnm != null" >
+        #{receiveBankAcnm,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNo != null" >
+        #{phoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="bankNo != null" >
+        #{bankNo,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="transNo != null" >
+        #{transNo,jdbcType=VARCHAR},
+      </if>
+      <if test="reqNo != null" >
+        #{reqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null" >
+        #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="dealTime != null" >
+        #{dealTime,jdbcType=VARCHAR},
+      </if>
+      <if test="oldfundUnitNo != null" >
+        #{oldfundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="fundstepname != null" >
+        #{fundstepname,jdbcType=VARCHAR},
+      </if>
+      <if test="fundmainflowname != null" >
+        #{fundmainflowname,jdbcType=VARCHAR},
+      </if>
+      <if test="fundsubflowname != null" >
+        #{fundsubflowname,jdbcType=VARCHAR},
+      </if>
+      <if test="fundsubflowstatus != null" >
+        #{fundsubflowstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="applychannel != null" >
+        #{applychannel,jdbcType=VARCHAR},
+      </if>
+    </trim>
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FunPutoutApplyEntity" >
     update FUN_PUTOUT_APPLY
@@ -110,7 +420,7 @@
       FINISH_DATETIME = #{finishDatetime,jdbcType=VARCHAR},
       L_DEAL_NO = #{lDealNo,jdbcType=VARCHAR},
       STATUS = #{status,jdbcType=VARCHAR},
-      L_CAPITAL_BUSINESS_NO = #{lCapitalBusinessNo,jdbcType=VARCHAR},
+      L_CAPITAL_BUSINESS_NO = #{lCapitalBusiNo,jdbcType=VARCHAR},
       DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
       DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
       TRANS_DATE = #{transDate,jdbcType=VARCHAR},
@@ -130,38 +440,168 @@
       OLDFUNDUNITNO = #{oldfundUnitNo,jdbcType=VARCHAR}
     where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
   </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.FunPutoutApplyEntity" >
+    update FUN_PUTOUT_APPLY
+    <set >
+      <if test="lBusiNo != null" >
+        L_SL_BUSINESS_NO = #{lBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aDealNo != null" >
+        A_DEAL_NO = #{aDealNo,jdbcType=VARCHAR},
+      </if>
+      <if test="aCapitalBusiNo != null" >
+        A_CAPITAL_BUSINESS_NO = #{aCapitalBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanAmt != null" >
+        LOAN_AMT = #{loanAmt,jdbcType=NUMERIC},
+      </if>
+      <if test="termNo != null" >
+        TERM_NO = #{termNo,jdbcType=VARCHAR},
+      </if>
+      <if test="paybackType != null" >
+        PAYBACK_TYPE = #{paybackType,jdbcType=VARCHAR},
+      </if>
+      <if test="loanUse != null" >
+        LOAN_USE = #{loanUse,jdbcType=VARCHAR},
+      </if>
+      <if test="certType != null" >
+        CERT_TYPE = #{certType,jdbcType=VARCHAR},
+      </if>
+      <if test="certNo != null" >
+        CERT_NO = #{certNo,jdbcType=VARCHAR},
+      </if>
+      <if test="imageFileName != null" >
+        IMAGEFILE_NAME = #{imageFileName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBankName != null" >
+        RECEIVE_BANK_NAME = #{receiveBankName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBankAcno != null" >
+        RECEIVE_BANK_ACNO = #{receiveBankAcno,jdbcType=VARCHAR},
+      </if>
+      <if test="checkAppleId != null" >
+        CHECK_APPLE_ID = #{checkAppleId,jdbcType=VARCHAR},
+      </if>
+      <if test="cardNo != null" >
+        BANK_CARD_NO = #{cardNo,jdbcType=VARCHAR},
+      </if>
+      <if test="cardType != null" >
+        BANK_CARD_TYPE = #{cardType,jdbcType=VARCHAR},
+      </if>
+      <if test="bankName != null" >
+        BANK_NAME = #{bankName,jdbcType=VARCHAR},
+      </if>
+      <if test="bankMobile != null" >
+        BANK_MOBILE = #{bankMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgCode != null" >
+        THIRD_ORG_CODE = #{thirdOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="validStatus != null" >
+        VALID_STATUS = #{validStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnCode != null" >
+        THIRD_ORG_RETURN_CODE = #{thirdOrgReturnCode,jdbcType=VARCHAR},
+      </if>
+      <if test="thirdOrgReturnMsg != null" >
+        THIRD_ORG_RETURN_MSG = #{thirdOrgReturnMsg,jdbcType=VARCHAR},
+      </if>
+      <if test="applyDatetime != null" >
+        APPLY_DATETIME = #{applyDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="finishDatetime != null" >
+        FINISH_DATETIME = #{finishDatetime,jdbcType=VARCHAR},
+      </if>
+      <if test="lDealNo != null" >
+        L_DEAL_NO = #{lDealNo,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="lCapitalBusiNo != null" >
+        L_CAPITAL_BUSINESS_NO = #{lCapitalBusiNo,jdbcType=VARCHAR},
+      </if>
+      <if test="dealStatus != null" >
+        DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="dealDesc != null" >
+        DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="transDate != null" >
+        TRANS_DATE = #{transDate,jdbcType=VARCHAR},
+      </if>
+      <if test="clearDate != null" >
+        CLEAR_DATE = #{clearDate,jdbcType=VARCHAR},
+      </if>
+      <if test="custName != null" >
+        CUST_NAME = #{custName,jdbcType=VARCHAR},
+      </if>
+      <if test="receiveBankAcnm != null" >
+        RECEIVE_BANK_ACNM = #{receiveBankAcnm,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneNo != null" >
+        PHONE_NO = #{phoneNo,jdbcType=VARCHAR},
+      </if>
+      <if test="bankNo != null" >
+        BANK_NO = #{bankNo,jdbcType=VARCHAR},
+      </if>
+      <if test="fundUnitNo != null" >
+        FUNDUNITNO = #{fundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="loanOrgCode != null" >
+        LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="beginTime != null" >
+        BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+      </if>
+      <if test="endTime != null" >
+        ENDTIME = #{endTime,jdbcType=VARCHAR},
+      </if>
+      <if test="transNo != null" >
+        TRANSNO = #{transNo,jdbcType=VARCHAR},
+      </if>
+      <if test="reqNo != null" >
+        REQNO = #{reqNo,jdbcType=VARCHAR},
+      </if>
+      <if test="customerId != null" >
+        CUSTOMERID = #{customerId,jdbcType=VARCHAR},
+      </if>
+      <if test="dealTime != null" >
+        DEALTIME = #{dealTime,jdbcType=VARCHAR},
+      </if>
+      <if test="oldfundUnitNo != null" >
+        OLDFUNDUNITNO = #{oldfundUnitNo,jdbcType=VARCHAR},
+      </if>
+      <if test="fundstepname != null" >
+        FUNDSTEPNAME = #{fundstepname,jdbcType=VARCHAR},
+      </if>
+      <if test="fundmainflowname != null" >
+        FUNDMAINFLOWNAME = #{fundmainflowname,jdbcType=VARCHAR},
+      </if>
+      <if test="fundsubflowname != null" >
+        FUNDSUBFLOWNAME = #{fundsubflowname,jdbcType=VARCHAR},
+      </if>
+      <if test="fundsubflowstatus != null" >
+        FUNDSUBFLOWSTATUS = #{fundsubflowstatus,jdbcType=VARCHAR},
+      </if>
+      <if test="applychannel != null" >
+        APPLYCHANNEL = #{applychannel,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
+  </update>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, LOAN_AMT, 
-    TERM_NO, PAYBACK_TYPE, LOAN_USE, CERT_TYPE, CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME, 
-    RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, 
-    THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, APPLY_DATETIME, 
-    FINISH_DATETIME, L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
-    TRANS_DATE, CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, PHONE_NO, BANK_NO, FUNDUNITNO, 
-    LOANORGCODE, BEGINTIME, ENDTIME, TRANSNO, REQNO, CUSTOMERID, DEALTIME, OLDFUNDUNITNO
+    select <include refid="Base_Column_List"/>
     from FUN_PUTOUT_APPLY
     where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
   </select>
   <select id="selectAll" resultMap="BaseResultMap" >
-    select L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, LOAN_AMT, 
-    TERM_NO, PAYBACK_TYPE, LOAN_USE, CERT_TYPE, CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME, 
-    RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE, 
-    THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, APPLY_DATETIME, 
-    FINISH_DATETIME, L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC, 
-    TRANS_DATE, CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, PHONE_NO, BANK_NO, FUNDUNITNO, 
-    LOANORGCODE, BEGINTIME, ENDTIME, TRANSNO, REQNO, CUSTOMERID, DEALTIME, OLDFUNDUNITNO
-    from FUN_PUTOUT_APPLY
+    select <include refid="Base_Column_List"/> from FUN_PUTOUT_APPLY
   </select>
 
  <!--根据放款请求流水号lApplyNo查询 放款申请-->
   <select id="selectByApplyNo" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select L_APPLY_NO, L_SL_BUSINESS_NO, A_DEAL_NO, A_CAPITAL_BUSINESS_NO, LOAN_AMT,
-    TERM_NO, PAYBACK_TYPE, LOAN_USE, CERT_TYPE, CERT_NO, IMAGEFILE_NAME, RECEIVE_BANK_NAME,
-    RECEIVE_BANK_ACNO, CHECK_APPLE_ID, BANK_CARD_NO, BANK_CARD_TYPE, BANK_NAME, BANK_MOBILE,
-    THIRD_ORG_CODE, VALID_STATUS, THIRD_ORG_RETURN_CODE, THIRD_ORG_RETURN_MSG, APPLY_DATETIME,
-    FINISH_DATETIME, L_DEAL_NO, STATUS, L_CAPITAL_BUSINESS_NO, DEAL_STATUS, DEAL_DESC,
-    TRANS_DATE, CLEAR_DATE, CUST_NAME, RECEIVE_BANK_ACNM, PHONE_NO, BANK_NO, FUNDUNITNO,
-    LOANORGCODE, BEGINTIME, ENDTIME, TRANSNO, REQNO, CUSTOMERID, DEALTIME, OLDFUNDUNITNO
-    from FUN_PUTOUT_APPLY
+    select  <include refid="Base_Column_List"/>  from FUN_PUTOUT_APPLY
     where L_APPLY_NO = #{lApplyNo,jdbcType=VARCHAR}
   </select>
 </mapper>

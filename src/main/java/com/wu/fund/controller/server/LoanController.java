@@ -33,7 +33,7 @@ public class LoanController {
 
     @PostMapping("qurey")
     @ApiOperation(value = "放款查询", notes = "")
-    public Resp<FundPretrialApprovalQueryRespDto> queryLoanApplyResult(@RequestBody Req<LoadApplyQueryReqDto> req) {
+    public Resp<LoadApplyQueryRespDto> queryLoanApplyResult(@RequestBody Req<LoadApplyQueryReqDto> req) {
 
         LoadApplyQueryRespDto respDto = loanService.queryLoanApplyResult(req.getApplyNo());
         return Resp.success("放款查询成功", respDto);

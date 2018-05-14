@@ -18,6 +18,7 @@ public interface FunPutoutApplyDao {
      * @mbggenerated 2018-05-09
      */
     int insert(FunPutoutApplyEntity record);
+    int insertSelective(FunPutoutApplyEntity record);
 
     /**
      *
@@ -36,6 +37,7 @@ public interface FunPutoutApplyDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FunPutoutApplyEntity record);
+    int updateByPrimaryKeySelective(FunPutoutApplyEntity record);
 
     /**
      * 根据放款请求流水号lApplyNo查询 放款申请

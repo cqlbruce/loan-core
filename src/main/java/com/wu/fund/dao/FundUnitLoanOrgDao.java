@@ -15,6 +15,7 @@ public interface FundUnitLoanOrgDao {
      * @mbggenerated 2018-05-08
      */
     int insert(FundUnitLoanOrgEntity record);
+    int insertSelective(FundUnitLoanOrgEntity record);
 
     /**
      *
@@ -33,4 +34,5 @@ public interface FundUnitLoanOrgDao {
      * @mbggenerated 2018-05-08
      */
     int updateByPrimaryKey(FundUnitLoanOrgEntity record);
+    int updateByPrimaryKeySelective(FundUnitLoanOrgEntity record);
 }

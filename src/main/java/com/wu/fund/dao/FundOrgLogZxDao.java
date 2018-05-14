@@ -17,6 +17,7 @@ public interface FundOrgLogZxDao {
      * @mbggenerated 2018-05-09
      */
     int insert(FundOrgLogZxEntity record);
+    int insertSelective(FundOrgLogZxEntity record);
 
     /**
      *
@@ -35,6 +36,7 @@ public interface FundOrgLogZxDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FundOrgLogZxEntity record);
+    int updateByPrimaryKeySelective(FundOrgLogZxEntity record);
     
     
     List<FundOrgLogZxEntity> queryByCertIdAndApplyTime(Map<String, String> map);

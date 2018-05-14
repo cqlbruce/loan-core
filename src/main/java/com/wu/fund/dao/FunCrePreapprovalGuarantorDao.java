@@ -19,6 +19,7 @@ public interface FunCrePreapprovalGuarantorDao {
      * @mbggenerated 2018-05-09
      */
     int insert(FunCrePreapprovalGuarantorEntity record);
+    int insertSelective(FunCrePreapprovalGuarantorEntity record);
 
     /**
      *
@@ -37,6 +38,7 @@ public interface FunCrePreapprovalGuarantorDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FunCrePreapprovalGuarantorEntity record);
+    int updateByPrimaryKeySelective(FunCrePreapprovalGuarantorEntity record);
     /**
      * -根据授信或预审批请求流水号查询担保人
      * @param aApplyNo

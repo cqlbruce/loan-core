@@ -15,6 +15,7 @@ public interface FundUnitPutoutConstraintDao {
      * @mbggenerated 2018-05-08
      */
     int insert(FundUnitPutoutConstraintEntity record);
+    int insertSelective(FundUnitPutoutConstraintEntity record);
 
     /**
      *
@@ -33,4 +34,5 @@ public interface FundUnitPutoutConstraintDao {
      * @mbggenerated 2018-05-08
      */
     int updateByPrimaryKey(FundUnitPutoutConstraintEntity record);
+    int updateByPrimaryKeySelective(FundUnitPutoutConstraintEntity record);
 }

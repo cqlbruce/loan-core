@@ -18,7 +18,7 @@ public interface FunCrePreapprovalContactDao {
      * @mbggenerated 2018-05-09
      */
     int insert(FunCrePreapprovalContactEntity record);
-
+    int insertSelective(FunCrePreapprovalContactEntity record);
     /**
      *
      * @mbggenerated 2018-05-09
@@ -36,12 +36,11 @@ public interface FunCrePreapprovalContactDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FunCrePreapprovalContactEntity record);
-
+    int updateByPrimaryKeySelective(FunCrePreapprovalContactEntity record);
     /**
      * -根据授信或预审批请求流水号查询联系人
      * @param aApplyNo
      * @return
      */
-
     List<FunCrePreapprovalContactEntity> selectContactByApplyNo(@Param("aApplyNo")String aApplyNo);
 }

@@ -15,6 +15,7 @@ public interface FundUnitCustomerConstraintDao {
      * @mbggenerated 2018-05-08
      */
     int insert(FundUnitCustomerConstraintEntity record);
+    int insertSelective(FundUnitCustomerConstraintEntity record);
 
     /**
      *
@@ -33,4 +34,5 @@ public interface FundUnitCustomerConstraintDao {
      * @mbggenerated 2018-05-08
      */
     int updateByPrimaryKey(FundUnitCustomerConstraintEntity record);
+    int updateByPrimaryKeySelective(FundUnitCustomerConstraintEntity record);
 }

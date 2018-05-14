@@ -9,6 +9,7 @@ public interface FunctionDarkPeriodDao {
      * @mbggenerated 2018-05-09
      */
     int insert(FunctionDarkPeriodEntity record);
+    int insertSelective(FunctionDarkPeriodEntity record);
 
     /**
      *

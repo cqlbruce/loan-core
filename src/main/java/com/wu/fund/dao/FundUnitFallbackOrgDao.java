@@ -9,6 +9,7 @@ public interface FundUnitFallbackOrgDao {
      * @mbggenerated 2018-05-08
      */
     int insert(FundUnitFallbackOrgEntity record);
+    int insertSelective(FundUnitFallbackOrgEntity record);
 
     /**
      *

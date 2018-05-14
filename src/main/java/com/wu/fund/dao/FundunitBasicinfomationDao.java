@@ -15,6 +15,7 @@ public interface FundunitBasicinfomationDao {
      * @mbggenerated 2018-05-08
      */
     int insert(FundunitBasicinfomationEntity record);
+    int insertSelective(FundunitBasicinfomationEntity record);
 
     /**
      *
@@ -33,4 +34,5 @@ public interface FundunitBasicinfomationDao {
      * @mbggenerated 2018-05-08
      */
     int updateByPrimaryKey(FundunitBasicinfomationEntity record);
+    int updateByPrimaryKeySelective(FundunitBasicinfomationEntity record);
 }

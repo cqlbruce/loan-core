@@ -1,6 +1,9 @@
 package com.wu.fund.dao;
 
+
 import com.wu.fund.entity.CoreCrePreapprovalContactEntity;
+
+
 import java.util.List;
 
 public interface CoreCrePreapprovalContactDao {
@@ -15,6 +18,7 @@ public interface CoreCrePreapprovalContactDao {
      * @mbggenerated 2018-05-09
      */
     int insert(CoreCrePreapprovalContactEntity record);
+    int insertSelective(CoreCrePreapprovalContactEntity record);
 
     /**
      *
@@ -33,4 +37,5 @@ public interface CoreCrePreapprovalContactDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(CoreCrePreapprovalContactEntity record);
+    int updateByPrimaryKeySelective(CoreCrePreapprovalContactEntity record);
 }

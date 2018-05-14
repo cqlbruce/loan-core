@@ -15,7 +15,7 @@ public interface CorePutoutApplyDao {
      * @mbggenerated 2018-05-09
      */
     int insert(CorePutoutApplyEntity record);
-
+    int insertSelective(CorePutoutApplyEntity record);
     /**
      *
      * @mbggenerated 2018-05-09
@@ -33,4 +33,5 @@ public interface CorePutoutApplyDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(CorePutoutApplyEntity record);
+    int updateByPrimaryKeySelective(CorePutoutApplyEntity record);
 }

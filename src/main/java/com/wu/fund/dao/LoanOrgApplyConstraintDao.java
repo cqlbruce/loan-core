@@ -15,6 +15,7 @@ public interface LoanOrgApplyConstraintDao {
      * @mbggenerated 2018-05-08
      */
     int insert(LoanOrgApplyConstraintEntity record);
+    int insertSelective(LoanOrgApplyConstraintEntity record);
 
     /**
      *
@@ -33,4 +34,5 @@ public interface LoanOrgApplyConstraintDao {
      * @mbggenerated 2018-05-08
      */
     int updateByPrimaryKey(LoanOrgApplyConstraintEntity record);
+    int updateByPrimaryKeySelective(LoanOrgApplyConstraintEntity record);
 }

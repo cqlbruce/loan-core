@@ -15,7 +15,7 @@ public interface CoreCrePreapprovalGuarantorDao {
      * @mbggenerated 2018-05-09
      */
     int insert(CoreCrePreapprovalGuarantorEntity record);
-
+    int insertSelective(CoreCrePreapprovalGuarantorEntity record);
     /**
      *
      * @mbggenerated 2018-05-09
@@ -33,4 +33,5 @@ public interface CoreCrePreapprovalGuarantorDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(CoreCrePreapprovalGuarantorEntity record);
+    int updateByPrimaryKeySelective(CoreCrePreapprovalGuarantorEntity record);
 }

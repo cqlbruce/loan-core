@@ -25,6 +25,7 @@ public interface FundPreapprovalCreditDao {
      * @mbggenerated 2018-05-09
      */
     int insert(FundPreapprovalCreditEntity record);
+    int insertSelective(FundPreapprovalCreditEntity record);
 
     /**
      *
@@ -43,6 +44,7 @@ public interface FundPreapprovalCreditDao {
      * @mbggenerated 2018-05-09
      */
     int updateByPrimaryKey(FundPreapprovalCreditEntity record);
+    int updateByPrimaryKeySelective(FundPreapprovalCreditEntity record);
 
     /**
      * 根据aBusiNo查询申请授信或预审批

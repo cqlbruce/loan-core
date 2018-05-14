@@ -9,6 +9,7 @@ public interface FundUnitLoanChannelDao {
      * @mbggenerated 2018-05-08
      */
     int insert(FundUnitLoanChannelEntity record);
+    int insertSelective(FundUnitLoanChannelEntity record);
 
     /**
      *

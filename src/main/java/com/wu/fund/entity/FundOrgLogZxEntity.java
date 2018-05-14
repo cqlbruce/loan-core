@@ -20,7 +20,7 @@ public class FundOrgLogZxEntity {
     /**
      * 世联金融业务流水号
      */
-    private String cslBusinessNo;
+    private String cBusiNo;
 
     /**
      * 人行受理流水号
@@ -65,7 +65,7 @@ public class FundOrgLogZxEntity {
     /**
      * 人行资金方业务流水号
      */
-    private String cCapitalBusinessNo;
+    private String cCapitalBusiNo;
 
     /**
      * 开始查询时间
@@ -127,6 +127,18 @@ public class FundOrgLogZxEntity {
      */
     private String responseMessage;
 
+
+
+    private String idcardPicture;
+
+    private String idcardKey;
+
+    private String pbAttorneyLetterPicture;
+
+    private String pbAttorneyLetterkey;
+
+    private String signPdfKey;
+
     public String getSerialNo() {
         return serialNo;
     }
@@ -143,12 +155,12 @@ public class FundOrgLogZxEntity {
         this.cApplyNo = capplyNo;
     }
 
-    public String getCslBusinessNo() {
-        return cslBusinessNo;
+    public String getcBusiNo() {
+        return cBusiNo;
     }
 
-    public void setCslBusinessNo(String cslBusinessNo) {
-        this.cslBusinessNo = cslBusinessNo;
+    public void setcBusiNo(String cBusiNo) {
+        this.cBusiNo = cBusiNo;
     }
 
     public String getcDealNo() {
@@ -215,12 +227,12 @@ public class FundOrgLogZxEntity {
         this.fundBusinessStatus = fundBusinessStatus;
     }
 
-    public String getcCapitalBusinessNo() {
-        return cCapitalBusinessNo;
+    public String getcCapitalBusiNo() {
+        return cCapitalBusiNo;
     }
 
-    public void setcCapitalBusinessNo(String cCapitalBusinessNo) {
-        this.cCapitalBusinessNo = cCapitalBusinessNo;
+    public void setcCapitalBusiNo(String cCapitalBusiNo) {
+        this.cCapitalBusiNo = cCapitalBusiNo;
     }
 
     public String getBeginTime() {
@@ -317,5 +329,53 @@ public class FundOrgLogZxEntity {
 
     public void setResponseMessage(String responseMessage) {
         this.responseMessage = responseMessage;
+    }
+
+    public String getcApplyNo() {
+        return cApplyNo;
+    }
+
+    public void setcApplyNo(String cApplyNo) {
+        this.cApplyNo = cApplyNo;
+    }
+
+    public String getIdcardPicture() {
+        return idcardPicture;
+    }
+
+    public void setIdcardPicture(String idcardPicture) {
+        this.idcardPicture = idcardPicture;
+    }
+
+    public String getIdcardKey() {
+        return idcardKey;
+    }
+
+    public void setIdcardKey(String idcardKey) {
+        this.idcardKey = idcardKey;
+    }
+
+    public String getPbAttorneyLetterPicture() {
+        return pbAttorneyLetterPicture;
+    }
+
+    public void setPbAttorneyLetterPicture(String pbAttorneyLetterPicture) {
+        this.pbAttorneyLetterPicture = pbAttorneyLetterPicture;
+    }
+
+    public String getPbAttorneyLetterkey() {
+        return pbAttorneyLetterkey;
+    }
+
+    public void setPbAttorneyLetterkey(String pbAttorneyLetterkey) {
+        this.pbAttorneyLetterkey = pbAttorneyLetterkey;
+    }
+
+    public String getSignPdfKey() {
+        return signPdfKey;
+    }
+
+    public void setSignPdfKey(String signPdfKey) {
+        this.signPdfKey = signPdfKey;
     }
 }

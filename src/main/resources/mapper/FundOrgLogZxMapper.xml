@@ -1,37 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wu.fund.dao.FundOrgLogZxDao">
-  <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundOrgLogZxEntity">
-    <id column="SERIALNO" jdbcType="VARCHAR" property="serialNo" />
-    <result column="CAPPLYNO" jdbcType="VARCHAR" property="cApplyNo" />
-    <result column="CSLBUSINESSNO" jdbcType="VARCHAR" property="cslBusinessNo" />
-    <result column="CDEALNO" jdbcType="VARCHAR" property="cDealNo" />
-    <result column="FUNDSTEPNAME" jdbcType="VARCHAR" property="fundStepName" />
-    <result column="FUNDMAINFLOWNAME" jdbcType="VARCHAR" property="fundMainFlowName" />
-    <result column="FUNDSUBFLOWNAME" jdbcType="VARCHAR" property="fundSubFlowName" />
-    <result column="FUNDSUBFLOWSTATUS" jdbcType="VARCHAR" property="fundSubFlowStatus" />
-    <result column="FUNDSERVICERETURNCODE" jdbcType="VARCHAR" property="fundServiceReturnCode" />
-    <result column="FUNDSERVICERETURNMSG" jdbcType="VARCHAR" property="fundServiceReturnMsg" />
-    <result column="FUNDBUSINESSSTATUS" jdbcType="VARCHAR" property="fundBusinessStatus" />
-    <result column="CCAPITALBUSINESSNO" jdbcType="VARCHAR" property="cCapitalBusinessNo" />
-    <result column="BEGINTIME" jdbcType="VARCHAR" property="beginTime" />
-    <result column="ENDTIME" jdbcType="VARCHAR" property="endTime" />
-    <result column="LOANORGCODE" jdbcType="VARCHAR" property="loanOrgCode" />
-    <result column="STATUS" jdbcType="VARCHAR" property="status" />
-    <result column="OLDLOANORGCODE" jdbcType="VARCHAR" property="oldLoanOrgCode" />
-    <result column="CERTID" jdbcType="VARCHAR" property="certId" />
-    <result column="FILEPACKAGE_NAME" jdbcType="VARCHAR" property="filePackageName" />
-    <result column="DEAL_STATUS" jdbcType="VARCHAR" property="dealStatus" />
-    <result column="DEAL_DESC" jdbcType="VARCHAR" property="dealDesc" />
-    <result column="CERTTYPE" jdbcType="VARCHAR" property="certType" />
-    <result column="CUSTOMERNAME" jdbcType="VARCHAR" property="customerName" />
-    <result column="RESPONSEMESSAGE" jdbcType="CLOB" property="responseMessage" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundOrgLogZxEntity">
+        <id column="SERIALNO" jdbcType="VARCHAR" property="serialNo"/>
+        <result column="CAPPLYNO" jdbcType="VARCHAR" property="cApplyNo"/>
+        <result column="CSLBUSINESSNO" jdbcType="VARCHAR" property="cslBusinessNo"/>
+        <result column="CDEALNO" jdbcType="VARCHAR" property="cDealNo"/>
+        <result column="FUNDSTEPNAME" jdbcType="VARCHAR" property="fundStepName"/>
+        <result column="FUNDMAINFLOWNAME" jdbcType="VARCHAR" property="fundMainFlowName"/>
+        <result column="FUNDSUBFLOWNAME" jdbcType="VARCHAR" property="fundSubFlowName"/>
+        <result column="FUNDSUBFLOWSTATUS" jdbcType="VARCHAR" property="fundSubFlowStatus"/>
+        <result column="FUNDSERVICERETURNCODE" jdbcType="VARCHAR" property="fundServiceReturnCode"/>
+        <result column="FUNDSERVICERETURNMSG" jdbcType="VARCHAR" property="fundServiceReturnMsg"/>
+        <result column="FUNDBUSINESSSTATUS" jdbcType="VARCHAR" property="fundBusinessStatus"/>
+        <result column="CCAPITALBUSINESSNO" jdbcType="VARCHAR" property="cCapitalBusinessNo"/>
+        <result column="BEGINTIME" jdbcType="VARCHAR" property="beginTime"/>
+        <result column="ENDTIME" jdbcType="VARCHAR" property="endTime"/>
+        <result column="LOANORGCODE" jdbcType="VARCHAR" property="loanOrgCode"/>
+        <result column="STATUS" jdbcType="VARCHAR" property="status"/>
+        <result column="OLDLOANORGCODE" jdbcType="VARCHAR" property="oldLoanOrgCode"/>
+        <result column="CERTID" jdbcType="VARCHAR" property="certId"/>
+        <result column="FILEPACKAGE_NAME" jdbcType="VARCHAR" property="filePackageName"/>
+        <result column="DEAL_STATUS" jdbcType="VARCHAR" property="dealStatus"/>
+        <result column="DEAL_DESC" jdbcType="VARCHAR" property="dealDesc"/>
+        <result column="CERTTYPE" jdbcType="VARCHAR" property="certType"/>
+        <result column="CUSTOMERNAME" jdbcType="VARCHAR" property="customerName"/>
+        <result column="RESPONSEMESSAGE" jdbcType="CLOB" property="responseMessage"/>
+        <result column="IDCARDPICTURE" property="idcardPicture" jdbcType="VARCHAR" />
+        <result column="IDCARDKEY" property="idcardKey" jdbcType="VARCHAR" />
+        <result column="PBATTORNEYLETTERPICTURE" property="pbAttorneyLetterPicture" jdbcType="VARCHAR" />
+        <result column="PBATTORNEYLETTERKEY" property="pbAttorneyLetterkey" jdbcType="VARCHAR" />
+        <result column="SIGNPDFKEY" property="signPdfKey" jdbcType="VARCHAR" />
+    </resultMap>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from FUND_ORG_LOG_ZX
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
+    <insert id="insert" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
     insert into FUND_ORG_LOG_ZX (SERIALNO, CAPPLYNO, CSLBUSINESSNO, 
       CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, 
       FUNDSUBFLOWNAME, FUNDSUBFLOWSTATUS, FUNDSERVICERETURNCODE, 
@@ -39,7 +44,8 @@
       CCAPITALBUSINESSNO, BEGINTIME, ENDTIME, 
       LOANORGCODE, STATUS, OLDLOANORGCODE, 
       CERTID, FILEPACKAGE_NAME, DEAL_STATUS, 
-      DEAL_DESC, CERTTYPE, CUSTOMERNAME, 
+      DEAL_DESC, CERTTYPE, CUSTOMERNAME, IDCARDPICTURE, IDCARDKEY, PBATTORNEYLETTERPICTURE, 
+      PBATTORNEYLETTERKEY, SIGNPDFKEY,
       RESPONSEMESSAGE)
     values (#{serialNo,jdbcType=VARCHAR}, #{cApplyNo,jdbcType=VARCHAR}, #{cslBusinessNo,jdbcType=VARCHAR}, 
       #{cDealNo,jdbcType=VARCHAR}, #{fundStepName,jdbcType=VARCHAR}, #{fundMainFlowName,jdbcType=VARCHAR}, 
@@ -49,9 +55,193 @@
       #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{oldLoanOrgCode,jdbcType=VARCHAR}, 
       #{certId,jdbcType=VARCHAR}, #{filePackageName,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, 
       #{dealDesc,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, 
+       #{idcardPicture,jdbcType=VARCHAR}, #{idcardKey,jdbcType=VARCHAR}, #{pbAttorneyLetterPicture,jdbcType=VARCHAR}, 
+      #{pbAttorneyLetterkey,jdbcType=VARCHAR}, #{signPdfKey,jdbcType=VARCHAR},
       #{responseMessage,jdbcType=CLOB})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
+
+    <insert id="insertSelective" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
+        insert into FUND_ORG_LOG_ZX
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="serialNo != null">
+                SERIALNO,
+            </if>
+            <if test="cApplyNo != null">
+                CAPPLYNO,
+            </if>
+            <if test="cBusiNo != null">
+                CSLBUSINESSNO,
+            </if>
+            <if test="cDealNo != null">
+                CDEALNO,
+            </if>
+            <if test="fundStepName != null">
+                FUNDSTEPNAME,
+            </if>
+            <if test="fundMainFlowName != null">
+                FUNDMAINFLOWNAME,
+            </if>
+            <if test="fundSubFlowName != null">
+                FUNDSUBFLOWNAME,
+            </if>
+            <if test="fundSubFlowStatus != null">
+                FUNDSUBFLOWSTATUS,
+            </if>
+            <if test="fundServiceReturnCode != null">
+                FUNDSERVICERETURNCODE,
+            </if>
+            <if test="fundServiceReturnMsg != null">
+                FUNDSERVICERETURNMSG,
+            </if>
+            <if test="fundBusinessStatus != null">
+                FUNDBUSINESSSTATUS,
+            </if>
+            <if test="cCapitalBusiNo != null">
+                CCAPITALBUSINESSNO,
+            </if>
+            <if test="beginTime != null">
+                BEGINTIME,
+            </if>
+            <if test="endTime != null">
+                ENDTIME,
+            </if>
+            <if test="loanOrgCode != null">
+                LOANORGCODE,
+            </if>
+            <if test="status != null">
+                STATUS,
+            </if>
+            <if test="oldloanOrgCode != null">
+                OLDLOANORGCODE,
+            </if>
+            <if test="certId != null">
+                CERTID,
+            </if>
+            <if test="filePackageName != null">
+                FILEPACKAGE_NAME,
+            </if>
+            <if test="dealStatus != null">
+                DEAL_STATUS,
+            </if>
+            <if test="dealDesc != null">
+                DEAL_DESC,
+            </if>
+            <if test="certType != null">
+                CERTTYPE,
+            </if>
+            <if test="customerName != null">
+                CUSTOMERNAME,
+            </if>
+            <if test="idcardPicture != null">
+                IDCARDPICTURE,
+            </if>
+            <if test="idcardKey != null">
+                IDCARDKEY,
+            </if>
+            <if test="pbAttorneyLetterPicture != null">
+                PBATTORNEYLETTERPICTURE,
+            </if>
+            <if test="pbAttorneyLetterkey != null">
+                PBATTORNEYLETTERKEY,
+            </if>
+            <if test="signPdfKey != null">
+                SIGNPDFKEY,
+            </if>
+            <if test="responseMessage != null">
+                RESPONSEMESSAGE,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="serialNo != null">
+                #{serialNo,jdbcType=VARCHAR},
+            </if>
+            <if test="cApplyNo != null">
+                #{cApplyNo,jdbcType=VARCHAR},
+            </if>
+            <if test="cBusiNo != null">
+                #{cBusiNo,jdbcType=VARCHAR},
+            </if>
+            <if test="cDealNo != null">
+                #{cDealNo,jdbcType=VARCHAR},
+            </if>
+            <if test="fundStepName != null">
+                #{fundStepName,jdbcType=VARCHAR},
+            </if>
+            <if test="fundMainFlowName != null">
+                #{fundMainFlowName,jdbcType=VARCHAR},
+            </if>
+            <if test="fundSubFlowName != null">
+                #{fundSubFlowName,jdbcType=VARCHAR},
+            </if>
+            <if test="fundSubFlowStatus != null">
+                #{fundSubFlowStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="fundServiceReturnCode != null">
+                #{fundServiceReturnCode,jdbcType=VARCHAR},
+            </if>
+            <if test="fundServiceReturnMsg != null">
+                #{fundServiceReturnMsg,jdbcType=VARCHAR},
+            </if>
+            <if test="fundBusinessStatus != null">
+                #{fundBusinessStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="cCapitalBusiNo != null">
+                #{cCapitalBusiNo,jdbcType=VARCHAR},
+            </if>
+            <if test="beginTime != null">
+                #{beginTime,jdbcType=VARCHAR},
+            </if>
+            <if test="endTime != null">
+                #{endTime,jdbcType=VARCHAR},
+            </if>
+            <if test="loanOrgCode != null">
+                #{loanOrgCode,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="oldloanOrgCode != null">
+                #{oldloanOrgCode,jdbcType=VARCHAR},
+            </if>
+            <if test="certId != null">
+                #{certId,jdbcType=VARCHAR},
+            </if>
+            <if test="filePackageName != null">
+                #{filePackageName,jdbcType=VARCHAR},
+            </if>
+            <if test="dealStatus != null">
+                #{dealStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="dealDesc != null">
+                #{dealDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="certType != null">
+                #{certType,jdbcType=VARCHAR},
+            </if>
+            <if test="customerName != null">
+                #{customerName,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardPicture != null">
+                #{idcardPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardKey != null">
+                #{idcardKey,jdbcType=VARCHAR},
+            </if>
+            <if test="pbAttorneyLetterPicture != null">
+                #{pbAttorneyLetterPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="pbAttorneyLetterkey != null">
+                #{pbAttorneyLetterkey,jdbcType=VARCHAR},
+            </if>
+            <if test="signPdfKey != null">
+                #{signPdfKey,jdbcType=VARCHAR},
+            </if>
+            <if test="responseMessage != null">
+                #{responseMessage,jdbcType=CLOB},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
     update FUND_ORG_LOG_ZX
     set CAPPLYNO = #{cApplyNo,jdbcType=VARCHAR},
       CSLBUSINESSNO = #{cslBusinessNo,jdbcType=VARCHAR},
@@ -75,10 +265,106 @@
       DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
       CERTTYPE = #{certType,jdbcType=VARCHAR},
       CUSTOMERNAME = #{customerName,jdbcType=VARCHAR},
+       IDCARDPICTURE = #{record.idcardPicture,jdbcType=VARCHAR},
+      IDCARDKEY = #{record.idcardKey,jdbcType=VARCHAR},
+      PBATTORNEYLETTERPICTURE = #{record.pbAttorneyLetterPicture,jdbcType=VARCHAR},
+      PBATTORNEYLETTERKEY = #{record.pbAttorneyLetterkey,jdbcType=VARCHAR},
+      SIGNPDFKEY = #{record.signPdfKey,jdbcType=VARCHAR},
       RESPONSEMESSAGE = #{responseMessage,jdbcType=CLOB}
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
+        update FUND_ORG_LOG_ZX
+        <set>
+            <if test="cApplyNo != null">
+                CAPPLYNO = #{cApplyNo,jdbcType=VARCHAR},
+            </if>
+            <if test="cBusiNo != null">
+                CSLBUSINESSNO = #{cBusiNo,jdbcType=VARCHAR},
+            </if>
+            <if test="cDealNo != null">
+                CDEALNO = #{cDealNo,jdbcType=VARCHAR},
+            </if>
+            <if test="fundStepName != null">
+                FUNDSTEPNAME = #{fundStepName,jdbcType=VARCHAR},
+            </if>
+            <if test="fundMainFlowName != null">
+                FUNDMAINFLOWNAME = #{fundMainFlowName,jdbcType=VARCHAR},
+            </if>
+            <if test="fundSubFlowName != null">
+                FUNDSUBFLOWNAME = #{fundSubFlowName,jdbcType=VARCHAR},
+            </if>
+            <if test="fundSubFlowStatus != null">
+                FUNDSUBFLOWSTATUS = #{fundSubFlowStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="fundServiceReturnCode != null">
+                FUNDSERVICERETURNCODE = #{fundServiceReturnCode,jdbcType=VARCHAR},
+            </if>
+            <if test="fundServiceReturnMsg != null">
+                FUNDSERVICERETURNMSG = #{fundServiceReturnMsg,jdbcType=VARCHAR},
+            </if>
+            <if test="fundBusinessStatus != null">
+                FUNDBUSINESSSTATUS = #{fundBusinessStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="cCapitalBusiNo != null">
+                CCAPITALBUSINESSNO = #{cCapitalBusiNo,jdbcType=VARCHAR},
+            </if>
+            <if test="beginTime != null">
+                BEGINTIME = #{beginTime,jdbcType=VARCHAR},
+            </if>
+            <if test="endTime != null">
+                ENDTIME = #{endTime,jdbcType=VARCHAR},
+            </if>
+            <if test="loanOrgCode != null">
+                LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
+            </if>
+            <if test="status != null">
+                STATUS = #{status,jdbcType=VARCHAR},
+            </if>
+            <if test="oldLoanOrgCode != null">
+                OLDLOANORGCODE = #{oldLoanOrgCode,jdbcType=VARCHAR},
+            </if>
+            <if test="certId != null">
+                CERTID = #{certId,jdbcType=VARCHAR},
+            </if>
+            <if test="filePackageName != null">
+                FILEPACKAGE_NAME = #{filePackageName,jdbcType=VARCHAR},
+            </if>
+            <if test="dealStatus != null">
+                DEAL_STATUS = #{dealStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="dealDesc != null">
+                DEAL_DESC = #{dealDesc,jdbcType=VARCHAR},
+            </if>
+            <if test="certType != null">
+                CERTTYPE = #{certType,jdbcType=VARCHAR},
+            </if>
+            <if test="customerName != null">
+                CUSTOMERNAME = #{customerName,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardPicture != null">
+                IDCARDPICTURE = #{idcardPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="idcardKey != null">
+                IDCARDKEY = #{idcardKey,jdbcType=VARCHAR},
+            </if>
+            <if test="pbAttorneyLetterPicture != null">
+                PBATTORNEYLETTERPICTURE = #{pbAttorneyLetterPicture,jdbcType=VARCHAR},
+            </if>
+            <if test="pbAttorneyLetterkey != null">
+                PBATTORNEYLETTERKEY = #{pbAttorneyLetterkey,jdbcType=VARCHAR},
+            </if>
+            <if test="signPdfKey != null">
+                SIGNPDFKEY = #{signPdfKey,jdbcType=VARCHAR},
+            </if>
+            <if test="responseMessage != null">
+                RESPONSEMESSAGE = #{responseMessage,jdbcType=CLOB},
+            </if>
+        </set>
+        where SERIALNO = #{serialNo,jdbcType=VARCHAR}
+    </update>
+    <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select SERIALNO, CAPPLYNO, CSLBUSINESSNO, CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, 
     FUNDSUBFLOWNAME, FUNDSUBFLOWSTATUS, FUNDSERVICERETURNCODE, FUNDSERVICERETURNMSG, 
     FUNDBUSINESSSTATUS, CCAPITALBUSINESSNO, BEGINTIME, ENDTIME, LOANORGCODE, STATUS, 
@@ -87,7 +373,7 @@
     from FUND_ORG_LOG_ZX
     where SERIALNO = #{serialNo,jdbcType=VARCHAR}
   </select>
-  <select id="selectAll" resultMap="BaseResultMap">
+    <select id="selectAll" resultMap="BaseResultMap">
     select SERIALNO, CAPPLYNO, CSLBUSINESSNO, CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, 
     FUNDSUBFLOWNAME, FUNDSUBFLOWSTATUS, FUNDSERVICERETURNCODE, FUNDSERVICERETURNMSG, 
     FUNDBUSINESSSTATUS, CCAPITALBUSINESSNO, BEGINTIME, ENDTIME, LOANORGCODE, STATUS, 
@@ -95,20 +381,24 @@
     RESPONSEMESSAGE
     from FUND_ORG_LOG_ZX
   </select>
-  
-  <sql id="Base_Column_List">
-    SERIALNO,CAPPLYNO,CSLBUSINESSNO,CDEALNO,FUNDSTEPNAME,FUNDMAINFLOWNAME,FUNDSUBFLOWSTATUS,FUNDSERVICERETURNCODE,FUNDSERVICERETURNMSG,FUNDBUSINESSSTATUS,CCAPITALBUSINESSNO,BEGINTIME,ENDTIME,
-    LOANORGCODE,STATUS,OLDLOANORGCODE,CERTID,FILEPACKAGE_NAME,DEAL_STATUS,DEAL_DESC,CERTTYPE,CUSTOMERNAME,RESPONSEMESSAGE
+
+    <sql id="Base_Column_List" >
+    SERIALNO, CAPPLYNO, CSLBUSINESSNO, CDEALNO, FUNDSTEPNAME, FUNDMAINFLOWNAME, FUNDSUBFLOWNAME, 
+    FUNDSUBFLOWSTATUS, FUNDSERVICERETURNCODE, FUNDSERVICERETURNMSG, FUNDBUSINESSSTATUS, 
+    CCAPITALBUSINESSNO, BEGINTIME, ENDTIME, LOANORGCODE, STATUS, OLDLOANORGCODE, CERTID, 
+    FILEPACKAGE_NAME, DEAL_STATUS, DEAL_DESC, CERTTYPE, CUSTOMERNAME, IDCARDPICTURE, 
+    IDCARDKEY, PBATTORNEYLETTERPICTURE, PBATTORNEYLETTERKEY, SIGNPDFKEY
   </sql>
-  
-  <select id="queryByCertIdAndApplyTime" resultMap="BaseResultMap" parameterType="java.util.Map">
-	  select <include refid="Base_Column_List" /> from FUND_ORG_LOG_ZX 
-	  where 
-	  	CERTID = #{certId, jdbcType=VARCHAR}
-	  and 
-	    ENDTIME &gt;= #{applyTime,jdbcType=VARCHAR}
-  </select>
-  
-  
-  
+
+    <select id="queryByCertIdAndApplyTime" resultMap="BaseResultMap" parameterType="java.util.Map">
+        select
+        <include refid="Base_Column_List"/>
+        from FUND_ORG_LOG_ZX
+        where
+        CERTID = #{certId, jdbcType=VARCHAR}
+        and
+        ENDTIME &gt;= #{applyTime,jdbcType=VARCHAR}
+    </select>
+
+
 </mapper>

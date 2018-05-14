@@ -1,12 +1,13 @@
 package com.wu.fund.dao;
 
 import com.wu.fund.entity.FunCrePreapprovalContactEntity;
+import com.wu.fund.entity.FunCrePreapprovalGuarantorEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 @Repository
-public interface FunCrePreapprovalContactMapper {
+public interface FunCrePreapprovalGuarantorDao {
     /**
      *
      * @mbggenerated 2018-05-09
@@ -17,31 +18,30 @@ public interface FunCrePreapprovalContactMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int insert(FunCrePreapprovalContactEntity record);
+    int insert(FunCrePreapprovalGuarantorEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    FunCrePreapprovalContactEntity selectByPrimaryKey(String serialNo);
+    FunCrePreapprovalGuarantorEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    List<FunCrePreapprovalContactEntity> selectAll();
+    List<FunCrePreapprovalGuarantorEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    int updateByPrimaryKey(FunCrePreapprovalContactEntity record);
-
+    int updateByPrimaryKey(FunCrePreapprovalGuarantorEntity record);
     /**
-     * -根据授信或预审批请求流水号查询联系人
+     * -根据授信或预审批请求流水号查询担保人
      * @param aApplyNo
      * @return
      */
 
-    List<FunCrePreapprovalContactEntity> selectContactByApplyNo(@Param("aApplyNo")String aApplyNo);
+    List<FunCrePreapprovalGuarantorEntity> selectGuarantorByApplyNo(@Param("aApplyNo")String aApplyNo);
 }

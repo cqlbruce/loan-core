@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.CorePutoutApplyEntity;
+import com.wu.fund.entity.FunPutoutApplyEntity;
 import java.util.List;
 
-public interface CorePutoutApplyMapper {
+public interface FunPutoutApplyDao {
     /**
      *
      * @mbggenerated 2018-05-09
@@ -14,23 +14,23 @@ public interface CorePutoutApplyMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int insert(CorePutoutApplyEntity record);
+    int insert(FunPutoutApplyEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    CorePutoutApplyEntity selectByPrimaryKey(String lApplyNo);
+    FunPutoutApplyEntity selectByPrimaryKey(String lApplyNo);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    List<CorePutoutApplyEntity> selectAll();
+    List<FunPutoutApplyEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    int updateByPrimaryKey(CorePutoutApplyEntity record);
+    int updateByPrimaryKey(FunPutoutApplyEntity record);
 }

@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.CoreCrePreapprovalGuarantorEntity;
+import com.wu.fund.entity.LoanOrgFunctionConstraintEntity;
 import java.util.List;
 
-public interface CoreCrePreapprovalGuarantorMapper {
+public interface LoanOrgFunctionConstraintDao {
     /**
      *
      * @mbggenerated 2018-05-09
@@ -14,23 +14,23 @@ public interface CoreCrePreapprovalGuarantorMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int insert(CoreCrePreapprovalGuarantorEntity record);
+    int insert(LoanOrgFunctionConstraintEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    CoreCrePreapprovalGuarantorEntity selectByPrimaryKey(String serialNo);
+    LoanOrgFunctionConstraintEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    List<CoreCrePreapprovalGuarantorEntity> selectAll();
+    List<LoanOrgFunctionConstraintEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    int updateByPrimaryKey(CoreCrePreapprovalGuarantorEntity record);
+    int updateByPrimaryKey(LoanOrgFunctionConstraintEntity record);
 }

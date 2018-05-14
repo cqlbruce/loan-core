@@ -3,7 +3,7 @@ package com.wu.fund.dao;
 import com.wu.fund.entity.FunctionDarkPeriodEntity;
 import java.util.List;
 
-public interface FunctionDarkPeriodMapper {
+public interface FunctionDarkPeriodDao {
     /**
      *
      * @mbggenerated 2018-05-09

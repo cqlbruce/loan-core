@@ -1,8 +1,8 @@
 package com.wu.fund.service.impl;
 
-import com.wu.fund.dao.FunCrePreapprovalContactMapper;
-import com.wu.fund.dao.FunCrePreapprovalGuarantorMapper;
-import com.wu.fund.dao.FundPreapprovalCreditMapper;
+import com.wu.fund.dao.FunCrePreapprovalContactDao;
+import com.wu.fund.dao.FunCrePreapprovalGuarantorDao;
+import com.wu.fund.dao.FundPreapprovalCreditDao;
 import com.wu.fund.dto.FundPreapprovalCreditReqDto;
 import com.wu.fund.dto.QueryPretrialApprovalRespDto;
 import com.wu.fund.entity.FunCrePreapprovalContactEntity;
@@ -25,12 +25,12 @@ import java.util.List;
 public class PretrialApprovalServiceImpl implements PretrialApprovalService {
 
     @Autowired
-    private FundPreapprovalCreditMapper creditMapper;
+    private FundPreapprovalCreditDao creditMapper;
 
     @Autowired
-    private FunCrePreapprovalContactMapper crePreapprovalContactMapper;
+    private FunCrePreapprovalContactDao crePreapprovalContactMapper;
     @Autowired
-    private FunCrePreapprovalGuarantorMapper crePreapprovalGuarantorMapper;
+    private FunCrePreapprovalGuarantorDao crePreapprovalGuarantorMapper;
 
     /**
      *T20.申请授信或预审批

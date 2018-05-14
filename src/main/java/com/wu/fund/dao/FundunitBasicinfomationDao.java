@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.LoanOrgCatalogEntity;
+import com.wu.fund.entity.FundunitBasicinfomationEntity;
 import java.util.List;
 
-public interface LoanOrgCatalogMapper {
+public interface FundunitBasicinfomationDao {
     /**
      *
      * @mbggenerated 2018-05-08
@@ -14,23 +14,23 @@ public interface LoanOrgCatalogMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int insert(LoanOrgCatalogEntity record);
+    int insert(FundunitBasicinfomationEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    LoanOrgCatalogEntity selectByPrimaryKey(String serialNo);
+    FundunitBasicinfomationEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    List<LoanOrgCatalogEntity> selectAll();
+    List<FundunitBasicinfomationEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    int updateByPrimaryKey(LoanOrgCatalogEntity record);
+    int updateByPrimaryKey(FundunitBasicinfomationEntity record);
 }

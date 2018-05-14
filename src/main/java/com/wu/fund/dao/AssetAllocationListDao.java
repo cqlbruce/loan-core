@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.LoanOrgBankConstraintEntity;
+import com.wu.fund.entity.AssetAllocationListEntity;
 import java.util.List;
 
-public interface LoanOrgBankConstraintMapper {
+public interface AssetAllocationListDao {
     /**
      *
      * @mbggenerated 2018-05-08
@@ -14,23 +14,23 @@ public interface LoanOrgBankConstraintMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int insert(LoanOrgBankConstraintEntity record);
+    int insert(AssetAllocationListEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    LoanOrgBankConstraintEntity selectByPrimaryKey(String serialNo);
+    AssetAllocationListEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    List<LoanOrgBankConstraintEntity> selectAll();
+    List<AssetAllocationListEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    int updateByPrimaryKey(LoanOrgBankConstraintEntity record);
+    int updateByPrimaryKey(AssetAllocationListEntity record);
 }

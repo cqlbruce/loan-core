@@ -3,7 +3,7 @@ package com.wu.fund.dao;
 import com.wu.fund.entity.FundUnitFallbackOrgEntity;
 import java.util.List;
 
-public interface FundUnitFallbackOrgMapper {
+public interface FundUnitFallbackOrgDao {
     /**
      *
      * @mbggenerated 2018-05-08

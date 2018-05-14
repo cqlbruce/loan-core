@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.LoanOrgBankChargeEntity;
+import com.wu.fund.entity.FundUnitCustomerConstraintEntity;
 import java.util.List;
 
-public interface LoanOrgBankChargeMapper {
+public interface FundUnitCustomerConstraintDao {
     /**
      *
      * @mbggenerated 2018-05-08
@@ -14,23 +14,23 @@ public interface LoanOrgBankChargeMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int insert(LoanOrgBankChargeEntity record);
+    int insert(FundUnitCustomerConstraintEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    LoanOrgBankChargeEntity selectByPrimaryKey(String serialNo);
+    FundUnitCustomerConstraintEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    List<LoanOrgBankChargeEntity> selectAll();
+    List<FundUnitCustomerConstraintEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    int updateByPrimaryKey(LoanOrgBankChargeEntity record);
+    int updateByPrimaryKey(FundUnitCustomerConstraintEntity record);
 }

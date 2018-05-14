@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.wu.fund.dao.CorePutoutApplyMapper" >
+<mapper namespace="com.wu.fund.dao.CorePutoutApplyDao" >
   <resultMap id="BaseResultMap" type="com.wu.fund.entity.CorePutoutApplyEntity" >
     <id column="L_APPLY_NO" property="lApplyNo" jdbcType="VARCHAR" />
     <result column="L_SL_BUSINESS_NO" property="lBusiNo" jdbcType="VARCHAR" />

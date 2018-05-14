@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.LoanorgCreditpreapprovalEntity;
+import com.wu.fund.entity.CoreCreditpreapprovalEntity;
 import java.util.List;
 
-public interface LoanorgCreditpreapprovalMapper {
+public interface CoreCreditpreapprovalDao {
     /**
      *
      * @mbggenerated 2018-05-09
@@ -14,23 +14,23 @@ public interface LoanorgCreditpreapprovalMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int insert(LoanorgCreditpreapprovalEntity record);
+    int insert(CoreCreditpreapprovalEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    LoanorgCreditpreapprovalEntity selectByPrimaryKey(String aApplyNo);
+    CoreCreditpreapprovalEntity selectByPrimaryKey(String aApplyNo);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    List<LoanorgCreditpreapprovalEntity> selectAll();
+    List<CoreCreditpreapprovalEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    int updateByPrimaryKey(LoanorgCreditpreapprovalEntity record);
+    int updateByPrimaryKey(CoreCreditpreapprovalEntity record);
 }

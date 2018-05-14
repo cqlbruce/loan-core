@@ -13,7 +13,7 @@ import java.util.List;
  * @Date: Created in  2018/5/9
  */
 @Component
-public interface FundPreapprovalCreditMapper {
+public interface FundPreapprovalCreditDao {
     /**
      *
      * @mbggenerated 2018-05-09

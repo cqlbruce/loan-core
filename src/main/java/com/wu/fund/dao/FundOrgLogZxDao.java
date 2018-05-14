@@ -1,9 +1,10 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.LoanorgPreapprovalGuarantorEntity;
+import com.wu.fund.entity.FundOrgLogZxEntity;
+
 import java.util.List;
 
-public interface LoanorgPreapprovalGuarantorMapper {
+public interface FundOrgLogZxDao {
     /**
      *
      * @mbggenerated 2018-05-09
@@ -14,23 +15,23 @@ public interface LoanorgPreapprovalGuarantorMapper {
      *
      * @mbggenerated 2018-05-09
      */
-    int insert(LoanorgPreapprovalGuarantorEntity record);
+    int insert(FundOrgLogZxEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    LoanorgPreapprovalGuarantorEntity selectByPrimaryKey(String serialNo);
+    FundOrgLogZxEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    List<LoanorgPreapprovalGuarantorEntity> selectAll();
+    List<FundOrgLogZxEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-09
      */
-    int updateByPrimaryKey(LoanorgPreapprovalGuarantorEntity record);
+    int updateByPrimaryKey(FundOrgLogZxEntity record);
 }

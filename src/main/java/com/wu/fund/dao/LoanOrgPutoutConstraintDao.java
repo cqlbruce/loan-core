@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.FundUnitContributionOrgEntity;
+import com.wu.fund.entity.LoanOrgPutoutConstraintEntity;
 import java.util.List;
 
-public interface FundUnitContributionOrgMapper {
+public interface LoanOrgPutoutConstraintDao {
     /**
      *
      * @mbggenerated 2018-05-08
@@ -14,23 +14,23 @@ public interface FundUnitContributionOrgMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int insert(FundUnitContributionOrgEntity record);
+    int insert(LoanOrgPutoutConstraintEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    FundUnitContributionOrgEntity selectByPrimaryKey(String serialNo);
+    LoanOrgPutoutConstraintEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    List<FundUnitContributionOrgEntity> selectAll();
+    List<LoanOrgPutoutConstraintEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    int updateByPrimaryKey(FundUnitContributionOrgEntity record);
+    int updateByPrimaryKey(LoanOrgPutoutConstraintEntity record);
 }

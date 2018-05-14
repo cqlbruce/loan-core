@@ -3,7 +3,7 @@ package com.wu.fund.dao;
 import com.wu.fund.entity.FundUnitLoanChannelEntity;
 import java.util.List;
 
-public interface FundUnitLoanChannelMapper {
+public interface FundUnitLoanChannelDao {
     /**
      *
      * @mbggenerated 2018-05-08

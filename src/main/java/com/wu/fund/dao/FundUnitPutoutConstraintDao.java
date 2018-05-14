@@ -1,9 +1,9 @@
 package com.wu.fund.dao;
 
-import com.wu.fund.entity.FundUnitCustomerConstraintEntity;
+import com.wu.fund.entity.FundUnitPutoutConstraintEntity;
 import java.util.List;
 
-public interface FundUnitCustomerConstraintMapper {
+public interface FundUnitPutoutConstraintDao {
     /**
      *
      * @mbggenerated 2018-05-08
@@ -14,23 +14,23 @@ public interface FundUnitCustomerConstraintMapper {
      *
      * @mbggenerated 2018-05-08
      */
-    int insert(FundUnitCustomerConstraintEntity record);
+    int insert(FundUnitPutoutConstraintEntity record);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    FundUnitCustomerConstraintEntity selectByPrimaryKey(String serialNo);
+    FundUnitPutoutConstraintEntity selectByPrimaryKey(String serialNo);
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    List<FundUnitCustomerConstraintEntity> selectAll();
+    List<FundUnitPutoutConstraintEntity> selectAll();
 
     /**
      *
      * @mbggenerated 2018-05-08
      */
-    int updateByPrimaryKey(FundUnitCustomerConstraintEntity record);
+    int updateByPrimaryKey(FundUnitPutoutConstraintEntity record);
 }

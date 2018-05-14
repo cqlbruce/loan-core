@@ -26,7 +26,7 @@ public class PretrialApprovalController {
 
     @PostMapping("qurey")
     @ApiOperation(value = "申请授信或预审批查询", notes = "")
-    @ApiImplicitParam(name = "req", value = "申请授信或预审批查询请求参数", required = true, dataType = "Req", paramType = "body")
+  //  @ApiImplicitParam(name = "req", value = "申请授信或预审批查询请求参数", required = true, dataType = "Req", paramType = "body")
     public Resp<QueryPretrialApprovalRespDto> queryPretrialApprovalResult(@RequestBody Req<String> req) {
 
         QueryPretrialApprovalRespDto respDto = pretrialApprovalService.queryPretrialApprovalResult(req.getApplyNo());

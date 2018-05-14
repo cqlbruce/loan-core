@@ -8,6 +8,9 @@ package com.wu.fund.common;
 public interface Constants {
 	
 	
+
 	
 
+
+			
 }

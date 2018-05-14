@@ -1,10 +1,11 @@
 package com.wu.fund.controller.server;
 
-/**
- * @Author: wangying
- * @Description:
- * @Date: Created in  2018/5/11
- */
 
+
+/**
+ * @Description:征信申请控制器
+ * @author cql
+ * @date:   2018年5月14日 
+ */
 public class CreditApplyController {
 }

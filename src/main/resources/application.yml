@@ -38,6 +38,8 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 20000
+logging:
+  config: classpath:logback-boot.xml
 #  metrics:
 #    enabled: true
 #  config:

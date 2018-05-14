@@ -1,5 +1,7 @@
 package com.wu.fund.common.req;
 
+import io.swagger.annotations.ApiModelProperty;
+
 /**
  * @Author: wangying
  * @Description:接受的请求头
@@ -9,16 +11,19 @@ public class ReqHeader {
     /**
      * 通道
      */
+    @ApiModelProperty(value = "通道")
     private String channelNo;
 
     /**
-     * 授信或预审批请求流水号
+     * 请求流水号
      */
+    @ApiModelProperty(value = "请求流水号", required = true)
     private String applyNo;
 
     /**
      * 业务流水号
      */
+    @ApiModelProperty(value = "业务流水号")
     private String busiNo;
 
 

@@ -7,10 +7,16 @@ import com.wu.fund.dto.FundPreapprovalCreditReqDto;
  * @Description:申请授信或预审批
  * @Date: Created in  2018/5/11
  */
-public interface CreditApplyService {
+public interface PretrialApprovalService {
     /**
      *T20.申请授信或预审批
      * @param creditDto
      */
-    void  creditApply(FundPreapprovalCreditReqDto creditDto);
+    void  pretrialApproval(FundPreapprovalCreditReqDto creditDto);
+
+    /**
+     *
+     * @param aApplyNo
+     */
+    void  queryPretrialApprovalResult(String aApplyNo);
 }

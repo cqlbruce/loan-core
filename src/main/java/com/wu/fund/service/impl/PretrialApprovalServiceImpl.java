@@ -7,7 +7,8 @@ import com.wu.fund.dto.FundPreapprovalCreditReqDto;
 import com.wu.fund.entity.FunCrePreapprovalContactEntity;
 import com.wu.fund.entity.FunCrePreapprovalGuarantorEntity;
 import com.wu.fund.entity.FundPreapprovalCreditEntity;
-import com.wu.fund.service.CreditApplyService;
+
+import com.wu.fund.service.PretrialApprovalService;
 import com.wu.fund.util.BeanCopierUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +21,7 @@ import java.util.List;
  * @Date: Created in  2018/5/11
  */
 @Service
-public class CreditApplyServiceImpl implements CreditApplyService {
+public class PretrialApprovalServiceImpl implements PretrialApprovalService {
 
     @Autowired
     private FundPreapprovalCreditMapper creditMapper;
@@ -35,7 +36,7 @@ public class CreditApplyServiceImpl implements CreditApplyService {
      * @param creditDto
      */
     @Override
-    public void creditApply(FundPreapprovalCreditReqDto creditDto) {
+    public void pretrialApproval(FundPreapprovalCreditReqDto creditDto) {
         //预审批主表
         FundPreapprovalCreditEntity creditEntity= creditMapper.selectByBusiNo(creditDto.getaBusiNo(),"3");
         if (creditEntity!=null){
@@ -60,5 +61,10 @@ public class CreditApplyServiceImpl implements CreditApplyService {
                 guarantor.setaApplyNo(creditDto.getaApplyNo());
                 crePreapprovalGuarantorMapper.insert(guarantor);});
         }
+    }
+
+    @Override
+    public void queryPretrialApprovalResult(String aApplyNo) {
+
     }
 }

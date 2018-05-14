@@ -5,5 +5,6 @@ package com.wu.fund.controller.server;
  * @Description:
  * @Date: Created in  2018/5/11
  */
+
 public class CreditApplyController {
 }

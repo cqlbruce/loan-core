@@ -2,10 +2,10 @@ package com.wu.fund.controller.server;
 
 import com.wu.fund.common.req.Req;
 import com.wu.fund.common.resp.Resp;
-import com.wu.fund.dto.QueryPretrialApprovalRespDto;
+import com.wu.fund.dto.FundPretrialApprovalQueryReqDto;
+import com.wu.fund.dto.FundPretrialApprovalQueryRespDto;
 import com.wu.fund.service.PretrialApprovalService;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -27,9 +27,9 @@ public class PretrialApprovalController {
     @PostMapping("qurey")
     @ApiOperation(value = "申请授信或预审批查询", notes = "")
   //  @ApiImplicitParam(name = "req", value = "申请授信或预审批查询请求参数", required = true, dataType = "Req", paramType = "body")
-    public Resp<QueryPretrialApprovalRespDto> queryPretrialApprovalResult(@RequestBody Req<String> req) {
+    public Resp<FundPretrialApprovalQueryRespDto> queryPretrialApprovalResult(@RequestBody Req<FundPretrialApprovalQueryReqDto> req) {
 
-        QueryPretrialApprovalRespDto respDto = pretrialApprovalService.queryPretrialApprovalResult(req.getApplyNo());
+        FundPretrialApprovalQueryRespDto respDto = pretrialApprovalService.queryPretrialApprovalResult(req.getApplyNo());
         return Resp.success("申请授信或预审批查询成功", respDto);
 
     }

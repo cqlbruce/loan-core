@@ -55,3 +55,11 @@ logging:
 
 credit:
   dates: 15
+org:
+   grlea:
+      logBridge:
+         LogBridgeFactory: com.wu.rcs.da.DALogbackLogBridgeFactory
+
+da:
+  log:
+    level:  31

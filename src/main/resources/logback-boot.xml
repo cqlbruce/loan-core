@@ -2,6 +2,7 @@
 <!DOCTYPE configuration>
 
 <configuration debug="false" scanPeriod="3 seconds">
+	<property name="LOG_HOME" value="logs"/>
     <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
     
 	<appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
@@ -12,7 +13,7 @@
 
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/data/app/logs/pp-adm/LogFile.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
+			<fileNamePattern>/data/app/logs/fund/LogFile.%d{yyyy-MM-dd}.%i.log.zip</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
 				<maxFileSize>100MB</maxFileSize>
@@ -26,7 +27,7 @@
 	<appender name="ERRFILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/data/app/logs/pp-adm/ErrLogFile.%d{yyyy-MM-dd}.%i.log.zip
+			<fileNamePattern>/data/app/logs/fund/ErrLogFile.%d{yyyy-MM-dd}.%i.log.zip
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -41,7 +42,7 @@
 	<appender name="CommunicationFILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>/data/app/logs/pp-adm/CommLogFile.%d{yyyy-MM-dd}.%i.log.zip
+			<fileNamePattern>/data/app/logs/fund/CommLogFile.%d{yyyy-MM-dd}.%i.log.zip
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
@@ -57,7 +58,7 @@
 	<appender name="DA_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 	<file>${LOG_HOME}/wu_rcs_da.log</file>
 	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-		<FileNamePattern>${LOG_HOME}/wu_rcs_da.log.%d{yyyy-MM-dd}.log.zip</FileNamePattern>
+		<FileNamePattern>${LOG_HOME}/fund_da.log.%d{yyyy-MM-dd}.log.zip</FileNamePattern>
 		<MaxHistory>7</MaxHistory>
 	</rollingPolicy>
 	<layout class="ch.qos.logback.classic.PatternLayout">

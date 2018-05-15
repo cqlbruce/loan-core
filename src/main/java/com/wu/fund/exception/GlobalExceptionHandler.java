@@ -24,6 +24,12 @@ public class GlobalExceptionHandler {
 
     private static final Logger LOG = LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
+    @ExceptionHandler(value = CommonException.class)
+    public Resp orderExceptionHandler(HttpServletRequest request, CommonException e) {
+        LOG.info(e.getMessage(), e);
+        return Resp.fail(e.getErrorCode(), e.getMessage());
+    }
+
 
     @ExceptionHandler(value = ClientException.class)
     public Resp clientExceptionHandler(HttpServletRequest request, ClientException e) {

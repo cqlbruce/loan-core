@@ -53,9 +53,31 @@
 			<Pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5level] %logger [%thread] %C -- %m%n</Pattern>
 		</layout>
 	</appender>
+
+	<appender name="DA_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+	<file>${LOG_HOME}/wu_rcs_da.log</file>
+	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+		<FileNamePattern>${LOG_HOME}/wu_rcs_da.log.%d{yyyy-MM-dd}.log.zip</FileNamePattern>
+		<MaxHistory>7</MaxHistory>
+	</rollingPolicy>
+	<layout class="ch.qos.logback.classic.PatternLayout">
+		<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level-%msg%n</pattern>
+	</layout>
+   </appender>
 	<logger name="com.wu.fund" additivity="true">
 		<level value="debug" />
 	    <appender-ref ref="FILE" />
+	</logger>
+
+	<logger name="com.wu.fund.da.DecisionAnalyticsService" additivity="true">
+		<appender-ref ref="DA_FILE"/>
+	</logger>
+
+	<logger name="com.experian.stratman" additivity="false">
+		<appender-ref ref="DA_FILE"/>
+	</logger>
+	<logger name="com.experian.eda" additivity="false">
+		<appender-ref ref="DA_FILE"/>
 	</logger>
 	<root>
 		<level value="info" />

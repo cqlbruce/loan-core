@@ -35,6 +35,25 @@ public class CreditApplyReqDto {
 	 */
 	private String imageDataUrl      ;
 	
+	/**
+	 * 证件照片正面
+	 */
+	private String creditPicReverse ; 
+	
+	/**
+	 * 证件照片反面 
+	 */
+	private String creditPicPositive ;
+	
+	/**
+	 *  授权书照片正面
+	 */
+	private String attorneyPicPositive ;
+	
+	/**
+	 * 授权书照片反面
+	 */
+	private String attorneyPicReverse ;
 
 	public String getBusiNo() {
 		return busiNo;
@@ -83,6 +102,37 @@ public class CreditApplyReqDto {
 	public void setImageDataUrl(String imageDataUrl) {
 		this.imageDataUrl = imageDataUrl;
 	}
-	
+
+	public String getCreditPicReverse() {
+		return creditPicReverse;
+	}
+
+	public void setCreditPicReverse(String creditPicReverse) {
+		this.creditPicReverse = creditPicReverse;
+	}
+
+	public String getCreditPicPositive() {
+		return creditPicPositive;
+	}
+
+	public void setCreditPicPositive(String creditPicPositive) {
+		this.creditPicPositive = creditPicPositive;
+	}
+
+	public String getAttorneyPicPositive() {
+		return attorneyPicPositive;
+	}
+
+	public void setAttorneyPicPositive(String attorneyPicPositive) {
+		this.attorneyPicPositive = attorneyPicPositive;
+	}
+
+	public String getAttorneyPicReverse() {
+		return attorneyPicReverse;
+	}
+
+	public void setAttorneyPicReverse(String attorneyPicReverse) {
+		this.attorneyPicReverse = attorneyPicReverse;
+	}
 
 }

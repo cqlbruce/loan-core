@@ -1,6 +1,7 @@
 package com.wu.fund.service;
 
 import com.wu.fund.dto.CreditApplyReqDto;
+import com.wu.fund.dto.CreditApplyRespDto;
 
 /**
  * @Description: 征信申请服务
@@ -16,7 +17,8 @@ public interface CreditApplyService {
 	* @return void    返回类型  
 	* @throws  
 	*/  
-	void apply(CreditApplyReqDto reqDto) ;
+	CreditApplyRespDto apply(CreditApplyReqDto reqDto) ;
+	
 	
 
 }

@@ -16,6 +16,7 @@ public class DateUtil
   public static final String ISO_DATETIME_WITH_MILLISECOND_FORMAT = "dd-MMM-yyyy HH:mm:ss.SSS";
   public static final String ISO_SHORT_DATE_FORMAT = "dd-MMM-yy";
   public static final String AMR_FULL_DATETIME_FORMAT = "yyyy/MM/dd HH:mm:ss.SSS";
+  public static final String FULL_DATETIME_FORMAT = "yyyy/MM/dd HH:mm:ss";
   public static final String AMR_NOMAL_DATE_FORMAT = "yyyy/MM/dd";
   public static final String AMR_SHORT_DATE_FORMAT = "yyyy/MM";
   public static final String AMR_DATE_WITHOUT_SLASH_FORMAT = "yyyyMMdd";
@@ -248,4 +249,25 @@ public static int compareMs(String timeA, String timeB, String format) throws Ex
     cal.setTime(parseString2Date(date, format));
     return cal;
   }
+  
+  
+  /**
+   *  加减天数 by cql
+   * 
+   * @date:2016年4月10日下午5:00:44
+   * @param date
+   * @param dateIndex
+   * @return
+   */
+  public static String addDays(Date date , int dateIndex , String dateFormat){
+      if(null==date){
+          throw new IllegalArgumentException("The date must not be null");
+      }
+      Calendar c = Calendar.getInstance();
+      c.setTime(date);
+      c.add(Calendar.DATE, dateIndex);
+      return new SimpleDateFormat(dateFormat).format(c.getTime());
+  }
+  
+  
 }

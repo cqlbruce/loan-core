@@ -4,7 +4,7 @@
     <resultMap id="BaseResultMap" type="com.wu.fund.entity.FundOrgLogZxEntity">
         <id column="SERIALNO" jdbcType="VARCHAR" property="serialNo"/>
         <result column="CAPPLYNO" jdbcType="VARCHAR" property="cApplyNo"/>
-        <result column="CSLBUSINESSNO" jdbcType="VARCHAR" property="cslBusinessNo"/>
+        <result column="CSLBUSINESSNO" jdbcType="VARCHAR" property="cBusiNo"/>
         <result column="CDEALNO" jdbcType="VARCHAR" property="cDealNo"/>
         <result column="FUNDSTEPNAME" jdbcType="VARCHAR" property="fundStepName"/>
         <result column="FUNDMAINFLOWNAME" jdbcType="VARCHAR" property="fundMainFlowName"/>
@@ -13,7 +13,7 @@
         <result column="FUNDSERVICERETURNCODE" jdbcType="VARCHAR" property="fundServiceReturnCode"/>
         <result column="FUNDSERVICERETURNMSG" jdbcType="VARCHAR" property="fundServiceReturnMsg"/>
         <result column="FUNDBUSINESSSTATUS" jdbcType="VARCHAR" property="fundBusinessStatus"/>
-        <result column="CCAPITALBUSINESSNO" jdbcType="VARCHAR" property="cCapitalBusinessNo"/>
+        <result column="CCAPITALBUSINESSNO" jdbcType="VARCHAR" property="cCapitalBusiNo"/>
         <result column="BEGINTIME" jdbcType="VARCHAR" property="beginTime"/>
         <result column="ENDTIME" jdbcType="VARCHAR" property="endTime"/>
         <result column="LOANORGCODE" jdbcType="VARCHAR" property="loanOrgCode"/>
@@ -47,11 +47,11 @@
       DEAL_DESC, CERTTYPE, CUSTOMERNAME, IDCARDPICTURE, IDCARDKEY, PBATTORNEYLETTERPICTURE, 
       PBATTORNEYLETTERKEY, SIGNPDFKEY,
       RESPONSEMESSAGE)
-    values (#{serialNo,jdbcType=VARCHAR}, #{cApplyNo,jdbcType=VARCHAR}, #{cslBusinessNo,jdbcType=VARCHAR}, 
+    values (#{serialNo,jdbcType=VARCHAR}, #{cApplyNo,jdbcType=VARCHAR}, #{cBusiNo,jdbcType=VARCHAR}, 
       #{cDealNo,jdbcType=VARCHAR}, #{fundStepName,jdbcType=VARCHAR}, #{fundMainFlowName,jdbcType=VARCHAR}, 
       #{fundSubFlowName,jdbcType=VARCHAR}, #{fundSubFlowStatus,jdbcType=VARCHAR}, #{fundServiceReturnCode,jdbcType=VARCHAR}, 
       #{fundServiceReturnMsg,jdbcType=VARCHAR}, #{fundBusinessStatus,jdbcType=VARCHAR}, 
-      #{cCapitalBusinessNo,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
+      #{cCapitalBusiNo,jdbcType=VARCHAR}, #{beginTime,jdbcType=VARCHAR}, #{endTime,jdbcType=VARCHAR}, 
       #{loanOrgCode,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{oldLoanOrgCode,jdbcType=VARCHAR}, 
       #{certId,jdbcType=VARCHAR}, #{filePackageName,jdbcType=VARCHAR}, #{dealStatus,jdbcType=VARCHAR}, 
       #{dealDesc,jdbcType=VARCHAR}, #{certType,jdbcType=VARCHAR}, #{customerName,jdbcType=VARCHAR}, 
@@ -244,7 +244,7 @@
     <update id="updateByPrimaryKey" parameterType="com.wu.fund.entity.FundOrgLogZxEntity">
     update FUND_ORG_LOG_ZX
     set CAPPLYNO = #{cApplyNo,jdbcType=VARCHAR},
-      CSLBUSINESSNO = #{cslBusinessNo,jdbcType=VARCHAR},
+      CSLBUSINESSNO = #{cBusiNo,jdbcType=VARCHAR},
       CDEALNO = #{cDealNo,jdbcType=VARCHAR},
       FUNDSTEPNAME = #{fundStepName,jdbcType=VARCHAR},
       FUNDMAINFLOWNAME = #{fundMainFlowName,jdbcType=VARCHAR},
@@ -253,7 +253,7 @@
       FUNDSERVICERETURNCODE = #{fundServiceReturnCode,jdbcType=VARCHAR},
       FUNDSERVICERETURNMSG = #{fundServiceReturnMsg,jdbcType=VARCHAR},
       FUNDBUSINESSSTATUS = #{fundBusinessStatus,jdbcType=VARCHAR},
-      CCAPITALBUSINESSNO = #{cCapitalBusinessNo,jdbcType=VARCHAR},
+      CCAPITALBUSINESSNO = #{cCapitalBusiNo,jdbcType=VARCHAR},
       BEGINTIME = #{beginTime,jdbcType=VARCHAR},
       ENDTIME = #{endTime,jdbcType=VARCHAR},
       LOANORGCODE = #{loanOrgCode,jdbcType=VARCHAR},
@@ -396,6 +396,8 @@
         from FUND_ORG_LOG_ZX
         where
         CERTID = #{certId, jdbcType=VARCHAR}
+        and
+		DEAL_STATUS = #{dealStatus, jdbcType=VARCHAR}        
         and
         ENDTIME &gt;= #{applyTime,jdbcType=VARCHAR}
     </select>

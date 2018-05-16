@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:oracle:thin:@192.168.34.185:1521:jrkj
-    username: credit_test
-    password: credit_testpass
+    username: credit
+    password: creditpass
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: oracle.jdbc.driver.OracleDriver
     initialSize: 5

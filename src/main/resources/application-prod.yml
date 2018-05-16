@@ -32,3 +32,6 @@ eureka:
     serviceUrl:
       #defaultZone: "http://sl:sl123@localhost:9000/eureka"
       defaultZone: http://192.168.34.186:7001/eureka,http://192.168.34.188:7001/eureka,http://192.168.34.189:7001/eureka
+      
+      
+      
